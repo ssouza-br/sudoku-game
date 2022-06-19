@@ -38,10 +38,10 @@ int get_digits(long int n, int pos)
 int len_number(long int n)
 {
     int res = 1;
-    int i = 1;
-    while (res > 0)
+    int i = 0;
+    while (res >= 0)
     {
-        res = n - gen_decimals(i-1);
+        res = n - gen_decimals(i);
         i++;
     }
     return i - 1;
