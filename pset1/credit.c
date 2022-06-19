@@ -106,17 +106,17 @@ string card_type(long int n)
 
     if (card_validation(n) && first_pos == 4)
     {
-        return "VISA\n";
+        return "VISA";
     }
     else if (card_validation(n) && first_pos == 5 && (second_pos == 1 || second_pos == 2 || second_pos == 3 || second_pos == 4 || second_pos == 5))
     {
-        return "MASTERCARD\n";
+        return "MASTERCARD";
     }
     else if (card_validation(n) && first_pos == 3 && (second_pos == 4 || second_pos == 7))
     {
-        return "AMEX\n";
+        return "AMEX";
     }
     else{
-        return "INVALID\n";
+        return "INVALID";
     }
 };
