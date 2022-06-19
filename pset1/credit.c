@@ -67,6 +67,9 @@ string card_type(long int n)
     {
         return "AMEX";
     }
+    else{
+        return "TRUISTE";
+    }
 };
 
 // string luhns_algorithm(long int n)
