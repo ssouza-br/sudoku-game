@@ -40,7 +40,7 @@ int get_digits(long int n, int pos)
 
 int len_number(long int n)
 {
-    int res = 1;
+    long int res = 1;
     int i = 0;
     while (res >= 0)
     {
