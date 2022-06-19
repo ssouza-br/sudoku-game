@@ -55,7 +55,8 @@ int check_sum(long int n)
     int sum = 0;
     for (int i = 1; i <= len_number(n);i=i+2)
     {
-        sum = sum + get_digits(n, i);
+        sum = sum + 2*get_digits(n, i);
+        printf("%i\n", i);
     }
     return sum;
 }
