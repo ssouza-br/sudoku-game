@@ -6,12 +6,13 @@ void horizontal_block(int n);
 int main(void){
     int n;
     do{
-        n = get_int("Height: ");
+        n = get_int("Height: \n");
         for(int i =0;i<n;i++){
-            horizontal_block(n);
+            horizontal_block(i);
+            printf("\n");
         }
     }
-    while(n<=1 && n>=8);
+    while(n>=1 && n<=8);
 
 }
 
