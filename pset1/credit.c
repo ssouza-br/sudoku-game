@@ -4,11 +4,13 @@
 long int gen_decimals(int n);
 int get_digits(long int n, int pos);
 int len_number(long int n);
+string card_type(long int n);
 
 int main(void)
 {
     long int n = get_long("Number: ");
-    printf("%i\n", len_number(n));
+   // printf("%i\n", len_number(n));
+   printf("%s",card_type(n));
    // int pos = get_int("position: ");
    // printf("%i\n", get_digits(n,pos));
     // printf("%li\n", n);
@@ -49,23 +51,23 @@ int len_number(long int n)
 
 string card_type(long int n)
 {
-    int len_number = len_number(n);
-    int first_pos = get_digits(n, len_number);
-    int second_pos = get_digits(n, len_number - 1);
+    int len = len_number(n);
+    int first_pos = get_digits(n, len);
+    int second_pos = get_digits(n, len - 1);
 
     if (first_pos == 4)
     {
-        return "VISA"
+        return "VISA";
     }
-    else if (first_pos == 5 && (second_pos == 1 || second_pos == 2 || second_pos == 3 || second_pos == 4 || second_pos == 5 ))
+    else if (first_pos == 5 && (second_pos == 1 || second_pos == 2 || second_pos == 3 || second_pos == 4 || second_pos == 5))
     {
-        return "MASTERCARD"
+        return "MASTERCARD";
     }
-    else if (first_pos == 5 && (second_pos == 1 || second_pos == 2 || second_pos == 3 || second_pos == 4 || second_pos == 5 ))
+    else if (first_pos == 3 && (second_pos == 4 || second_pos == 7))
     {
-        return "MASTERCARD"
+        return "AMEX";
     }
-}
+};
 
 // string luhns_algorithm(long int n)
 // {
