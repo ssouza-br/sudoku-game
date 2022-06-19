@@ -2,5 +2,9 @@
 #include <stdio.h>
 
 int main(void){
-    printf("#   #\n");
+    printf("#  #\n");
+}
+
+void horizontal_block(int n){
+    
 }
