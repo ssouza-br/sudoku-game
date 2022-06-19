@@ -2,11 +2,13 @@
 #include <stdio.h>
 
 long int gen_decimals(int n);
+int get_digits(long int n, int pos);
 
 int main(void)
 {
     long int n = get_long("Number: ");
-    printf("%li\n", gen_decimals(n));
+    int pos = get_int("position: ");
+    printf("%i\n", get_digits(n,pos));
     // printf("%li\n", n);
     // printf("%li\n", n%10);
     // printf("%li\n", (n%100- n%10)/10);
@@ -28,7 +30,7 @@ long int gen_decimals(int n)
 
 int get_digits(long int n, int pos)
 {
-    return n%10 - n%1;
+    return n%gen_decimals(pos+1) - n%gen_decimals(pos);
 }
 
 // string luhns_algorithm(long int n)
