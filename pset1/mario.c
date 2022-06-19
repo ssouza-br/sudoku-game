@@ -1,20 +1,16 @@
 #include <cs50.h>
 #include <stdio.h>
 
-void horizontal_block(int n);
+void horizontal_block(int n, int m);
 
 int main(void){
-    int n;
-    do{
-        n = get_int("Height: \n");
-        for(int i = 1;i<=n;i++){
-            horizontal_block(i);
-            printf("\n");
-        }
+    int m = get_int("Height: \n");
+    for(int i = 1;i<=m;i++){
+        horizontal_block(i,m);
+        printf("\n");
     }
-    while(n>=1 && n<=8);
-
 }
+
 
 void parts_block(int n){
     for(int i = 0;i<n;i++){
@@ -28,8 +24,8 @@ void parts_space(int n){
     }
 }
 
-void horizontal_block(int n){
-    parts_space(n);
+void horizontal_block(int n, int m){
+    parts_space(m-n);
     parts_block(n);
     printf("  ");
     parts_block(n);
