@@ -3,11 +3,11 @@
 
 int main(void)
 {
-    string name = get_string("What's your name? ");
-    printf("Hello, %s\n", name);
+    long int n = get_long("Number: ");
+
 }
 
 string luhns_algorithm(long int n)
 {
-    
+
 }
