@@ -30,7 +30,7 @@ long int gen_decimals(int n)
 
 int get_digits(long int n, int pos)
 {
-    return (n%gen_decimals(pos+1) - n%gen_decimals(pos)) / gen_decimals(pos);
+    return (n%gen_decimals(pos) - n%gen_decimals(pos-1)) / gen_decimals(pos-1);
 }
 
 // string luhns_algorithm(long int n)
