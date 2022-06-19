@@ -15,7 +15,7 @@ int main(void)
     printf("%s\n",card_type(n));
     printf("%i\n",check_sum_part1(n));
     printf("%i\n",check_sum_part2(n));
-    printf("%i\n",check_sum_part2(n));
+    printf("%s", card_validation(n) ? "true" : "false");
    // int pos = get_int("position: ");
    // printf("%i\n", get_digits(n,pos));
     // printf("%li\n", n);
@@ -88,7 +88,7 @@ int check_sum_part2(long int n)
 bool card_validation(long int n)
 {
     bool valid = false;
-    int sum = check_sum_part1(n) + check_sum_part2(n)
+    int sum = check_sum_part1(n) + check_sum_part2(n);
     if (get_digits(sum, 1) == 0)
     {
         valid = true;
