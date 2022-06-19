@@ -86,7 +86,7 @@ bool card_validation(long int n)
 {
     bool valid = false;
     int sum = check_sum_part1(n) + check_sum_part2(n);
-    if (get_digits(sum, 1) == 0)
+    if (sum % 10 == 0)
     {
         valid = true;
         return valid;
