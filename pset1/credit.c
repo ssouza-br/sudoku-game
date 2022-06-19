@@ -9,8 +9,8 @@ int main(void)
     long int n = get_long("Number: ");
     int pos = get_int("position: ");
     printf("%i\n", get_digits(n,pos));
-    printf("%i\n", 100123%1000);
-    printf("%i\n", 123%1000);
+    printf("%i\n", 100123%10000-);
+    printf("%i\n", 123%10000);
     // printf("%li\n", n);
     // printf("%li\n", n%10);
     // printf("%li\n", (n%100- n%10)/10);
