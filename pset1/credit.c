@@ -48,6 +48,11 @@ int len_number(long int n)
     return i - 1;
 }
 
+int check_sum(long int n)
+{
+    
+}
+
 string card_type(long int n)
 {
     int len = len_number(n);
@@ -73,8 +78,3 @@ string card_type(long int n)
         return "TRISTE\n";
     }
 };
-
-// string luhns_algorithm(long int n)
-// {
-
-// }
