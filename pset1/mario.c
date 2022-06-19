@@ -4,7 +4,7 @@
 void horizontal_block(int n, int m);
 
 int main(void){
-    int m = get_int("Height: \n");
+    int m = get_int("Height: ");
     for(int i = 1;i<=m;i++){
         horizontal_block(i,m);
         printf("\n");
