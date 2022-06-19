@@ -58,7 +58,7 @@ int len_number(long int n)
 int check_sum_part1(long int n)
 {
     int sum = 0;
-    for (int i = len_number(n); i > 0;i=i-2)
+    for (int i = 2; i <= len_number(n); i=i+2)
     {
         int double_digts = 2*get_digits(n, i);
         if (len_number(double_digts) > 1)
@@ -75,7 +75,7 @@ int check_sum_part1(long int n)
 int check_sum_part2(long int n)
 {
     int sum = 0;
-    for (int i = len_number(n) - 1; i > 0;i=i-2)
+    for (int i = 2; i <= len_number(n); i=i+2)
     {
         sum = sum + get_digits(n, i);
     }
