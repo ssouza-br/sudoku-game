@@ -41,8 +41,10 @@ int len_number(long int n)
     int i = 0;
     while (res > 0)
     {
-        res = 
+        res = n - gen_decimals(i);
+        i++
     }
+    
 
 }
 
