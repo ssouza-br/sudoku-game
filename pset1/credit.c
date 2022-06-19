@@ -9,8 +9,8 @@ string card_type(long int n);
 int main(void)
 {
     long int n = get_long("Number: ");
-   // printf("%i\n", len_number(n));
-   printf("%s",card_type(n));
+    printf("%i\n", len_number(n));
+    printf("%s",card_type(n));
    // int pos = get_int("position: ");
    // printf("%i\n", get_digits(n,pos));
     // printf("%li\n", n);
@@ -54,9 +54,9 @@ string card_type(long int n)
     int len = len_number(n);
     int first_pos = get_digits(n, len);
     int second_pos = get_digits(n, len - 1);
-    printf("%i", len);
-    printf("%i", first_pos);
-    printf("%i", second_pos);
+    printf("%i\n", len);
+    printf("%i\n", first_pos);
+    printf("%i\n", second_pos);
 
     if (first_pos == 4)
     {
