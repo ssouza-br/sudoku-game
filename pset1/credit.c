@@ -98,7 +98,7 @@ string card_type(long int n)
         return "VISA";
     }
     else if (len == 16 && card_validation(n) && first_pos == 5 && (second_pos == 1 || second_pos == 2 || second_pos == 3 ||
-    second_pos == 4 || second_pos == 5))
+             second_pos == 4 || second_pos == 5))
     {
         return "MASTERCARD";
     }
