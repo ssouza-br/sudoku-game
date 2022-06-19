@@ -13,10 +13,10 @@ int main(void)
 
 }
 
-// int get_digits(long int n)
-// {
-
-// }
+int get_digits(long int n, int pos)
+{
+    return n%10 - n%1
+}
 
 // string luhns_algorithm(long int n)
 // {
