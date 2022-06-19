@@ -8,14 +8,14 @@ int main(void){
 
     do{
          m = get_int("Height: ");
-        if(m<=8){
+        if(m<=8 && m>0){
             for(int i = 1;i<=m;i++){
                 horizontal_block(i,m);
                 printf("\n");
             }
         }
     }
-    while(m<0 || m>8);
+    while(m<=0 || m>8);
 }
 
 void parts_block(int n){
