@@ -19,7 +19,7 @@ void parts_block(int n){
 }
 
 void parts_space(int n){
-    for(int i = n;i<0;i--){
+    for(int i = 0;i<n;i++){
         printf(" ");
     }
 }
