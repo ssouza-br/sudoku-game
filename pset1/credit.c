@@ -13,8 +13,8 @@ int main(void)
 {
     long int n = get_long("Number: ");
     //printf("%s\n",card_type(n));
-    // printf("%i\n",check_sum_part1(n));
-    // printf("%i\n",check_sum_part2(n));
+    printf("%i\n",check_sum_part1(n));
+    printf("%i\n",check_sum_part2(n));
     printf("%s", card_validation(n) ? "true" : "false");
    // int pos = get_int("position: ");
    // printf("%i\n", get_digits(n,pos));
