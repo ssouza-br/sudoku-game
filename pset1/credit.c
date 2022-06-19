@@ -9,9 +9,7 @@ string card_type(long int n);
 int main(void)
 {
     long int n = get_long("Number: ");
-    printf("%i\n", len_number(n));
     printf("%s\n",card_type(n));
-    printf("%li\n",n);
    // int pos = get_int("position: ");
    // printf("%i\n", get_digits(n,pos));
     // printf("%li\n", n);
