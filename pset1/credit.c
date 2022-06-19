@@ -53,9 +53,9 @@ string card_type(long int n)
     int len = len_number(n);
     int first_pos = get_digits(n, len);
     int second_pos = get_digits(n, len - 1);
-    printf("%i\n", len);
-    printf("%i\n", first_pos);
-    printf("%i\n", second_pos);
+    // printf("%i\n", len);
+    // printf("%i\n", first_pos);
+    // printf("%i\n", second_pos);
 
     if (first_pos == 4)
     {
