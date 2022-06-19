@@ -4,10 +4,11 @@
 int main(void)
 {
     long int n = get_long("Number: ");
+    printf("%li\n", n);
 
 }
 
-string luhns_algorithm(long int n)
-{
+// string luhns_algorithm(long int n)
+// {
 
-}
+// }
