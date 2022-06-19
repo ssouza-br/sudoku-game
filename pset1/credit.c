@@ -12,11 +12,11 @@ bool card_validation(long int n);
 int main(void)
 {
     long int n = get_long("Number: ");
-    //printf("%s\n",card_type(n));
-    printf("%i\n",len_number(n));
-    printf("%i\n",check_sum_part1(n));
-    printf("%i\n",check_sum_part2(n));
-    printf("%s", card_validation(n) ? "true\n" : "false\n");
+    printf("%s\n",card_type(n));
+    // printf("%i\n",len_number(n));
+    // printf("%i\n",check_sum_part1(n));
+    // printf("%i\n",check_sum_part2(n));
+    // printf("%s", card_validation(n) ? "true\n" : "false\n");
    // int pos = get_int("position: ");
    // printf("%i\n", get_digits(n,pos));
     // printf("%li\n", n);
@@ -75,7 +75,7 @@ int check_sum_part1(long int n)
 int check_sum_part2(long int n)
 {
     int sum = 0;
-    for (int i = 2; i <= len_number(n); i=i+2)
+    for (int i = 1; i <= len_number(n); i=i+2)
     {
         sum = sum + get_digits(n, i);
     }
