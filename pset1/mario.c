@@ -12,7 +12,7 @@ int main(void){
             printf("\n");
         }
     }
-    while(m<1 || m>8);
+    while(m<1 && m>8);
 }
 
 void parts_block(int n){
