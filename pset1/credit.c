@@ -5,11 +5,13 @@ long int gen_decimals(int n);
 int get_digits(long int n, int pos);
 int len_number(long int n);
 string card_type(long int n);
+int check_sum(long int n);
 
 int main(void)
 {
     long int n = get_long("Number: ");
     printf("%s\n",card_type(n));
+    printf("%i\n",check_sum(n));
    // int pos = get_int("position: ");
    // printf("%i\n", get_digits(n,pos));
     // printf("%li\n", n);
@@ -50,7 +52,12 @@ int len_number(long int n)
 
 int check_sum(long int n)
 {
-    
+    int sum = 0;
+    for (int i = 1; i <= len_number(n);i=i+2)
+    {
+        sum = sum + get_digits(n, i);
+    }
+    return sum;
 }
 
 string card_type(long int n)
