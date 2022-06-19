@@ -5,11 +5,14 @@ void horizontal_block(int n, int m);
 
 int main(void){
     int m;
+
     do{
-        m = get_int("Height: ");
-        for(int i = 1;i<=m;i++){
-            horizontal_block(i,m);
-            printf("\n");
+         m = get_int("Height: ");
+        if(m<=8){
+            for(int i = 1;i<=m;i++){
+                horizontal_block(i,m);
+                printf("\n");
+            }
         }
     }
     while(m<0 || m>8);
