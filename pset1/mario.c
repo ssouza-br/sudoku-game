@@ -22,7 +22,14 @@ void parts_block(int n){
     }
 }
 
+void parts_space(int n){
+    for(int i = n;i<0;i--){
+        printf(" ");
+    }
+}
+
 void horizontal_block(int n){
+    parts_space(n);
     parts_block(n);
     printf("  ");
     parts_block(n);
