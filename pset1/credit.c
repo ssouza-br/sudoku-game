@@ -56,7 +56,8 @@ int check_sum(long int n)
     for (int i = len_number(n); i >= 0;i=i-2)
     {
         sum = sum + 2*get_digits(n, i);
-        printf("%i\n", i);
+        printf("position: %i\n", i);
+        printf("digito: %i\n", get_digits(n, i));
     }
     return sum;
 }
