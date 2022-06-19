@@ -13,6 +13,7 @@ int main(void)
 {
     long int n = get_long("Number: ");
     //printf("%s\n",card_type(n));
+    printf("%i\n",len_number(n));
     printf("%i\n",check_sum_part1(n));
     printf("%i\n",check_sum_part2(n));
     printf("%s", card_validation(n) ? "true" : "false");
