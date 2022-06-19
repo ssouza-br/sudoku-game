@@ -95,8 +95,6 @@ bool card_validation(long int n)
     {
         return valid;
     }
-
-
 }
 
 string card_type(long int n)
@@ -105,15 +103,15 @@ string card_type(long int n)
     int first_pos = get_digits(n, len);
     int second_pos = get_digits(n, len - 1);
 
-    if (card_validation(n) && first_pos == 4)
+    if ((len==13||len==16) && card_validation(n) && first_pos == 4)
     {
         return "VISA";
     }
-    else if (card_validation(n) && first_pos == 5 && (second_pos == 1 || second_pos == 2 || second_pos == 3 || second_pos == 4 || second_pos == 5))
+    else if (len == 16 && card_validation(n) && first_pos == 5 && (second_pos == 1 || second_pos == 2 || second_pos == 3 || second_pos == 4 || second_pos == 5))
     {
         return "MASTERCARD";
     }
-    else if (card_validation(n) && first_pos == 3 && (second_pos == 4 || second_pos == 7))
+    else if (len == 15  && card_validation(n) && first_pos == 3 && (second_pos == 4 || second_pos == 7))
     {
         return "AMEX";
     }
