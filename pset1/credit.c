@@ -9,6 +9,8 @@ int main(void)
     long int n = get_long("Number: ");
     int pos = get_int("position: ");
     printf("%i\n", get_digits(n,pos));
+    printf("%i\n", 100123%1000);
+    printf("%i\n", 123%1000);
     // printf("%li\n", n);
     // printf("%li\n", n%10);
     // printf("%li\n", (n%100- n%10)/10);
@@ -33,10 +35,10 @@ int get_digits(long int n, int pos)
     return (n%gen_decimals(pos) - n%gen_decimals(pos-1)) / gen_decimals(pos-1);
 }
 
-int len_number(long int n)
-{
-    
-}
+// int len_number(long int n)
+// {
+
+// }
 
 // string luhns_algorithm(long int n)
 // {
