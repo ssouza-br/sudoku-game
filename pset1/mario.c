@@ -4,10 +4,11 @@
 void horizontal_block(int n);
 
 int main(void){
+    int n;
     do{
-        int n = get_int("Height: ");
+        n = get_int("Height: ");
     }
-    while(n>=1 && n<=8)
+    while(n>=1 && n<=8);
     for(int i =0;i<n;i++){
         horizontal_block(n);
     }
