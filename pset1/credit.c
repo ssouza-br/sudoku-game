@@ -49,7 +49,18 @@ int len_number(long int n)
 
 string card_type(long int n)
 {
-    
+    int len_number = len_number(n);
+    int first_pos = get_digits(n, len_number);
+    int second_pos = get_digits(n, len_number - 1);
+
+    if (first_pos == 4)
+    {
+        return "VISA"
+    }
+    else if ()
+    {
+        
+    }
 }
 
 // string luhns_algorithm(long int n)
