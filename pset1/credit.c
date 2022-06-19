@@ -6,12 +6,14 @@ int get_digits(long int n, int pos);
 int len_number(long int n);
 string card_type(long int n);
 int check_sum_part1(long int n);
+int check_sum_part2(long int n);
 
 int main(void)
 {
     long int n = get_long("Number: ");
     printf("%s\n",card_type(n));
-    printf("%i\n",check_sum(n));
+    printf("%i\n",check_sum_part1(n));
+    printf("%i\n",check_sum_part2(n));
    // int pos = get_int("position: ");
    // printf("%i\n", get_digits(n,pos));
     // printf("%li\n", n);
@@ -76,18 +78,7 @@ int check_sum_part2(long int n)
     int sum = 0;
     for (int i = len_number(n) - 1; i > 0;i=i-2)
     {
-        int double_digts = 2*get_digits(n, i);
-        if (len_number(double_digts) > 1)
-        {
-            sum = sum + get_digits(double_digts, 1) + get_digits(double_digts, 2);
-        }
-        else{
-            sum = sum + double_digts;
-        }
-
-        printf("position: %i\n", i);
-        printf("digito: %i\n", get_digits(n, i));
-        printf("item soma: %i\n", 2*get_digits(n, i));
+        sum = sum + get_digits(n, i);
     }
     return sum;
 }
