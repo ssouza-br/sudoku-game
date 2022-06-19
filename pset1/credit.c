@@ -13,6 +13,17 @@ int main(void)
 
 }
 
+int gen_tens(int n)
+{
+    long int res;
+    int i = n;
+    while(i > 0)
+    {
+
+    }
+    return
+}
+
 int get_digits(long int n, int pos)
 {
     return n%10 - n%1
