@@ -8,7 +8,8 @@ int main(void)
     printf("%li\n", n%10);
     printf("%li\n", (n%100- n%10)/10);
     printf("%li\n", (n%1000 - n%100)/100);
-    printf("%f\n", 1e2);
+    printf("%li\n", (n%10000 - n%1000)/1000);
+
 
 }
 
