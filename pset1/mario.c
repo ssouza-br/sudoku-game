@@ -5,7 +5,6 @@ void horizontal_block(int n, int m);
 
 int main(void){
     int m;
-
     do{
          m = get_int("Height: ");
         if(m<=8 && m>0){
