@@ -59,7 +59,11 @@ string card_type(long int n)
     }
     else if (first_pos == 5 && (second_pos == 1 || second_pos == 2 || second_pos == 3 || second_pos == 4 || second_pos == 5 ))
     {
-        return "MarterCard"
+        return "MASTERCARD"
+    }
+    else if (first_pos == 5 && (second_pos == 1 || second_pos == 2 || second_pos == 3 || second_pos == 4 || second_pos == 5 ))
+    {
+        return "MASTERCARD"
     }
 }
 
