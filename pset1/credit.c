@@ -12,27 +12,16 @@ bool card_validation(long int n);
 int main(void)
 {
     long int n = get_long("Number: ");
-    printf("%s\n",card_type(n));
-    // printf("%i\n",len_number(n));
-    // printf("%i\n",check_sum_part1(n));
-    // printf("%i\n",check_sum_part2(n));
-    // printf("%s", card_validation(n) ? "true\n" : "false\n");
-   // int pos = get_int("position: ");
-   // printf("%i\n", get_digits(n,pos));
-    // printf("%li\n", n);
-    // printf("%li\n", n%10);
-    // printf("%li\n", (n%100- n%10)/10);
-    // printf("%li\n", (n%1000 - n%100)/100);
-    // printf("%li\n", (n%10000 - n%1000)/1000);
+    printf("%s\n", card_type(n));
 }
 
 long int gen_decimals(int n)
 {
     long int res = 1;
     int i = n;
-    while(i > 0)
+    while (i > 0)
     {
-        res = res*10;
+        res = res * 10;
         i--;
     }
     return res;
@@ -40,7 +29,7 @@ long int gen_decimals(int n)
 
 int get_digits(long int n, int pos)
 {
-    return (n%gen_decimals(pos) - n%gen_decimals(pos-1)) / gen_decimals(pos-1);
+    return (n % gen_decimals(pos) - n % gen_decimals(pos - 1)) / gen_decimals(pos - 1);
 }
 
 int len_number(long int n)
@@ -58,14 +47,15 @@ int len_number(long int n)
 int check_sum_part1(long int n)
 {
     int sum = 0;
-    for (int i = 2; i <= len_number(n); i=i+2)
+    for (int i = 2; i <= len_number(n); i = i + 2)
     {
-        int double_digts = 2*get_digits(n, i);
+        int double_digts = 2 * get_digits(n, i);
         if (len_number(double_digts) > 1)
         {
             sum = sum + get_digits(double_digts, 1) + get_digits(double_digts, 2);
         }
-        else{
+        else
+        {
             sum = sum + double_digts;
         }
     }
@@ -75,7 +65,7 @@ int check_sum_part1(long int n)
 int check_sum_part2(long int n)
 {
     int sum = 0;
-    for (int i = 1; i <= len_number(n); i=i+2)
+    for (int i = 1; i <= len_number(n); i = i + 2)
     {
         sum = sum + get_digits(n, i);
     }
@@ -103,7 +93,7 @@ string card_type(long int n)
     int first_pos = get_digits(n, len);
     int second_pos = get_digits(n, len - 1);
 
-    if ((len==13||len==16) && card_validation(n) && first_pos == 4)
+    if ((len == 13 || len == 16) && card_validation(n) && first_pos == 4)
     {
         return "VISA";
     }
@@ -115,7 +105,8 @@ string card_type(long int n)
     {
         return "AMEX";
     }
-    else{
+    else
+    {
         return "INVALID";
     }
 };
