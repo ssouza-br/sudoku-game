@@ -54,21 +54,24 @@ string card_type(long int n)
     int len = len_number(n);
     int first_pos = get_digits(n, len);
     int second_pos = get_digits(n, len - 1);
+    printf("%i", len);
+    printf("%i", first_pos);
+    printf("%i", second_pos);
 
     if (first_pos == 4)
     {
-        return "VISA";
+        return "VISA\n";
     }
     else if (first_pos == 5 && (second_pos == 1 || second_pos == 2 || second_pos == 3 || second_pos == 4 || second_pos == 5))
     {
-        return "MASTERCARD";
+        return "MASTERCARD\n";
     }
     else if (first_pos == 3 && (second_pos == 4 || second_pos == 7))
     {
-        return "AMEX";
+        return "AMEX\n";
     }
     else{
-        return "TRUISTE";
+        return "TRISTE\n";
     }
 };
 
