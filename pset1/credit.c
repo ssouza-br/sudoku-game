@@ -3,14 +3,14 @@
 
 long int gen_decimals(int n);
 int get_digits(long int n, int pos);
+int len_number(long int n);
 
 int main(void)
 {
     long int n = get_long("Number: ");
-    int pos = get_int("position: ");
-    printf("%i\n", get_digits(n,pos));
-    printf("%i\n", 100123%1000-100123%100);
-    printf("%i\n", 123%1000-123%100);
+    printf("%i\n", len_number(n));
+   // int pos = get_int("position: ");
+   // printf("%i\n", get_digits(n,pos));
     // printf("%li\n", n);
     // printf("%li\n", n%10);
     // printf("%li\n", (n%100- n%10)/10);
@@ -42,10 +42,9 @@ int len_number(long int n)
     while (res > 0)
     {
         res = n - gen_decimals(i);
-        i++
+        i++;
     }
-    
-
+    return i - 1;
 }
 
 // string luhns_algorithm(long int n)
