@@ -13,9 +13,9 @@ int main(void)
 {
     long int n = get_long("Number: ");
     printf("%s\n",card_type(n));
-    printf("%i\n",check_sum_part1(n));
-    printf("%i\n",check_sum_part2(n));
-    printf("%s", card_validation(n) ? "true" : "false");
+    // printf("%i\n",check_sum_part1(n));
+    // printf("%i\n",check_sum_part2(n));
+    // printf("%s", card_validation(n) ? "true" : "false");
    // int pos = get_int("position: ");
    // printf("%i\n", get_digits(n,pos));
     // printf("%li\n", n);
@@ -67,10 +67,6 @@ int check_sum_part1(long int n)
         else{
             sum = sum + double_digts;
         }
-
-        printf("position: %i\n", i);
-        printf("digito: %i\n", get_digits(n, i));
-        printf("item soma: %i\n", 2*get_digits(n, i));
     }
     return sum;
 }
@@ -107,23 +103,20 @@ string card_type(long int n)
     int len = len_number(n);
     int first_pos = get_digits(n, len);
     int second_pos = get_digits(n, len - 1);
-    // printf("%i\n", len);
-    // printf("%i\n", first_pos);
-    // printf("%i\n", second_pos);
 
-    if (first_pos == 4)
+    if (card_validation(n) && first_pos == 4)
     {
         return "VISA\n";
     }
-    else if (first_pos == 5 && (second_pos == 1 || second_pos == 2 || second_pos == 3 || second_pos == 4 || second_pos == 5))
+    else if (card_validation(n) && first_pos == 5 && (second_pos == 1 || second_pos == 2 || second_pos == 3 || second_pos == 4 || second_pos == 5))
     {
         return "MASTERCARD\n";
     }
-    else if (first_pos == 3 && (second_pos == 4 || second_pos == 7))
+    else if (card_validation(n) && first_pos == 3 && (second_pos == 4 || second_pos == 7))
     {
         return "AMEX\n";
     }
     else{
-        return "TRISTE\n";
+        return "INVALID\n";
     }
 };
