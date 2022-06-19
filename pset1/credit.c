@@ -47,7 +47,10 @@ int len_number(long int n)
     return i - 1;
 }
 
-int 
+string card_type(long int n)
+{
+    
+}
 
 // string luhns_algorithm(long int n)
 // {
