@@ -4,13 +4,16 @@
 void horizontal_block(int n, int m);
 
 int main(void){
-    int m = get_int("Height: ");
-    for(int i = 1;i<=m;i++){
-        horizontal_block(i,m);
-        printf("\n");
+    int m;
+    do{
+        m = get_int("Height: ");
+        for(int i = 1;i<=m;i++){
+            horizontal_block(i,m);
+            printf("\n");
+        }
     }
+    while(m<1 || m>8);
 }
-
 
 void parts_block(int n){
     for(int i = 0;i<n;i++){
