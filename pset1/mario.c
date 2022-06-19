@@ -7,7 +7,7 @@ int main(void){
     do{
         int n = get_int("Height: ")
     }
-    while()
+    while(n)
     //printf("#  #\n");
     horizontal_block(2);
 }
