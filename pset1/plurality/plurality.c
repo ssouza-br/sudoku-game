@@ -75,7 +75,8 @@ bool vote(string name)
     {
         if (strcmp(candidates[i].name,name))
         {
-            candidates[i].votes++;
+            printf("Entrei no if\n");
+            candidates[i].votes = candidates[i].votes + 1;
             return true;
         }
     }
