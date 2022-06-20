@@ -63,6 +63,6 @@ void grade(string text)
     int L = 100 * count_letters(text) / count_words(text); //L is the average number of letters per 100 words in the text
     int S = 100 * count_sentences(text) / count_words(text); //S is the average number of sentences per 100 words in the text
     float index = 0.0588 * L - 0.296 * S - 15.8;
-    printf("%.2f", index);
+    printf("%.2f\n", index);
 }
 
