@@ -21,5 +21,6 @@ int count_letters(string text)
             counter_letters++;
         }
     }
+    printf("%i\n", len);
     return counter_letters;
 }
