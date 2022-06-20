@@ -73,6 +73,9 @@ bool vote(string name)
 {
     for (int i = 0; i < candidate_count; i++)
     {
+        printf("%s\n", name);
+        printf("%s\n", candidates[i].name);
+
         if (strcmp(candidates[i].name,name))
         {
             printf("Entrei no if\n");
