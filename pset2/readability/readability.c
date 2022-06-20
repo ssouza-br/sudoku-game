@@ -32,7 +32,7 @@ int count_words(string text)
     int counter_words = 0;
     for (int i = 0; i < len; i++)
     {
-        if (strcmp(text[i], " ") == 0)
+        if (isspace(text[i]))
         {
             counter_words++;
         }
