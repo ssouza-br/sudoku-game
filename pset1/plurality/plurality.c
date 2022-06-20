@@ -52,12 +52,6 @@ int main(int argc, string argv[])
         names[i] = candidates[i].name;
     }
 
-
-    printf("%s\n",candidates[0].name);
-    printf("%s\n",candidates[1].name);
-    printf("%i\n","Alice"=="Alice");
-    printf("%s\n",names[1]);
-
     // Loop over all voters
     for (int i = 0; i < voter_count; i++)
     {
