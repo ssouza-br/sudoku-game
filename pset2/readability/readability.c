@@ -37,6 +37,20 @@ int count_words(string text)
             counter_words++;
         }
     }
-    return counter_words;
+    return counter_words + 1;
+}
+
+int count_words(string text)
+{
+    int len = strlen(text);
+    int counter_words = 0;
+    for (int i = 0; i < len; i++)
+    {
+        if (isspace(text[i]))
+        {
+            counter_words++;
+        }
+    }
+    return counter_words + 1;
 }
 
