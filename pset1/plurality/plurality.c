@@ -80,6 +80,7 @@ bool vote(string name)
         {
             printf("Entrei no if\n");
             candidates[i].votes = candidates[i].votes + 1;
+            printf("%i\n", candidates[i].votes);
             return true;
         }
     }
@@ -90,8 +91,6 @@ bool vote(string name)
 void print_winner(void)
 {
     printf("%i\n", candidates[0].votes);
-    printf("%i\n", strcmp("Alice", "Bob"));
-    printf("%i\n", strcmp("Alice", "Alice"));
     // TODO
     //return;
 }
