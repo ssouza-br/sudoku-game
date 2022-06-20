@@ -13,6 +13,6 @@ int count_letters(string text)
     int counter_letters = 0;
     for (i = 0; i < len; i++)
     {
-        
+        if (text[i] = )
     }
 }
