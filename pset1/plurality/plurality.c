@@ -95,7 +95,7 @@ void print_winner(void)
             winner = candidates[i].name;
         }
     }
-    printf("%i\n", candidates[0].votes);
+    printf("%s\n", winner);
     // TODO
     //return;
 }
