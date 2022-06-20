@@ -55,7 +55,7 @@ int main(int argc, string argv[])
 
     printf("%s\n",candidates[0].name);
     printf("%s\n",candidates[1].name);
-    printf("%s\n",names[0]);
+    printf("%i\n",names[0]=="Alice");
     printf("%s\n",names[1]);
 
     // Loop over all voters
