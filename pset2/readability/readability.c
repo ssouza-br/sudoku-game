@@ -24,3 +24,17 @@ int count_letters(string text)
     return counter_letters;
 }
 
+int count_words(string text)
+{
+    int len = strlen(text);
+    int counter_letters = 0;
+    for (int i = 0; i < len; i++)
+    {
+        if (isalpha(text[i]))
+        {
+            counter_letters++;
+        }
+    }
+    return counter_letters;
+}
+
