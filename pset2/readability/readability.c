@@ -58,7 +58,8 @@ int count_sentences(string text)
 
 void grade(string text)
 {
-    int L = count_letters(text) / 100;
+    int L = count_letters(text) / 100; //L is the average number of letters per 100 words in the text
+    int S = count_sentences(text); //S is the average number of sentences per 100 words in the text
     int index = 0.0588 * L - 0.296 * S - 15.8
 }
 
