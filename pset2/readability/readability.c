@@ -4,12 +4,14 @@
 #include <ctype.h>
 int count_letters(string text);
 int count_words(string text);
+int count_sentences(string text);
 
 int main(void)
 {
     string text = get_string("Text: ");
     printf("%i letters\n", count_letters(text));
     printf("%i words\n", count_words(text));
+    printf("%i words\n", count_sentences(text));
 }
 
 int count_letters(string text)
@@ -40,17 +42,17 @@ int count_words(string text)
     return counter_words + 1;
 }
 
-int count_words(string text)
+int count_sentences(string text)
 {
     int len = strlen(text);
-    int counter_words = 0;
+    int counter_sentences = 0;
     for (int i = 0; i < len; i++)
     {
-        if (isspace(text[i]))
+        if (ispunct()(text[i]))
         {
-            counter_words++;
+            counter_sentences++;
         }
     }
-    return counter_words + 1;
+    return counter_sentences + 1;
 }
 
