@@ -56,5 +56,9 @@ int count_sentences(string text)
     return counter_sentences;
 }
 
-string 
+void grade(string text)
+{
+    int L = count_letters(text) / 100;
+    int index = 0.0588 * L - 0.296 * S - 15.8
+}
 
