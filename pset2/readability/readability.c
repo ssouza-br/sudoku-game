@@ -11,7 +11,7 @@ int main(void)
     string text = get_string("Text: ");
     printf("%i letters\n", count_letters(text));
     printf("%i words\n", count_words(text));
-    printf("%i words\n", count_sentences(text));
+    printf("%i sentences\n", count_sentences(text));
 }
 
 int count_letters(string text)
