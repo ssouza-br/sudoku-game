@@ -4,11 +4,16 @@
 int main(void)
 {
     int votes_number = get_int("Number of voters: ");
-    printf("Hello, %s\n", name);
+
+    typedef struct // Cria uma STRUCT para armazenar os dados de uma pessoa
+    {
+        string name;   // define o campo Peso
+        int votes;    // define o campo Idade
+    } candidate; // Define o nome do novo tipo criado
+
+    candidate cadidates[10]
+    
 }
 
-typedef struct // Cria uma STRUCT para armazenar os dados de uma pessoa
-{
-    string name;   // define o campo Peso
-    int votes;    // define o campo Idade
-} candidate; // Define o nome do novo tipo criado
+
+
