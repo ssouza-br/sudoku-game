@@ -46,6 +46,8 @@ int main(int argc, string argv[])
     }
 
     int voter_count = get_int("Number of voters: ");
+    printf("%s\n",candidates[0].name);
+    printf("%s\n",candidates[1].name);
 
     // Loop over all voters
     for (int i = 0; i < voter_count; i++)
@@ -68,7 +70,6 @@ bool vote(string name)
 {
     for (int i = 0; i < MAX; i++)
     {
-        printf("%s",candidates[i].name);
         if (candidates[i].name == name)
         {
             candidates[i].votes += 1;
