@@ -48,11 +48,11 @@ int count_sentences(string text)
     int counter_sentences = 0;
     for (int i = 0; i < len; i++)
     {
-        if (ispunct()(text[i]))
+        if (ispunct(text[i]))
         {
             counter_sentences++;
         }
     }
-    return counter_sentences + 1;
+    return counter_sentences;
 }
 
