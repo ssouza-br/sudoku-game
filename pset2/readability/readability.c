@@ -74,7 +74,7 @@ void grade(string text)
         printf("Grade 16+\n");
     }
     else{
-        printf("Grade %.2f\n", round(index));
+        printf("Grade %.2f\n", index);
     }
 }
 
