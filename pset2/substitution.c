@@ -15,6 +15,7 @@ int main(int argc, string argv[])
     else
     {
         string text = get_string("plaintext:  ");
+        printf("%s\n", text);
         encrypt(text,key);
     }
 }
