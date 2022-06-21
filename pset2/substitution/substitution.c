@@ -16,26 +16,26 @@ string encrypt(string text, string key)
     char decode[26];
     char alphabet[26];
     string str_alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    char new_text[100];
+    int len = strlen(text);
+    char new_text[len];
+    string return_text = " ";
 
     for (int i = 0; i < 26; i++)
     {
         decode[i] = key[i];
         alphabet[i] = str_alphabet[i];
     }
-    int i, len;
-    for (i = 0,len = strlen(text); i < len; i++)
+
+    for (int i = 0; i < len; i++)
     {
         for (int j = 0; j < 26; j++)
         {
             if (text[i] == alphabet[j])
             {
-                strcat(new_text,decode[j]);
-                // //printf("%c\n", text[i]);
-                // printf("%c", decode[j]);
+                new_text[i] = decode[j];
             }
         }
-        printf("\n");
+        strcpy(return_text, new_text);
     }
-    return new_text;
+    return return_text;
 }
