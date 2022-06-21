@@ -29,12 +29,19 @@ void encrypt(string text, string key)
 
     for (int i = 0; i < len; i++)
     {
-        for (int j = 0; j < 26; j++)
+        if (isalpha(text[i]))
         {
-            if (text[i] == alphabet[j])
+            for (int j = 0; j < 26; j++)
             {
-                new_text[i] = decode[j];
+                if (text[i] == alphabet[j])
+                {
+                    new_text[i] = decode[j];
+                }
             }
+        }
+        else
+        {
+            new_text[i] = text[i];
         }
     }
     strcpy(return_text, new_text);
