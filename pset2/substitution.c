@@ -15,7 +15,7 @@ int main(int argc, string argv[])
     else
     {
         string text = get_string("plaintext:  ");
-        printf("%s\n", text);
+        //printf("%s\n", text);
         encrypt(text,key);
     }
 }
@@ -65,5 +65,6 @@ void encrypt(string text, string key)
         }
     }
     strcpy(return_text, new_text);
-    printf("ciphertext: %s\n", return_text);
+    printf("ciphertext: %s", return_text);
+    printf("\n");
 }
