@@ -55,16 +55,7 @@ void encrypt(string text, string key)
                 }
                 else if (text[i] == tolower(alphabet[j]))
                 {
-                    if (islower(decode[j]))
-                    {
-                        new_text[i] = decode[j];
-                        //printf("%c\n",new_text[i]);
-                    }
-                    else
-                    {
-                        new_text[i] = tolower(decode[j]);
-                        //printf("%c\n",new_text[i]);
-                    }
+                    new_text[i] = tolower(decode[j]);
                 }
             }
         }
