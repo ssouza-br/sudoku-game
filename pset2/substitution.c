@@ -55,7 +55,6 @@ void encrypt(string text, string key)
                     {
                         new_text[i] = tolower(decode[j]);
                     }
-
                 }
             }
         }
@@ -65,6 +64,6 @@ void encrypt(string text, string key)
         }
     }
     strcpy(return_text, new_text);
-    printf("ciphertext: %s", return_text);
-    printf("\n");
+    printf("%lu\n", strlen(return_text));
+    printf("ciphertext: %s\n", return_text);
 }
