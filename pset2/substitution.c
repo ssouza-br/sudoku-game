@@ -3,7 +3,7 @@
 #include <string.h>
 #include <ctype.h>
 
-void encrypt(string text, string key);
+string encrypt(string text, string key);
 
 int main(int argc, string argv[])
 {
@@ -21,8 +21,7 @@ int main(int argc, string argv[])
     else
     {
         string text = get_string("plaintext:  ");
-        //printf("%s\n", text);
-        encrypt(text,key);
+        printf("%s\n", encrypt(text,key));
     }
 }
 
