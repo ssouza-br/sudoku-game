@@ -15,10 +15,8 @@ int main(int argc, string argv[])
 void encrypt(string text, string key)
 {
     char decode[26];
-    char upper_alphabet[26];
-    char lower_alphabet[26];
-    string str_upper_alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    string str_lower_alphabet = "abcdefghijklmnopqrstuvwxyz";
+    char alphabet[26];
+    string str_alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     int len = strlen(text);
     char new_text[len];
     char return_text[len];
@@ -26,8 +24,7 @@ void encrypt(string text, string key)
     for (int i = 0; i < 26; i++)
     {
         decode[i] = key[i];
-        lower_alphabet[i] = str_lower_alphabet[i];
-        upper_alphabet[i] = str_upper_alphabet[i];
+        alphabet[i] = str_alphabet[i];
     }
 
     for (int i = 0; i < len; i++)
@@ -36,13 +33,13 @@ void encrypt(string text, string key)
         {
             for (int j = 0; j < 26; j++)
             {
-                if (text[i] == upper_alphabet[j])
+                if (text[i] == alphabet[j])
                 {
                     new_text[i] = decode[j];
                 }
-                else if (text[i] == lower_alphabet[j])
+                else if (text[i] == tolower(alphabet[j]))
                 {
-                    new_text[i] = tolower(decode[j];
+                    new_text[i] = tolower(decode[j]);
                 }
             }
         }
