@@ -36,6 +36,6 @@ string encrypt(string text, string key)
             }
         }
     }
-    strcpy(return_text, new_text);
+    //strcpy(return_text, new_text);
     return return_text;
 }
