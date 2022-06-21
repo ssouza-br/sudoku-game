@@ -16,6 +16,7 @@ string encrypt(string text, string key)
     char decode[26];
     char alphabet[26];
     string str_alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    string new_text = " ";
 
     for (int i = 0; i < 26; i++)
     {
@@ -29,7 +30,7 @@ string encrypt(string text, string key)
         {
             if (text[i] == alphabet[j])
             {
-                text[i] = decode[j];
+                new_text[i] = decode[j];
             }
         }
     }
