@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
-
+string encrypt(string text, string key)
 int main(int argc, string argv[])
 {
     string key = argv[1]
@@ -22,10 +22,8 @@ string encrypt(string text, string key)
         {
             if (text[i] == alpabet[j])
             {
-
+                text[i] = decode[j];
             }
         }
-
-        decode[i] = key[i];
     }
 }
