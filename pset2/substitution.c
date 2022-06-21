@@ -50,6 +50,10 @@ void encrypt(string text, string key)
                     {
                         new_text[i] = decode[j];
                     }
+                    else
+                    {
+                        new_text[i] = tolower(decode[j]);
+                    }
 
                 }
             }
