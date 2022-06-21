@@ -14,4 +14,8 @@ string encrypt(string text, string key)
     {
         decode[i] = key[i];
     }
+    for (int i =0, int len = strlen(text); i < len; i++)
+    {
+        decode[i] = key[i];
+    }
 }
