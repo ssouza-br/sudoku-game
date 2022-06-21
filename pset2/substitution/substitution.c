@@ -35,6 +35,7 @@ string encrypt(string text, string key)
                 printf("%c", decode[j]);
             }
         }
+        printf("\n");
     }
     return text;
 }
