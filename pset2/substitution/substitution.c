@@ -30,12 +30,12 @@ string encrypt(string text, string key)
         {
             if (text[i] == alphabet[j])
             {
-                //new_text[i] = decode[j];
-                //printf("%c\n", text[i]);
-                printf("%c", decode[j]);
+                strcat(new_text,decode[j]);
+                // //printf("%c\n", text[i]);
+                // printf("%c", decode[j]);
             }
         }
         printf("\n");
     }
-    return text;
+    return new_text;
 }
