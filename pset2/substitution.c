@@ -36,9 +36,13 @@ void encrypt(string text, string key)
         {
             for (int j = 0; j < 26; j++)
             {
-                if (text[i] == alphabet[j])
+                if (text[i] == upper_alphabet[j])
                 {
                     new_text[i] = decode[j];
+                }
+                else if (text[i] == lower_alphabet[j])
+                {
+                    new_text[i] = tolower(decode[j];
                 }
             }
         }
