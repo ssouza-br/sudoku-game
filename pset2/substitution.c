@@ -51,11 +51,7 @@ void encrypt(string text, string key)
                 //buscando a letra no alfabeto maiusculo
                 if (text[i] == upper_alphabet[j])
                 {
-                    if (isupper(decode[j]))
-                    {
-                        new_text[i] = decode[j];
-                    }
-                    //printf("%c\n",new_text[i]);
+                    new_text[i] = decode[j];
                 }
                 else if (text[i] == tolower(alphabet[j]))
                 {
