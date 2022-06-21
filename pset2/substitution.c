@@ -8,14 +8,14 @@ void encrypt(string text, string key);
 int main(int argc, string argv[])
 {
     string key = argv[1];
-    if (strlen(key) != 26)
+    if (argc != 2)
     {
-        printf("Key must contain 26 characters.\n");
+        printf("Usage: ./substitution key\n");
         return 1;
     }
-    else if (argc != 2)
+    else if (strlen(key) != 26)
     {
-        printf("Usage: ./substitution key");
+        printf("Key must contain 26 characters.\n");
         return 1;
     }
     else
