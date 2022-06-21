@@ -18,7 +18,13 @@ string encrypt(string text, string key)
     }
     for (int i = 0, int len = strlen(text); i < len; i++)
     {
+        for (int j = 0; j < 26; j++)
+        {
+            if (text[i] == alpabet[j])
+            {
 
+            }
+        }
 
         decode[i] = key[i];
     }
