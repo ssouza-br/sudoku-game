@@ -31,8 +31,8 @@ string encrypt(string text, string key)
             if (text[i] == alphabet[j])
             {
                 //new_text[i] = decode[j];
-                printf("%c\n", text[i]);
-                printf("%c\n", decode[j]);
+                //printf("%c\n", text[i]);
+                printf("%c", decode[j]);
             }
         }
     }
