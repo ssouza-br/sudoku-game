@@ -1,6 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
+
 string encrypt(string text, string key);
 
 int main(int argc, string argv[])
@@ -14,17 +15,18 @@ string encrypt(string text, string key)
 {
     char decode[26];
     char alphabet[26];
-    alphabet = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+    string str_alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
     for (int i = 0; i < 26; i++)
     {
         decode[i] = key[i];
+        alphabet[i] = str_alphabet[i];
     }
     for (int i = 0, int len = strlen(text); i < len; i++)
     {
         for (int j = 0; j < 26; j++)
         {
-            if (text[i] == alpabet[j])
+            if (text[i] == str_alphabet[j])
             {
                 text[i] = decode[j];
             }
