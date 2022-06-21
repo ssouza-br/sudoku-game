@@ -46,7 +46,11 @@ void encrypt(string text, string key)
                 }
                 else if (text[i] == tolower(alphabet[j]))
                 {
-                    new_text[i] = decode[j];
+                    if (islower(decode[j]))
+                    {
+                        new_text[i] = decode[j];
+                    }
+
                 }
             }
         }
