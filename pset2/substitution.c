@@ -12,6 +12,10 @@ int main(int argc, string argv[])
     {
         printf("Key must contain 26 characters.\n");
     }
+    else if (argc != 2)
+    {
+        printf("Usage: ./substitution key");
+    }
     else
     {
         string text = get_string("plaintext:  ");
@@ -44,19 +48,19 @@ void encrypt(string text, string key)
                 if (text[i] == alphabet[j])
                 {
                     new_text[i] = decode[j];
-                    printf("%c\n",new_text[i]);
+                    //printf("%c\n",new_text[i]);
                 }
                 else if (text[i] == tolower(alphabet[j]))
                 {
                     if (islower(decode[j]))
                     {
                         new_text[i] = decode[j];
-                        printf("%c\n",new_text[i]);
+                        //printf("%c\n",new_text[i]);
                     }
                     else
                     {
                         new_text[i] = tolower(decode[j]);
-                        printf("%c\n",new_text[i]);
+                        //printf("%c\n",new_text[i]);
                     }
                 }
             }
@@ -64,7 +68,7 @@ void encrypt(string text, string key)
         else
         {
             new_text[i] = text[i];
-            printf("%c\n",new_text[i]);
+            //printf("%c\n",new_text[i]);
         }
     }
     // strcpy(return_text, new_text);
