@@ -38,5 +38,5 @@ string encrypt(string text, string key)
     }
     strcpy(return_text, new_text);
     printf("%s\n", return_text);
-    return text;
+    return return_text;
 }
