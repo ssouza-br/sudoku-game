@@ -33,4 +33,5 @@ string encrypt(string text, string key)
             }
         }
     }
+    return text;
 }
