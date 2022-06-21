@@ -33,6 +33,7 @@ void encrypt(string text, string key)
     string str_upper_alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     int len = strlen(text);
     char new_text[len];
+    char return_text[len];
 
     for (int i = 0; i < 26; i++)
     {
@@ -65,8 +66,8 @@ void encrypt(string text, string key)
             //printf("%c\n",new_text[i]);
         }
     }
-    // strcpy(return_text, new_text);
+    strcpy(return_text, new_text);
     // printf("%lu\n", strlen(return_text));
     // printf("ciphertext: %s\n", return_text);
-    printf("ciphertext: %s\n", new_text);
+    printf("ciphertext: %s\n", return_text);
 }
