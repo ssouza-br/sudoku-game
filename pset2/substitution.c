@@ -69,6 +69,7 @@ void encrypt(string text, string key)
     strcpy(return_text, new_text);
     printf("%lu\n", strlen(return_text));
     printf("%lu\n", strlen(text));
+    printf("%lu\n", strlen(new_text));
     // printf("ciphertext: %s\n", return_text);
     printf("ciphertext: %s\n", return_text);
 
