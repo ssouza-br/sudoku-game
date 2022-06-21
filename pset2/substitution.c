@@ -31,12 +31,13 @@ void encrypt(string text, string key)
     char decode[26];
     char upper_alphabet[26];
     string str_upper_alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    string upper_key = toupper(key);
     int len = strlen(text);
     char new_text[len];
 
     for (int i = 0; i < 26; i++)
     {
-        decode[i] = key[i];
+        decode[i] = upper_key[i];
         upper_alphabet[i] = str_upper_alphabet[i];
     }
 
