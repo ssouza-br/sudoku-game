@@ -49,5 +49,5 @@ void encrypt(string text, string key)
         }
     }
     strcpy(return_text, new_text);
-    printf("ciphertext: %s\n", return_text);
+    printf("ciphertext: %s", return_text);
 }
