@@ -42,13 +42,18 @@ void encrypt(string text, string key)
 
     for (int i = 0; i < len; i++)
     {
+        //caso seja uma letra
         if (isalpha(text[i]))
         {
             for (int j = 0; j < 26; j++)
             {
-                if (text[i] == alphabet[j])
+                //buscando a letra no alfabeto maiusculo
+                if (text[i] == upper_alphabet[j])
                 {
-                    new_text[i] = decode[j];
+                    if (isupper(decode[j]))
+                    {
+                        new_text[i] = decode[j];
+                    }
                     //printf("%c\n",new_text[i]);
                 }
                 else if (text[i] == tolower(alphabet[j]))
@@ -66,6 +71,7 @@ void encrypt(string text, string key)
                 }
             }
         }
+        //caso n seja uma letra
         else
         {
             new_text[i] = text[i];
