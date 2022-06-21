@@ -22,7 +22,8 @@ string encrypt(string text, string key)
         decode[i] = key[i];
         alphabet[i] = str_alphabet[i];
     }
-    for (int i = 0, int len = strlen(text); i < len; i++)
+    int i, len;
+    for (i = 0,len = strlen(text); i < len; i++)
     {
         for (int j = 0; j < 26; j++)
         {
