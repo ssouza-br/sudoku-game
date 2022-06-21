@@ -8,8 +8,13 @@ void encrypt(string text, string key);
 int main(int argc, string argv[])
 {
     string key = argv[1];
+    if (strlen(key) != 26)
+    {
+
+    }
     string text = get_string("plaintext:  ");
     encrypt(text,key);
+
 }
 
 void encrypt(string text, string key)
@@ -49,5 +54,5 @@ void encrypt(string text, string key)
         }
     }
     strcpy(return_text, new_text);
-    printf("ciphertext: %s", return_text);
+    printf("ciphertext: %s\n", return_text);
 }
