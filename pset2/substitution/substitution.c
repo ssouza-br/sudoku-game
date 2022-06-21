@@ -10,7 +10,7 @@ int main(int argc, string argv[])
 string encrypt(string text, string key)
 {
     char decode[26];
-    char alphabet = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','X','Y','W']
+    char alphabet = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','X','Y','Z','W']
     for (int i =0; i < 26; i++)
     {
         decode[i] = key[i];
