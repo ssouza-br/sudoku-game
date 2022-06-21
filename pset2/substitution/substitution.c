@@ -2,16 +2,16 @@
 #include <stdio.h>
 #include <string.h>
 
-string encrypt(string text, string key);
+void encrypt(string text, string key);
 
 int main(int argc, string argv[])
 {
     string key = argv[1];
     string text = get_string("plaintext:  ");
-    printf("ciphertext: %s\n", encrypt(text,key));
+    encrypt(text,key);
 }
 
-string encrypt(string text, string key)
+void encrypt(string text, string key)
 {
     char decode[26];
     char alphabet[26];
@@ -37,6 +37,5 @@ string encrypt(string text, string key)
         }
     }
     strcpy(return_text, new_text);
-    printf("%s\n", return_text);
-    return return_text;
+    printf("ciphertext: %s\n", return_text);
 }
