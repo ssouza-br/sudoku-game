@@ -29,15 +29,15 @@ int main(int argc, string argv[])
 void encrypt(string text, string key)
 {
     char decode[26];
-    char alphabet[26];
-    string str_alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    char upper_alphabet[26];
+    string str_upper_alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     int len = strlen(text);
     char new_text[len];
 
     for (int i = 0; i < 26; i++)
     {
         decode[i] = key[i];
-        alphabet[i] = str_alphabet[i];
+        upper_alphabet[i] = str_upper_alphabet[i];
     }
 
     for (int i = 0; i < len; i++)
