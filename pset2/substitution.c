@@ -3,7 +3,7 @@
 #include <string.h>
 #include <ctype.h>
 
-string encrypt(string text, string key);
+void encrypt(string text, string key);
 
 int main(int argc, string argv[])
 {
@@ -21,11 +21,12 @@ int main(int argc, string argv[])
     else
     {
         string text = get_string("plaintext:  ");
-        printf("%s\n", encrypt(text,key));
+        //printf("%s\n", text);
+        encrypt(text,key);
     }
 }
 
-string encrypt(string text, string key)
+void encrypt(string text, string key)
 {
     char decode[26];
     char alphabet[26];
@@ -75,6 +76,5 @@ string encrypt(string text, string key)
     // strcpy(return_text, new_text);
     // printf("%lu\n", strlen(return_text));
     // printf("ciphertext: %s\n", return_text);
-    //printf("ciphertext: %s\n", new_text);
-    return new_text;
+    printf("ciphertext: %s\n", new_text);
 }
