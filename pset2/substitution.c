@@ -26,7 +26,7 @@ int main(int argc, string argv[])
     }
 }
 
-void encrypt(string text, string key)
+string encrypt(string text, string key)
 {
     char decode[26];
     char alphabet[26];
@@ -76,5 +76,6 @@ void encrypt(string text, string key)
     // strcpy(return_text, new_text);
     // printf("%lu\n", strlen(return_text));
     // printf("ciphertext: %s\n", return_text);
-    printf("ciphertext: %s\n", new_text);
+    //printf("ciphertext: %s\n", new_text);
+    return new_text;
 }
