@@ -61,6 +61,7 @@ void encrypt(string text, string key)
         else
         {
             new_text[i] = text[i];
+            printf("%c\n",new_text[i]);
         }
     }
     // strcpy(return_text, new_text);
