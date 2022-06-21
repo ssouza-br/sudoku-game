@@ -12,9 +12,9 @@ void grade(string text);
 int main(void)
 {
     string text = get_string("Text: ");
-    printf("%i letters\n", count_letters(text));
-    printf("%i words\n", count_words(text));
-    printf("%i sentences\n", count_sentences(text));
+    // printf("%i letters\n", count_letters(text));
+    // printf("%i words\n", count_words(text));
+    // printf("%i sentences\n", count_sentences(text));
     grade(text);
 }
 
@@ -74,7 +74,7 @@ void grade(string text)
         printf("Grade 16+\n");
     }
     else{
-        printf("Grade %.0f\n", round(index));
+        printf("Grade %i\n", (int) index);
     }
 }
 
