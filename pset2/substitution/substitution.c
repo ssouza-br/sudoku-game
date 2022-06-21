@@ -1,16 +1,20 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
-string encrypt(string text, string key)
+string encrypt(string text, string key);
+
 int main(int argc, string argv[])
 {
-    string key = argv[1]
+    string key = argv[1];
+    string text = get_string("plaintext:  ");
+    printf("%s\n", encrypt(text,key));
 }
 
 string encrypt(string text, string key)
 {
     char decode[26];
-    char alphabet = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+    char alphabet[26];
+    alphabet = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
 
     for (int i = 0; i < 26; i++)
     {
