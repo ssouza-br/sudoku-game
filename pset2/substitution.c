@@ -66,11 +66,12 @@ void encrypt(string text, string key)
             //printf("%c\n",new_text[i]);
         }
     }
-    strcpy(return_text, new_text);
+    new_text[len]='\0';
+    //strcpy(return_text, new_text);
     // printf("%lu\n", strlen(return_text));
-    printf("%i\n", len);
+    //printf("%i\n", len);
     // printf("%lu\n", strlen(new_text));
     // printf("ciphertext: %s\n", return_text);
-    printf("ciphertext: %s\n", return_text);
+    printf("ciphertext: %s\n", new_text);
 
 }
