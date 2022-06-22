@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    char nome[2];
+    char nome[1];
     nome[0] = 'S';
     nome[1] = 'E';
     nome[2] = 'R';
