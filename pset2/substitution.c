@@ -68,6 +68,19 @@ void encrypt(string text, string key)
 
 bool key_valid(string key)
 {
+    int len = strlen(key);
+
+    for (int i = 0; i < len; i++)
+    {
+        if (!isalpha(key[i])){
+            return false;
+        }
+    }
+    return true;
+}
+
+bool check_key_duplicity(string key)
+{
     typedef struct
     {
         char letter;
@@ -78,10 +91,6 @@ bool key_valid(string key)
 
     for (int i = 0; i < len; i++)
     {
-        if (!isalpha(key[i])){
-            return false;
-        }
-
         if (dictionary[i].letter == '')
         {
             dictionary[i].letter = key[i];
@@ -89,9 +98,7 @@ bool key_valid(string key)
         }
         else
         {
-            
+            dictionary[i].count = dictionary[i].count + 1;
         }
-
     }
-    return true;
 }
