@@ -75,12 +75,13 @@ bool key_valid(string key)
     } letter
 
     dictionary = letter[26];
-    
-    for (int i = 0, len = strlen(key); i < len; i++)
+
+    for (int i = 0, ; i < len; i++)
     {
         if (!isalpha(key[i])){
             return false;
         }
+
     }
     return true;
 }
