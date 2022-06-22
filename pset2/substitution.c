@@ -5,11 +5,12 @@
 
 void encrypt(string text, string key);
 bool key_valid(string key);
+bool check_key_duplicity(string key);
 
 int main(int argc, string argv[])
 {
     string key = argv[1];
-    if (argc != 2 || !key_valid(key))
+    if (argc != 2 || !key_valid(key) || !check_key_duplicity(key))
     {
         printf("Usage: ./substitution key\n");
         return 1;
@@ -81,24 +82,17 @@ bool key_valid(string key)
 
 bool check_key_duplicity(string key)
 {
-    typedef struct
-    {
-        char letter;
-        int count
-    } letter
     int len = strlen(key);
-    dictionary = letter[len];
 
     for (int i = 0; i < len; i++)
     {
-        if (dictionary[i].letter == '')
+        for (int j = 0; j < len, i != j; j++)
         {
-            dictionary[i].letter = key[i];
-            dictionary[i].count = 1;
-        }
-        else
-        {
-            dictionary[i].count = dictionary[i].count + 1;
+            if (key[i] == key[j])
+            {
+                return false
+            }
         }
     }
+    return true;
 }
