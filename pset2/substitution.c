@@ -82,7 +82,12 @@ bool key_valid(string key)
             return false;
         }
 
-        if ()
+        if (dictionary[i].letter == '')
+        {
+            dictionary[i].letter = key[i];
+            dictionary[i].count = 1;
+        }
+        else
         {
             
         }
