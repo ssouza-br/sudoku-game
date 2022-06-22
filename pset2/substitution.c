@@ -86,11 +86,11 @@ bool check_key_duplicity(string key)
 
     for (int i = 0; i < len; i++)
     {
-        for (int j = 0; j < len, i != j; j++)
+        for (int j = 0; j < len && i != j; j++)
         {
             if (key[i] == key[j])
             {
-                return false
+                return false;
             }
         }
     }
