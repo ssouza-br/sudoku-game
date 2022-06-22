@@ -4,6 +4,7 @@
 #include <ctype.h>
 
 void encrypt(string text, string key);
+bool key_valid(string key);
 
 int main(int argc, string argv[])
 {
@@ -73,4 +74,5 @@ bool key_valid(string key)
             return false;
         }
     }
+    return true;
 }
