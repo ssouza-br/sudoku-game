@@ -64,3 +64,13 @@ void encrypt(string text, string key)
     new_text[len] = '\0';
     printf("ciphertext: %s\n", new_text);
 }
+
+bool key_valid(string key)
+{
+    for (int i = 0, int len = strlen(key); i < len, i++)
+    {
+        if (!isalpha(key[i])){
+            return false;
+        }
+    }
+}
