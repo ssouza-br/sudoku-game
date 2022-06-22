@@ -32,7 +32,7 @@ void encrypt(string text, string key)
     char upper_alphabet[26];
     string str_upper_alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     int len = strlen(text);
-    char new_text[len];
+    char new_text[len + 1];
     char return_text[len];
 
     for (int i = 0; i < 26; i++)
