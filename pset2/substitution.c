@@ -73,13 +73,18 @@ bool key_valid(string key)
         char letter;
         int count
     } letter
+    int len = strlen(key);
+    dictionary = letter[len];
 
-    dictionary = letter[26];
-
-    for (int i = 0, ; i < len; i++)
+    for (int i = 0; i < len; i++)
     {
         if (!isalpha(key[i])){
             return false;
+        }
+
+        if ()
+        {
+            
         }
 
     }
