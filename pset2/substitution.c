@@ -73,7 +73,8 @@ bool key_valid(string key)
 
     for (int i = 0; i < len; i++)
     {
-        if (!isalpha(key[i])){
+        if (!isalpha(key[i]))
+        {
             return false;
         }
     }
