@@ -72,7 +72,9 @@ bool key_valid(string key)
     {
         char letter;
         int count
-    } key_dictionary
+    } letter
+
+    dictionary = letter[26];
     
     for (int i = 0, len = strlen(key); i < len; i++)
     {
