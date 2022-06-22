@@ -43,12 +43,10 @@ void encrypt(string text, string key)
 
     for (int i = 0; i < len; i++)
     {
-        //caso seja uma letra
         if (isalpha(text[i]))
         {
             for (int j = 0; j < 26; j++)
             {
-                //buscando a letra no alfabeto maiusculo
                 if (text[i] == upper_alphabet[j])
                 {
                     new_text[i] = decode[j];
@@ -59,19 +57,11 @@ void encrypt(string text, string key)
                 }
             }
         }
-        //caso n seja uma letra
         else
         {
             new_text[i] = text[i];
-            //printf("%c\n",new_text[i]);
         }
     }
     new_text[len]='\0';
-    //strcpy(return_text, new_text);
-    // printf("%lu\n", strlen(return_text));
-    //printf("%i\n", len);
-    // printf("%lu\n", strlen(new_text));
-    // printf("ciphertext: %s\n", return_text);
     printf("ciphertext: %s\n", new_text);
-
 }
