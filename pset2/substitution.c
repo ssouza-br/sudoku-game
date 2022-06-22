@@ -68,6 +68,12 @@ void encrypt(string text, string key)
 
 bool key_valid(string key)
 {
+    typedef struct
+    {
+        char letter;
+        int count
+    } key_dictionary
+    
     for (int i = 0, len = strlen(key); i < len; i++)
     {
         if (!isalpha(key[i])){
