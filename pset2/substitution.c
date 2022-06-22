@@ -62,6 +62,6 @@ void encrypt(string text, string key)
             new_text[i] = text[i];
         }
     }
-    new_text[len]='\0';
+    new_text[len] = '\0';
     printf("ciphertext: %s\n", new_text);
 }
