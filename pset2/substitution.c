@@ -9,7 +9,7 @@ bool key_valid(string key);
 int main(int argc, string argv[])
 {
     string key = argv[1];
-    if (argc != 2)
+    if (argc != 2 || !key_valid(key))
     {
         printf("Usage: ./substitution key\n");
         return 1;
