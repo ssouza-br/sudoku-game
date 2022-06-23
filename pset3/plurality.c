@@ -90,16 +90,16 @@ void print_winner(void)
     int k = 0;
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i].votes > max_votes)
+        if (candidates[i].votes >= max_votes)
         {
             max_votes = candidates[i].votes;
             winner[k] = candidates[i].name;
         }
-        else if (candidates[i].votes == max_votes && max_votes !=0)
-        {
-            k++;
-            winner[k] = candidates[i].name;
-        }
+        // else if (candidates[i].votes == max_votes && max_votes !=0)
+        // {
+        //     k++;
+        //     winner[k] = candidates[i].name;
+        // }
     }
     for (int i = 0; i < k; i++)
     {
