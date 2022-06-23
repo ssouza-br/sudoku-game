@@ -97,6 +97,8 @@ void print_winner(void)
             k++;
         }
     }
-    printf("%s\n", winner);
-    return;
+    for (int i = 0; i < k; i++)
+    {
+        printf("%s\n", winner[i]);
+    }
 }
