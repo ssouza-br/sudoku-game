@@ -96,8 +96,5 @@ void print_winner(void)
         }
     }
     printf("%s\n", winner);
-    // TODO
-    //return;
+    return;
 }
-
-int 
