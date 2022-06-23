@@ -94,7 +94,6 @@ void print_winner(void)
         {
             max_votes = candidates[i].votes;
             winner[k] = candidates[i].name;
-            k++;
         }
         else if (candidates[i].votes == max_votes)
         {
