@@ -130,7 +130,7 @@ void record_preferences(int ranks[])
 
     //j = 2;
     //i =0;
-    // preferences[ranks[0]][ranks[1]] = preferences[ranks[0]][ranks[1]] + 1;
+    // preferences[ranks[0]][ranks[2]] = preferences[ranks[0]][ranks[2]] + 1;
     //i =1;
     // preferences[ranks[1]][ranks[2]] = preferences[ranks[1]][ranks[2]] + 1;
 
