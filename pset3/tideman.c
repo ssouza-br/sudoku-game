@@ -115,41 +115,14 @@ bool vote(int rank, string name, int ranks[])
 // Update preferences given one voter's ranks
 void record_preferences(int ranks[])
 {
-    int k = 0;
-    //k indo de 1 até counter_votes - 1 -> supondo 4 candidatos
-    //k=1
-    //preferences[ranks[0]][ranks[1]] = preferences[ranks[0]][ranks[1]] + 1;//0 com 1, 0 com 2, 0 com 3
-    //preferences[ranks[1]][ranks[2]] = preferences[ranks[1]][ranks[2]] + 1;//1 com 2, 1 com 3
-    //preferences[ranks[2]][ranks[3]] = preferences[ranks[2]][ranks[3]] + 1;//2 com 3
-    //....
-    //preferences[ranks[candidates - 2]][candidates - 1] = preferences[ranks[candidates - 2]][candidates - 1] + 1;//2 com 3
-
     for (int i = 0; i < candidate_count - 1; i++)
     {
-        preferences[ranks[i]][ranks[i + 1]] = [ranks[i]][ranks[i + 1]] + 1;
+        preferences[ranks[i]][ranks[i + 1]] = preferences[ranks[i]][ranks[i + 1]] + 1;
     }
 
-
-    //k=1
-    //preferences[ranks[0]][ranks[1]] = preferences[ranks[0]][ranks[1]] + 1;//0 com 1, 0 com 2, 0 com 3
-    //preferences[ranks[1]][ranks[2]] = preferences[ranks[1]][ranks[2]] + 1;//1 com 2, 1 com 3
-    //preferences[ranks[2]][ranks[3]] = preferences[ranks[2]][ranks[3]] + 1;//2 com 3
-
-
-
-    preferences[ranks[0]][ranks[0 + k]] = preferences[ranks[0]][ranks[0 + k]] + 1;//0 com 1, 0 com 2, 0 com 3
-
-
-
-
-
-    preferences[ranks[1]][ranks[1 + k]] = preferences[ranks[1]][ranks[1 + k]] + 1;//1 com 2, 1 com 3
-
-    preferences[ranks[2]][ranks[2 + k]] = preferences[ranks[2]][ranks[2 + k]] + 1;//2 com 3
-
-    preferences[ranks[k]][ranks[k + 1]] = preferences[ranks[k]][ranks[k + 1]] + 1;
-    preferences[ranks[k]][ranks[k + 2]] = preferences[ranks[k]][ranks[k + 2]] + 1;
-    preferences[ranks[k + 1]][ranks[k + 2]] = preferences[ranks[k + 1]][ranks[k + 2]] + 1;
+    // preferences[ranks[k]][ranks[k + 1]] = preferences[ranks[k]][ranks[k + 1]] + 1;
+    // preferences[ranks[k]][ranks[k + 2]] = preferences[ranks[k]][ranks[k + 2]] + 1;
+    // preferences[ranks[k + 1]][ranks[k + 2]] = preferences[ranks[k + 1]][ranks[k + 2]] + 1;
     return;
 }
 
