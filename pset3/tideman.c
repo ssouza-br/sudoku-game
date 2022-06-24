@@ -119,6 +119,8 @@ void record_preferences(int ranks[])
     //k indo de 1 até counter_votes - 1 -> supondo 4 candidatos
     //k=1
     //preferences[ranks[0]][ranks[1]] = preferences[ranks[0]][ranks[1]] + 1;//0 com 1, 0 com 2, 0 com 3
+    //preferences[ranks[1]][ranks[2]] = preferences[ranks[1]][ranks[2]] + 1;//1 com 2, 1 com 3
+
 
 
     preferences[ranks[0]][ranks[0 + k]] = preferences[ranks[0]][ranks[0 + k]] + 1;//0 com 1, 0 com 2, 0 com 3
