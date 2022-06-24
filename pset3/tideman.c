@@ -116,6 +116,13 @@ bool vote(int rank, string name, int ranks[])
 void record_preferences(int ranks[])
 {
     int k = 0;
+    //k indo de 1 até counter_votes - 1 -> supondo 4 candidatos
+    preferences[ranks[0]][ranks[0 + k]] = preferences[ranks[0]][ranks[0 + k]] + 1;//0 com 1, 0 com 2, 0 com 3
+
+    preferences[ranks[1]][ranks[k + 2]] = preferences[ranks[k + 1]][ranks[k + 2]] + 1;//1 com 2, 1 com 3
+
+    //2 com 3
+
     preferences[ranks[k]][ranks[k + 1]] = preferences[ranks[k]][ranks[k + 1]] + 1;
     preferences[ranks[k]][ranks[k + 2]] = preferences[ranks[k]][ranks[k + 2]] + 1;
     preferences[ranks[k + 1]][ranks[k + 2]] = preferences[ranks[k + 1]][ranks[k + 2]] + 1;
