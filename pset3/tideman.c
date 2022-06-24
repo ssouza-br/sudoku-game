@@ -123,7 +123,8 @@ void record_preferences(int ranks[])
             {
                 preferences[ranks[k]][ranks[k + 1]] = preferences[ranks[k]][ranks[k + 1]] + 1;
                 preferences[ranks[k]][ranks[k + 2]] = preferences[ranks[k]][ranks[k + 2]] + 1;
-                preferences[ranks[1]][ranks[i]] = preferences[ranks[1]][ranks[i]] + 1;
+                preferences[ranks[k + 1]][ranks[k + 2]] = preferences[ranks[k + 1]][ranks[k + 2]] + 1;
+
             }
             // printf("i: %i j: %i value: %i\n", ranks[0], ranks[i], preferences[ranks[0]][ranks[i]]);
             // printf("i: %i j: %i value: %i\n", ranks[1], ranks[i], preferences[ranks[1]][ranks[i]]);
