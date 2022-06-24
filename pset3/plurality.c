@@ -100,6 +100,7 @@ void print_winner(void)
         if (candidates[i].votes == max_votes)
         {
             winner[k] = candidates[i].name;
+            k++;
         }
     }
     for (int i = 0; i < k; i++)
