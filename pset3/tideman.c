@@ -162,14 +162,17 @@ void sort_pairs(void)
         if (strength > max_strength)
         {
             max_strength = strength;
-            temp.winner = pairs[0].winner;
-            temp.loser =  pairs[0].loser;
+            temp = {pairs[0].winner, pairs[0].loser};
+            // temp.winner = pairs[0].winner;
+            // temp.loser =  pairs[0].loser;
 
-            pairs[0].winner = pairs[i].winner;
-            pairs[0].loser = pairs[i].loser;
+            pairs[0] = {pairs[i].winner, pairs[i].loser};
+            // pairs[0].winner = pairs[i].winner;
+            // pairs[0].loser = pairs[i].loser;
 
-            pairs[i].winner = temp.winner;
-            pairs[i].loser = temp.loser;
+            pairs[i] = {temp.winner, temp.loser}
+            // pairs[i].winner = temp.winner;
+            // pairs[i].loser = temp.loser;
 
         }
     }
