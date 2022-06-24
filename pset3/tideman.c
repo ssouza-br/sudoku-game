@@ -154,30 +154,23 @@ void sort_pairs(void)
 {
     int max_strength = 0;
     pair temp = {0, 0};
-    // temp.winner = 0;
-    // temp.loser = 0;
+
     for (int i = 0; i < pair_count; i++)
     {
         int strength = preferences[pairs[i].winner][pairs[i].loser] - preferences[pairs[i].loser][pairs[i].winner];
         if (strength > max_strength)
         {
             max_strength = strength;
-            temp = {pairs[0].winner, pairs[0].loser};
-            // temp.winner = pairs[0].winner;
-            // temp.loser =  pairs[0].loser;
+            temp.winner = pairs[0].winner;
+            temp.loser =  pairs[0].loser;
 
-            pairs[0] = {pairs[i].winner, pairs[i].loser};
-            // pairs[0].winner = pairs[i].winner;
-            // pairs[0].loser = pairs[i].loser;
+            pairs[0].winner = pairs[i].winner;
+            pairs[0].loser = pairs[i].loser;
 
-            pairs[i] = {temp.winner, temp.loser}
-            // pairs[i].winner = temp.winner;
-            // pairs[i].loser = temp.loser;
-
+            pairs[i].winner = temp.winner;
+            pairs[i].loser = temp.loser;
         }
     }
-
-    // TODO
     return;
 }
 
