@@ -122,22 +122,6 @@ void record_preferences(int ranks[])
             preferences[ranks[i]][ranks[i + j]] = preferences[ranks[i]][ranks[i + j]] + 1;
         }
     }
-    //j = 1;
-    //i =0;
-    // preferences[ranks[0]][ranks[1]] = preferences[ranks[0]][ranks[1]] + 1;
-    //i =1;
-    // preferences[ranks[1]][ranks[2]] = preferences[ranks[1]][ranks[2]] + 1;
-
-    //j = 2;
-    //i =0;
-    // preferences[ranks[0]][ranks[2]] = preferences[ranks[0]][ranks[2]] + 1;
-    //i =1;
-    // preferences[ranks[1]][ranks[3]] = preferences[ranks[0]][ranks[3]] + 1; NÃO EXISTE
-
-
-
-
-
     //int k =0;
     // preferences[ranks[k]][ranks[k + 1]] = preferences[ranks[k]][ranks[k + 1]] + 1;
     // preferences[ranks[k]][ranks[k + 2]] = preferences[ranks[k]][ranks[k + 2]] + 1;
