@@ -164,13 +164,13 @@ void sort_pairs(void)
             max_strength = strength;
             temp.winner = pairs[0].winner;
             temp.loser =  pairs[0].loser;
-            //printf("pairs0 original winner: %i loser: %i", temp.winner, temp.loser);
+
             pairs[0].winner = pairs[i].winner;
             pairs[0].loser = pairs[i].loser;
-            //printf("pairs0 atual winner: %i loser: %i", pairs[0].winner, pairs[0].loser);
+
             pairs[i].winner = temp.winner;
             pairs[i].loser = temp.loser;
-            //printf("pairsi trocado winner: %i loser: %i", pairs[i].winner, pairs[i].loser);
+
         }
     }
 
