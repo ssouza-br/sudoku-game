@@ -133,9 +133,9 @@ void record_preferences(int ranks[])
 void add_pairs(void)
 {
     int k = 0;
-    for (int i = 0; i < candidate_count - 1; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
-        for (int j = 0; j < candidate_count - 1 && j != i; j++)
+        for (int j = 0; j < candidate_count; j++)
         {
             if (preferences[i][j] > preferences[j][i])
             {
