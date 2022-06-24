@@ -122,10 +122,6 @@ void record_preferences(int ranks[])
             preferences[ranks[i]][ranks[i + j]] = preferences[ranks[i]][ranks[i + j]] + 1;
         }
     }
-    //int k =0;
-    // preferences[ranks[k]][ranks[k + 1]] = preferences[ranks[k]][ranks[k + 1]] + 1;
-    // preferences[ranks[k]][ranks[k + 2]] = preferences[ranks[k]][ranks[k + 2]] + 1;
-    // preferences[ranks[k + 1]][ranks[k + 2]] = preferences[ranks[k + 1]][ranks[k + 2]] + 1;
     return;
 }
 
