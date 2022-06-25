@@ -291,10 +291,11 @@ void print_winner(void)
     {
         for (int j = 0; j < candidate_count; j++)
         {
-        if (tst1 && tst2)
-        {
-            printf("%s\n", candidates[i]);
-            return;
+            if (tst1 && tst2)
+            {
+                printf("%s\n", candidates[i]);
+                return;
+            }
         }
     }
 
