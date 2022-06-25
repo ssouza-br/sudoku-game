@@ -162,7 +162,7 @@ void sort_pairs(void)
     pair temp = {0, 0};
     int k = 0;
 
-    for (int i = 0; i < pair_count; i++)
+    for (int i = k; i < pair_count; i++)
     {
         //lista completa
         printf("par number: %i winner: %i loser: %i\n", i, pairs[i].winner, pairs[i].loser);
@@ -173,11 +173,12 @@ void sort_pairs(void)
             temp.winner = pairs[0].winner;
             temp.loser =  pairs[0].loser;
 
-            pairs[0].winner = pairs[i].winner;
-            pairs[0].loser = pairs[i].loser;
+            pairs[k].winner = pairs[i].winner;
+            pairs[k].loser = pairs[i].loser;
 
             pairs[i].winner = temp.winner;
             pairs[i].loser = temp.loser;
+            k++;
         }
     }
     return;
