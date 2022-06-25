@@ -193,7 +193,7 @@ void sort_pairs(void)
         }
         max_strength = 0;
     }
-   }
+}
 
 // Lock pairs into the candidate graph in order, without creating cycles
 void lock_pairs(void)
