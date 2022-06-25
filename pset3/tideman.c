@@ -237,7 +237,8 @@ bool check_source(void)
     }
 }
 
-
+printf("status recebe A: %i status sai A: %i status recebe B: %i status sai B: %i status recebe C: %i status sai C: %i\n",
+status_general[0].recebe, status_general[0].sai, status_general[1].recebe, status_general[1].sai, status_general[2].recebe, status_general[2].sai);
 // Print the winner of the election
 void print_winner(void)
 {
