@@ -231,7 +231,6 @@ void print_winner(void)
 
     tst tst_list[candidate_count];
 
-    int i_true = false;
     for (int i = 0; i < candidate_count; i++)
     {
         for (int j = 0; j < candidate_count; j++)
@@ -239,8 +238,7 @@ void print_winner(void)
             if (locked[i][j] == true)
             {
                 tst_list[i].lin_lock = 1;
-                
-                k++;
+                tst_list[j].col_lock = 1;
             }
         }
     }
