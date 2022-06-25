@@ -203,6 +203,7 @@ bool check_source(void)
     int k = 0;
     for (int j = 0; j < candidate_count; j++)
     {
+        printf("j: %i recebe: %i sai: %i\n", j, status_general[j].recebe, status_general[j].sai);
         if (status_general[j].recebe == 1 && status_general[j].sai == 1)
         {
             k++;
