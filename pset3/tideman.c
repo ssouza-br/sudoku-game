@@ -175,13 +175,6 @@ void lock_pairs(void)
 {
     for (int i = 0; i < pair_count; i++)
     {
-        for (int j = 0; i < candidate_count; j++)
-        {
-            if (status_general[j].entra == 1 && status_general[j].sai == 1)
-            {
-
-            }
-        }
         if ()
         {
 
@@ -196,7 +189,7 @@ void lock_pairs(void)
     return;
 }
 
-bool check_source(status status_general[])
+bool check_source(void)
 {
         typedef struct
     {
@@ -205,6 +198,18 @@ bool check_source(status status_general[])
     }
     status;
     status status_general[candidate_count];
+    int k = 0;
+    for (int j = 0; i < candidate_count; j++)
+    {
+        if (status_general[j].entra == 1 && status_general[j].sai == 1)
+        {
+            k++;
+        }
+    }
+    if (k < candidate_count)
+    {
+        return true;
+    }
 }
 
 
