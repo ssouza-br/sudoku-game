@@ -257,7 +257,7 @@ void print_winner(void)
     {
         if (status_general[i].recebe == 0 && status_general[i].sai == 1)
         {
-            printf("entrei no i: %i", i);
+            //printf("entrei no i: %i", i);
             printf("%s\n", candidates[i]);
             return;
         }
