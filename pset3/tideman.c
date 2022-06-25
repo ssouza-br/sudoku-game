@@ -203,6 +203,7 @@ bool check_source(void)
         if (status_general[j].recebe == 1 && status_general[j].sai == 1)
         {
             k++;
+            printf("k: %i", k)
         }
     }
     if (k == candidate_count)
