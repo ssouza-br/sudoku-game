@@ -167,6 +167,7 @@ void sort_pairs(void)
         //lista completa
         printf("par number: %i winner: %i loser: %i\n", i, pairs[i].winner, pairs[i].loser);
         int strength = preferences[pairs[i].winner][pairs[i].loser] - preferences[pairs[i].loser][pairs[i].winner];
+        printf("strengt: %i", strength);
         if (strength > max_strength)
         {
             max_strength = strength;
