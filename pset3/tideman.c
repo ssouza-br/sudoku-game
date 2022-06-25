@@ -258,7 +258,7 @@ void print_winner(void)
 
     tst tst_list[candidate_count];
     int k = 0;
-    bool tst;
+    bool tst1;
     bool tst2;
     for (int i = 0; i < candidate_count; i++)
     {
@@ -275,9 +275,9 @@ void print_winner(void)
         }
         if (k == candidate_count - 1)
         {
-            tst = true;
+            tst1 = true;
         }
-        if (tst && tst2)
+        if (tst1 && tst2)
         {
             printf("%s\n", candidates[i]);
             return;
