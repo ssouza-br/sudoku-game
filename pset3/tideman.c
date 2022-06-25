@@ -283,27 +283,5 @@ void print_winner(void)
             printf("%s\n", candidates[i]);
             return;
         }
-
     }
-
-    // for (int i = 0; i < candidate_count; i++)
-    // {
-    //     if (tst_list[i].lin_lock == 1 && tst_list[i].col_lock == 0)
-    //     {
-    //         //printf("entrei no i: %i", i);
-    //         printf("%s\n", candidates[i]);
-    //         return;
-    //     }
-    // }
-
-    // for (int i = 0; i < candidate_count; i++)
-    // {
-    //     if (status_general[i].recebe == 0 && status_general[i].sai == 1)
-    //     {
-    //         //printf("entrei no i: %i", i);
-    //         printf("%s\n", candidates[i]);
-    //         return;
-    //     }
-    // }
-
 }
