@@ -187,6 +187,7 @@ void lock_pairs(void)
     {
         status_general[pairs[i].winner].sai = 1;
         status_general[pairs[i].loser].recebe = 1;
+        print("%i", check_source());
         if (check_source())
         {
             locked[pairs[i].winner][pairs[i].loser] = true;
