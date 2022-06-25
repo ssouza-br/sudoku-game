@@ -160,30 +160,31 @@ void sort_pairs(void)
 {
     int max_strength = 0;
     pair temp = {0, 0};
-    int k = 0;
 
-    for (int i = k; i < pair_count; i++)
+    for (int k = 0; k < pair_count - 1;k++)
     {
-        //lista completa
-        printf("par number: %i winner: %i loser: %i\n", i, pairs[i].winner, pairs[i].loser);
-        int strength = preferences[pairs[i].winner][pairs[i].loser] - preferences[pairs[i].loser][pairs[i].winner];
-        printf("strengt: %i", strength);
-        if (strength > max_strength)
+        for (int i = k; i < pair_count; i++)
         {
-            max_strength = strength;
-            temp.winner = pairs[k].winner;
-            temp.loser =  pairs[k].loser;
+            //lista completa
+            printf("par number: %i winner: %i loser: %i\n", i, pairs[i].winner, pairs[i].loser);
+            int strength = preferences[pairs[i].winner][pairs[i].loser] - preferences[pairs[i].loser][pairs[i].winner];
+            printf("strengt: %i\n", strength);
+            if (strength > max_strength)
+            {
+                max_strength = strength;
+                temp.winner = pairs[k].winner;
+                temp.loser =  pairs[k].loser;
 
-            pairs[k].winner = pairs[i].winner;
-            pairs[k].loser = pairs[i].loser;
+                pairs[k].winner = pairs[i].winner;
+                pairs[k].loser = pairs[i].loser;
 
-            pairs[i].winner = temp.winner;
-            pairs[i].loser = temp.loser;
-            k++;
+                pairs[i].winner = temp.winner;
+                pairs[i].loser = temp.loser;
+            }
         }
+        max_strength = 0;
     }
-    return;
-}
+   }
 
 // Lock pairs into the candidate graph in order, without creating cycles
 void lock_pairs(void)
