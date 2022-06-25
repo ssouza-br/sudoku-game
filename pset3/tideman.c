@@ -33,7 +33,7 @@ typedef struct
     int recebe;
 }
 status;
-status status_general[candidate_count];
+status status_general[MAX];
 
 // Function prototypes
 bool vote(int rank, string name, int ranks[]);
@@ -184,7 +184,7 @@ void lock_pairs(void)
 {
     for (int i = 0; i < pair_count; i++)
     {
-        if (check_source(void))
+        if (check_source())
         {
             locked[pairs[i].winner][pairs[i].loser] = true;
             status_general[pairs[i].winner].sai = 1;
