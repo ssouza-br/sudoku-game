@@ -176,6 +176,8 @@ void lock_pairs(void)
     for (int i = 0; i < pair_count; i++)
     {
         locked[pairs[i].winner][pairs[i].loser] = true;//caso de n ter cycle
+        //pair[i].winner -> sai uma seta
+        //pair[i].loser -> recebe uma seta
     }
     return;
 }
