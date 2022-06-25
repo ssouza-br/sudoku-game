@@ -257,16 +257,20 @@ void print_winner(void)
     tst;
 
     tst tst_list[candidate_count];
-
+    int k = 0;
     for (int i = 0; i < candidate_count; i++)
     {
-        for (int j = 0; j < candidate_count; j++)
+        for (int j = 0; j < candidate_count && j != i; j++)
         {
             if (locked[i][j] == true)
             {
-                tst_list[i].lin_lock = 1;
-                tst_list[j].col_lock = 1;
+                k++;
             }
+        }
+        if (k == candidate_count - 1)
+        {
+            printf("%s\n", candidates[i]);
+            return;
         }
     }
 
