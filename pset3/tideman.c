@@ -19,6 +19,15 @@ typedef struct
 }
 pair;
 
+// help variable source
+typedef struct
+{
+    int sair;
+    int recebe;
+}
+status;
+status status_general[candidate_count];
+
 // Array of candidates
 string candidates[MAX];
 pair pairs[MAX * (MAX - 1) / 2];
@@ -191,13 +200,6 @@ void lock_pairs(void)
 
 bool check_source(void)
 {
-        typedef struct
-    {
-        int sair;
-        int recebe;
-    }
-    status;
-    status status_general[candidate_count];
     int k = 0;
     for (int j = 0; i < candidate_count; j++)
     {
@@ -209,6 +211,10 @@ bool check_source(void)
     if (k < candidate_count)
     {
         return true;
+    }
+    else
+    {
+        return false;
     }
 }
 
