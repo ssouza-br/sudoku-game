@@ -29,7 +29,7 @@ int candidate_count;
 // help variable source
 typedef struct
 {
-    int sair;
+    int sai;
     int recebe;
 }
 status;
@@ -42,6 +42,7 @@ void add_pairs(void);
 void sort_pairs(void);
 void lock_pairs(void);
 void print_winner(void);
+bool check_source(void);
 
 int main(int argc, string argv[])
 {
@@ -197,7 +198,7 @@ void lock_pairs(void)
 bool check_source(void)
 {
     int k = 0;
-    for (int j = 0; i < candidate_count; j++)
+    for (int j = 0; j < candidate_count; j++)
     {
         if (status_general[j].entra == 1 && status_general[j].sai == 1)
         {
