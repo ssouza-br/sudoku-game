@@ -170,7 +170,7 @@ void sort_pairs(void)
     int max_strength = 0;
     pair temp = {0, 0};
 
-    for (int k = 0; k < pair_count - 1;k++)
+    for (int k = 0; k < pair_count - 1; k++)
     {
         for (int i = k; i < pair_count; i++)
         {
