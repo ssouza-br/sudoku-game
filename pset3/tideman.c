@@ -182,9 +182,16 @@ void lock_pairs(void)
     status status_general[candidate_count];
     for (int i = 0; i < pair_count; i++)
     {
+        for (int j = 0; i < candidate_count; j++)
+        {
+            if (status_general[j].entra == 1 && status_general[j].sai == 1)
+            {
+
+            }
+        }
         if ()
         {
-            
+
         }
         locked[pairs[i].winner][pairs[i].loser] = true;//caso de n ter cycle
         status_general[pairs[i].winner].sai = 1;
