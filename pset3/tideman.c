@@ -184,16 +184,12 @@ void lock_pairs(void)
 {
     for (int i = 0; i < pair_count; i++)
     {
-        if ()
+        if (check_source(void))
         {
-
+            locked[pairs[i].winner][pairs[i].loser] = true;
+            status_general[pairs[i].winner].sai = 1;
+            status_general[pairs[i].loser].recebe = 1;
         }
-        locked[pairs[i].winner][pairs[i].loser] = true;//caso de n ter cycle
-        status_general[pairs[i].winner].sai = 1;
-        status_general[pairs[i].loser].recebe = 1;
-
-        //pair[i].winner -> sai uma seta
-        //pair[i].loser -> recebe uma seta
     }
     return;
 }
