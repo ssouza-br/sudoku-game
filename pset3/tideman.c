@@ -203,6 +203,9 @@ void lock_pairs(void)
     return;
 }
 
+bool check_source(status status_general[])
+
+
 // Print the winner of the election
 void print_winner(void)
 {
