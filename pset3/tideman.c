@@ -289,14 +289,12 @@ void print_winner(void)
     bool tst2;
     for (int i = 0; i < candidate_count; i++)
     {
-        for (int j = 0; j < candidate_count; j++)
+        if (column_free(i) && line_true(i))
         {
-            if (column_free(j) && line_true(i))
-            {
-                printf("%s\n", candidates[i]);
-                return;
-            }
+            printf("%s\n", candidates[i]);
+            return;
         }
+
     }
 
     // for (int i = 0; i < candidate_count; i++)
