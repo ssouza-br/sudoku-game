@@ -250,7 +250,8 @@ void print_winner(void)
         if (status_general[i].recebe == 0 && status_general[i].sai == 1)
         {
             printf("%s\n", candidates[i]);
+            return;
         }
     }
-    return;
+
 }
