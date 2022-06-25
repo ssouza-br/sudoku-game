@@ -200,7 +200,7 @@ bool check_source(void)
     int k = 0;
     for (int j = 0; j < candidate_count; j++)
     {
-        if (status_general[j].entra == 1 && status_general[j].sai == 1)
+        if (status_general[j].recebe == 1 && status_general[j].sai == 1)
         {
             k++;
         }
