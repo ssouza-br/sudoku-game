@@ -189,6 +189,7 @@ void lock_pairs(void)
         printf("winner: %i loser: %i\n", pairs[i].winner, pairs[i].loser);
         temp_sai = status_general[pairs[i].winner].sai;
         temp_recebe = status_general[pairs[i].loser].recebe;
+        printf("temp_sai: %i temp_recebe: %i", temp_sai, temp_recebe);
         status_general[pairs[i].winner].sai = 1;
         status_general[pairs[i].loser].recebe = 1;
         //printf("TRUE OR FALSE: %i\n", check_source());
