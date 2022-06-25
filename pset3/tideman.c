@@ -258,6 +258,8 @@ void print_winner(void)
 
     tst tst_list[candidate_count];
     int k = 0;
+    bool tst;
+    bool tst2;
     for (int i = 0; i < candidate_count; i++)
     {
         for (int j = 0; j < candidate_count; j++)
@@ -266,23 +268,31 @@ void print_winner(void)
             {
                 k++;
             }
+            if (locked[i][j] == true)
+            {
+                tst2 = true;
+            }
         }
         if (k == candidate_count - 1)
+        {
+            tst = true;
+        }
+        if (tst && tst2)
         {
             printf("%s\n", candidates[i]);
             return;
         }
     }
 
-    for (int i = 0; i < candidate_count; i++)
-    {
-        if (tst_list[i].lin_lock == 1 && tst_list[i].col_lock == 0)
-        {
-            //printf("entrei no i: %i", i);
-            printf("%s\n", candidates[i]);
-            return;
-        }
-    }
+    // for (int i = 0; i < candidate_count; i++)
+    // {
+    //     if (tst_list[i].lin_lock == 1 && tst_list[i].col_lock == 0)
+    //     {
+    //         //printf("entrei no i: %i", i);
+    //         printf("%s\n", candidates[i]);
+    //         return;
+    //     }
+    // }
 
     // for (int i = 0; i < candidate_count; i++)
     // {
