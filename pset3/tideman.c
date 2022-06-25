@@ -205,7 +205,7 @@ bool check_source(void)
             k++;
         }
     }
-    if (k >= candidate_count -1)
+    if (k >= candidate_count - 1)
     {
         return false;
     }
