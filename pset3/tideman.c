@@ -259,6 +259,19 @@ bool column_free(int column_number)
     return true;
 }
 
+bool line_true(int line_number)
+{
+    for (int j = 0; j < candidate_count; j++)
+    {
+        //verificar toda coluna se tudo está false, caso positivo tst1 = true
+        if (locked[line_number][j] == true)
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
 
 // Print the winner of the election
 void print_winner(void)
