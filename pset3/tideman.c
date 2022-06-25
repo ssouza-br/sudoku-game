@@ -222,6 +222,6 @@ bool check_source(void)
 // Print the winner of the election
 void print_winner(void)
 {
-    // TODO
+
     return;
 }
