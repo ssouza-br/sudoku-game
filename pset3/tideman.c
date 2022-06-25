@@ -185,11 +185,11 @@ void lock_pairs(void)
 {
     for (int i = 0; i < pair_count; i++)
     {
+        status_general[pairs[i].winner].sai = 1;
+        status_general[pairs[i].loser].recebe = 1;
         if (check_source())
         {
             locked[pairs[i].winner][pairs[i].loser] = true;
-            status_general[pairs[i].winner].sai = 1;
-            status_general[pairs[i].loser].recebe = 1;
         }
     }
     return;
