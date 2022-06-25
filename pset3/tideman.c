@@ -276,17 +276,6 @@ bool line_true(int line_number)
 // Print the winner of the election
 void print_winner(void)
 {
-    typedef struct
-    {
-        int col_lock;
-        int lin_lock;
-    }
-    tst;
-
-    tst tst_list[candidate_count];
-    int k = 0;
-    bool tst1;
-    bool tst2;
     for (int i = 0; i < candidate_count; i++)
     {
         if (column_free(i) && line_true(i))
