@@ -179,6 +179,7 @@ void sort_pairs(void)
             pairs[i].winner = temp.winner;
             pairs[i].loser = temp.loser;
             k++;
+            max_strength = 0;
         }
     }
     return;
