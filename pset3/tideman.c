@@ -205,13 +205,13 @@ bool check_source(void)
             k++;
         }
     }
-    if (k < candidate_count)
+    if (k >= candidate_count -1)
     {
-        return true;
+        return false;
     }
     else
     {
-        return false;
+        return true;
     }
 }
 
