@@ -179,9 +179,13 @@ void lock_pairs(void)
         int recebe;
     }
     status;
+    status status_general[candidate_count];
     for (int i = 0; i < pair_count; i++)
     {
         locked[pairs[i].winner][pairs[i].loser] = true;//caso de n ter cycle
+        status_general[pairs[i].winner].sai = 1;
+        status_general[pairs[i].loser].recebe = 1;
+
         //pair[i].winner -> sai uma seta
         //pair[i].loser -> recebe uma seta
     }
