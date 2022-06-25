@@ -291,20 +291,6 @@ void print_winner(void)
     {
         for (int j = 0; j < candidate_count; j++)
         {
-            //verificar toda coluna se tudo está false, caso positivo tst1 = true
-            if (locked[j][i] == false)
-            {
-                k++;
-            }
-            if (locked[i][j] == true)
-            {
-                tst2 = true;
-            }
-        }
-        if (k == candidate_count - 1)
-        {
-            tst1 = true;
-        }
         if (tst1 && tst2)
         {
             printf("%s\n", candidates[i]);
