@@ -194,6 +194,11 @@ void lock_pairs(void)
             printf("entrei\n");
             locked[pairs[i].winner][pairs[i].loser] = true;
         }
+        else
+        {
+            status_general[pairs[i].winner].sai = 0;
+            status_general[pairs[i].loser].recebe = 0;
+        }
     }
     return;
 }
