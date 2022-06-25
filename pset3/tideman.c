@@ -224,27 +224,6 @@ bool check_source(void)
 // Print the winner of the election
 void print_winner(void)
 {
-    // typedef struct
-    // {
-    //     int col_lock;
-    //     int lin_lock;
-    // }
-    // tst;
-
-    // tst tst_list[candidate_count];
-
-    // for (int i = 0; i < candidate_count; i++)
-    // {
-    //     for (int j = 0; j < candidate_count; j++)
-    //     {
-    //         if (locked[i][j] == true)
-    //         {
-    //             tst_list[i].lin_lock = 1;
-    //             tst_list[j].col_lock = 1;
-    //         }
-    //     }
-    // }
-
     for (int i = 0; i < candidate_count; i++)
     {
         if (status_general[i].recebe == 0 && status_general[i].sai == 1)
