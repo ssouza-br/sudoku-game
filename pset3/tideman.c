@@ -170,8 +170,8 @@ void sort_pairs(void)
         if (strength > max_strength)
         {
             max_strength = strength;
-            temp.winner = pairs[0].winner;
-            temp.loser =  pairs[0].loser;
+            temp.winner = pairs[k].winner;
+            temp.loser =  pairs[k].loser;
 
             pairs[k].winner = pairs[i].winner;
             pairs[k].loser = pairs[i].loser;
