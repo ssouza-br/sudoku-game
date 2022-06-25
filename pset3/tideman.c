@@ -223,15 +223,16 @@ bool check_source(void)
         if (status_general[j].recebe == 1 && status_general[j].sai == 1)
         {
             k++;
-            //printf("k: %i\n", k);
         }
     }
     if (k == candidate_count)
     {
+        printf("k FALSE: %i\n", k);
         return false;
     }
     else
     {
+        printf("k TRUE: %i\n", k);
         return true;
     }
 }
