@@ -103,8 +103,15 @@ int main(int argc, string argv[])
     add_pairs();
     sort_pairs();
     lock_pairs();
-    printf("status recebe A: %i status sai A: %i status recebe B: %i status sai B: %i status recebe C: %i status sai C: %i\n",
-status_general[0].recebe, status_general[0].sai, status_general[1].recebe, status_general[1].sai, status_general[2].recebe, status_general[2].sai);
+//     printf("status recebe A: %i status sai A: %i status recebe B: %i status sai B: %i status recebe C: %i status sai C: %i\n",
+// status_general[0].recebe, status_general[0].sai, status_general[1].recebe, status_general[1].sai, status_general[2].recebe, status_general[2].sai);
+    for (int i = 0; i < pair_count; i++)
+    {
+        for (int j = 0; j < pair_count; j++)
+        {
+            printf("i: %i j: %i locked[i][j] %i\n", i, j, locked[i][j]);
+        }
+    }
     print_winner();
     return 0;
 }
