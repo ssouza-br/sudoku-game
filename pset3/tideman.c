@@ -264,6 +264,7 @@ void print_winner(void)
     {
         for (int j = 0; j < candidate_count; j++)
         {
+            //verificar toda coluna se tudo está false, caso positivo tst1 = true
             if (locked[j][i] == false)
             {
                 k++;
