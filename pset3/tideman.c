@@ -247,7 +247,7 @@ void print_winner(void)
     {
         if (tst_list[i].lin_lock == 1 && tst_list[i].col_lock == 0)
         {
-            printf("%s\n", )
+            printf("%s\n", candidates[i]);
         }
     }
     return;
