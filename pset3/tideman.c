@@ -187,7 +187,7 @@ void lock_pairs(void)
     {
         status_general[pairs[i].winner].sai = 1;
         status_general[pairs[i].loser].recebe = 1;
-        print("%i", check_source());
+        printf("%i", check_source());
         if (check_source())
         {
             locked[pairs[i].winner][pairs[i].loser] = true;
@@ -204,7 +204,7 @@ bool check_source(void)
         if (status_general[j].recebe == 1 && status_general[j].sai == 1)
         {
             k++;
-            printf("k: %i", k)
+            printf("k: %i", k);
         }
     }
     if (k == candidate_count)
