@@ -246,6 +246,20 @@ bool check_source(void)
     }
 }
 
+bool column_free(int column_number)
+{
+    for (int j = 0; j < candidate_count; j++)
+    {
+        //verificar toda coluna se tudo está false, caso positivo tst1 = true
+        if (locked[j][column_number] == true)
+        {
+            return false;
+        }
+    }
+    return true;
+}
+
+
 // Print the winner of the election
 void print_winner(void)
 {
