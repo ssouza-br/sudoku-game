@@ -19,6 +19,13 @@ typedef struct
 }
 pair;
 
+// Array of candidates
+string candidates[MAX];
+pair pairs[MAX * (MAX - 1) / 2];
+
+int pair_count;
+int candidate_count;
+
 // help variable source
 typedef struct
 {
@@ -27,13 +34,6 @@ typedef struct
 }
 status;
 status status_general[candidate_count];
-
-// Array of candidates
-string candidates[MAX];
-pair pairs[MAX * (MAX - 1) / 2];
-
-int pair_count;
-int candidate_count;
 
 // Function prototypes
 bool vote(int rank, string name, int ranks[]);
