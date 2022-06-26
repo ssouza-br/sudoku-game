@@ -1,5 +1,15 @@
 #include <stdio.h>
 
+
+typedef struct
+{
+    int sai;
+    int recebe;
+}
+status;
+status status_general[3];
+
+
 int main(void)
 {
 
