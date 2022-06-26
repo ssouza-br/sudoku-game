@@ -8,9 +8,9 @@ int main(void)
     {
         for (int j = 0; j < width; j++)
         {
+            int counter = 0;
             for (int k = -1; k < 2; k++)
             {
-                int counter = 0;
                 for (int m = -1; m < 2; m++)
                 {
                     int index_i = i + k, index_j = j + m;
