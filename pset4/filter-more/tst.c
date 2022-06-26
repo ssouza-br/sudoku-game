@@ -22,6 +22,6 @@ int main(void)
 
             }
         }
-    }
     printf("counter: %i\n", counter);
+    }
 }
