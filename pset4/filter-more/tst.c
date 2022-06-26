@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    int tmpBlue = 0, tmpRed = 0, tmpGreen = 0, counter = 0;
+    int tmpBlue = 0, tmpRed = 0, tmpGreen = 0, counter = 0, height = 3, width = 3;
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
@@ -15,17 +15,11 @@ int main(void)
                     int index_i = i + k, index_j = j + m;
                     if (index_i >= 0 && index_j >= 0)
                     {
-                        tmpBlue = tmpBlue + image[index_i][index_j].rgbtBlue;
-                        tmpRed = tmpRed + image[index_i][index_j].rgbtRed;
-                        tmpGreen = tmpGreen + image[index_i][index_j].rgbtGreen;
-                        counter++;
+                        printf("i: %i j: %i index_i: %i index_j: %i\n", i, j, index_i, index_j);
                     }
                 }
 
             }
-            image[i][j].rgbtBlue = round((float) tmpBlue / counter);
-            image[i][j].rgbtRed = round((float) tmpRed / counter);
-            image[i][j].rgbtGreen = round((float) tmpGreen / counter);
         }
     }
 }
