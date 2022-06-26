@@ -1,7 +1,5 @@
 #include <stdio.h>
 
-#define MAX 9
-
 // Each pair has a winner, loser
 typedef struct
 {
@@ -11,7 +9,7 @@ typedef struct
 pair;
 
 // Array of candidates
-pair pairs[MAX * (MAX - 1) / 2];
+pair pairs[3];
 
 pairs[0].winner = 0;
 pairs[0].loser = 1;
