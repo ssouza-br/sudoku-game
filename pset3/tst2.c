@@ -8,11 +8,21 @@ typedef struct
 }
 status;
 status status_general[3];
+int pair_count = 3;
 
+void lock_pairs(void);
 
 int main(void)
 {
-
+    for (int i = 0; i < pair_count; i++)
+    {
+        printf("valor sai: %i valor recebe: %i\n", status_general[i].sai, status_general[i].recebe);
+    }
+    lock_pairs();
+    for (int i = 0; i < pair_count; i++)
+    {
+        printf("valor sai: %i valor recebe: %i\n", status_general[i].sai, status_general[i].recebe);
+    }
 }
 
 void lock_pairs(void)
