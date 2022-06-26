@@ -49,11 +49,16 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width / 2; j++)
         {
-            tmp1 = image[i][j];
-            tmp2 = image[i][width - j - 1];
+            for (int k = -1; k < 2; k++)
+            {
 
-            image[i][j] = tmp2;
-            image[i][width - j - 1] = tmp1;
+
+                tmp1 = image[i][j];
+                tmp2 = image[i][width - j - 1];
+
+                image[i][j] = tmp2;
+                image[i][width - j - 1] = tmp1;
+            }
         }
     }
 
