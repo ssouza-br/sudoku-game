@@ -3,13 +3,14 @@
 
 int main(void)
 {
-    int tmpBlue = 0, tmpRed = 0, tmpGreen = 0, counter = 0, height = 3, width = 3;
+    int tmpBlue = 0, tmpRed = 0, tmpGreen = 0, height = 3, width = 3;
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
         {
             for (int k = -1; k < 2; k++)
             {
+                int counter = 0;
                 for (int m = -1; m < 2; m++)
                 {
                     int index_i = i + k, index_j = j + m;
@@ -19,9 +20,8 @@ int main(void)
                         counter++;
                     }
                 }
-
             }
+            printf("counter: %i\n", counter);
         }
-    printf("counter: %i\n", counter);
     }
 }
