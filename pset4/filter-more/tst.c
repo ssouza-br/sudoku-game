@@ -47,13 +47,13 @@ int main(void)
             // printf("i: %i j: %i res: %i\n",i, j, new_image[i][j]);
         }
     }
-        printf("\n");
-        for (int i = 0; i < height; i++)
+    image = new_image;
+    printf("\n");
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
         {
-            for (int j = 0; j < width; j++)
-            {
-                image[i][j] = new_image[i][j];
-                printf("i: %i j: %i res: %i\n",i, j, image[i][j]);
-            }
+            printf("i: %i j: %i res: %i\n",i, j, image[i][j]);
         }
+    }
 }
