@@ -42,9 +42,9 @@ int main(void)
                     }
                 }
             }
-            printf("counter: %i\n", counter);
-            new_image[i][j] = round((float) tmpBlue / counter);
-            printf("i: %i j: %i res: %i\n",i, j, new_image[i][j]);
+            // printf("counter: %i\n", counter);
+            // new_image[i][j] = round((float) tmpBlue / counter);
+            // printf("i: %i j: %i res: %i\n",i, j, new_image[i][j]);
         }
     }
         printf("\n");
@@ -52,7 +52,8 @@ int main(void)
         {
             for (int j = 0; j < width; j++)
             {
-                printf("i: %i j: %i res: %i\n",i, j, new_image[i][j]);
+                image[i][j] = new_image[i][j];
+                printf("i: %i j: %i res: %i\n",i, j, image[i][j]);
             }
         }
 }
