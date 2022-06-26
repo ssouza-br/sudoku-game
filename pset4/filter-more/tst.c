@@ -3,8 +3,8 @@
 
 int main(void)
 {
-    float avg2 = (28 + 27 + 28)/3;
-    int avg = round(avg2);
+    int avg = round(((float) 28 + (float) 27 + (float) 28)/3);
+    //int avg = round(avg2);
 
-    printf("avg: %f", avg2);
+    printf("avg: %i", avg);
 }
