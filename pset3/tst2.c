@@ -1,5 +1,8 @@
 #include <stdio.h>
 
+void lock_pairs(void);
+bool check_source(void);
+
 // Each pair has a winner, loser
 typedef struct
 {
@@ -20,9 +23,6 @@ typedef struct
 status;
 status status_general[3];
 int pair_count = 3;
-
-void lock_pairs(void);
-bool check_source(void);
 
 int main(void)
 {
