@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+void swap(int *a, int *b);
 void sort_pairs(int lista_deord[]);
 int main(void)
 {
@@ -11,12 +11,11 @@ int main(void)
     }
 }
 
-void swap(int a, int b)
+void swap(int *a, int *b)
 {
-    int temp = a;
-    b = a;
-    
-
+    int temp = *a;
+    *a = *b;
+    *b = temp;
 }
 
 void sort_pairs(int lista_deord[])
@@ -32,11 +31,7 @@ void sort_pairs(int lista_deord[])
             if (lista_deord[i] > max_strength)
             {
                 max_strength = lista_deord[i];
-                temp = lista_deord[k];
-
-                lista_deord[k] = lista_deord[i];
-
-                lista_deord[i] = temp;
+                swap(&lista_deord[k], &lista_deord[i]);
             }
         }
         max_strength = 0;
