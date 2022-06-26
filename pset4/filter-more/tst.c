@@ -44,14 +44,14 @@ int main(void)
             }
             printf("counter: %i\n", counter);
             new_image[i][j] = round((float) tmpBlue / counter);
-            printf("i: %i j: %i res: %i\n",i, j, res);
+            printf("i: %i j: %i res: %i\n",i, j, new_image[i][j]);
         }
     }
         for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
         {
-            printf("i: %i j: %i res: %i\n",i, j, new_imagr[i][j]);
+            printf("i: %i j: %i res: %i\n",i, j, new_image[i][j]);
         }
     }
 }
