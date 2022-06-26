@@ -1,14 +1,26 @@
 #include <stdio.h>
 #include <math.h>
 
+first row: (10, 20, 30), (40, 50, 60), (70, 80, 90)
+second row: (110, 130, 140), (120, 140, 150), (130, 150, 160)
+third row: (200, 210, 220), (220, 230, 240), (240, 250, 255)
+
+
 int main(void)
 {
     int height = 3, width = 3;
     int image[3][3];
     image[0][0] = 10;
     image[0][1] = 40;
+    image[0][2] = 70;
+
     image[1][0] = 110;
     image[1][1] = 120;
+    image[1][2] = 130;
+
+    image[2][0] = 200;
+    image[2][1] = 220;
+    image[2][2] = 240;
 
     for (int i = 0; i < height; i++)
     {
@@ -31,7 +43,7 @@ int main(void)
             }
             printf("counter: %i\n", counter);
             int res = round((float) tmpBlue / counter);
-            printf("res: %i\n", res);
+            printf("i: %i j: %i res: %i\n",i, j, res);
         }
     }
 }
