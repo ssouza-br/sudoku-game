@@ -10,6 +10,7 @@ int main(void)
 {
     int height = 3, width = 3;
     int image[3][3];
+    int new_image[3][3];
     image[0][0] = 10;
     image[0][1] = 40;
     image[0][2] = 70;
@@ -42,8 +43,15 @@ int main(void)
                 }
             }
             printf("counter: %i\n", counter);
-            int res = round((float) tmpBlue / counter);
+            new_image[i][j] = round((float) tmpBlue / counter);
             printf("i: %i j: %i res: %i\n",i, j, res);
+        }
+    }
+        for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            printf("i: %i j: %i res: %i\n",i, j, new_imagr[i][j]);
         }
     }
 }
