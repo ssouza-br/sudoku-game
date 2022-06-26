@@ -47,6 +47,7 @@ int main(void)
             printf("i: %i j: %i res: %i\n",i, j, new_image[i][j]);
         }
     }
+        printf("\n");
         for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
