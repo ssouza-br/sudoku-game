@@ -103,7 +103,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            int tmpBlue = 0, tmpRed = 0, tmpGreen = 0, index_i = 0, index_j = 0;
+            int tmpBluex = 0, tmpRedx = 0, tmpGreenx = 0, index_i = 0, index_j = 0, tmpBluey = 0, tmpRedy = 0, tmpGreeny = 0;
             for (int k = -1; k < 2; k++)
             {
                 for (int m = -1; m < 2; m++)
@@ -112,17 +112,29 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     index_j = j + m;
                     if (index_i >= 0 && index_j >= 0 && index_i <= height - 1 && index_j <= width - 1)
                     {
-                        tmpBlue = tmpBlue + image[index_i][index_j].rgbtBlue * Gx[k+1][m+1];
-                        tmpRed = tmpRed + image[index_i][index_j].rgbtRed * Gx[k+1][m+1];
-                        tmpGreen = tmpGreen + image[index_i][index_j].rgbtGreen * Gx[k+1][m+1];
+                        tmpBluex = tmpBluex + image[index_i][index_j].rgbtBlue * Gx[k+1][m+1];
+                        tmpRedx = tmpRedx + image[index_i][index_j].rgbtRed * Gx[k+1][m+1];
+                        tmpGreenx = tmpGreenx + image[index_i][index_j].rgbtGreen * Gx[k+1][m+1];
+
+                        tmpBluey = tmpBluey + image[index_i][index_j].rgbtBlue * Gy[k+1][m+1];
+                        tmpRedy = tmpRedy + image[index_i][index_j].rgbtRed * Gy[k+1][m+1];
+                        tmpGreeny = tmpGreeny + image[index_i][index_j].rgbtGreen * Gy[k+1][m+1];
                     }
                     else
                     {
-                        tmpBlue = tmpBlue + 0 * Gx[k+1][m+1];
-                        tmpRed = tmpRed + 0 * Gx[k+1][m+1];
-                        tmpGreen = tmpGreen + 0 * Gx[k+1][m+1];
+                        tmpBluex = tmpBluex + 0 * Gx[k+1][m+1];
+                        tmpRedx = tmpRedx + 0 * Gx[k+1][m+1];
+                        tmpGreenx = tmpGreenx + 0 * Gx[k+1][m+1];
+
+                        tmpBluey = tmpBluey + 0 * Gy[k+1][m+1];
+                        tmpRedy = tmpRedy + 0 * Gy[k+1][m+1];
+                        tmpGreeny = tmpGreeny + 0 * Gy[k+1][m+1];
                     }
                 }
+            }
+            if ()
+            {
+
             }
             new_image[i][j].rgbtBlue = round((float) tmpBlue / counter);
             new_image[i][j].rgbtRed = round((float) tmpRed / counter);
@@ -139,3 +151,5 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     }
     return;
 }
+
+void
