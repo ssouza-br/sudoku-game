@@ -3,7 +3,7 @@
 void sort_pairs(int lista_deord[]);
 int main(void)
 {
-    int lista[] = {5, 3, 1};
+    int lista[] = {1, 9, 5};
     sort_pairs(lista);
     for (int i = 0; i < 3; i++)
     {
