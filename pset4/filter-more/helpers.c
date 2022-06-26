@@ -132,13 +132,10 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     }
                 }
             }
-            if ()
-            {
 
-            }
-            new_image[i][j].rgbtBlue = round((float) tmpBlue / counter);
-            new_image[i][j].rgbtRed = round((float) tmpRed / counter);
-            new_image[i][j].rgbtGreen = round((float) tmpGreen / counter);
+            new_image[i][j].rgbtBlue = sqrt(tmpBluex * tmpBluex + tmpBluey * tmpBluey) > 255 ? 255, round(sqrt(tmpBluex * tmpBluex + tmpBluey * tmpBluey));
+            new_image[i][j].rgbtRed = sqrt(tmpRedx * tmpRedx + tmpRedy * tmpRedy) > 255 ? 255, round(sqrt(tmpRedx * tmpRedx + tmpRedy * tmpRedy));
+            new_image[i][j].rgbtGreen = sqrt(tmpGreenx * tmpGreenx + tmpGreeny * tmpGreeny) > 255 ? 255, round(sqrt(tmpGreenx * tmpGreenx + tmpGreeny * tmpGreeny));
         }
     }
 
@@ -151,5 +148,3 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     }
     return;
 }
-
-void
