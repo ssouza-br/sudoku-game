@@ -49,10 +49,10 @@ int main(void)
     }
         printf("\n");
         for (int i = 0; i < height; i++)
-    {
-        for (int j = 0; j < width; j++)
         {
-            printf("i: %i j: %i res: %i\n",i, j, new_image[i][j]);
+            for (int j = 0; j < width; j++)
+            {
+                printf("i: %i j: %i res: %i\n",i, j, new_image[i][j]);
+            }
         }
-    }
 }
