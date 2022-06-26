@@ -27,24 +27,32 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
     int tmpBlue1 = 0, tmpRed1 = 0, tmpGreen1 = 0, tmpBlue2 = 0, tmpRed2 = 0, tmpGreen2 = 0;
-    RGBTRIPLE tmp1, tmp2;
+    //RGBTRIPLE tmp1, tmp2;
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
         {
-            tmp1 = image[i][j];
-            tmp2 = image[i][width - j];
+            // tmp1 = image[i][j];
+            // tmp2 = image[i][width - j];
 
-            image[i][j] = tmp2;
-            image[i][width - j] = tmp1;
+            // image[i][j] = tmp2;
+            // image[i][width - j] = tmp1;
 
-            // tmpBlue = image[i][j].rgbtBlue;
-            // tmpRed = image[i][j].rgbtRed;
-            // tmpGreen = image[i][j].rgbtGreen;
+            tmpBlue1 = image[i][j].rgbtBlue;
+            tmpRed1 = image[i][j].rgbtRed;
+            tmpGreen1 = image[i][j].rgbtGreen;
 
-            // image[i][j].rgbtBlue = avgValue;
-            // image[i][j].rgbtRed = avgValue;
-            // image[i][j].rgbtGreen = avgValue;
+            tmpBlue2 = image[i][width - j].rgbtBlue;
+            tmpRed2 = image[i][width - j].rgbtRed;
+            tmpGreen2 = image[i][width - j].rgbtGreen;
+
+            image[i][j].rgbtBlue = tmpBlue2;
+            image[i][j].rgbtRed = tmpRed2;
+            image[i][j].rgbtGreen = tmpGreen2;
+
+            image[i][width - j].rgbtBlue = tmpBlue1;
+            image[i][width - j].rgbtRed = tmpRed1;
+            image[i][width - j].rgbtGreen = tmpGreen1;
         }
     }
     return;
