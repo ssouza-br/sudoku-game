@@ -16,10 +16,12 @@ int main(void)
                     if (index_i >= 0 && index_j >= 0)
                     {
                         printf("i: %i j: %i index_i: %i index_j: %i\n", i, j, index_i, index_j);
+                        counter++;
                     }
                 }
 
             }
         }
     }
+    printf("counter: %i\n", counter);
 }
