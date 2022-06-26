@@ -1,27 +1,34 @@
-void sort_pairs(void)
+#include <stdio.h>
+
+void sort_pairs(int lista_deord[]);
+int main(void)
+{
+    int lista[] = {5, 3, 1};
+    sort_pairs(lista);
+    for (int i = 0; i < 3; i++)
+    {
+        printf("%i\n", lista[i]);
+    }
+}
+
+void sort_pairs(int lista_deord[])
 {
     int max_strength = 0;
-    pair temp = {0, 0};
+    int temp = 0;
 
-    for (int k = 0; k < pair_count - 1; k++)
+    for (int k = 0; k < 3 - 1; k++)
     {
-        for (int i = k; i < pair_count; i++)
+        for (int i = k; i < 3; i++)
         {
             //lista completa
-            printf("par number: %i winner: %i loser: %i\n", i, pairs[i].winner, pairs[i].loser);
-            int strength = preferences[pairs[i].winner][pairs[i].loser] - preferences[pairs[i].loser][pairs[i].winner];
-            printf("strengt: %i\n", strength);
-            if (strength > max_strength)
+            if (lista_deord[i] > max_strength)
             {
-                max_strength = strength;
-                temp.winner = pairs[k].winner;
-                temp.loser =  pairs[k].loser;
+                max_strength = lista_deord[i];
+                temp = lista_deord[k];
 
-                pairs[k].winner = pairs[i].winner;
-                pairs[k].loser = pairs[i].loser;
+                lista_deord[k] = lista_deord[i];
 
-                pairs[i].winner = temp.winner;
-                pairs[i].loser = temp.loser;
+                lista_deord[i] = temp;
             }
         }
         max_strength = 0;
