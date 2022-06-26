@@ -14,6 +14,14 @@ pair;
 string candidates[MAX];
 pair pairs[MAX * (MAX - 1) / 2];
 
+pairs[0].winner = 0;
+pairs[0].loser = 1;
+pairs[1].winner = 2;
+pairs[1].loser = 0;
+pairs[2].winner = 1;
+pairs[2].loser = 2;
+
+
 typedef struct
 {
     int sai;
