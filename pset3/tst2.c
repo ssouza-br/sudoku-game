@@ -11,13 +11,6 @@ pair;
 // Array of candidates
 pair pairs[3];
 
-pairs[0].winner = 0;
-pairs[0].loser = 1;
-pairs[1].winner = 2;
-pairs[1].loser = 0;
-pairs[2].winner = 1;
-pairs[2].loser = 2;
-
 
 typedef struct
 {
@@ -29,9 +22,17 @@ status status_general[3];
 int pair_count = 3;
 
 void lock_pairs(void);
+bool check_source(void);
 
 int main(void)
 {
+    pairs[0].winner = 0;
+    pairs[0].loser = 1;
+    pairs[1].winner = 2;
+    pairs[1].loser = 0;
+    pairs[2].winner = 1;
+    pairs[2].loser = 2;
+
     for (int i = 0; i < pair_count; i++)
     {
         printf("valor sai: %i valor recebe: %i\n", status_general[i].sai, status_general[i].recebe);
