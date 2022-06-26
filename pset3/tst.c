@@ -11,6 +11,14 @@ int main(void)
     }
 }
 
+void swap(int a, int b)
+{
+    int temp = a;
+    b = a;
+    
+
+}
+
 void sort_pairs(int lista_deord[])
 {
     int max_strength = 0;
