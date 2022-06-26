@@ -43,7 +43,7 @@ int main(void)
                 }
             }
             printf("counter: %i\n", counter);
-            new_image[i][j] = round((float) tmpBlue / counter);
+            image[i][j] = round((float) tmpBlue / counter);
             printf("i: %i j: %i res: %i\n",i, j, new_image[i][j]);
         }
     }
