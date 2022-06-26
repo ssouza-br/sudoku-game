@@ -112,30 +112,33 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     index_j = j + m;
                     if (index_i >= 0 && index_j >= 0 && index_i <= height - 1 && index_j <= width - 1)
                     {
-                        tmpBluex = tmpBluex + image[index_i][index_j].rgbtBlue * Gx[k+1][m+1];
-                        tmpRedx = tmpRedx + image[index_i][index_j].rgbtRed * Gx[k+1][m+1];
-                        tmpGreenx = tmpGreenx + image[index_i][index_j].rgbtGreen * Gx[k+1][m+1];
+                        tmpBluex = tmpBluex + image[index_i][index_j].rgbtBlue * Gx[k + 1][m + 1];
+                        tmpRedx = tmpRedx + image[index_i][index_j].rgbtRed * Gx[k + 1][m + 1];
+                        tmpGreenx = tmpGreenx + image[index_i][index_j].rgbtGreen * Gx[k + 1][m + 1];
 
-                        tmpBluey = tmpBluey + image[index_i][index_j].rgbtBlue * Gy[k+1][m+1];
-                        tmpRedy = tmpRedy + image[index_i][index_j].rgbtRed * Gy[k+1][m+1];
-                        tmpGreeny = tmpGreeny + image[index_i][index_j].rgbtGreen * Gy[k+1][m+1];
+                        tmpBluey = tmpBluey + image[index_i][index_j].rgbtBlue * Gy[k + 1][m + 1];
+                        tmpRedy = tmpRedy + image[index_i][index_j].rgbtRed * Gy[k + 1][m + 1];
+                        tmpGreeny = tmpGreeny + image[index_i][index_j].rgbtGreen * Gy[k + 1][m + 1];
                     }
                     else
                     {
-                        tmpBluex = tmpBluex + 0 * Gx[k+1][m+1];
-                        tmpRedx = tmpRedx + 0 * Gx[k+1][m+1];
-                        tmpGreenx = tmpGreenx + 0 * Gx[k+1][m+1];
+                        tmpBluex = tmpBluex + 0 * Gx[k + 1][m + 1];
+                        tmpRedx = tmpRedx + 0 * Gx[k + 1][m + 1];
+                        tmpGreenx = tmpGreenx + 0 * Gx[k + 1][m + 1];
 
-                        tmpBluey = tmpBluey + 0 * Gy[k+1][m+1];
-                        tmpRedy = tmpRedy + 0 * Gy[k+1][m+1];
-                        tmpGreeny = tmpGreeny + 0 * Gy[k+1][m+1];
+                        tmpBluey = tmpBluey + 0 * Gy[k + 1][m + 1];
+                        tmpRedy = tmpRedy + 0 * Gy[k + 1][m + 1];
+                        tmpGreeny = tmpGreeny + 0 * Gy[k + 1][m + 1];
                     }
                 }
             }
 
-            new_image[i][j].rgbtBlue = (sqrt(tmpBluex * tmpBluex + tmpBluey * tmpBluey) > 255) ? 255 : round(sqrt(tmpBluex * tmpBluex + tmpBluey * tmpBluey));
-            new_image[i][j].rgbtRed = (sqrt(tmpRedx * tmpRedx + tmpRedy * tmpRedy) > 255) ? 255 : round(sqrt(tmpRedx * tmpRedx + tmpRedy * tmpRedy));
-            new_image[i][j].rgbtGreen = (sqrt(tmpGreenx * tmpGreenx + tmpGreeny * tmpGreeny) > 255) ? 255 : round(sqrt(tmpGreenx * tmpGreenx + tmpGreeny * tmpGreeny));
+            new_image[i][j].rgbtBlue = (sqrt(tmpBluex * tmpBluex + tmpBluey * tmpBluey) > 255) ? 255 : round(sqrt(
+                                           tmpBluex * tmpBluex + tmpBluey * tmpBluey));
+            new_image[i][j].rgbtRed = (sqrt(tmpRedx * tmpRedx + tmpRedy * tmpRedy) > 255) ? 255 : round(sqrt(
+                                          tmpRedx * tmpRedx + tmpRedy * tmpRedy));
+            new_image[i][j].rgbtGreen = (sqrt(tmpGreenx * tmpGreenx + tmpGreeny * tmpGreeny) > 255) ? 255 : round(sqrt(
+                                            tmpGreenx * tmpGreenx + tmpGreeny * tmpGreeny));
         }
     }
 
