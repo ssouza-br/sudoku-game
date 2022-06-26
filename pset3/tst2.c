@@ -11,7 +11,6 @@ typedef struct
 pair;
 
 // Array of candidates
-string candidates[MAX];
 pair pairs[MAX * (MAX - 1) / 2];
 
 pairs[0].winner = 0;
