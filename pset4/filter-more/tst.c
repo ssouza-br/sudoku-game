@@ -23,13 +23,15 @@ int main(void)
                     int index_i = i + k, index_j = j + m;
                     if (index_i >= 0 && index_j >= 0 && index_i <= height - 1 && index_j <= width - 1 )
                     {
-                        printf("i: %i j: %i index_i: %i index_j: %i\n", i, j, index_i, index_j);
+                        //printf("i: %i j: %i index_i: %i index_j: %i\n", i, j, index_i, index_j);
                         tmpBlue = tmpBlue + image[index_i][index_j];
                         counter++;
                     }
                 }
             }
             printf("counter: %i\n", counter);
+            int res = round((float) tmpBlue / counter);
+            printf("res: %i\n", res);
         }
     }
 }
