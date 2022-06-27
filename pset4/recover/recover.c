@@ -10,10 +10,9 @@ int main(int argc, char *argv[])
 
     FILE *file = fopen(argv[1], "r");
 
-    printf("%s\n", argv[1]);
-
     if(file == NULL)
     {
         return 1;
     }
+    printf("%s\n", argv[1]);
 }
