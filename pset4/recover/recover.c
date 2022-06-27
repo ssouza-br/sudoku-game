@@ -24,38 +24,10 @@ int main(int argc, char *argv[])
             counter++;
             sprintf(filename, "%03i.jpg", counter);
             printf("meu nome de arquivo: %s\n", filename);
-            FILE *img0 = fopen(filename, "w");
-            fwrite(buffer, 1, BLOCK_SIZE, img0);
         }
-        else
-        {
-            fwrite(buffer, 1, BLOCK_SIZE, img0);
-        }
-
-            fclose(img0);
-            counter++;
-            sprintf(filename, "%03i.jpg", counter);
-            printf("meu nome de arquivo: %s\n", filename);
-            FILE *img1 = fopen(filename, "w");
-            fwrite(buffer, 1, BLOCK_SIZE, img1);
-        }
-
-        char filename[9];
-        sprintf(filename, "%03i.jpg", counter);
-        printf("meu nome de arquivo: %s\n", filename);
         FILE *img0 = fopen(filename, "w");
         fwrite(buffer, 1, BLOCK_SIZE, img0);
-        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
-        {
-            fclose(img0);
-            counter++;
-            sprintf(filename, "%03i.jpg", counter);
-            printf("meu nome de arquivo: %s\n", filename);
-            FILE *img1 = fopen(filename, "w");
-            fwrite(buffer, 1, BLOCK_SIZE, img1);
-        }
     }
-    fclose(img1);
     free(buffer);
     fclose(file);
     if(file == NULL)
