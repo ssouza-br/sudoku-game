@@ -10,6 +10,10 @@ int main(int argc, char *argv[])
 
     FILE *file = fopen(argv[1], "r");
 
+
+
+
+    fclose(file);
     if(file == NULL)
     {
         return 1;
