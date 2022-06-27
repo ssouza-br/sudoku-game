@@ -9,7 +9,9 @@ int main(int argc, char *argv[])
     }
 
     FILE *file = fopen(argv[1], "r");
+
     buffer = malloc(512);
+
     while (fread(buffer, 1, BLOCK_SIZE, file) == BLOCK_SIZE)
     {
 
