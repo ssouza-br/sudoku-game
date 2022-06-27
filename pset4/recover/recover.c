@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
             char filename[9];
             sprintf(filename, "%03i.jpg", counter);
             printf("meu nome de arquivo: %s\n", filename);
-            fopen(filename, "w");
+            FILE *img = fopen(filename, "w");
         }
 
     }
