@@ -17,11 +17,13 @@ int main(int argc, char *argv[])
     BYTE *buffer = malloc(512);
     int counter = -1;
     char filename[9];
+    bool new_file = false;
     while (fread(buffer, 1, BLOCK_SIZE, file) == BLOCK_SIZE)
     {
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
             counter++;
+            new_file = true;
             sprintf(filename, "%03i.jpg", counter);
             printf("meu nome de arquivo: %s\n", filename);
             FILE *img0 = fopen(filename, "w");
