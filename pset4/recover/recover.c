@@ -7,7 +7,7 @@ int main(int argc, char *argv[])
     {
         return 1;
     }
-
+    printf("%s\n", argv[1]);
 
     FILE *file = fopen(argv[1], "r");
 }
