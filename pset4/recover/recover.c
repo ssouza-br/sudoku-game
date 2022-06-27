@@ -23,7 +23,8 @@ int main(int argc, char *argv[])
         {
             counter++;
             sprintf(filename, "%03i.jpg", counter);
-            fopen(filename, "w")
+            printf("meu nome de arquivo: %s", filename);
+            fopen(filename, "w");
         }
 
     }
