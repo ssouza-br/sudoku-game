@@ -27,10 +27,10 @@ int main(int argc, char *argv[])
             FILE *img = fopen(filename, "w");
             fwrite(buffer, BLOCK_SIZE, 1, img);
         }
-        else
-        {
-            fwrite(buffer, BLOCK_SIZE, 1, img);
-        }
+        // else
+        // {
+        //     fwrite(buffer, BLOCK_SIZE, 1, img);
+        // }
 
     }
 
