@@ -24,9 +24,8 @@ int main(int argc, char *argv[])
             counter++;
             sprintf(filename, "%03i.jpg", counter);
             printf("meu nome de arquivo: %s\n", filename);
-            fclose(img0);
+            FILE *img0 = fopen(filename, "w");
         }
-        FILE *img0 = fopen(filename, "w");
         fwrite(buffer, 1, BLOCK_SIZE, img0);
     }
     free(buffer);
