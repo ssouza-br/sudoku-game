@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
             {
                 new_jpg = true;
                 fwrite(buffer, 1, BLOCK_SIZE, img0);
-                counter++;
+                //counter++;
             }
         else if (new_jpg)
         {
