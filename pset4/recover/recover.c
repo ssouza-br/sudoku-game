@@ -19,6 +19,7 @@ int main(int argc, char *argv[])
     int counter = 0;
     char filename[9];
     bool new_jpg = false;
+    int jpg_count = 0;
     while (fread(buffer, 1, BLOCK_SIZE, file) == BLOCK_SIZE)
     {
         sprintf(filename, "%03i.jpg", counter);
