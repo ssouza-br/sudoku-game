@@ -28,24 +28,9 @@ int main(int argc, char *argv[])
             {
                 fwrite(buffer, 1, BLOCK_SIZE, img0);
             }
-        if (new_jpg)
-        {
-
-        }
 
 
 
-            counter++;
-
-                sprintf(filename, "%03i.jpg", counter);
-                printf("meu nome de arquivo: %s\n", filename);
-
-            }
-        do
-        {
-
-        }
-        while(!new_jpg);
         fclose(img0);
     }
     free(buffer);
