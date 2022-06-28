@@ -22,12 +22,20 @@ int main(int argc, char *argv[])
     {
         sprintf(filename, "%03i.jpg", counter);
         printf("meu nome de arquivo: %s\n", filename);
-        FILE *img0 = fopen(filename, "w");
+
 
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
             {
                 new_jpg = true;
-                counter++;
+            }
+        if (new_jpg)
+        {
+            FILE *img0 = fopen(filename, "w");
+        }
+
+
+
+            counter++;
                 fwrite(buffer, 1, BLOCK_SIZE, img0);
                 sprintf(filename, "%03i.jpg", counter);
                 printf("meu nome de arquivo: %s\n", filename);
