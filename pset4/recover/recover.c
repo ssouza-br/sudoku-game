@@ -21,9 +21,15 @@ int main(int argc, char *argv[])
     bool new_jpg = false;
     int jpg_count = 0;
     char conteudo[600];
-    while (fread(conteudo, 1, BLOCK_SIZE, file) == BLOCK_SIZE)
+    typedef struct
     {
-        printf("\nO CONTEÚDO DO ARQUIVO É:\n %s \n", conteudo);
+        int count;
+        char file[9];
+    }
+    pacote;
+    pacote pack;
+    while (fread(buffer, 1, BLOCK_SIZE, file) == BLOCK_SIZE)
+    {
         sprintf(filename, "%03i.jpg", counter);
         printf("meu nome de arquivo: %s\n", filename);
         FILE *img0 = fopen(filename, "w");
