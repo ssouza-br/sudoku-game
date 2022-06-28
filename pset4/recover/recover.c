@@ -20,7 +20,8 @@ int main(int argc, char *argv[])
     char filename[9];
     bool new_jpg = false;
     int jpg_count = 0;
-    while (fread(buffer, 1, BLOCK_SIZE, file) == BLOCK_SIZE)
+    char conteudo[600];
+    while (fread(conteudo, 1, BLOCK_SIZE, file) == BLOCK_SIZE)
     {
         sprintf(filename, "%03i.jpg", counter);
         printf("meu nome de arquivo: %s\n", filename);
