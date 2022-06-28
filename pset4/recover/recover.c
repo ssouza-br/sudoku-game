@@ -28,6 +28,8 @@ int main(int argc, char *argv[])
             {
                 new_jpg = true;
                 counter++;
+                sprintf(filename, "%03i.jpg", counter);
+                printf("meu nome de arquivo: %s\n", filename);
 
             }
         do
