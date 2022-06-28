@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
     FILE *file = fopen(argv[1], "r");
 
     BYTE *buffer = malloc(512);
-    int counter = 0;
+    int counter = -1;
     char filename[9];
     bool is_jpg = false;
     while (fread(buffer, 1, BLOCK_SIZE, file) == BLOCK_SIZE)
@@ -23,16 +23,17 @@ int main(int argc, char *argv[])
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
             {
                 is_jpg = true;
+                counter++;
+                sprintf(filename, "%03i.jpg", counter);
+                printf("meu nome de arquivo: %s\n", filename);
             }
         if (is_jpg)
         {
-            sprintf(filename, "%03i.jpg", counter);
-            printf("meu nome de arquivo: %s\n", filename);
             FILE *img0 = fopen(filename, "w");
             fwrite(buffer, 1, BLOCK_SIZE, img0);
         }
 
-        counter++;
+
         while ()
         {
 
