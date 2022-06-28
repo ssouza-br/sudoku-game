@@ -17,41 +17,23 @@ int main(int argc, char *argv[])
     BYTE *buffer = malloc(512);
     int counter = -1;
     char filename[9];
-    bool is_jpg = false;
+    bool new_jpg = false;
     while (fread(buffer, 1, BLOCK_SIZE, file) == BLOCK_SIZE)
     {
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
             {
-                is_jpg = true;
+                new_jpg = true;
                 counter++;
+                sprintf(filename, "%03i.jpg", counter);
+                printf("meu nome de arquivo: %s\n", filename);
+                FILE *img0 = fopen(filename, "w");
             }
-        if (is_jpg)
-        {
-            sprintf(filename, "%03i.jpg", counter);
-            printf("meu nome de arquivo: %s\n", filename);
-            FILE *img0 = fopen(filename, "w");
-        }
-
-        while(!is_jpg)
+        do
         {
             fwrite(buffer, 1, BLOCK_SIZE, img0);
         }
+        while(!new_jpg);
         fclose(img0);
-
-
-        if (is_jpg)
-        {
-
-
-        }
-
-
-        while ()
-        {
-
-        }
-        new_file = false;
-
     }
     free(buffer);
     fclose(file);
