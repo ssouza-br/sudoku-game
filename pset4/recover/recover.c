@@ -26,10 +26,11 @@ int main(int argc, char *argv[])
 
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
             {
+                new_jpg = true;
                 fwrite(buffer, 1, BLOCK_SIZE, img0);
                 counter++;
             }
-        else
+        else if (new_jpg)
         {
             fwrite(buffer, 1, BLOCK_SIZE, img0);
         }
