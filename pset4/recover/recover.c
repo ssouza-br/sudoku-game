@@ -34,10 +34,6 @@ int main(int argc, char *argv[])
         {
             fwrite(buffer, 1, BLOCK_SIZE, img0);
         }
-
-
-
-        fclose(img0);
     }
     free(buffer);
     fclose(file);
