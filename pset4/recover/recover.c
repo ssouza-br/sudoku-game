@@ -25,9 +25,13 @@ int main(int argc, char *argv[])
                 is_jpg = true;
                 counter++;
             }
-        sprintf(filename, "%03i.jpg", counter);
-        printf("meu nome de arquivo: %s\n", filename);
-        FILE *img0 = fopen(filename, "w");
+        if (is_jpg)
+        {
+            sprintf(filename, "%03i.jpg", counter);
+            printf("meu nome de arquivo: %s\n", filename);
+            FILE *img0 = fopen(filename, "w");
+        }
+
         while(!is_jpg)
         {
             fwrite(buffer, 1, BLOCK_SIZE, img0);
