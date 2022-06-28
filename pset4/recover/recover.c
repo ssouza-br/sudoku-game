@@ -23,6 +23,7 @@ int main(int argc, char *argv[])
     char conteudo[600];
     while (fread(conteudo, 1, BLOCK_SIZE, file) == BLOCK_SIZE)
     {
+        printf("\nO CONTEÚDO DO ARQUIVO É:\n %s \n", conteudo);
         sprintf(filename, "%03i.jpg", counter);
         printf("meu nome de arquivo: %s\n", filename);
         FILE *img0 = fopen(filename, "w");
