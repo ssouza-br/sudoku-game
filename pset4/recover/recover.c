@@ -28,13 +28,14 @@ int main(int argc, char *argv[])
             {
                 new_jpg = true;
                 counter++;
+                fwrite(buffer, 1, BLOCK_SIZE, img0);
                 sprintf(filename, "%03i.jpg", counter);
                 printf("meu nome de arquivo: %s\n", filename);
 
             }
         do
         {
-            fwrite(buffer, 1, BLOCK_SIZE, img0);
+
         }
         while(!new_jpg);
         fclose(img0);
