@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
     char filename[9];
     bool new_jpg = false;
     int jpg_count = 0;
-    while (fread(buffer, 1, BLOCK_SIZE, file) == BLOCK_SIZE)
+    while (fread(buffer, 1, BLOCK_SIZE, file) == BLOCK_SIZE && jpg_count<=2)
     {
         sprintf(filename, "%03i.jpg", counter);
         printf("meu nome de arquivo: %s\n", filename);
@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
             {
-                new_jpg = true;
+                jpg_count++;
                 fwrite(buffer, 1, BLOCK_SIZE, img0);
                 //counter++;
             }
