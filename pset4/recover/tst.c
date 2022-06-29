@@ -22,7 +22,7 @@ printf("%i\n", pack.type);
 
 sprintf(filename, "%03i.txt", pack.count);
 pack.file = fopen(filename, "w");
-char *text = "teste louco\n";
+char *text = "teste louco";
 fprintf(text, sizeof(text), 50, pack.file)
 //fwrite(buffer, 1, BLOCK_SIZE, pack.file);
 
