@@ -35,16 +35,17 @@ int main(int argc, char *argv[])
         {
             pack.type = 1;
         }
-        if (pack.type == 1)
-        {
-            pack.file = fopen(sprintf(filename, "%03i.jpg", counter), "w");
-        }
+        // if (pack.type == 1)
+        // {
+        //     pack.file = fopen(sprintf(filename, "%03i.jpg", counter), "w");
+        // }
 
 
-        if (pack.type == 0)
-        {
-            fread(buffer, 1, BLOCK_SIZE, img0)
-        }
+        // if (pack.type == 0)
+        // {
+        //     fread(buffer, 1, BLOCK_SIZE, img0)
+        // }
+        printf("pack type: %i\n", pack.type)
     }
     free(buffer);
     fclose(file);
