@@ -23,8 +23,8 @@ int main(int argc, char *argv[])
     char conteudo[600];
     typedef struct
     {
-        int type = 0;//0 normal e 1 jpg
-        int count = 0;
+        int type;//0 normal e 1 jpg
+        int count;
         FILE *file;
     }
     pacote;
@@ -34,6 +34,10 @@ int main(int argc, char *argv[])
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
             pack.type = 1;
+        }
+        else
+        {
+            pack.type = 0;
         }
         // if (pack.type == 1)
         // {
@@ -45,7 +49,7 @@ int main(int argc, char *argv[])
         // {
         //     fread(buffer, 1, BLOCK_SIZE, img0)
         // }
-        printf("pack type: %i\n", pack.type)
+        printf("pack type: %i\n", pack.type);
     }
     free(buffer);
     fclose(file);
