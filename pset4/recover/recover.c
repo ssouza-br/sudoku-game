@@ -36,6 +36,10 @@ int main(int argc, char *argv[])
                 pack.count = counter;
                 pack.type = 1;
             }
+        if (pack.type == 0)
+        {
+            
+        }
     }
     free(buffer);
     fclose(file);
