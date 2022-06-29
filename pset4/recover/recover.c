@@ -43,6 +43,7 @@ int main(int argc, char *argv[])
         if (pack.type == 1)
         {
             pack.file = fopen(sprintf(filename, "%03i.jpg", pack.count), "w");
+            pack.count++;
         }
 
 
