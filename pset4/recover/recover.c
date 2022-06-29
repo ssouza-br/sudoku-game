@@ -29,7 +29,7 @@ pacote pack;
     {
         return 1;
     }
-    BYTE *buffer = malloc(512*sizeof(BYTE));
+    BYTE *buffer = malloc(512);
     FILE *file = fopen(argv[1], "r");
 
     pack.count = 0;
