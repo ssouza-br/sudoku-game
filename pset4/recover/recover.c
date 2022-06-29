@@ -37,8 +37,7 @@ int main(int argc, char *argv[])
         }
         if (pack.type == 1)
         {
-            filename = sprintf()
-            pack.file = fopen(filename, "w");
+            pack.file = fopen(sprintf(filename, "%03i.jpg", counter), "w");
         }
 
 
