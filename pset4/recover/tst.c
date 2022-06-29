@@ -25,6 +25,15 @@ pack.file = fopen(filename, "w");
 char *text = "teste louco";
 
 fprintf(pack.file,"%s",text);
+
+fclose(pack.file);
+pack.count++;
+sprintf(filename, "%03i.txt", pack.count);
+pack.file = fopen(filename, "w");
+text = "eu mudei cara!!!";
+fprintf(pack.file,"%s",text);
+fclose(pack.file);
+
 //fprintf(text, sizeof(text), 50, pack.file)
 //fwrite(buffer, 1, BLOCK_SIZE, pack.file);
 
