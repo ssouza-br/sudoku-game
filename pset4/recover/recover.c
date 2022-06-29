@@ -39,10 +39,10 @@ int main(int argc, char *argv[])
         {
             pack.type = 0;
         }
-        // if (pack.type == 1)
-        // {
-        //     pack.file = fopen(sprintf(filename, "%03i.jpg", counter), "w");
-        // }
+        if (pack.type == 1)
+        {
+            pack.file = fopen(sprintf(filename, "%03i.jpg", counter), "w");
+        }
 
 
         // if (pack.type == 0)
