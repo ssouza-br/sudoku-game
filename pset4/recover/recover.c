@@ -37,7 +37,8 @@ int main(int argc, char *argv[])
         }
         if (pack.type == 1)
         {
-            pack.file = fopen(filename, )
+            filename = sprintf()
+            pack.file = fopen(filename, "w");
         }
 
 
