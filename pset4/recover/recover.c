@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
     {
         int type = 0;//0 normal e 1 jpg
         int count = 0;
-        FILE file[9];
+        FILE *file;
     }
     pacote;
     pacote pack;
@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
         }
         if (pack.type == 1)
         {
-
+            pack.file = fopen(filename, )
         }
 
 
