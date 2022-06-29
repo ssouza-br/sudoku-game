@@ -3,6 +3,8 @@
 #include <stdint.h>
 #include <stdbool.h>
 
+int main(int argc, char *argv[])
+{
 typedef uint8_t BYTE;
 int BLOCK_SIZE = 512;
 
@@ -21,8 +23,8 @@ typedef struct
 pacote;
 pacote pack;
 
-int main(int argc, char *argv[])
-{
+
+
     if (argc > 2)
     {
         return 1;
@@ -44,16 +46,17 @@ int main(int argc, char *argv[])
         if (pack.type == 1)
         {
             sprintf(filename, "%03i.jpg", pack.count);
-            //pack.file = fopen(filename, "w");
-            FILE *img = fopen(filename, "w");
-            fwrite(buffer, 1, BLOCK_SIZE, img);
+            pack.file = fopen(filename, "w");
+            //FILE *img = fopen(filename, "w");
+            //fwrite(buffer, 1, BLOCK_SIZE, img);
+            fwrite(buffer, 1, BLOCK_SIZE, pack.file);
             pack.count++;
         }
-        // else
-        // {
-        //     fwrite(buffer, 1, BLOCK_SIZE, pack.file);
-        // }
-        printf("pack type: %i\n", pack.type);
+        else
+        {
+            fwrite(buffer, 1, BLOCK_SIZE, pack.file);
+        }
+        //printf("pack type: %i\n", pack.type);
     }
     free(buffer);
     fclose(file);
@@ -61,5 +64,4 @@ int main(int argc, char *argv[])
     {
         return 1;
     }
-    printf("%s\n", argv[1]);
 }
