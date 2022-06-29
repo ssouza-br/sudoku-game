@@ -43,16 +43,15 @@ int main(int argc, char *argv[])
         }
         if (pack.type == 1)
         {
-        // fclose(pack.old_file);
-        // sprintf(filename, "%03i.jpg", pack.count);
-        // pack.file = fopen(filename, "w");
-        // fwrite(buffer, 1, BLOCK_SIZE, pack.file);
-        // pack.count++;
-        }
-        else
-        {
+            sprintf(filename, "%03i.jpg", pack.count);
+            pack.file = fopen(filename, "w");
             fwrite(buffer, 1, BLOCK_SIZE, pack.file);
+            pack.count++;
         }
+        // else
+        // {
+        //     fwrite(buffer, 1, BLOCK_SIZE, pack.file);
+        // }
         printf("pack type: %i\n", pack.type);
     }
     free(buffer);
