@@ -60,8 +60,6 @@ int main(int argc, char *argv[])
             pack.init = 0;
             sprintf(filename, "%03i.jpg", pack.count);
             pack.file = fopen(filename, "w");
-            //FILE *img = fopen(filename, "w");
-            //fwrite(buffer, 1, BLOCK_SIZE, img);
             fwrite(buffer, 1, BLOCK_SIZE, pack.file);
             pack.count++;
         }
