@@ -13,13 +13,16 @@ typedef struct
 pacote;
 pacote pack;
 
+char filename[9];
 int main(void)
 {
 pack.type = 1;
+pack.count = 0;
 printf("%i\n", pack.type);
 
-sprintf(filename, "%03i.jpg", pack.count);
+sprintf(filename, "%03i.txt", pack.count);
 pack.file = fopen(filename, "w");
-fwrite(buffer, 1, BLOCK_SIZE, pack.file);
+fprintf("teste louco\n", sizeof(char), 50, pack.file)
+//fwrite(buffer, 1, BLOCK_SIZE, pack.file);
 
 }
