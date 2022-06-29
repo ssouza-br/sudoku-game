@@ -4,7 +4,9 @@
 #include <stdbool.h>
 
 typedef uint8_t BYTE;
-buffer = (BYTE*)malloc(512);
+int *buffer;
+
+buffer = (int*)malloc(n * sizeof(int));
 
 // Check if the memory has been successfully
 // allocated by malloc or not
