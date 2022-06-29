@@ -54,7 +54,8 @@ pacote pack;
         }
         else
         {
-            fwrite(buffer, 1, BLOCK_SIZE, pack.file);
+        printf("%s\n", pack.file);
+            //fwrite(buffer, 1, BLOCK_SIZE, pack.file);
         }
         //printf("pack type: %i\n", pack.type);
     }
