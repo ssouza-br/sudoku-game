@@ -6,15 +6,6 @@
 typedef uint8_t BYTE;
 int *buffer;
 
-buffer = (int*)malloc(n * sizeof(int));
-
-// Check if the memory has been successfully
-// allocated by malloc or not
-if (buffer == NULL) {
-    printf("Memory not allocated.\n");
-    exit(0);
-}
-
 int main(int argc, char *argv[])
 {
 
