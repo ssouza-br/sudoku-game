@@ -65,7 +65,8 @@ int main(int argc, char *argv[])
         else
         {
         //printf("%s\n", pack.file);
-            fwrite(buffer, 1, BLOCK_SIZE, pack.file);
+            FILE *ptr = pack.file;
+            fwrite(buffer, 1, BLOCK_SIZE, ptr);
         }
         //printf("pack type: %i\n", pack.type);
     }
