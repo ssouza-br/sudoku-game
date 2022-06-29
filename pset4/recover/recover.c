@@ -17,6 +17,7 @@ int main(int argc, char *argv[])
     {
         int type;//0 normal e 1 jpg
         int count;
+        int init;
         FILE *file;
         FILE *old_file;
     }
@@ -43,6 +44,7 @@ int main(int argc, char *argv[])
     FILE *file = fopen(argv[1], "r");
 
     pack.count = 0;
+    pack.init = -1;
     while (fread(buffer, 1, BLOCK_SIZE, file) == BLOCK_SIZE)
     {
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
@@ -55,6 +57,7 @@ int main(int argc, char *argv[])
         }
         if (pack.type == 1)
         {
+            pack.init = 0;
             sprintf(filename, "%03i.jpg", pack.count);
             pack.file = fopen(filename, "w");
             //FILE *img = fopen(filename, "w");
@@ -62,7 +65,7 @@ int main(int argc, char *argv[])
             fwrite(buffer, 1, BLOCK_SIZE, pack.file);
             pack.count++;
         }
-        else
+        else if (pack.init == 0)
         {
         //printf("%s\n", pack.file);
             FILE *ptr = pack.file;
