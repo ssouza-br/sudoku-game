@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
             }
         if (pack.type == 0)
         {
-            
+            fread(buffer, 1, BLOCK_SIZE, img0)
         }
     }
     free(buffer);
