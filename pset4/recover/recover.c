@@ -6,6 +6,22 @@
 typedef uint8_t BYTE;
 int BLOCK_SIZE = 512;
 
+BYTE *buffer = malloc(512);
+int counter = 0;
+char filename[9];
+bool new_jpg = false;
+int jpg_count = 0;
+char conteudo[600];
+typedef struct
+{
+    int type;//0 normal e 1 jpg
+    int count;
+    FILE *file;
+    FILE *old_file;
+}
+pacote;
+pacote pack;
+
 int main(int argc, char *argv[])
 {
     if (argc > 2)
@@ -15,21 +31,6 @@ int main(int argc, char *argv[])
 
     FILE *file = fopen(argv[1], "r");
 
-    BYTE *buffer = malloc(512);
-    int counter = 0;
-    char filename[9];
-    bool new_jpg = false;
-    int jpg_count = 0;
-    char conteudo[600];
-    typedef struct
-    {
-        int type;//0 normal e 1 jpg
-        int count;
-        FILE *file;
-        FILE *old_file;
-    }
-    pacote;
-    pacote pack;
     pack.count = 0;
     while (fread(buffer, 1, BLOCK_SIZE, file) == BLOCK_SIZE)
     {
