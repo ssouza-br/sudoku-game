@@ -3,9 +3,19 @@
 #include <stdint.h>
 #include <stdbool.h>
 
+typedef uint8_t BYTE;
+buffer = (BYTE*)malloc(512);
+
+// Check if the memory has been successfully
+// allocated by malloc or not
+if (buffer == NULL) {
+    printf("Memory not allocated.\n");
+    exit(0);
+}
+
 int main(int argc, char *argv[])
 {
-typedef uint8_t BYTE;
+
 int BLOCK_SIZE = 512;
 
 int counter = 0;
