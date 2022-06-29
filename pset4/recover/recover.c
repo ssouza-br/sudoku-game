@@ -24,11 +24,12 @@ int main(int argc, char *argv[])
     pacote;
     pacote pack;
 
-    BYTE *buffer = (BYTE*)malloc(512*sizeof(BYTE));
+    BYTE *buffer = (BYTE *)malloc(512 * sizeof(BYTE));
 
     // Check if the memory has been successfully
     // allocated by malloc or not
-    if (buffer == NULL) {
+    if (buffer == NULL)
+    {
         printf("Memory not allocated.\n");
         exit(0);
     }
@@ -71,7 +72,7 @@ int main(int argc, char *argv[])
     }
     free(buffer);
     fclose(file);
-    if(file == NULL)
+    if (file == NULL)
     {
         return 1;
     }
