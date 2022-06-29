@@ -44,8 +44,9 @@ int main(int argc, char *argv[])
         if (pack.type == 1)
         {
             sprintf(filename, "%03i.jpg", pack.count);
-            pack.file = fopen(filename, "w");
-            fwrite(buffer, 1, BLOCK_SIZE, pack.file);
+            //pack.file = fopen(filename, "w");
+            FILE *img = fopen(filename, "w");
+            fwrite(buffer, 1, BLOCK_SIZE, img);
             pack.count++;
         }
         // else
