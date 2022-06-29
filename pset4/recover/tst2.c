@@ -11,7 +11,7 @@ typedef uint8_t BYTE;
 
 int main(void)
 {
-    int *buffer;
+    BYTE *buffer;
 
     buffer = (BYTE*)malloc(512*sizeof(BYTE));
 

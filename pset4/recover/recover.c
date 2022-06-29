@@ -5,34 +5,32 @@
 
 int main(int argc, char *argv[])
 {
-typedef uint8_t BYTE;
-int BLOCK_SIZE = 512;
+    typedef uint8_t BYTE;
+    int BLOCK_SIZE = 512;
 
-int counter = 0;
-char filename[9];
-bool new_jpg = false;
-int jpg_count = 0;
-char conteudo[600];
-typedef struct
-{
-    int type;//0 normal e 1 jpg
-    int count;
-    FILE *file;
-    FILE *old_file;
-}
-pacote;
-pacote pack;
+    int counter = 0;
+    char filename[9];
+    bool new_jpg = false;
+    int jpg_count = 0;
+    char conteudo[600];
+    typedef struct
+    {
+        int type;//0 normal e 1 jpg
+        int count;
+        FILE *file;
+        FILE *old_file;
+    }
+    pacote;
+    pacote pack;
 
-buffer = (BYTE*)malloc(512);
+    BYTE *buffer = (BYTE*)malloc(512*sizeof(BYTE));
 
-// Check if the memory has been successfully
-// allocated by malloc or not
-if (buffer == NULL) {
-    printf("Memory not allocated.\n");
-    exit(0);
-}
-
-
+    // Check if the memory has been successfully
+    // allocated by malloc or not
+    if (buffer == NULL) {
+        printf("Memory not allocated.\n");
+        exit(0);
+    }
 
     if (argc > 2)
     {
