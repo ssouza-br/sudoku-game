@@ -25,17 +25,22 @@ int main(int argc, char *argv[])
     {
         int type = 0;//0 normal e 1 jpg
         int count = 0;
-        char file[9];
+        FILE file[9];
     }
     pacote;
     pacote pack;
     while (fread(buffer, 1, BLOCK_SIZE, file) == BLOCK_SIZE)
     {
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
-            {
-                pack.count = counter;
-                pack.type = 1;
-            }
+        {
+            pack.type = 1;
+        }
+        if (pack.type == 1)
+        {
+
+        }
+
+
         if (pack.type == 0)
         {
             fread(buffer, 1, BLOCK_SIZE, img0)
