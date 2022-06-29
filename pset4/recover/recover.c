@@ -26,6 +26,7 @@ int main(int argc, char *argv[])
         int type;//0 normal e 1 jpg
         int count;
         FILE *file;
+        FILE *old_file;
     }
     pacote;
     pacote pack;
@@ -42,6 +43,7 @@ int main(int argc, char *argv[])
         }
         if (pack.type == 1)
         {
+            fclose(pack.old_file);
             sprintf(filename, "%03i.jpg", pack.count);
             pack.file = fopen(filename, "w");
             fwrite(buffer, 1, BLOCK_SIZE, pack.file);
