@@ -65,11 +65,9 @@ int main(int argc, char *argv[])
         }
         else if (pack.init == 0)
         {
-        //printf("%s\n", pack.file);
             FILE *ptr = pack.file;
             fwrite(buffer, 1, BLOCK_SIZE, ptr);
         }
-        //printf("pack type: %i\n", pack.type);
     }
     free(buffer);
     fclose(file);
