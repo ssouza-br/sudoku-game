@@ -6,10 +6,15 @@
 
 
 
+
+typedef uint8_t BYTE;
+
 int main(void)
 {
     int *buffer;
-    buffer = (int*)malloc(20 * sizeof(int));
+
+    buffer = (BYTE*)malloc(512*sizeof(BYTE));
+
 
     // Check if the memory has been successfully
     // allocated by malloc or not
