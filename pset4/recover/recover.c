@@ -6,7 +6,6 @@
 typedef uint8_t BYTE;
 int BLOCK_SIZE = 512;
 
-BYTE *buffer = malloc(512);
 int counter = 0;
 char filename[9];
 bool new_jpg = false;
@@ -28,7 +27,7 @@ int main(int argc, char *argv[])
     {
         return 1;
     }
-
+    BYTE *buffer = malloc(512);
     FILE *file = fopen(argv[1], "r");
 
     pack.count = 0;
@@ -44,11 +43,11 @@ int main(int argc, char *argv[])
         }
         if (pack.type == 1)
         {
-            // fclose(pack.old_file);
-            // sprintf(filename, "%03i.jpg", pack.count);
-            // pack.file = fopen(filename, "w");
-            // fwrite(buffer, 1, BLOCK_SIZE, pack.file);
-            // pack.count++;
+        // fclose(pack.old_file);
+        // sprintf(filename, "%03i.jpg", pack.count);
+        // pack.file = fopen(filename, "w");
+        // fwrite(buffer, 1, BLOCK_SIZE, pack.file);
+        // pack.count++;
         }
         else
         {
