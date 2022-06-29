@@ -23,23 +23,21 @@ int main(int argc, char *argv[])
     char conteudo[600];
     typedef struct
     {
-        int count;
+        int count = 0;
         char file[9];
     }
     pacote;
     pacote pack;
     while (fread(buffer, 1, BLOCK_SIZE, file) == BLOCK_SIZE)
     {
-        sprintf(filename, "%03i.jpg", counter);
-        printf("meu nome de arquivo: %s\n", filename);
-        FILE *img0 = fopen(filename, "w");
+        printf("meu nome de arquivo: %s\n", pack.file);
+        FILE *img0 = fopen(pack.file, "w");
 
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
             {
-                pack.count++;
-                new_jpg = true;
+                counter = pack.count;
+                pack.file = sprintf(filename, "%03i.jpg", counter);
                 fwrite(buffer, 1, BLOCK_SIZE, img0);
-                //counter++;
             }
         else if (new_jpg)
         {
