@@ -3,6 +3,7 @@
 #include <ctype.h>
 #include <stdbool.h>
 #include <stdlib.h>
+#include <stdint.h>
 
 #include "dictionary.h"
 
@@ -41,14 +42,14 @@ bool load(const char *dictionary)
     strcpy(n->word, word_read);
     n->next = NULL;
 
-    FILE *file = fopen(dictionary);
+    FILE *file = fopen(dictionary,"r");
 
     if (file == NULL)
     {
         return false;
     }
 
-    fscanf(file, )
+    fscanf(file,"%s",word);
 
 
     return false;
