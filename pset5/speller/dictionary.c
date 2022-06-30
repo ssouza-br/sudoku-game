@@ -40,7 +40,14 @@ bool load(const char *dictionary)
     strcpy(n->word, word_read);
     n->next = NULL;
 
-    int *file = fopen(dictionary);
+    FILE *file = fopen(dictionary);
+
+    if (file == NULL)
+    {
+        return false;
+    }
+
+    fscanf(file, )
 
 
     return false;
