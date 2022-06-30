@@ -4,6 +4,7 @@
 #include <stdbool.h>
 #include <stdlib.h>
 #include <stdint.h>
+#include <stdio.h>
 
 #include "dictionary.h"
 
@@ -38,18 +39,21 @@ unsigned int hash(const char *word)
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
+    FILE *file = fopen(dictionary,"r");
+
+
+    fscanf(file,"%s",word);
+
     node *n = malloc(sizeof(node));
     strcpy(n->word, word_read);
     n->next = NULL;
-
-    FILE *file = fopen(dictionary,"r");
 
     if (file == NULL)
     {
         return false;
     }
 
-    fscanf(file,"%s",word);
+
 
 
     return false;
