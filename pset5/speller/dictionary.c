@@ -40,9 +40,9 @@ bool load(const char *dictionary)
     strcpy(n->word, word_read);
     n->next = NULL;
 
-    FILE *file = fopen(dictionary);
+    int *file = fopen(dictionary);
 
-    
+
     return false;
 }
 
