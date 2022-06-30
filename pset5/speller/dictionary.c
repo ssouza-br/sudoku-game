@@ -41,6 +41,8 @@ bool load(const char *dictionary)
     n->next = NULL;
 
     FILE *file = fopen(dictionary);
+
+    
     return false;
 }
 
