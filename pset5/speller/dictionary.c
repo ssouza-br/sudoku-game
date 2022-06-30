@@ -42,7 +42,11 @@ bool load(const char *dictionary)
     FILE *file = fopen(dictionary,"r");
 
 
-    fscanf(file,"%s",word);
+    while (fscanf(file,"%s",word) == )
+    {
+
+    }
+    ;
 
     node *n = malloc(sizeof(node));
     strcpy(n->word, word_read);
