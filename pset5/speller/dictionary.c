@@ -40,7 +40,11 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     FILE *file = fopen(dictionary,"r");
-    char *word_read[]
+    if (file == NULL)
+        {
+            return false;
+        }
+    char *word_read[];
 
     while (fscanf(file,"%s",word_read) != EOF)
     {
@@ -48,15 +52,6 @@ bool load(const char *dictionary)
         strcpy(n->word, word_read);
         n->next = NULL;
     }
-
-
-    if (file == NULL)
-    {
-        return false;
-    }
-
-
-
 
     return false;
 }
