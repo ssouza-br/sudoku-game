@@ -72,6 +72,7 @@ bool load(const char *dictionary)
         word_number++;
         strcpy(n->word, word_read);
         //n->next = NULL;
+        node *tmp;
 
         n->next = table[hash(word_read)]->next;
         table[hash(word_read)]->next = n;
