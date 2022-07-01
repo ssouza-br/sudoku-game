@@ -55,15 +55,18 @@ bool load(const char *dictionary)
     printf("eu entrei aqui\n");
     if (file == NULL)
         {
+            printf("bug no arqui\n");
             return false;
         }
     char word_read[LENGTH + 1];
 
     while (fscanf(file,"%s", word_read) != EOF)
     {
+        printf("estou no fscanf. word number: %i. word: %s\n", word_number, word_read);
         node *n = malloc(sizeof(node));
         if (n == NULL)
         {
+            printf("bug no malloc\n");
             return false;
         }
         word_number++;
