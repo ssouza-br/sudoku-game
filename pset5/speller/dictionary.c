@@ -29,9 +29,15 @@ node *table[N];
 bool check(const char *word)
 {
     node *cursor = table[hash(word)]->next;
-    cursor = cursor->next;
 
-
+    while (cursor != NULL)
+    {
+        cursor = cursor->next;
+        if (cursor->word == word)
+        {
+            return true;
+        }
+    }
     return false;
 }
 
