@@ -76,7 +76,7 @@ bool load(const char *dictionary)
         //printf(" foo: %s\n", n->word);
         n = table[hash(word_read)];
         //table[hash(word_read)] = n;
-        //free(n);
+        free(n);
     }
 
     return true;
