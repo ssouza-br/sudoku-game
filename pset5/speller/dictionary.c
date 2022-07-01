@@ -77,6 +77,8 @@ bool load(const char *dictionary)
         //n = table[hash(word_read)];
         n->next = table[hash(word_read)]->next;
         table[hash(word_read)] = n;
+        free(n);
+
 
 
         //table[hash(word_read)] = n;
