@@ -57,7 +57,7 @@ bool load(const char *dictionary)
         n->next = NULL;
 
         n->next = table[hash(word_read)]->next;
-        int index = ;
+        table[hash(word_read)]->next = n;
     }
 
     return false;
