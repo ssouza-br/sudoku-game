@@ -64,6 +64,7 @@ bool load(const char *dictionary)
     {
         printf("estou no fscanf. word number: %i. word: %s\n", word_number, word_read);
         node *n = malloc(sizeof(node));
+        n->next = NULL;
         if (n == NULL)
         {
             printf("bug no malloc\n");
@@ -71,7 +72,6 @@ bool load(const char *dictionary)
         }
         word_number++;
         strcpy(n->word, word_read);
-        //n->next = NULL;
         node *tmp;
 
         n->next = table[hash(word_read)]->next;
