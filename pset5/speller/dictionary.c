@@ -32,11 +32,11 @@ bool check(const char *word)
 
     while (cursor != NULL)
     {
-        cursor = cursor->next;
         if (cursor->word == word)
         {
             return true;
         }
+        cursor = cursor->next;
     }
     return false;
 }
