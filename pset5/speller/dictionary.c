@@ -43,6 +43,7 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     FILE *file = fopen(dictionary,"r");
+    printf("eu entrei aqui");
     if (file == NULL)
         {
             return false;
