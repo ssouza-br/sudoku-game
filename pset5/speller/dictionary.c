@@ -52,7 +52,7 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     FILE *file = fopen(dictionary,"r");
-    printf("eu entrei aqui");
+    printf("eu entrei aqui\n");
     if (file == NULL)
         {
             return false;
