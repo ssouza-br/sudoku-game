@@ -52,17 +52,17 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     FILE *file = fopen(dictionary,"r");
-    printf("eu entrei aqui\n");
+    //printf("eu entrei aqui\n");
     if (file == NULL)
         {
-            printf("bug no arqui\n");
+            //printf("bug no arqui\n");
             return false;
         }
     char word_read[LENGTH + 1];
 
     while (fscanf(file,"%s", word_read) != EOF)
     {
-        printf("estou no fscanf. word number: %i. word: %s\n", word_number, word_read);
+        //printf("estou no fscanf. word number: %i. word: %s\n", word_number, word_read);
         node *n = malloc(sizeof(node));
         n->next = NULL;
         if (n == NULL)
