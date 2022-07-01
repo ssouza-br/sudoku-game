@@ -73,7 +73,7 @@ bool load(const char *dictionary)
         word_number++;
         strcpy(n->word, word_read);
 
-        printf(" foo: %s\n", n->word);
+        //printf(" foo: %s\n", n->word);
         // n->next = table[hash(word_read)]->next;
         // table[hash(word_read)] = n;
         //free(n);
