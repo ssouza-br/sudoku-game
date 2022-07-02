@@ -76,20 +76,20 @@ bool load(const char *dictionary)
         word_number++;
         strcpy(n->word, word_read);
 
-        //printf(" foo: %s\n", n->word);
+        printf(" foo: %s\n", n->word);
         //n = table[hash(word_read)];
-        if (table[hash(word_read)]->next != NULL)
-        {
-            printf("hash: %i word_read: %s\n",hash(word_read), word_read);
-            // //printf("word: %s\n",n->next->word);
-            // n->next = table[hash(word_read)]->next;
-            // table[hash(word_read)]->next = n;
-        }
-        else
-        {
-            printf("hash: %i word_read: %s\n",hash(word_read), word_read);
-            table[hash(word_read)] = n;
-        }
+        // if (table[hash(word_read)]->next != NULL)
+        // {
+        //     printf("hash: %i word_read: %s\n",hash(word_read), word_read);
+        //     // //printf("word: %s\n",n->next->word);
+        //     // n->next = table[hash(word_read)]->next;
+        //     // table[hash(word_read)]->next = n;
+        // }
+        // else
+        // {
+        //     printf("hash: %i word_read: %s\n",hash(word_read), word_read);
+        //     table[hash(word_read)] = n;
+        // }
         //table[hash(word_read)] = n;
         free(n);
     }
