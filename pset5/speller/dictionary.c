@@ -128,8 +128,8 @@ bool unload(void)
 {
     for (int i = 0; i < N; i++)
     {
-        node *cursor =  NULL;
-        node *tmp = NULL;
+        node *cursor = malloc(sizeof(node));
+        node *tmp = malloc(sizeof(node));
         cursor = table[i]->next;
         while (cursor->next != NULL)
         {
@@ -137,7 +137,7 @@ bool unload(void)
             cursor = cursor->next;
             free(tmp);
         }
-        //free(cursor);
+        free(cursor);
         //free(table[i]);
     }
     return true;
