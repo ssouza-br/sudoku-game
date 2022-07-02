@@ -29,8 +29,7 @@ node *table[N];
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    node *cursor = NULL;
-    cursor = table[hash(word)]->next;
+    node *cursor = table[hash(word)]->next;
     printf("hash: %i, word: %s\n", hash(word), word);
     while (cursor->next != NULL)
     {
