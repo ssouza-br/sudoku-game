@@ -96,7 +96,7 @@ bool load(const char *dictionary)
     // {
     //     printf("%s\n", tmp->word);
     // }
-    //free(n);
+    free(n);
     return true;
 }
 
