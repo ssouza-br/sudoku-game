@@ -89,7 +89,6 @@ bool load(const char *dictionary)
         //table[hash(word_read)] = n;
         free(n);
     }
-
     return true;
 }
 
