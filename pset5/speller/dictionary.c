@@ -97,7 +97,7 @@ unsigned int size(void)
 {
     // if (load(DICTIONARY))
     // {
-    printf("wor number: %i", word_number);
+    printf("word number: %i\n", word_number);
     return word_number;
     // }
     // return 0;
