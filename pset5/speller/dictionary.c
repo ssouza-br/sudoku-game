@@ -131,7 +131,7 @@ bool unload(void)
     for (int i = 0; i < N; i++)
     {
         node *cursor = NULL;
-        node *tmp = malloc(sizeof(node));
+        node *tmp = NULL;
         cursor = table[i]->next;
         while (cursor->next != NULL)
         {
