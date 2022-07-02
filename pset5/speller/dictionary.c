@@ -79,35 +79,21 @@ bool load(const char *dictionary)
         //n = table[hash(word_read)];
         if (table[hash(word_read)] != NULL)
         {
-            //printf("hash: %i word_read: %s\n",hash(word_read), word_read);
-            //printf("next word after buck: %s next next word after buck: %s\n", table[hash(word_read)]->next->word, table[hash(word_read)]->next->next->word);
-            // //printf("word: %s\n",n->next->word);
             n->next = table[hash(word_read)]->next;
             table[hash(word_read)]->next = n;
         }
         else
         {
-            //printf("hash: %i word_read: %s\n",hash(word_read), word_read);
+
             table[hash(word_read)] = n;
         }
-        //table[hash(word_read)] = n;
     }
-    // for (node *tmp =  table[0]; tmp != NULL; tmp=tmp->next)
-    // {
-    //     printf("%s\n", tmp->word);
-    // }
-    free(n);
     return true;
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
 {
-    // if (unload())
-    // {
-    //     return 0;
-    // }
-    //printf("words in dict: %i\n", word_number);
     return word_number;
 }
 
