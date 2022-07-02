@@ -31,11 +31,11 @@ bool check(const char *word)
 {
     //node *cursor = table[hash(word)]->next;
     //printf("hash: %i, word: %s\n", hash(word), word);
-    for (node *tmp =  table[hash(word)]->next; tmp != NULL; tmp=tmp->next)
+    for (node *tmp =  table[hash(word)]; tmp != NULL; tmp=tmp->next)
     {
         if (strcasecmp(tmp->word, word) == 0)
         {
-            //printf("encontrei palavra");
+            printf("encontrei palavra\n");
             return true;
         }
     }
