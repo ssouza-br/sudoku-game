@@ -75,21 +75,17 @@ bool load(const char *dictionary)
 
         //printf(" foo: %s\n", n->word);
         //n = table[hash(word_read)];
-        if (table[hash(word_read)]->next != NULL)
+        if (table[hash(word_read)]!= NULL)
         {
-            printf("diferrent null");
+            //printf("hash: %i word_read: %s\n",hash(word_read), word_read);
             n->next = table[hash(word_read)]->next;
             table[hash(word_read)]->next = n;
         }
         else
         {
-            printf("null");
-            table[hash(word_read)]->next = n;
+            //printf("hash: %i word_read: %s\n",hash(word_read), word_read);
+            table[hash(word_read)] = n;
         }
-        free(n);
-
-
-
         //table[hash(word_read)] = n;
         free(n);
     }
