@@ -29,21 +29,31 @@ node *table[N];
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    node *cursor = table[hash(word)]->next;
+    //node *cursor = table[hash(word)]->next;
     //printf("hash: %i, word: %s\n", hash(word), word);
-    while (cursor != NULL)
+    for (node *tmp =  table[hash(word)]->next; tmp != NULL; tmp=tmp->next)
     {
-        //printf("entrei\n");
-        if (strcasecmp(cursor->word, word) == 0)
+        if (strcasecmp(tmp->word, word) == 0)
         {
-           // printf("encontrei palavra");
+            //printf("encontrei palavra");
             return true;
         }
-        cursor = cursor->next;
     }
-    free(cursor);
     return false;
 }
+    // while (cursor != NULL)
+    // {
+    //     //printf("entrei\n");
+    //     if (strcasecmp(cursor->word, word) == 0)
+    //     {
+    //        // printf("encontrei palavra");
+    //         return true;
+    //     }
+    //     cursor = cursor->next;
+    // }
+    // free(cursor);
+    // return false;
+//}
 
 // Hashes word to a number
 unsigned int hash(const char *word)
@@ -94,10 +104,10 @@ bool load(const char *dictionary)
         //table[hash(word_read)] = n;
         //free(n);
     }
-    for (node *tmp =  table[0]; tmp != NULL; tmp=tmp->next)
-    {
-        printf("%s\n", tmp->word);
-    }
+    // for (node *tmp =  table[0]; tmp != NULL; tmp=tmp->next)
+    // {
+    //     printf("%s\n", tmp->word);
+    // }
 
     return true;
 }
