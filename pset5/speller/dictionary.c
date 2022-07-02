@@ -32,13 +32,15 @@ bool check(const char *word)
     while (table[hash(word)] != NULL)
     {
         node *tmp = table[hash(word)]->next;
-        table[hash(word)] = tmp;
-
-        if (strcasecmp(table[hash(word)]->word, word) == 0)
+        if (strcasecmp(tmp->word, word) == 0)
         {
             //printf("encontrei palavra\n");
             word_number++;
             return true;
+        }
+        else
+        {
+            table[hash(word)] = tmp;
         }
     }
 
