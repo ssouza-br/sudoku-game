@@ -88,7 +88,7 @@ bool load(const char *dictionary)
         else
         {
             printf("hash: %i word_read: %s\n",hash(word_read), word_read);
-            table[hash(word_read)] = n;
+            table[hash(word_read)]->next = n;
         }
         //table[hash(word_read)] = n;
         free(n);
