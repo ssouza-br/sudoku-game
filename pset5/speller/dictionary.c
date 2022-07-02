@@ -37,6 +37,7 @@ bool check(const char *word)
         {
             //printf("encontrei palavra\n");
             word_number++;
+            printf("palavras achadas: %i\n", word_number);
             return true;
         }
     }
