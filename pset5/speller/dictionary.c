@@ -30,7 +30,7 @@ node *table[N];
 bool check(const char *word)
 {
     node *cursor = table[hash(word)];
-    printf("hash: %i", hash(word));
+    printf("hash: %i, word: %s\n", hash(word), word);
     while (cursor != NULL)
     {
         if (strcasecmp(cursor->word, word) == 0)
