@@ -42,19 +42,12 @@ bool check(const char *word)
     }
     return false;
 }
-    // while (cursor != NULL)
-    // {
-    //     //printf("entrei\n");
-    //     if (strcasecmp(cursor->word, word) == 0)
-    //     {
-    //        // printf("encontrei palavra");
-    //         return true;
-    //     }
-    //     cursor = cursor->next;
-    // }
-    // free(cursor);
-    // return false;
-//}
+
+        while (table[i] != NULL)
+        {
+            node *tmp = table[i]->next;
+            table[i] = tmp;
+        }
 
 // Hashes word to a number
 unsigned int hash(const char *word)
