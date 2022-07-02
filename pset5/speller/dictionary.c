@@ -31,7 +31,7 @@ bool check(const char *word)
 {
     //node *cursor = table[hash(word)]->next;
     //printf("hash: %i, word: %s\n", hash(word), word);
-    for (node *tmp =  table[hash(word)]; tmp != NULL; tmp=tmp->next)
+    for (node *tmp =  table[hash(word)]; tmp != NULL; tmp = tmp->next)
     {
         if (strcasecmp(tmp->word, word) == 0)
         {
@@ -52,17 +52,17 @@ unsigned int hash(const char *word)
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
-    FILE *file = fopen(dictionary,"r");
+    FILE *file = fopen(dictionary, "r");
     //printf("eu entrei aqui\n");
     if (file == NULL)
-        {
-            //printf("bug no arqui\n");
-            return false;
-        }
+    {
+        //printf("bug no arqui\n");
+        return false;
+    }
     char word_read[LENGTH + 1];
     word_number = 0;
 
-    while (fscanf(file,"%s", word_read) != EOF)
+    while (fscanf(file, "%s", word_read) != EOF)
     {
         //printf("estou no fscanf. word number: %i. word: %s\n", word_number, word_read);
         node *n = malloc(sizeof(node));
