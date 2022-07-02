@@ -96,6 +96,7 @@ bool load(const char *dictionary)
             n->next = table[hash(word_read)]->next;
             table[hash(word_read)]->next = n;
             free(n);
+            free(n->next);
         }
         else
         {
