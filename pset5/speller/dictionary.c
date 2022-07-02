@@ -31,7 +31,7 @@ bool check(const char *word)
 {
     node *cursor = table[hash(word)]->next;
     printf("hash: %i, word: %s\n", hash(word), word);
-    while (cursor->next != NULL)
+    while (cursor != NULL)
     {
         //printf("entrei\n");
         if (strcasecmp(cursor->word, word) == 0)
