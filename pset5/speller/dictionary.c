@@ -135,7 +135,7 @@ bool unload(void)
             node *tmp = NULL;
             tmp = cursor;
             cursor = cursor->next;
-            free(tmp);
+            //free(tmp);
         }
         //free(cursor);
         //free(table[i]);
