@@ -18,13 +18,13 @@ typedef struct node
 }
 node;
 
-int word_number = 0;
-
 // TODO: Choose number of buckets in hash table
 const unsigned int N = 26;
 
 // Hash table
 node *table[N];
+
+int word_number;
 
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
@@ -60,6 +60,7 @@ bool load(const char *dictionary)
             return false;
         }
     char word_read[LENGTH + 1];
+    word_number = 0;
 
     while (fscanf(file,"%s", word_read) != EOF)
     {
