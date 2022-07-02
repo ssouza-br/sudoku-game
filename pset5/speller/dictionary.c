@@ -94,7 +94,11 @@ bool load(const char *dictionary)
         //table[hash(word_read)] = n;
         free(n);
     }
-    printf("next word after buck: %s next next word after buck: %s\n", table[0]->word, table[0]->next->word);
+    for (node *tmp =  table[0]; tmp != NULL; tmp=tmp->next)
+    {
+        printf("%s\n", tmp->word);
+    }
+
     return true;
 }
 
