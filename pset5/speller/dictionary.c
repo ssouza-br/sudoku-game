@@ -128,7 +128,7 @@ bool unload(void)
     for (int i = 0; i < N; i++)
     {
         node *cursor =  NULL;
-        cursor = table[i];
+        cursor = table[i]->next;
         while (cursor->next != NULL)
         {
             node *tmp = NULL;
