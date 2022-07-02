@@ -128,9 +128,11 @@ bool unload(void)
 {
     for (int i = 0; i < N; i++)
     {
-        for (node *tmp =  table[i]; tmp != NULL; tmp=tmp->next)
+        for (node *cursor =  table[i]; cursor != NULL; cursor=cursor->next)
         {
-            printf("%s\n", tmp->word);
+            node *tmp = malloc(sizeof(node));
+            tmp = cursor;
+
         }
     }
     return false;
