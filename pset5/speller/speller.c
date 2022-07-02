@@ -107,6 +107,7 @@ int main(int argc, char *argv[])
 
             // Update counter
             words++;
+            printf("words counter in text: %i", words);
 
             // Check word's spelling
             getrusage(RUSAGE_SELF, &before);
