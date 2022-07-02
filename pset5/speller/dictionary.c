@@ -132,8 +132,10 @@ bool unload(void)
         {
             node *tmp = malloc(sizeof(node));
             tmp = cursor;
-
+            cursor = cursor->next;
+            free(tmp);
         }
     }
-    return false;
+    free(table);
+    return true;
 }
