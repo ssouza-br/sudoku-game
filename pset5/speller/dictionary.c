@@ -72,7 +72,7 @@ bool load(const char *dictionary)
             return false;
         }
         word_number++;
-        printf("words in dict: %i\n", word_number);
+        //printf("words in dict: %i\n", word_number);
         strcpy(n->word, word_read);
 
         //printf(" foo: %s\n", n->word);
@@ -105,6 +105,7 @@ unsigned int size(void)
 {
     if (!unload())
     {
+        printf("words in dict: %i\n", word_number);
         return word_number;
     }
     return 0;
