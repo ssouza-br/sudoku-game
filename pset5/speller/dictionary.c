@@ -73,11 +73,10 @@ bool load(const char *dictionary)
             return false;
         }
     char word_read[LENGTH + 1];
-
+    node *n = malloc(sizeof(node));
     while (fscanf(file,"%s", word_read) != EOF)
     {
         //printf("estou no fscanf. word number: %i. word: %s\n", word_number, word_read);
-        node *n = malloc(sizeof(node));
         n->next = NULL;
         if (n == NULL)
         {
