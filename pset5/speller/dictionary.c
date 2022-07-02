@@ -98,7 +98,7 @@ unsigned int size(void)
 {
     // if (load(DICTIONARY))
     // {
-        return word_number;
+    return word_number;
     // }
     // return 0;
 }
