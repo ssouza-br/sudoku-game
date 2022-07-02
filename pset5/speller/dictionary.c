@@ -95,15 +95,11 @@ bool load(const char *dictionary)
             // //printf("word: %s\n",n->next->word);
             n->next = table[hash(word_read)]->next;
             table[hash(word_read)]->next = n;
-            free(n->next);
-            free(n);
         }
         else
         {
             //printf("hash: %i word_read: %s\n",hash(word_read), word_read);
             table[hash(word_read)] = n;
-            free(n->next);
-            free(n);
         }
         //table[hash(word_read)] = n;
     }
