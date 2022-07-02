@@ -68,7 +68,6 @@ bool load(const char *dictionary)
         n->next = NULL;
         if (n == NULL)
         {
-            printf("bug no malloc\n");
             return false;
         }
         word_number++;
@@ -76,7 +75,7 @@ bool load(const char *dictionary)
 
         //printf(" foo: %s\n", n->word);
         //n = table[hash(word_read)];
-        if (table[hash(word_read)]!= NULL)
+        if (table[hash(word_read)] != NULL)
         {
             //printf("hash: %i word_read: %s\n",hash(word_read), word_read);
             n->next = table[hash(word_read)]->next;
@@ -96,11 +95,11 @@ bool load(const char *dictionary)
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
 {
-    // if (load(DICTIONARY))
-    // {
-    return word_number;
-    // }
-    // return 0;
+    if (load(DICTIONARY))
+    {
+        return word_number;
+    }
+    return 0;
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
