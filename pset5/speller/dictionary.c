@@ -102,7 +102,7 @@ bool load(const char *dictionary)
             table[hash(word_read)] = n;
         }
         //table[hash(word_read)] = n;
-        //free(n);
+        free(n);
     }
     // for (node *tmp =  table[0]; tmp != NULL; tmp=tmp->next)
     // {
