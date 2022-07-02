@@ -30,13 +30,13 @@ node *table[N];
 bool check(const char *word)
 {
     node *cursor = table[hash(word)]->next;
-    printf("hash: %i, word: %s\n", hash(word), word);
+    //printf("hash: %i, word: %s\n", hash(word), word);
     while (cursor != NULL)
     {
         //printf("entrei\n");
         if (strcasecmp(cursor->word, word) == 0)
         {
-            printf("encontrei palavra");
+           // printf("encontrei palavra");
             return true;
         }
         cursor = cursor->next;
@@ -100,7 +100,7 @@ unsigned int size(void)
 {
     // if (load(DICTIONARY))
     // {
-    printf("word number: %i\n", word_number);
+    //printf("word number: %i\n", word_number);
     return word_number;
     // }
     // return 0;
