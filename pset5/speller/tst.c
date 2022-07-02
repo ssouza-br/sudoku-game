@@ -29,7 +29,7 @@ int main(void)
     n->next = NULL;
 
     lista->next->next = n;
-    free(n);
+    //free(n);
 
     for (node *tmp = lista; tmp != NULL; tmp=tmp->next)
     {
