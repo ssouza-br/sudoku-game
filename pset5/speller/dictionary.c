@@ -33,7 +33,7 @@ bool check(const char *word)
     printf("hash: %i, word: %s\n", hash(word), word);
     while (cursor->next != NULL)
     {
-        printf("entrei\n");
+        //printf("entrei\n");
         if (strcasecmp(cursor->word, word) == 0)
         {
             printf("encontrei palavra");
