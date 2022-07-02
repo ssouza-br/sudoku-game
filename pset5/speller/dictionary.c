@@ -34,7 +34,7 @@ bool check(const char *word)
         node *tmp = table[hash(word)]->next;
         table[hash(word)] = tmp;
 
-        if (strcasecmp(tmp->word, word) == 0)
+        if (strcasecmp(table[hash(word)]->word, word) == 0)
         {
             //printf("encontrei palavra\n");
             word_number++;
