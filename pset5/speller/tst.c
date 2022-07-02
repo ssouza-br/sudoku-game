@@ -29,7 +29,11 @@ int main(void)
     n->next = NULL;
 
     lista->next->next = n;
-
     free(n);
+
+    for (node *tmp = lista; tmp != NULL; tmp=tmp->next)
+    {
+        printf("%i\n", tmp->number);
+    }
 
 }
