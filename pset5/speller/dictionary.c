@@ -35,7 +35,7 @@ bool check(const char *word)
     {
         if (strcasecmp(tmp->word, word) == 0)
         {
-            printf("encontrei palavra\n");
+            //printf("encontrei palavra\n");
             word_number++;
             return true;
         }
