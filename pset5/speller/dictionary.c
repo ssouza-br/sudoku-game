@@ -77,11 +77,13 @@ bool load(const char *dictionary)
         //n = table[hash(word_read)];
         if (table[hash(word_read)]->next != NULL)
         {
+            printf("diferrent null");
             n->next = table[hash(word_read)]->next;
             table[hash(word_read)]->next = n;
         }
         else
         {
+            printf("null");
             table[hash(word_read)]->next = n;
         }
         free(n);
