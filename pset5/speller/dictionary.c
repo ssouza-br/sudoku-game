@@ -36,8 +36,6 @@ bool check(const char *word)
         if (strcasecmp(tmp->word, word) == 0)
         {
             //printf("encontrei palavra\n");
-            word_number++;
-            printf("palavras achadas: %i\n", word_number);
             return true;
         }
     }
@@ -72,7 +70,7 @@ bool load(const char *dictionary)
         {
             return false;
         }
-        //word_number++;
+        word_number++;
         strcpy(n->word, word_read);
 
         //printf(" foo: %s\n", n->word);
