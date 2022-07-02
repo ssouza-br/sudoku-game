@@ -135,7 +135,7 @@ bool unload(void)
             cursor = cursor->next;
             free(tmp);
         }
-        free(table[i]);
+        //free(table[i]);
     }
     return true;
 }
