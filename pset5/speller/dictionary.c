@@ -80,8 +80,8 @@ bool load(const char *dictionary)
         //n = table[hash(word_read)];
         if (table[hash(word_read)] != NULL)
         {
-            printf("hash: %i word_read: %s\n",hash(word_read), word_read);
-            printf("next word after buck: %s next next word after buck: %s\n", table[hash(word_read)]->next->word, table[hash(word_read)]->next->next->word);
+            //printf("hash: %i word_read: %s\n",hash(word_read), word_read);
+            //printf("next word after buck: %s next next word after buck: %s\n", table[hash(word_read)]->next->word, table[hash(word_read)]->next->next->word);
             // //printf("word: %s\n",n->next->word);
             n->next = table[hash(word_read)]->next;
             table[hash(word_read)]->next = n;
