@@ -28,11 +28,11 @@ node *table[N];
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    node *cursor = table[hash(word)]->next;
+    node *cursor = table[hash(word)];
 
     while (cursor != NULL)
     {
-        if (cursor->word == word)
+        if ( strcasecmpcursor->word == word)
         {
             return true;
         }
