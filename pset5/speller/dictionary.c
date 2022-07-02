@@ -71,6 +71,7 @@ bool load(const char *dictionary)
             return false;
         }
         word_number++;
+        printf("words in dict: %i\n", word_number);
         strcpy(n->word, word_read);
 
         //printf(" foo: %s\n", n->word);
