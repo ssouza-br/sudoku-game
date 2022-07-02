@@ -37,6 +37,13 @@ int main(void)
     }
 
     //unload
-    
+    node* tmp;
+    for (node *cursor = lista; cursor != NULL; cursor=cursor->next)
+    {
+        tmp = cursor;
+        cursor = cursor->next;
+        free(tmp);
+    }
+
 
 }
