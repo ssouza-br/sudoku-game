@@ -32,7 +32,7 @@ bool check(const char *word)
 
     while (cursor != NULL)
     {
-        if (strcasecmp(cursor->word, word))
+        if (strcasecmp(cursor->word, word) == 0)
         {
             return true;
         }
