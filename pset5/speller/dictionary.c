@@ -130,7 +130,7 @@ bool unload(void)
         node *cursor =  table[i];
         while (cursor->next != NULL)
         {
-            node *tmp = malloc(sizeof(node));
+            node *tmp = NULL;
             tmp = cursor;
             cursor = cursor->next;
             free(tmp);
