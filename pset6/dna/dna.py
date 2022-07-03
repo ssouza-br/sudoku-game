@@ -33,13 +33,16 @@ def main():
     for i in headers[1:]:
         dict_seq[i] = longest_match(seq[0], i)
 
-
     # TODO: Check database for matching profiles
     for name in db:
+        success_count = 0
         for subseq in db[name]:
-            if db[name][subseq] != dict_seq[subseq]:
-                break
-        print(name)
+            if db[name][subseq] == dict_seq[subseq]:
+                print('entrei')
+                success_count += 1
+
+        if success_count == len(headers[1:]):
+            print(name)
 
     # print(dict_seq)
     return
