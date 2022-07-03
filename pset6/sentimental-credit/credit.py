@@ -29,7 +29,7 @@ def card_validation(n):
         sum += int(n[i])
 
 
-    if sum % 10 == 0
+    if sum % 10 == 0:
         return True
     return False
 
