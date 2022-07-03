@@ -44,7 +44,9 @@ def main():
         if success_count == len(headers[1:]):
             print(name)
 
-    # print(dict_seq)
+    print(dict_seq)
+    print(db['Lavender'])
+
     return
 
 
