@@ -18,8 +18,11 @@ def main():
     with open(database, "r") as dbfile:
         database_reader = csv.DictReader(dbfile)
         for row in database_reader:
-            db['name'] = row['name']
-            db['name']["AGATC"] = row["AGATC"]
+            db["name"] = row["name"]
+            db["name"]["AGATC"] = row["AGATC"]
+            db["name"]["TTTTTTCT"] = row["TTTTTTCT"]
+            db["name"]["AATG"] = row["AATG"]
+
 
     # TODO: Read DNA sequence file into a variable
 
