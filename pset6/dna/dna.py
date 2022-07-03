@@ -28,7 +28,7 @@ def main():
         sequence_reader = csv.DictReader(sqfile)
         headers = sequence_reader.fieldnames
         for row in sequence_reader:
-            
+            print(row)
             # db[row["name"]] = {}
             # for i in headers[1:]:
             #     db[row["name"]][i] = row[i]
