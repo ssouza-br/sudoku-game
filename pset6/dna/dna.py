@@ -19,6 +19,8 @@ def main():
         database_reader = csv.DictReader(dbfile)
         for row in database_reader:
             db['name'] = row['name']
+            db['name'][""]
+
 
     # TODO: Read DNA sequence file into a variable
 
