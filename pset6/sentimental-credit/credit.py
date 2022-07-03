@@ -1,5 +1,7 @@
 number = input("Number: ")
 
+def main():
+    print(card_type(number))
 
 def card_type(n):
     if (len(n) == 13 or len(n) == 16) and n[0] == "4":
@@ -10,3 +12,7 @@ def card_type(n):
         return "AMEX"
     else:
         return "INVALID"
+
+
+
+main()
