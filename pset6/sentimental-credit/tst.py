@@ -1,1 +1,4 @@
-print(99//10)
+
+
+
+print(int("2") in range(1,6))
