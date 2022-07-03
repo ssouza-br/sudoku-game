@@ -20,8 +20,8 @@ def main():
         headers = database_reader.fieldnames
         for row in database_reader:
             db[row["name"]] = 0
-            # for i in headers[1:]:
-            #     db[row["name"]][i] = row[i]
+            for i in headers[1:]:
+                db[row["name"]][i] = row[i]
     print(db)
     # TODO: Read DNA sequence file into a variable
 
