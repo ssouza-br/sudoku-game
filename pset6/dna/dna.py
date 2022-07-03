@@ -2,7 +2,7 @@ import csv
 import sys
 
 db = {}
-seq = {}
+dict_seq = {}
 
 def main():
 
@@ -30,11 +30,13 @@ def main():
             seq = row
 
     # TODO: Find longest match of each STR in DNA sequence
+    for i in headers[1:]:
+        dict_seq[i] = longest_match(seq, i)
+
 
     # TODO: Check database for matching profiles
-
+    print(dict_seq)
     return
-
 
 
 
