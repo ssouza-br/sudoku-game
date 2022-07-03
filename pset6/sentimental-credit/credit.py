@@ -13,6 +13,18 @@ def card_type(n):
     else:
         return "INVALID"
 
+def card_validation(n):
+    valid = False
+    int sum = check_sum_part1(n) + check_sum_part2(n);
+    if (get_digits(sum, 1) == 0)
+    {
+        valid = true;
+        return valid;
+    }
+
+        return valid;
+    }
+
 long int gen_decimals(int n)
 {
     long int res = 1;
