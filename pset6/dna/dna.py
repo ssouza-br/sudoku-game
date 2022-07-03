@@ -17,13 +17,12 @@ def main():
     # TODO: Read database file into a variable
     with open(database, "r") as dbfile:
         database_reader = csv.DictReader(dbfile)
+        headers = database_reader.fieldnames
         for row in database_reader:
             db["name"] = row["name"]
-            db["name"]["AGATC"] = row["AGATC"]
-            db["name"]["TTTTTTCT"] = row["TTTTTTCT"]
-            db["name"]["AATG"] = row["AATG"]
-
-
+            for i in headers:
+                db["name"][i] = row[i]
+    print(db)
     # TODO: Read DNA sequence file into a variable
 
     # TODO: Find longest match of each STR in DNA sequence
