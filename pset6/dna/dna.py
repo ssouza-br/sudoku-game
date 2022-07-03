@@ -7,8 +7,8 @@ def main():
     # TODO: Check for command-line usage
     while True:
         if len(sys.argv) == 2:
-            filename = sys.argv[0]
-            
+            database = sys.argv[0]
+            sequence = sys.argv[1]
             break
         try:
 
