@@ -35,6 +35,9 @@ def main():
 
 
     # TODO: Check database for matching profiles
+
+    for name in db:
+        
     print(dict_seq)
     return
 
