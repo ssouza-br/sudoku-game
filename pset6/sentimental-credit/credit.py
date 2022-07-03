@@ -25,7 +25,7 @@ def card_validation(n):
 
 def check_sum(n):
     sum = 0
-    for i in range(0, len(n), 2):
+    for i in range(len(n)-1, 0, -2):
         if 2*int(n[i]) > 10:
             sum += 2*int(n[i]) // 10 + 2*int(n[i]) % 10
         else:
