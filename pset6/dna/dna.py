@@ -5,14 +5,12 @@ import sys
 def main():
 
     # TODO: Check for command-line usage
-    while True:
-        if len(sys.argv) == 2:
-            database = sys.argv[0]
-            sequence = sys.argv[1]
-            break
-        try:
 
-        except:
+    if len(sys.argv) == 2:
+        database = sys.argv[0]
+        sequence = sys.argv[1]
+    print()
+
 
     # TODO: Read database file into a variable
 
