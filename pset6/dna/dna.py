@@ -6,10 +6,11 @@ def main():
 
     # TODO: Check for command-line usage
 
-    if len(sys.argv) == 2:
-        database = sys.argv[0]
-        sequence = sys.argv[1]
-    print("Missing arguments")
+    if len(sys.argv) == 3:
+        database = sys.argv[1]
+        sequence = sys.argv[2]
+    else:
+        print("Missing arguments")
 
 
     # TODO: Read database file into a variable
