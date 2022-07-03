@@ -19,7 +19,7 @@ def main():
         database_reader = csv.DictReader(dbfile)
         headers = database_reader.fieldnames
         for row in database_reader:
-            db["name"] = row["name"]
+            db[row["name"]] = 0
             # for i in headers[1:]:
             #     db[row["name"]][i] = row[i]
     print(db)
