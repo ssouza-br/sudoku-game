@@ -9,7 +9,7 @@ def main():
     if len(sys.argv) == 2:
         database = sys.argv[0]
         sequence = sys.argv[1]
-    print()
+    print("Missing arguments")
 
 
     # TODO: Read database file into a variable
