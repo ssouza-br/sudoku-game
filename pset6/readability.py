@@ -26,6 +26,6 @@ def grade():
     elif (round(index) > 16):
         printf("Grade 16+")
     else:
-        print(f"Grade {round(index)}")
+        print(f"Grade {index}")
 
 grade()
