@@ -28,3 +28,4 @@ def grade():
     else:
         print(f"Grade {round(index)}")
 
+grade()
