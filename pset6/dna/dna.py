@@ -41,6 +41,8 @@ def main():
                 success_count += 1
         if success_count == len(headers[1:]):
             print(name)
+            return 0
+    print("No match")
     return
 
 
