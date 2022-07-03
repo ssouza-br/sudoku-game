@@ -23,7 +23,10 @@ def card_validation(n):
     }
     return valid
 
-
+def check_sum(n):
+    sum = 0
+    for i in range(0, len(n), 2):
+        sum += 2*int(n[i])
 
 int check_sum_part1(long int n)
 {
