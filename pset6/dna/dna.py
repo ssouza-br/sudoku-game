@@ -15,12 +15,11 @@ def main():
         print("Missing arguments")
 
     # TODO: Read database file into a variable
-    with open(database) as dbfile:
+    with open(database, "r") as dbfile:
         database_reader = csv.DictReader(dbfile)
         for row in database_reader:
             db['name'] = row['name']
-            db['name'][""]
-
+            db['name']["AGATC"] = row["AGATC"]
 
     # TODO: Read DNA sequence file into a variable
 
