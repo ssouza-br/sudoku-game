@@ -13,7 +13,10 @@ def main():
         print("Missing arguments")
 
     # TODO: Read database file into a variable
-    with 
+    with open(database) as dbfile:
+        database_reader = csv.reader(dbfile)
+        for row in database_reader:
+            print(', '.join(row))
 
     # TODO: Read DNA sequence file into a variable
 
