@@ -19,6 +19,7 @@ for c in text:
 def grade():
     L = 100 * counter_letters / counter_words # L is the average number of letters per 100 words in the text
     S = 100 * counter_sentences / counter_words # S is the average number of sentences per 100 words in the text
+
     index = 0.0588 * L - 0.296 * S - 15.8
 
     if (round(index) < 1):
@@ -27,5 +28,6 @@ def grade():
         print("Grade 16+")
     else:
         print(f"Grade {round(index)}")
+
 print(f" l: {counter_letters} w: {counter_words} s: {counter_sentences}")
 grade()
