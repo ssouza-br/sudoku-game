@@ -4,6 +4,7 @@ import sys
 db = {}
 dict_seq = {}
 
+
 def main():
 
     # TODO: Check for command-line usage
