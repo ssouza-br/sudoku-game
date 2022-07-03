@@ -1,4 +1,8 @@
-height = int(input("Height: "))
+
+while True:
+    height = int(input("Height: "))
+    if height > 0:
+        break
 
 def blocks(n):
     print(" "*(height - n) + "#"*n + "  " +"#"*n)
