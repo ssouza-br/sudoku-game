@@ -1,6 +1,8 @@
 import csv
 import sys
 
+db = {}
+seq = {}
 
 def main():
 
