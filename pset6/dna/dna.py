@@ -25,8 +25,8 @@ def main():
 
     # TODO: Read DNA sequence file into a variable
     with open(sequence, "r") as sqfile:
-        sequence_reader = csv.DictReader(sqfile)
-        headers = sequence_reader.fieldnames
+        sequence_reader = csv.reader(sqfile)
+        # headers = sequence_reader.fieldnames
         for row in sequence_reader:
             print(row)
             # db[row["name"]] = {}
