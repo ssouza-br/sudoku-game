@@ -37,7 +37,9 @@ def main():
     # TODO: Check database for matching profiles
 
     for name in db:
-        if db[name] 
+        for subseq in db[name]:
+            if db[name]
+
     # print(dict_seq)
     return
 
