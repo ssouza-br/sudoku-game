@@ -27,8 +27,9 @@ def check_sum(n):
     sum = 0
     for i in range(0, len(n), 2):
         if 2*int(n[i]) > 10:
-            sum += 
-        sum += 2*int(n[i])
+            sum += 2*int(n[i]) // 10 + 2*int(n[i]) % 10
+        else:
+            sum += 2*int(n[i])
 
 int check_sum_part1(long int n)
 {
