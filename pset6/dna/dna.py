@@ -22,9 +22,16 @@ def main():
             db[row["name"]] = {}
             for i in headers[1:]:
                 db[row["name"]][i] = row[i]
-    print(db)
-    # TODO: Read DNA sequence file into a variable
 
+    # TODO: Read DNA sequence file into a variable
+    with open(sequence, "r") as sqfile:
+        sequence_reader = csv.DictReader(sqfile)
+        headers = sequence_reader.fieldnames
+        for row in sequence_reader:
+            
+            # db[row["name"]] = {}
+            # for i in headers[1:]:
+            #     db[row["name"]][i] = row[i]
     # TODO: Find longest match of each STR in DNA sequence
 
     # TODO: Check database for matching profiles
