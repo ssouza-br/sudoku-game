@@ -7,7 +7,6 @@ seq = {}
 def main():
 
     # TODO: Check for command-line usage
-
     if len(sys.argv) == 3:
         database = sys.argv[1]
         sequence = sys.argv[2]
@@ -28,10 +27,8 @@ def main():
         sequence_reader = csv.reader(sqfile)
         # headers = sequence_reader.fieldnames
         for row in sequence_reader:
-            print(row)
-            # db[row["name"]] = {}
-            # for i in headers[1:]:
-            #     db[row["name"]][i] = row[i]
+            seq = row
+
     # TODO: Find longest match of each STR in DNA sequence
 
     # TODO: Check database for matching profiles
