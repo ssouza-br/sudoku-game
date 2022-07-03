@@ -20,9 +20,9 @@ def main():
         headers = database_reader.fieldnames
         for row in database_reader:
             db["name"] = row["name"]
-            for i in headers[1:]:
-                db["name"][i] = row[i]
-    print(headers)
+            # for i in headers[1:]:
+            #     db[row["name"]][i] = row[i]
+    print(db)
     # TODO: Read DNA sequence file into a variable
 
     # TODO: Find longest match of each STR in DNA sequence
