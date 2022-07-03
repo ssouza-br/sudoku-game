@@ -24,7 +24,7 @@ def grade():
     if (round(index) < 1):
         print("Before Grade 1")
     elif (round(index) > 16):
-        printf("Grade 16+")
+        print("Grade 16+")
     else:
         print(f"Grade {round(index)}")
 print(f" l: {counter_letters} w: {counter_words} s: {counter_sentences}")
