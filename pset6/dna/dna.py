@@ -16,7 +16,7 @@ def main():
 
     # TODO: Read database file into a variable
     with open(database) as dbfile:
-        database_reader = csv.reader(dbfile)
+        database_reader = csv.DictReader(dbfile)
         for row in database_reader:
             print(', '.join(row))
 
