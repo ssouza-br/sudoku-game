@@ -35,10 +35,11 @@ def main():
 
 
     # TODO: Check database for matching profiles
-    
+    check = False
     for name in db:
         for subseq in db[name]:
             if db[name][subseq] != dict_seq[subseq]:
+                check = False
                 break
 
 
