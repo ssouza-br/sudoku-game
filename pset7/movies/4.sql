@@ -1,1 +1,1 @@
-SELECT title FROM movies
+SELECT COUNT(*) FROM movies WHERE id=(SELECT * FROM ratings WHERE rating=10.0)
