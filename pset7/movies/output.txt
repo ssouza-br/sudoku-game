@@ -3,7 +3,6 @@
 +--------------------------------------+
 | Francis Ford Coppola                 |
 | John D. Goodell                      |
-| Francis Ford Coppola                 |
 | Lekh Tandon                          |
 | Moustapha Akkad                      |
 | György Révész                        |
@@ -13,12 +12,8 @@
 | Christian Baudissin                  |
 | Gerhard Ertl                         |
 | Sabine Hiebler                       |
-| Gerhard Ertl                         |
-| Sabine Hiebler                       |
 | Richard Mauro                        |
 | Nora Jacobson                        |
-| Gerhard Ertl                         |
-| Sabine Hiebler                       |
 | Gábor Dettre                         |
 | Frank Darabont                       |
 | Patricia Cardoso                     |
@@ -35,12 +30,9 @@
 | Vivi Dragan Vasile                   |
 | András Salamon                       |
 | Sabin Streeter                       |
-| András Salamon                       |
 | Peter Skuts                          |
 | Brent Sims                           |
 | Ivan Andonov                         |
-| Viktor Gjika                         |
-| Viktor Gjika                         |
 | Viktor Gjika                         |
 | Gretchen Bender                      |
 | Bill T. Jones                        |
@@ -89,7 +81,6 @@
 | Kon Pet Moon                         |
 | Jacques Holender                     |
 | Peter Delpeut                        |
-| Ivan Andonov                         |
 | Jimmy Aleck                          |
 | John Boni                            |
 | Geoffrey Sharp                       |
@@ -102,7 +93,6 @@
 | Albert Xholi                         |
 | Vladimir Blazevski                   |
 | Zoran Solomun                        |
-| Jacques Holender                     |
 | Ishmael Bernal                       |
 | Celso Ad. Castillo                   |
 | Massoumeh Emami                      |
@@ -121,9 +111,7 @@
 | Buana Kabue                          |
 | René Vautier                         |
 | Oliver Tambo                         |
-| René Vautier                         |
 | Samad Zarmandili                     |
-| Patricia Cardoso                     |
 | Catherine Masud                      |
 | Tareque Masud                        |
 | Jason Triplett                       |
@@ -135,8 +123,6 @@
 | Richard Sylvarnes                    |
 | Zdravko Randic                       |
 | Joel Lamangan                        |
-| Joel Lamangan                        |
-| Jacques Holender                     |
 | Dirk Böll                            |
 | Linton Semage                        |
 | Sathyan Anthikad                     |
@@ -180,7 +166,6 @@
 | Matt Whitaker                        |
 | Ferenc Moldoványi                    |
 | Renie Oxley                          |
-| Mac Alejandre                        |
 | Doug Barber                          |
 | James Phillips                       |
 | Jim Brown                            |
@@ -260,7 +245,6 @@
 | Viktor Pacsorasz                     |
 | John Baxter                          |
 | Bob Fink                             |
-| Alexander Binder                     |
 | Alexander Binder                     |
 | Don Hardy                            |
 | Stacey Goldschmidt                   |
@@ -348,7 +332,6 @@
 | Viviana Calò                         |
 | Thanesh Gopal                        |
 | Ihdar Nur                            |
-| Liam Bilsky                          |
 | Rasika Ruwanpathirana                |
 | Joshua Coates                        |
 | Rojin Thomas                         |
@@ -418,7 +401,6 @@
 | Malachi Leopold                      |
 | Scott M. Rosenfelt                   |
 | Lance Miccio                         |
-| Joaquin Montalvan                    |
 | Jeff Waldridge                       |
 | Pouya Eshtehardi                     |
 | Rosemary Rawcliffe                   |
@@ -443,7 +425,6 @@
 | Stephan Balay                        |
 | Amadeusz Kocan                       |
 | Karen Akins                          |
-| Liam Bilsky                          |
 | Chase Pearson                        |
 | Mars Roberge                         |
 | Jeff Arballo                         |
@@ -451,8 +432,6 @@
 | Malcolm Willis                       |
 | Sue Carpenter                        |
 | Belmaya Nepali                       |
-| René Vautier                         |
-| René Vautier                         |
 | Ales Verbic                          |
 | Janchivdorj Jamyansuren              |
 | David Kadel                          |
@@ -460,13 +439,10 @@
 | Abdallah Yahya                       |
 | Nick Hamer                           |
 | Elisabeth Frasson-Marin              |
-| René Vautier                         |
-| René Vautier                         |
 | Henry Leblanc                        |
 | Arturo Pulido                        |
 | Antonis Renieris                     |
 | Maria Svoliantopoulou                |
-| René Vautier                         |
 | Néjib Belkadhi                       |
 | Sami Tlili                           |
 | Mark Manning                         |
@@ -579,7 +555,6 @@
 | James A. Sinclair                    |
 | Bozidar Kalezic                      |
 | Matthew Levy                         |
-| Sergey A.                            |
 | Luke A. Renner                       |
 | Rick Dugdale                         |
 | Steve Fetsch                         |
@@ -596,15 +571,11 @@
 | Scott Galloway                       |
 | Brent Pierson                        |
 | Laura Belsey                         |
-| Tareque Masud                        |
-| Catherine Masud                      |
-| Tareque Masud                        |
 | Mahagama Sekera                      |
 | Kacey Cox                            |
 | Paul Alexander Morales               |
 | Mara Zizou Fall                      |
 | Jonathan Zaurin                      |
-| Claudio Costa                        |
 | Wendo Mbilizi                        |
 | Wendo Musaly                         |
 | Wmm Record                           |
@@ -654,7 +625,6 @@
 | Blake Wiers                          |
 | Royal Kennedy Rodgers                |
 | Kathy McCampbell Vance               |
-| Dusan Nestorovic                     |
 | Nickolas Bird                        |
 | Eleanor Sharpe                       |
 | Venkatesh Bk                         |
@@ -721,7 +691,6 @@
 | Brandon D. Lunsford                  |
 | Brian M. McKnight                    |
 | Marilyn Gaunt                        |
-| Wendo Mbilizi                        |
 | Lee Page                             |
 | Shiraz Henry                         |
 | Lee Da Yeon                          |
@@ -759,7 +728,6 @@
 | Daniel H. Ronacher                   |
 | Raghav Jairath                       |
 | Lorenzo Borghini                     |
-| Wendo Mbilizi                        |
 | Kittu Nalluri                        |
 | Chris Hartung                        |
 | Carl Eneroth                         |
@@ -792,7 +760,6 @@
 | Zhang Yingli                         |
 | Jacob Ennis                          |
 | Katoria Chanyasubkit                 |
-| Lance Miccio                         |
 | Mahi Gyk                             |
 | Ahmed Elghatas                       |
 | Edward Payson                        |
@@ -813,7 +780,6 @@
 | Colin Scheyen                        |
 | Quique Cruz                          |
 | Marilyn Mulford                      |
-| Terry Lukemire                       |
 | Jimmy Traynor                        |
 | Bala Nageswara Rao Varada            |
 | Nila Madhab Panda                    |
@@ -847,7 +813,6 @@
 | Andrea Meyerson                      |
 | Jaya Kishore .B.                     |
 | Kyle Mumford                         |
-| Mano Khalil                          |
 | Alejandro Ventura                    |
 | Matías Ventura                       |
 | Rabi Kinagi                          |
@@ -895,19 +860,14 @@
 | Rich Tella                           |
 | Nidhi Patel                          |
 | Pooja Patel                          |
-| Taylor Golonka                       |
 | Rezvan Pakpour                       |
 | Vir Srinivas                         |
-| Claudio Costa                        |
-| Matthew Watson                       |
-| Sergey A.                            |
 | Laurits Munch-Petersen               |
 | Kittu                                |
 | Pelle Neroth                         |
 | Cole Sax                             |
 | Galen Knowles                        |
 | Umanu Elijah                         |
-| Vyacheslav Bihun                     |
 | Frank Martinez                       |
 | Marco Gutekunst                      |
 | John Murphy                          |
@@ -953,7 +913,6 @@
 | Seyi Babatope                        |
 | Bandi Saroj Kumar                    |
 | Rohith Padaki                        |
-| Sergey A.                            |
 | Terry Hughes                         |
 | Jay Sandrich                         |
 | Kimberly Bautista                    |
@@ -1055,11 +1014,9 @@
 | Andrea Prandstraller                 |
 | Robert Kane Pappas                   |
 | Katharina Weingartner                |
-| Alexander Binder                     |
 | Elke Kratzer                         |
 | Frederic Lilien                      |
 | Lisa Pozo Núñez                      |
-| Alexander Binder                     |
 | Jenifer McShane                      |
 | Shane Aquino                         |
 | B. Douglas Robbins                   |
@@ -1074,7 +1031,6 @@
 | Scott Teems                          |
 | Jonathan Hock                        |
 | Corey Landis                         |
-| Roger Lay Jr.                        |
 | Justine Pearsall                     |
 | Andrei Zagdansky                     |
 | Deepa Bhatia                         |
@@ -1089,8 +1045,6 @@
 | David Rey                            |
 | Ric Esther Bienstock                 |
 | Hichem Ben Ammar                     |
-| Eleanor Sharpe                       |
-| Nickolas Bird                        |
 | Joey Daoud                           |
 | Cathy Jones                          |
 | Frank Gapinski                       |
@@ -1110,16 +1064,13 @@
 | Bose O. Pastina                      |
 | Lesedi Mogoathle                     |
 | Inger Smith                          |
-| Mary Lance                           |
 | Ester Brym                           |
 | Leonardo Wild                        |
 | Kristian Day                         |
 | Gustavo Coelho                       |
 | Marcelo Guerra                       |
 | Bruno Caetano                        |
-| Cathy Jones                          |
 | Judyta Fibiger                       |
-| Petar Lalovic                        |
 | Nathaniel Hansen                     |
 | Christoph Röhl                       |
 | Lefteris Fylaktos                    |
@@ -1132,7 +1083,6 @@
 | Gabriel Deloach                      |
 | James Short                          |
 | John Sanvidge                        |
-| Jim Fields                           |
 | Zvonimir Karakatic                   |
 | Ramune Cekuolyte                     |
 | Nick Kuiper                          |
@@ -1148,7 +1098,6 @@
 | Jai Michael                          |
 | John Lucas                           |
 | Colin Sander                         |
-| Zoltán Török                         |
 | Jewel Maranan                        |
 | Jose Asuncion                        |
 | Milton Chassman                      |
@@ -1163,7 +1112,6 @@
 | Alice Gruia                          |
 | Dav Kaufman                          |
 | John Darling Haynes                  |
-| Michael Stillwater                   |
 | Marcela Zamora                       |
 | Merab Kokochashvili                  |
 | Robert G. Streit Jr.                 |
@@ -1181,7 +1129,6 @@
 | Marko Kacanski                       |
 | Frank Zamacona                       |
 | Louise Woehrle                       |
-| Frank Zamacona                       |
 | Luigi Maria Perotti                  |
 | Juliet Snowden                       |
 | Kirein Doobs                         |
@@ -1194,12 +1141,10 @@
 | Paul Kentoffio                       |
 | Klaas Bense                          |
 | Tom Logan                            |
-| Tom Logan                            |
 | James Ficklin                        |
 | Penelope Andrews                     |
 | Courtney James                       |
 | Himesh Bhargo                        |
-| Tom Logan                            |
 | Susan Sfarra                         |
 | Hemamset Angaza                      |
 | Theresa Moore                        |
@@ -1246,7 +1191,6 @@
 | John-William Noble                   |
 | Davids Ernstreits                    |
 | Armands Tripans                      |
-| Tom Logan                            |
 | Robert Rajchl                        |
 | Ane Siderman                         |
 | Chris Wheeler                        |
@@ -1285,7 +1229,6 @@
 | Zahra Mackaoui                       |
 | Erick M. Crespo                      |
 | Dan Salmon                           |
-| Francois Lespes                      |
 | Famor Botero                         |
 | Michael Bird                         |
 | Scott Andrew Kurchak                 |
@@ -1344,7 +1287,6 @@
 | Kimberlee Bassford                   |
 | Aurelien Cormier                     |
 | Julien Riquier                       |
-| Ariel Santschi                       |
 | Christophe Cotteret                  |
 | Alan Swyer                           |
 | George Manatos                       |
@@ -1363,7 +1305,6 @@
 | Mladen Medic                         |
 | Inda Reid                            |
 | Byron Conrad Erwin                   |
-| Ryan Mayers                          |
 | Kenneth Shapiro                      |
 | Ismahane Lahmar                      |
 | Cortlandt Hull                       |
@@ -1383,7 +1324,6 @@
 | Craig J. Williams                    |
 | Brent Florence                       |
 | Miguel Gaudêncio                     |
-| Laurel Spellman Smith                |
 | Laurel Spellman Smith                |
 | Francine Strickwerda                 |
 | Daniel Vernon                        |
@@ -1419,15 +1359,12 @@
 | Helen Cohen                          |
 | Mark Lipman                          |
 | Paul Michael Angell                  |
-| Georges Chamchoum                    |
 | Yasmine Asha                         |
 | Gary Culleton                        |
 | Simon Bang                           |
 | Martin Sundstrøm                     |
 | Renaud Barret                        |
 | Florent de La Tullaye                |
-| Judyta Fibiger                       |
-| Suneel Kumar Reddy                   |
 | Michael Amundsen                     |
 | Dwayne Buckle                        |
 | Federico Neri                        |
@@ -1463,7 +1400,6 @@
 | Pia Lenz                             |
 | Christian von Brockhausen            |
 | Debbie Howard                        |
-| Roger Lay Jr.                        |
 | Joe Urban                            |
 | Raphaël Frydman                      |
 | John Dinwoodie                       |
@@ -1482,7 +1418,6 @@
 | S.J. Creazzo                         |
 | Sara Landas                          |
 | Holli Rae                            |
-| Vyacheslav Bihun                     |
 | Dan Andrusiak                        |
 | Scott Mactavish                      |
 | Joseph East                          |
@@ -1515,11 +1450,9 @@
 | Gonzalo Gonzalez                     |
 | Randall Moore                        |
 | Jacqui Blue                          |
-| Miguel Gaudêncio                     |
 | Asteris Kutulas                      |
 | Klaus Salge                          |
 | Milan Lisica                         |
-| Georges Chamchoum                    |
 | Leon Lee                             |
 | Jelle Posthuma                       |
 | Jack Klink                           |
@@ -1534,7 +1467,6 @@
 | Rafael Andreazza                     |
 | Cíntia Langie                        |
 | Pedro González Bermúdez              |
-| Nick Hamer                           |
 | Olivier Asselin                      |
 | Shaan Couture                        |
 | Christopher Kenneally                |
@@ -1549,7 +1481,6 @@
 | Leonardo Edde                        |
 | Gustavo Godinho                      |
 | Gregg R. Simpson                     |
-| Thomas Dunn                          |
 | PJ Moynihan                          |
 | Doug Sharp                           |
 | Budi Kurniawan                       |
@@ -1586,18 +1517,12 @@
 | Eric J. Benson                       |
 | Ila Bêka                             |
 | Louise Lemoine                       |
-| Ila Bêka                             |
-| Louise Lemoine                       |
-| Ila Bêka                             |
-| Louise Lemoine                       |
 | Ali Atshani                          |
 | Artem Agafonov                       |
 | Shari Macy                           |
 | Rick Wood                            |
-| Paul Hill                            |
 | April Martin                         |
 | Brian Holden                         |
-| Ethan Michaels                       |
 | Paul Michael Bloodgood               |
 | Luis Ramírez Guzmán                  |
 | Federico Mastrogiovanni              |
@@ -1614,7 +1539,6 @@
 | Sarah Mabrouk                        |
 | Gloria A. Downey                     |
 | Jeff Roman                           |
-| Jacqui Blue                          |
 | Peter Williams                       |
 | Alan Chebot                          |
 | Regis Coussot                        |
@@ -1634,7 +1558,6 @@
 | Christophe Hamon                     |
 | Marie Hamon                          |
 | Beau Davis                           |
-| Gustavo Gamou                        |
 | Radislav Jovanov Gonzo               |
 | Josip Ivancic                        |
 | Deborah Louise Ortiz                 |
@@ -1671,7 +1594,6 @@
 | Gregory Fitzsimmons                  |
 | Luca Ammendola                       |
 | Mia Tate                             |
-| Claudio Costa                        |
 | José Luis Sánchez Maldonado          |
 | Michael Turner                       |
 | Hadzi-Aleksandar Djurovic            |
@@ -1691,12 +1613,10 @@
 | Eamonn Norris                        |
 | Ramon 'R.L.' Terry                   |
 | Bruno Muschio                        |
-| Christopher H.K. Lee                 |
 | Linda Palmer                         |
 | David Rudskin                        |
 | Nick Nanton                          |
 | Edward Jeffries                      |
-| Aleksandras Matonis                  |
 | Roman Jaquez                         |
 | John Putch                           |
 | Joko Nugroho                         |
@@ -1721,7 +1641,6 @@
 | Ok-Hee Jeong                         |
 | Willy Lindwer                        |
 | Nicolás Guzmán                       |
-| Jonathon Link                        |
 | James Yukich                         |
 | Ullabritt Horn                       |
 | Dan Lewis                            |
@@ -1745,7 +1664,6 @@
 | Julio César Torres                   |
 | Alex c Rivera                        |
 | Charles Mattocks                     |
-| Francois Lespes                      |
 | David Beilinson                      |
 | Michael Galinsky                     |
 | Suki Hawley                          |
@@ -1756,7 +1674,6 @@
 | Abdelwaheb Bouden                    |
 | Dalton Coffey                        |
 | Nitin Chandra                        |
-| Adel Bakri                           |
 | Adel Bakri                           |
 | Moirangthem Maniram                  |
 | Carlos Almón Muñoz                   |
@@ -1770,7 +1687,6 @@
 | Barak Tal                            |
 | Kiranraj K                           |
 | Ian MacDougall                       |
-| Nidhal Chatta                        |
 | Rosalie Parker                       |
 | R.B. Russell                         |
 | Michelle Memran                      |
@@ -1781,8 +1697,6 @@
 | Amit Vikas Patel                     |
 | Kate Keckler Dandel                  |
 | Aldine Reinink                       |
-| Ila Bêka                             |
-| Louise Lemoine                       |
 | Daniel H.A. Stewart                  |
 | Caro Duarte                          |
 | Natalie Kaplan                       |
@@ -1793,7 +1707,6 @@
 | Sai Kelly                            |
 | Bladimir Abud                        |
 | Febian Nurrahman Saktinegara         |
-| Aditi Thakor                         |
 | Aditi Thakor                         |
 | Marjolein Hermans                    |
 | Marcello Daciano                     |
@@ -1816,7 +1729,6 @@
 | Giovanna Miralles                    |
 | Emma Nitti                           |
 | Chris Delforce                       |
-| Simon Frith                          |
 | Kid Art                              |
 | Juan Antonio Moreno Amador           |
 | Silvia Venegas Venegas               |
@@ -1827,7 +1739,6 @@
 | Oyd Craddock                         |
 | Manuel Fanni Canelles                |
 | Paolo Parisotto                      |
-| Menios Karagiannis                   |
 | Paulo De Barros                      |
 | Gustavo Gama Rodrigues               |
 | Paddy Jessop                         |
@@ -1862,16 +1773,13 @@
 | Dermott Petty                        |
 | Adrian Scott                         |
 | Dheeraj Sharma                       |
-| Ferenc Moldoványi                    |
 | James Corbett                        |
 | Ferdinand Almi                       |
 | Josh Freund                          |
 | Sam Radutzky                         |
-| Zoltán Török                         |
 | Ryan Callaway                        |
 | Jackson Kosmacki                     |
 | Jana Papenbroock                     |
-| Matthew J. Gunn                      |
 | Brandon Block                        |
 | Andrea Kalin                         |
 | Leonardo Tonitza                     |
@@ -1908,7 +1816,6 @@
 | Mario Cuzic                          |
 | Nicholas Marwa                       |
 | J.P. Veillet                         |
-| Alonso O. Lara                       |
 | Donald Rayne Mitchell                |
 | Ludvig Christian Næsted Poulsen      |
 | Gonzalo López                        |
@@ -1926,7 +1833,6 @@
 | Elias Bouquillon                     |
 | Kenneth Michiels                     |
 | Vincent Bal                          |
-| Utpal Kalal                          |
 | Peter Getzels                        |
 | Harriet Gordon Getzels               |
 | Evan Tramel                          |
@@ -2011,7 +1917,6 @@
 | Ondrej Hudecek                       |
 | Lukas Agelastos                      |
 | Spiridoula Gouskou                   |
-| Gil Golan                            |
 | Edouard Salier                       |
 | Makan Ashoori                        |
 | Jordan Amandes                       |
@@ -2082,7 +1987,6 @@
 | Steve Wystrach                       |
 | David Lee                            |
 | Jiakun Gu                            |
-| Zheng Zhou                           |
 | Laura Rozkalne                       |
 | Sandijs Semjonovs                    |
 | John Gomez                           |
@@ -2099,8 +2003,6 @@
 | Lee Hicken                           |
 | Tiago P. de Carvalho                 |
 | Sebastián Martínez Piñeiro           |
-| Tim Gray                             |
-| Tim Gray                             |
 | Tim Gray                             |
 | Yadu Vijayakrishnan                  |
 | Kara Kwiecinski                      |
@@ -2124,15 +2026,10 @@
 | Yihui Ye                             |
 | Renjie                               |
 | Feng Lin                             |
-| Nuo Wang                             |
 | Miao Zhang                           |
 | Ningyuan Zhang                       |
 | Dan Fu                               |
 | Wen Wu                               |
-| Renjie                               |
-| Fan Li                               |
-| Nuo Wang                             |
-| Yihui Ye                             |
 | Art Jones                            |
 | Vladimir Kurcubic                    |
 | Vladimir Pajic                       |
@@ -2154,11 +2051,9 @@
 | Gino Raphael Payne                   |
 | Giancarlo Cutrona                    |
 | Zahara Moufid                        |
-| Dominique Whittaker                  |
 | Kerwin Skinner                       |
 | Fiona Apanui                         |
 | Joe Bini                             |
-| Sam Green                            |
 | João Figueiredo                      |
 | João Pico                            |
 | Elizabeth Vieira                     |
@@ -2176,8 +2071,6 @@
 | Jawad Sharif                         |
 | Nikolay Stefanov                     |
 | Pablo García Sanz                    |
-| Kasia Wezowski                       |
-| Patryk Wezowski                      |
 | Joseph McGee                         |
 | Henry Parizek                        |
 | Alain d'Aix                          |
@@ -2192,7 +2085,6 @@
 | Adam Rabinowitz                      |
 | Pavlina Ivanova                      |
 | Jan Hosek                            |
-| Nabwana I.G.G.                       |
 | Adel L. Morales                      |
 | Gabriele Fabbro                      |
 | Bobby Tongs                          |
@@ -2214,7 +2106,6 @@
 | Renato Terra                         |
 | Fernando Escovar                     |
 | J Wayne Patterson Jr                 |
-| Irina Maldea                         |
 | Bruno M.C.                           |
 | Neer Bikram Shah                     |
 | Michael P. Nash                      |
@@ -2232,7 +2123,6 @@
 | Kevin King                           |
 | Susan Scott                          |
 | Manoj Nair                           |
-| Menios Karagiannis                   |
 | Warren R Hull                        |
 | Lorenzo Thione                       |
 | Matt Hoffman                         |
@@ -2242,13 +2132,11 @@
 | Yitong Lu                            |
 | Stanislav Puzdryak                   |
 | Denise Ferrari                       |
-| Alonso O. Lara                       |
 | Paul Gerard Crane                    |
 | Haakon Alfheim                       |
 | Bjarne Sahlen                        |
 | Chris Johnson                        |
 | Kip Oebanda                          |
-| Nick Nanton                          |
 | Tilak Shetty                         |
 | Isaac Lock                           |
 | Matthew LeFevour                     |
@@ -2256,7 +2144,6 @@
 | Dragan Bjelogrlic                    |
 | Zoran Lisinac                        |
 | Antonis Mandranis                    |
-| Joel Lamangan                        |
 | Cassandra Bryson                     |
 | Nawzad Shekhany                      |
 | Genevieve Anderson                   |
@@ -2269,7 +2156,6 @@
 | Ray Morgan                           |
 | Michael Dominic                      |
 | Eric Werthman                        |
-| Suneel Kumar Reddy                   |
 | Greg Swartz                          |
 | Chrysanthos Konstantinidis           |
 | Loïc Porcher                         |
@@ -2293,7 +2179,6 @@
 | Porsalin                             |
 | Suriyon Jongleepun                   |
 | Alberto Arvelo                       |
-| Carlotta Cerquetti                   |
 | Peter Ebanks                         |
 | Troy Lowman                          |
 | Ruslan Akun                          |
@@ -2318,12 +2203,10 @@
 | Chris Shimojima                      |
 | J.Y. Park                            |
 | Princeton Steele                     |
-| Menios Karagiannis                   |
 | Franchin Don                         |
 | Lifang Wan                           |
 | Ghanshyam Vishnupant Yede            |
 | J.P. Allen                           |
-| Robert Delamere                      |
 | Dorothy Leiper                       |
 | Wyatt Daily                          |
 | Kevin Desmond                        |
@@ -2340,7 +2223,6 @@
 | Taras Khymych                        |
 | Zach Thomson                         |
 | Dianne Wennick                       |
-| Avinash Kumar Singh                  |
 | Andrew Jezard                        |
 | Terry Strauss                        |
 | Manoj Patel                          |
