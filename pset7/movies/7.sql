@@ -1,0 +1,1 @@
+SELECT title FROM movies WHERE year=2010 JOIN (SELECT rating FROM ratings ORDER BY rating ASC) ON id=movie_id;
