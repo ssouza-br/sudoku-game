@@ -1,13 +1,6 @@
-+--------------------+-------------------------------------+-----------+
-|        name        |                title                | person_id |
-+--------------------+-------------------------------------+-----------+
-| Jennifer Willems   | Trapped                             | 929730    |
-| Morris Carnovsky   | Trapped                             | 138885    |
-| William Hansen     | The Woodsman                        | 361127    |
-| Peter Bolhuis      | End of the Line                     | 92967     |
-| Christiane Brammer | A Few Good Men                      | 104257    |
-| Alejandro Bracho   | Queens Logic                        | 102741    |
-| Ruth Brück         | Sleepers                            | 117665    |
-| Michelle Gomez     | Mystic River                        | 327056    |
-| Royana Black       | Enormous Changes at the Last Minute | 85494     |
-+--------------------+-------------------------------------+-----------+
++------------------+---------+-----------+-------+
+|       name       |  title  | person_id | birth |
++------------------+---------+-----------+-------+
+| Jennifer Willems | Trapped | 929730    | 1947  |
+| Morris Carnovsky | Trapped | 138885    | 1897  |
++------------------+---------+-----------+-------+
