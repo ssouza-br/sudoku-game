@@ -1,0 +1,12 @@
++------------------+
+|       name       |
++------------------+
+| Steve Guttenberg |
+| Mickey Rourke    |
+| Kevin Bacon      |
+| Daniel Stern     |
+| Yûki Ashida      |
+| Katsuki Bettô    |
+| Tatsuya Fujiwara |
+| Kanata Hongô     |
++------------------+
