@@ -1,0 +1,14 @@
++--------------------------+
+|          title           |
++--------------------------+
+| 42                       |
+| Black Panther            |
+| Marshall                 |
+| Ma Rainey's Black Bottom |
+| Get on Up                |
+| Draft Day                |
+| 21 Bridges               |
+| Message from the King    |
+| Gods of Egypt            |
+| The Kill Hole            |
++--------------------------+
