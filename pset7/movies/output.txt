@@ -5,23 +5,9 @@
 | Morris Carnovsky   | Trapped                             |
 | William Hansen     | The Woodsman                        |
 | Peter Bolhuis      | End of the Line                     |
-| Peter Bolhuis      | End of the Line                     |
 | Christiane Brammer | A Few Good Men                      |
 | Alejandro Bracho   | Queens Logic                        |
 | Ruth Brück         | Sleepers                            |
 | Michelle Gomez     | Mystic River                        |
-| Michelle Gomez     | Mystic River                        |
-| Alejandro Bracho   | Queens Logic                        |
-| Peter Bolhuis      | End of the Line                     |
 | Royana Black       | Enormous Changes at the Last Minute |
-| Peter Bolhuis      | End of the Line                     |
-| Royana Black       | Enormous Changes at the Last Minute |
-| Alejandro Bracho   | Queens Logic                        |
-| Peter Bolhuis      | End of the Line                     |
-| Michelle Gomez     | Mystic River                        |
-| Royana Black       | Enormous Changes at the Last Minute |
-| Peter Bolhuis      | End of the Line                     |
-| Michelle Gomez     | Mystic River                        |
-| Peter Bolhuis      | End of the Line                     |
-| Peter Bolhuis      | End of the Line                     |
 +--------------------+-------------------------------------+
