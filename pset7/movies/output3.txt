@@ -4,38 +4,30 @@
 | Tom Cruise                 | A Few Good Men                                           | 129       |
 | Jack Nicholson             | A Few Good Men                                           | 197       |
 | Demi Moore                 | A Few Good Men                                           | 193       |
-| Kevin Bacon                | A Few Good Men                                           | 102       |
 | Tom Hanks                  | Apollo 13                                                | 158       |
 | Bill Paxton                | Apollo 13                                                | 200       |
-| Kevin Bacon                | Apollo 13                                                | 102       |
 | Gary Sinise                | Apollo 13                                                | 641       |
-| Kevin Bacon                | Balto                                                    | 102       |
 | Bob Hoskins                | Balto                                                    | 1364      |
 | Bridget Fonda              | Balto                                                    | 403       |
 | Jim Cummings               | Balto                                                    | 191906    |
-| Kevin Bacon                | Cop Car                                                  | 102       |
 | James Freedson-Jackson     | Cop Car                                                  | 6627667   |
 | Hays Wellford              | Cop Car                                                  | 4881741   |
 | Shea Whigham               | Cop Car                                                  | 924154    |
 | Gary Oldman                | Criminal Law                                             | 198       |
-| Kevin Bacon                | Criminal Law                                             | 102       |
 | Tess Harper                | Criminal Law                                             | 2128      |
 | Karen Young                | Criminal Law                                             | 949744    |
 | Shabana Azmi               | Death Sentence                                           | 818       |
 | Madhuri Dixit              | Death Sentence                                           | 2043      |
 | Ayub Khan                  | Death Sentence                                           | 451183    |
 | Shilpa Shirodkar           | Death Sentence                                           | 794364    |
-| Kevin Bacon                | Death Sentence                                           | 102       |
 | John Goodman               | Death Sentence                                           | 422       |
 | Kelly Preston              | Death Sentence                                           | 593       |
 | Garrett Hedlund            | Death Sentence                                           | 1330560   |
 | Evan Rachel Wood           | Digging to China                                         | 939697    |
-| Kevin Bacon                | Digging to China                                         | 102       |
 | Mary Stuart Masterson      | Digging to China                                         | 524       |
 | Marian Seldes              | Digging to China                                         | 783033    |
 | Steve Guttenberg           | Diner                                                    | 430       |
 | Mickey Rourke              | Diner                                                    | 620       |
-| Kevin Bacon                | Diner                                                    | 102       |
 | Daniel Stern               | Diner                                                    | 827663    |
 | Yûki Ashida                | Diner                                                    | 12166557  |
 | Katsuki Bettô              | Diner                                                    | 12242222  |
@@ -43,10 +35,8 @@
 | Kanata Hongô               | Diner                                                    | 1959800   |
 | Danny Abelson              | Drunk Stoned Brilliant Dead                              | 2581028   |
 | Judd Apatow                | Drunk Stoned Brilliant Dead                              | 31976     |
-| Kevin Bacon                | Drunk Stoned Brilliant Dead                              | 102       |
 | Henry Beard                | Drunk Stoned Brilliant Dead                              | 1088287   |
 | Bill Gerber                | Eastwood Directs: The Untold Story                       | 314088    |
-| Kevin Bacon                | Eastwood Directs: The Untold Story                       | 102       |
 | John Calley                | Eastwood Directs: The Untold Story                       | 130492    |
 | Kevin Costner              | Eastwood Directs: The Untold Story                       | 126       |
 | Joel Cox                   | Eastwood Directs: The Untold Story                       | 185088    |
@@ -54,9 +44,7 @@
 | Morgan Freeman             | Eastwood Directs: The Untold Story                       | 151       |
 | Djimon Hounsou             | Elephant White                                           | 5023      |
 | Markus Waldow              | Elephant White                                           | 6132568   |
-| Kevin Bacon                | Elephant White                                           | 102       |
 | Jirantanin Pitakporntrakul | Elephant White                                           | 3823724   |
-| Kevin Bacon                | End of the Line                                          | 102       |
 | Bob Balaban                | End of the Line                                          | 837       |
 | Barbara Barrie             | End of the Line                                          | 57363     |
 | Michael Beach              | End of the Line                                          | 4729      |
@@ -82,17 +70,14 @@
 | Elena Sharikova            | End of the Line                                          | 7224651   |
 | Maria Tucci                | Enormous Changes at the Last Minute                      | 875698    |
 | David Strathairn           | Enormous Changes at the Last Minute                      | 657       |
-| Kevin Bacon                | Enormous Changes at the Last Minute                      | 102       |
 | Didi Velez                 | Enormous Changes at the Last Minute                      | 892453    |
 | Kiefer Sutherland          | Flatliners                                               | 662       |
-| Kevin Bacon                | Flatliners                                               | 102       |
 | Julia Roberts              | Flatliners                                               | 210       |
 | William Baldwin            | Flatliners                                               | 287       |
 | Elliot Page                | Flatliners                                               | 680983    |
 | Diego Luna                 | Flatliners                                               | 526019    |
 | Nina Dobrev                | Flatliners                                               | 2400045   |
 | James Norton               | Flatliners                                               | 3584268   |
-| Kevin Bacon                | Footloose                                                | 102       |
 | Lori Singer                | Footloose                                                | 1742      |
 | John Lithgow               | Footloose                                                | 1475      |
 | Dianne Wiest               | Footloose                                                | 1848      |
@@ -101,42 +86,33 @@
 | Dennis Quaid               | Footloose                                                | 598       |
 | Andie MacDowell            | Footloose                                                | 510       |
 | Orson Bean                 | Forty Deuce                                              | 4730      |
-| Kevin Bacon                | Forty Deuce                                              | 102       |
 | Mark Keyloun               | Forty Deuce                                              | 450848    |
 | Tommy Citera               | Forty Deuce                                              | 162906    |
 | Frank Langella             | Frost/Nixon                                              | 1449      |
 | Michael Sheen              | Frost/Nixon                                              | 790688    |
-| Kevin Bacon                | Frost/Nixon                                              | 102       |
 | Sam Rockwell               | Frost/Nixon                                              | 5377      |
-| Kevin Bacon                | He Said, She Said                                        | 102       |
 | Elizabeth Perkins          | He Said, She Said                                        | 1610      |
 | Nathan Lane                | He Said, She Said                                        | 1447      |
 | Anthony LaPaglia           | He Said, She Said                                        | 1439      |
-| Kevin Bacon                | Hollow Man                                               | 102       |
 | Elisabeth Shue             | Hollow Man                                               | 223       |
 | Josh Brolin                | Hollow Man                                               | 982       |
 | Kim Dickens                | Hollow Man                                               | 225332    |
 | Margie Adam                | Holly Near: Singing For Our Lives                        | 10500613  |
 | Karen Anderson             | Holly Near: Singing For Our Lives                        | 3497546   |
-| Kevin Bacon                | Holly Near: Singing For Our Lives                        | 102       |
 | Melanie DeMore             | Holly Near: Singing For Our Lives                        | 10500614  |
-| Kevin Bacon                | Hollywood Waterloo                                       | 102       |
 | James Caan                 | Hollywood Waterloo                                       | 1001      |
 | Nicolas Cage               | Hollywood Waterloo                                       | 115       |
 | Matt Dillon                | Hollywood Waterloo                                       | 369       |
 | Andreas Michera            | Hollywood Waterloo                                       | 585157    |
 | Tippi Hedren               | Jayne Mansfield's Car                                    | 1335      |
-| Kevin Bacon                | Jayne Mansfield's Car                                    | 102       |
 | Ray Stevenson              | Jayne Mansfield's Car                                    | 829032    |
 | Robert Patrick             | Jayne Mansfield's Car                                    | 1598      |
 | Austin Crute               | John Logan Untitled Horror Project                       | 4699985   |
-| Kevin Bacon                | John Logan Untitled Horror Project                       | 102       |
 | Anna Chlumsky              | John Logan Untitled Horror Project                       | 1043      |
 | Carrie Preston             | John Logan Untitled Horror Project                       | 696387    |
 | Anna Lore                  | John Logan Untitled Horror Project                       | 4741273   |
 | Theo Germaine              | John Logan Untitled Horror Project                       | 7466966   |
 | Quei Tann                  | John Logan Untitled Horror Project                       | 7292374   |
-| Kevin Bacon                | Lemon Sky                                                | 102       |
 | Tom Atkins                 | Lemon Sky                                                | 40662     |
 | Lindsay Crouse             | Lemon Sky                                                | 1080      |
 | Kyra Sedgwick              | Lemon Sky                                                | 1718      |
@@ -147,7 +123,6 @@
 | Kyra Sedgwick              | Loverboy                                                 | 1718      |
 | Dominic Scott Kay          | Loverboy                                                 | 1122614   |
 | Campbell Scott             | Loverboy                                                 | 1714      |
-| Kevin Bacon                | Loverboy                                                 | 102       |
 | George Pistereanu          | Loverboy                                                 | 3778618   |
 | Ada Condeescu              | Loverboy                                                 | 3778527   |
 | Ion Besoiu                 | Loverboy                                                 | 78725     |
@@ -161,22 +136,17 @@
 | Maria Simon                | Loverboy                                                 | 800314    |
 | Bernd Michael Lade         | Loverboy                                                 | 480487    |
 | Christian Slater           | Murder in the First                                      | 225       |
-| Kevin Bacon                | Murder in the First                                      | 102       |
 | Gary Oldman                | Murder in the First                                      | 198       |
 | Embeth Davidtz             | Murder in the First                                      | 1110      |
 | Frankie Muniz              | My Dog Skip                                              | 5260      |
-| Kevin Bacon                | My Dog Skip                                              | 102       |
 | Diane Lane                 | My Dog Skip                                              | 178       |
 | Luke Wilson                | My Dog Skip                                              | 5561      |
 | Renée Zellweger            | My One and Only                                          | 250       |
 | Logan Lerman               | My One and Only                                          | 503567    |
 | Mark Rendall               | My One and Only                                          | 719321    |
-| Kevin Bacon                | My One and Only                                          | 102       |
 | Sean Penn                  | Mystic River                                             | 576       |
 | Tim Robbins                | Mystic River                                             | 209       |
-| Kevin Bacon                | Mystic River                                             | 102       |
 | Emmy Rossum                | Mystic River                                             | 2536      |
-| Kevin Bacon                | New York Skyride                                         | 102       |
 | Elya Baskin                | New York Skyride                                         | 59946     |
 | James Doohan               | New York Skyride                                         | 1150      |
 | Michael Harkins            | New York Skyride                                         | 363159    |
@@ -192,7 +162,6 @@
 | Lauren Lee Smith           | One Way                                                  | 809049    |
 | Travis Fimmel              | One Way                                                  | 1379938   |
 | Drea de Matteo             | One Way                                                  | 5576      |
-| Kevin Bacon                | One Way                                                  | 102       |
 | Machine Gun Kelly          | One Way                                                  | 446622    |
 | Alexander Jeffery          | One Way                                                  | 3679527   |
 | Christian Stokes           | One Way                                                  | 3282562   |
@@ -207,12 +176,10 @@
 | Anisur Rahman Milon        | One Way                                                  | 3144839   |
 | Syed Azizul Hakim Semanto  | One Way                                                  | 12744040  |
 | Air Supply                 | Original Motion Picture Soundtrack                       | 2937657   |
-| Kevin Bacon                | Original Motion Picture Soundtrack                       | 102       |
 | Christophe Beck            | Original Motion Picture Soundtrack                       | 65100     |
 | Richard Blade              | Original Motion Picture Soundtrack                       | 86014     |
 | Jennifer Aniston           | Picture Perfect                                          | 98        |
 | Jay Mohr                   | Picture Perfect                                          | 1542      |
-| Kevin Bacon                | Picture Perfect                                          | 102       |
 | Olympia Dukakis            | Picture Perfect                                          | 1156      |
 | Queen Salawa Abeni         | Picture Perfect                                          | 2600283   |
 | Aiyeola Bisola             | Picture Perfect                                          | 9803346   |
@@ -220,49 +187,38 @@
 | Bolanle Ninalowo           | Picture Perfect                                          | 7970787   |
 | Mary Remmy                 | Picture Perfect                                          | 2594402   |
 | Asah Samuel                | Picture Perfect                                          | 7484904   |
-| Kevin Bacon                | Pyrates                                                  | 102       |
 | Kyra Sedgwick              | Pyrates                                                  | 1718      |
 | Bruce Payne                | Pyrates                                                  | 668271    |
 | Kristin Dattilo            | Pyrates                                                  | 202184    |
-| Kevin Bacon                | Queens Logic                                             | 102       |
 | Linda Fiorentino           | Queens Logic                                             | 400       |
 | John Malkovich             | Queens Logic                                             | 518       |
 | Joe Mantegna               | Queens Logic                                             | 1505      |
-| Kevin Bacon                | Quicksilver                                              | 102       |
 | Jami Gertz                 | Quicksilver                                              | 415       |
 | Paul Rodriguez             | Quicksilver                                              | 735467    |
 | Rudy Ramos                 | Quicksilver                                              | 708784    |
 | Ryan Reynolds              | R.I.P.D.                                                 | 5351      |
 | Jeff Bridges               | R.I.P.D.                                                 | 313       |
 | Mary-Louise Parker         | R.I.P.D.                                                 | 571       |
-| Kevin Bacon                | R.I.P.D.                                                 | 102       |
-| Kevin Bacon                | Rails & Ties                                             | 102       |
 | Marcia Gay Harden          | Rails & Ties                                             | 1315      |
 | Miles Heizer               | Rails & Ties                                             | 1851028   |
 | Marin Hinkle               | Rails & Ties                                             | 385792    |
-| Kevin Bacon                | She's Having a Baby                                      | 102       |
 | Elizabeth McGovern         | She's Having a Baby                                      | 1527      |
 | Alec Baldwin               | She's Having a Baby                                      | 285       |
 | James Ray                  | She's Having a Baby                                      | 712857    |
 | Jill Anenberg              | Skum Rocks!                                              | 3054583   |
 | Joanna Angel               | Skum Rocks!                                              | 2063560   |
 | Carmine Appice             | Skum Rocks!                                              | 32304     |
-| Kevin Bacon                | Skum Rocks!                                              | 102       |
 | Robert De Niro             | Sleepers                                                 | 134       |
-| Kevin Bacon                | Sleepers                                                 | 102       |
 | Brad Pitt                  | Sleepers                                                 | 93        |
 | Jason Patric               | Sleepers                                                 | 574       |
-| Kevin Bacon                | Songs to Keep: Treasures of an Adirondack Folk Collector | 102       |
 | Michael Bacon              | Songs to Keep: Treasures of an Adirondack Folk Collector | 45807     |
 | Pete Seeger                | Songs to Keep: Treasures of an Adirondack Folk Collector | 781517    |
 | N. Paul Stookey            | Songs to Keep: Treasures of an Adirondack Folk Collector | 832342    |
-| Kevin Bacon                | Stir of Echoes                                           | 102       |
 | Zachary David Cope         | Stir of Echoes                                           | 178574    |
 | Kathryn Erbe               | Stir of Echoes                                           | 2062      |
 | Illeana Douglas            | Stir of Echoes                                           | 1152      |
 | Peter Gallagher            | Sundance Skippy                                          | 1251      |
 | Ben Affleck                | Sundance Skippy                                          | 255       |
-| Kevin Bacon                | Sundance Skippy                                          | 102       |
 | Josh Brolin                | Sundance Skippy                                          | 982       |
 | Michael Cera               | Sundance Skippy                                          | 148418    |
 | Rob Corddry                | Sundance Skippy                                          | 1117791   |
@@ -280,7 +236,6 @@
 | Rainn Wilson               | Super                                                    | 933988    |
 | Elliot Page                | Super                                                    | 680983    |
 | Liv Tyler                  | Super                                                    | 239       |
-| Kevin Bacon                | Super                                                    | 102       |
 | Antonella Ríos             | Super                                                    | 1443809   |
 | Luis Uribe                 | Super                                                    | 1440304   |
 | Julio Jung                 | Super                                                    | 432553    |
@@ -290,19 +245,15 @@
 | Nayanthara                 | Super                                                    | 1521381   |
 | Tulip Joshi                | Super                                                    | 1188140   |
 | Sadhu Kokila               | Super                                                    | 2794335   |
-| Kevin Bacon                | Telling Lies in America                                  | 102       |
 | Brad Renfro                | Telling Lies in America                                  | 605       |
 | Maximilian Schell          | Telling Lies in America                                  | 1703      |
 | Calista Flockhart          | Telling Lies in America                                  | 1222      |
 | Brendan Fraser             | The Air I Breathe                                        | 409       |
 | Sarah Michelle Gellar      | The Air I Breathe                                        | 1264      |
 | Andy Garcia                | The Air I Breathe                                        | 412       |
-| Kevin Bacon                | The Air I Breathe                                        | 102       |
-| Kevin Bacon                | The Air Up There                                         | 102       |
 | Charles Gitonga Maina      | The Air Up There                                         | 537698    |
 | Yolanda Vazquez            | The Air Up There                                         | 891483    |
 | Winston Ntshona            | The Air Up There                                         | 637681    |
-| Kevin Bacon                | The Big Picture                                          | 102       |
 | Jennifer Jason Leigh       | The Big Picture                                          | 492       |
 | Emily Longstreth           | The Big Picture                                          | 519489    |
 | J.T. Walsh                 | The Big Picture                                          | 687       |
@@ -318,7 +269,6 @@
 | Sophie Jade                | The Darkness                                             | 11498224  |
 | Oskar Policha              | The Darkness                                             | 11498225  |
 | Jack Quinn                 | The Darkness                                             | 11498223  |
-| Kevin Bacon                | The Darkness                                             | 102       |
 | Radha Mitchell             | The Darkness                                             | 593664    |
 | David Mazouz               | The Darkness                                             | 3458761   |
 | Lucy Fry                   | The Darkness                                             | 4867258   |
@@ -331,10 +281,8 @@
 | Cyril Blake                | The Darkness                                             | 4524928   |
 | Adam Bond                  | The Darkness                                             | 2713969   |
 | Meryl Streep               | The River Wild                                           | 658       |
-| Kevin Bacon                | The River Wild                                           | 102       |
 | David Strathairn           | The River Wild                                           | 657       |
 | Joseph Mazzello            | The River Wild                                           | 1515      |
-| Kevin Bacon                | The Woodsman                                             | 102       |
 | Kyra Sedgwick              | The Woodsman                                             | 1718      |
 | Yasiin Bey                 | The Woodsman                                             | 80049     |
 | David Alan Grier           | The Woodsman                                             | 4979      |
@@ -354,7 +302,6 @@
 | Teresa Gilmore             | Trapped                                                  | 135565    |
 | Paul Bollen                | Trapped                                                  | 93097     |
 | Rene Featherstone          | Trapped                                                  | 1004309   |
-| Kevin Bacon                | Trapped                                                  | 102       |
 | Charlize Theron            | Trapped                                                  | 234       |
 | Courtney Love              | Trapped                                                  | 1482      |
 | Stuart Townsend            | Trapped                                                  | 870204    |
@@ -420,7 +367,6 @@
 | Ragwa Hamed                | Trapped                                                  | 9195484   |
 | Robert Cristian Trif       | Trapped                                                  | 8987658   |
 | Briana Vasquez             | Trapped                                                  | 10112916  |
-| Kevin Bacon                | Tremors                                                  | 102       |
 | Fred Ward                  | Tremors                                                  | 911542    |
 | Finn Carter                | Tremors                                                  | 141617    |
 | Michael Gross              | Tremors                                                  | 343447    |
@@ -430,9 +376,7 @@
 | Rui Frati                  | Tremors                                                  | 10488634  |
 | Johnny A.                  | Turn It Up!                                              | 7842272   |
 | Russell Ali                | Turn It Up!                                              | 3419278   |
-| Kevin Bacon                | Turn It Up!                                              | 102       |
 | Jeffrey Baxter             | Turn It Up!                                              | 62749     |
-| Kevin Bacon                | Where the Truth Lies                                     | 102       |
 | Colin Firth                | Where the Truth Lies                                     | 147       |
 | Alison Lohman              | Where the Truth Lies                                     | 517844    |
 | David Hayman               | Where the Truth Lies                                     | 371342    |
@@ -440,19 +384,15 @@
 | Lisa B. Whitfield          | Where the Truth Lies                                     | 3269071   |
 | Rickey Colbert             | Where the Truth Lies                                     | 2740171   |
 | Brittney Dubose            | Where the Truth Lies                                     | 4501740   |
-| Kevin Bacon                | White Water Summer                                       | 102       |
 | Sean Astin                 | White Water Summer                                       | 276       |
 | Jonathan Ward              | White Water Summer                                       | 911644    |
 | K.C. Martel                | White Water Summer                                       | 551502    |
-| Kevin Bacon                | Wild Things                                              | 102       |
 | Neve Campbell              | Wild Things                                              | 117       |
 | Matt Dillon                | Wild Things                                              | 369       |
 | Denise Richards            | Wild Things                                              | 612       |
 | James McAvoy               | X-Men: First Class                                       | 564215    |
 | Michael Fassbender         | X-Men: First Class                                       | 1055413   |
 | Jennifer Lawrence          | X-Men: First Class                                       | 2225369   |
-| Kevin Bacon                | X-Men: First Class                                       | 102       |
-| Kevin Bacon                | You Should Have Left                                     | 102       |
 | Amanda Seyfried            | You Should Have Left                                     | 1086543   |
 | Avery Tiiu Essex           | You Should Have Left                                     | 10424479  |
 | Colin Blumenau             | You Should Have Left                                     | 89772     |
