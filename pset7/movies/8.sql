@@ -1,4 +1,4 @@
-SELECT name FROM people as p JOIN stars as s ON p.id=s.person_id JOIN movies as m ON p.id=m.id WHERE m.title='Toy Story';
+SELECT name FROM people JOIN stars ON people.id=stars.person_id JOIN movies ON people.id=movies.id WHERE movies.title='Toy Story';
 
 
 
