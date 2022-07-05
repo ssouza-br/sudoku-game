@@ -5,4 +5,4 @@
 -- WHERE (people.name='Kevin Bacon') AND (people.birth=1958))
 
 SELECT DISTINCT(name) , movies.title, stars.person_id, people.birth FROM people JOIN stars ON people.id=stars.person_id JOIN movies ON stars.person_id=movies.id
-WHERE movies.title='Trapped'
+WHERE movies.title='End of the Line'
