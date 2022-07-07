@@ -68,4 +68,5 @@
 -- | 342 | 55322348       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 5      |
 -- +-----+----------------+------+-------+-----+---------------+------------------+--------+
 
---check third interview -> atm_transactions
+--check third interview -> flights
+SELECT * FROM flights WHERE day=29 AND month=07 AND year=2021
