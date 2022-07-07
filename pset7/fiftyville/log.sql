@@ -2,8 +2,16 @@
 
 -- checking crimes on 288/07/2021 at Humphrey Street
 -- SELECT * FROM crime_scene_reports WHERE day=28 AND month=07 AND year=2021 AND street='Humphrey Street'
+-- +-----+------+-------+-----+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+-- | id  | year | month | day |     street      |                                                                                                       description                                                                                                        |
+-- +-----+------+-------+-----+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+-- | 295 | 2021 | 7     | 28  | Humphrey Street | Theft of the CS50 duck took place at 10:15am at the Humphrey Street bakery. Interviews were conducted today with three witnesses who were present at the time – each of their interview transcripts mentions the bakery. |
+-- | 297 | 2021 | 7     | 28  | Humphrey Street | Littering took place at 16:36. No known witnesses.                                                                                                                                                                       |
+-- +-----+------+-------+-----+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
 
 -- cheking interviews
+-- SELECT * FROM interviews WHERE day=28 AND month=07 AND year=2021 AND transcript LIKE "%bakery%"
 -- +-----+---------+------+-------+-----+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 -- | id  |  name   | year | month | day |                                                                                                                                                     transcript                                                                                                                                                      |
 -- +-----+---------+------+-------+-----+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -12,7 +20,6 @@
 -- | 163 | Raymond | 2021 | 7     | 28  | As the thief was leaving the bakery, they called someone who talked to them for less than a minute. In the call, I heard the thief say that they were planning to take the earliest flight out of Fiftyville tomorrow. The thief then asked the person on the other end of the phone to purchase the flight ticket. |
 -- +-----+---------+------+-------+-----+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-SELECT * FROM interviews WHERE day=28 AND month=07 AND year=2021 AND transcript LIKE "%bakery%"
 
 --check first interview -> security camera
 --SELECT * FROM bakery_security_logs WHERE day=28 AND month=07 AND year=2021 --AND transcript LIKE "%bakery%"
