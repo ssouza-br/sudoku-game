@@ -142,6 +142,7 @@
 
 --check third interview -> people from caller phone number
 -- SELECT * FROM people WHERE phone_number IN (SELECT caller FROM phone_calls WHERE day=29 AND month=07 AND year=2021 AND duration<=60)
+--check license_plate with security camera -> stolen car
 -- +--------+------------+----------------+-----------------+---------------+
 -- |   id   |    name    |  phone_number  | passport_number | license_plate |
 -- +--------+------------+----------------+-----------------+---------------+
@@ -169,8 +170,4 @@
 -- +-----+------+-------+-----+------+--------+----------+---------------+
 
 
---check license_plate with security camera
-SELECT * FROM people WHERE phone_number IN (SELECT caller FROM phone_calls WHERE day=29 AND month=07 AND year=2021 AND duration<=60)
 
-
-WHERE license_plate IN (SELECT license_plate FROM bakery_security_logs WHERE day=28 AND month=07 AND year=2021 AND activity='exit' AND hour=10)
