@@ -141,4 +141,15 @@
 -- +-----+----------------+----------------+------+-------+-----+----------+
 
 --check third interview -> people from caller phone number
-SELECT * FROM people WHERE   day=29 AND month=07 AND year=2021 AND duration<=60
+-- SELECT * FROM people WHERE phone_number IN (SELECT caller FROM phone_calls WHERE day=29 AND month=07 AND year=2021 AND duration<=60)
+-- +--------+------------+----------------+-----------------+---------------+
+-- |   id   |    name    |  phone_number  | passport_number | license_plate |
+-- +--------+------------+----------------+-----------------+---------------+
+-- | 274893 | Christina  | (547) 555-8781 | 4322787338      | 79X5400       |
+-- | 293753 | Ryan       | (901) 555-8732 |                 | 0WZS77X       |
+-- | 331126 | Brenda     | (831) 555-0973 | 1139561952      | N7M42GP       |
+-- | 617509 | Jerry      | (558) 555-9741 | 3816396248      | 4DD691O       |
+-- | 692353 | Jonathan   | (211) 555-3762 | 2047409662      | 7627B71       |
+-- | 712712 | Jacqueline | (910) 555-3251 |                 | 43V0R5D       |
+-- | 985497 | Deborah    | (344) 555-9601 | 8714200946      | 10I5658       |
+-- +--------+------------+----------------+-----------------+---------------+
