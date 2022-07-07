@@ -81,7 +81,7 @@
 -- +----+-------------------+------------------------+------+-------+-----+------+--------+
 
 --check third interview -> flights -> passengers
-WHERE IN (SELECT * FROM flights WHERE day=29 AND month=07 AND year=2021)
+SELECT * FROM passengers WHERE flight_id IN (SELECT id FROM flights WHERE day=29 AND month=07 AND year=2021)
 
 --check third interview -> phone_calls
 -- SELECT * FROM phone_calls   day=29 AND month=07 AND year=2021 AND duration<=60
