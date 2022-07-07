@@ -20,4 +20,4 @@
 -- +-----+---------+------+-------+-----+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 --check first interview -> security camera
-SELECT * FROM bakery_security_logs WHERE day=28 AND month=07 AND year=2021 --AND transcript LIKE "%bakery%"
+SELECT * FROM bakery_security_logs WHERE day=28 AND month=07 AND year=2021 AND activity='exit' AND hour=10
