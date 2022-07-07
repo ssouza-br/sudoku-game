@@ -69,40 +69,39 @@
     -- +-----+----------------+------+-------+-----+---------------+------------------+--------+
 
     --name of people withdraw money
-    -- SELECT id, name FROM people WHERE id IN
+--     SELECT id, name FROM people WHERE id IN
 
-    -- (SELECT person_id from bank_accounts where account_number in
-    -- (SELECT account_number FROM atm_transactions WHERE day=28 AND month=07 AND
-    -- year=2021 AND atm_location LIKE "%Humphrey%" AND transaction_type='withdraw'))
+--     (SELECT person_id from bank_accounts where account_number in
+--     (SELECT account_number FROM atm_transactions WHERE day=28 AND month=07 AND
+--     year=2021 AND atm_location LIKE "%Humphrey%" AND transaction_type='withdraw')) order by name ASC
 -- +--------+-----------+
 -- |   id   |   name    |
 -- +--------+-----------+
--- | 229572 | Ernest    |
--- | 274388 | Laura     |
--- | 274893 | Christina |
--- | 293753 | Ryan      |
--- | 336397 | Joan      |
--- | 341739 | Rebecca   |
--- | 484375 | Anna      |
--- | 506435 | Zachary   |
--- | 539960 | Theresa   |
--- | 567218 | Jack      |
--- | 572028 | Paul      |
 -- | 630782 | Alexis    |
 -- | 632023 | Amanda    |
--- | 637069 | Michelle  |
+-- | 929343 | Andrea    |
+-- | 837455 | Andrew    |
+-- | 484375 | Anna      |
+-- | 769190 | Charles   |
+-- | 274893 | Christina |
 -- | 652412 | Denise    |
--- | 704850 | Rachel    |
 -- | 713341 | Donna     |
 -- | 757606 | Douglas   |
--- | 769190 | Charles   |
+-- | 229572 | Ernest    |
 -- | 779942 | Harold    |
--- | 837455 | Andrew    |
--- | 920334 | Stephen   |
--- | 929343 | Andrea    |
+-- | 567218 | Jack      |
+-- | 336397 | Joan      |
+-- | 274388 | Laura     |
 -- | 985539 | Lisa      |
+-- | 637069 | Michelle  |
+-- | 572028 | Paul      |
+-- | 704850 | Rachel    |
+-- | 341739 | Rebecca   |
+-- | 293753 | Ryan      |
+-- | 920334 | Stephen   |
+-- | 539960 | Theresa   |
+-- | 506435 | Zachary   |
 -- +--------+-----------+
-
 
 --check third interview -> flights
 -- SELECT * FROM flights WHERE day=29 AND month=07 AND year=2021
@@ -162,6 +161,13 @@
 -- | 449774 | Taylor    |
 -- | 660982 | Thomas    |
 -- +--------+-----------+
+
+
+
+
+
+
+
 --check third interview -> phone_calls
 -- SELECT * FROM phone_calls   day=29 AND month=07 AND year=2021 AND duration<=60
 -- +-----+----------------+----------------+------+-------+-----+----------+
