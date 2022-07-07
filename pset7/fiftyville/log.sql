@@ -182,9 +182,6 @@
     -- | 769190 | Charles |
     -- +--------+---------+
 
-
-
-
 --check third interview -> phone_calls
 -- SELECT * FROM phone_calls   day=29 AND month=07 AND year=2021 AND duration<=60
 -- +-----+----------------+----------------+------+-------+-----+----------+
