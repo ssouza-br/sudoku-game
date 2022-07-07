@@ -74,93 +74,95 @@
 --     (SELECT person_id from bank_accounts where account_number in
 --     (SELECT account_number FROM atm_transactions WHERE day=28 AND month=07 AND
 --     year=2021 AND atm_location LIKE "%Humphrey%" AND transaction_type='withdraw')) order by name ASC
--- +--------+-----------+
--- |   id   |   name    |
--- +--------+-----------+
--- | 630782 | Alexis    |
--- | 632023 | Amanda    |
--- | 929343 | Andrea    |
--- | 837455 | Andrew    |
--- | 484375 | Anna      |
--- | 769190 | Charles   |
--- | 274893 | Christina |
--- | 652412 | Denise    |
--- | 713341 | Donna     |
--- | 757606 | Douglas   |
--- | 229572 | Ernest    |
--- | 779942 | Harold    |
--- | 567218 | Jack      |
--- | 336397 | Joan      |
--- | 274388 | Laura     |
--- | 985539 | Lisa      |
--- | 637069 | Michelle  |
--- | 572028 | Paul      |
--- | 704850 | Rachel    |
--- | 341739 | Rebecca   |
--- | 293753 | Ryan      |
--- | 920334 | Stephen   |
--- | 539960 | Theresa   |
--- | 506435 | Zachary   |
--- +--------+-----------+
+    -- +--------+-----------+
+    -- |   id   |   name    |
+    -- +--------+-----------+
+    -- | 630782 | Alexis    |
+    -- | 632023 | Amanda    |
+    -- | 929343 | Andrea    |
+    -- | 837455 | Andrew    |
+    -- | 484375 | Anna      |
+    -- | 769190 | Charles   |
+    -- | 274893 | Christina |
+    -- | 652412 | Denise    |
+    -- | 713341 | Donna     |
+    -- | 757606 | Douglas   |
+    -- | 229572 | Ernest    |
+    -- | 779942 | Harold    |
+    -- | 567218 | Jack      |
+    -- | 336397 | Joan      |
+    -- | 274388 | Laura     |
+    -- | 985539 | Lisa      |
+    -- | 637069 | Michelle  |
+    -- | 572028 | Paul      |
+    -- | 704850 | Rachel    |
+    -- | 341739 | Rebecca   |
+    -- | 293753 | Ryan      |
+    -- | 920334 | Stephen   |
+    -- | 539960 | Theresa   |
+    -- | 506435 | Zachary   |
+    -- +--------+-----------+
 
 --check third interview -> flights
--- SELECT * FROM flights WHERE day=29 AND month=07 AND year=2021
--- +----+-------------------+------------------------+------+-------+-----+------+--------+
--- | id | origin_airport_id | destination_airport_id | year | month | day | hour | minute |
--- +----+-------------------+------------------------+------+-------+-----+------+--------+
--- | 18 | 8                 | 6                      | 2021 | 7     | 29  | 16   | 0      |
--- | 23 | 8                 | 11                     | 2021 | 7     | 29  | 12   | 15     |
--- | 36 | 8                 | 4                      | 2021 | 7     | 29  | 8    | 20     |
--- | 43 | 8                 | 1                      | 2021 | 7     | 29  | 9    | 30     |
--- | 53 | 8                 | 9                      | 2021 | 7     | 29  | 15   | 20     |
--- +----+-------------------+------------------------+------+-------+-----+------+--------+
+    -- SELECT * FROM flights WHERE day=29 AND month=07 AND year=2021
+    -- +----+-------------------+------------------------+------+-------+-----+------+--------+
+    -- | id | origin_airport_id | destination_airport_id | year | month | day | hour | minute |
+    -- +----+-------------------+------------------------+------+-------+-----+------+--------+
+    -- | 18 | 8                 | 6                      | 2021 | 7     | 29  | 16   | 0      |
+    -- | 23 | 8                 | 11                     | 2021 | 7     | 29  | 12   | 15     |
+    -- | 36 | 8                 | 4                      | 2021 | 7     | 29  | 8    | 20     |
+    -- | 43 | 8                 | 1                      | 2021 | 7     | 29  | 9    | 30     |
+    -- | 53 | 8                 | 9                      | 2021 | 7     | 29  | 15   | 20     |
+    -- +----+-------------------+------------------------+------+-------+-----+------+--------+
 
---check third interview -> flights -> passengers
--- SELECT id, name from people where passport_number in
+    --check third interview -> flights -> passengers
+    -- SELECT id, name from people where passport_number in
 
--- (SELECT passport_number FROM passengers WHERE flight_id IN (SELECT id FROM flights WHERE day=29 AND month=07 AND year=2021)) order by name ASC
+    -- (SELECT passport_number FROM passengers WHERE flight_id IN (SELECT id FROM flights WHERE day=29 AND month=07 AND year=2021)) order by name ASC
 
--- +--------+-----------+
--- |   id   |   name    |
--- +--------+-----------+
--- | 325548 | Brandon   |
--- | 458378 | Brooke    |
--- | 686048 | Bruce     |
--- | 423393 | Carol     |
--- | 769190 | Charles   |
--- | 952462 | Christian |
--- | 750165 | Daniel    |
--- | 447494 | Dennis    |
--- | 514354 | Diana     |
--- | 953679 | Doris     |
--- | 757606 | Douglas   |
--- | 651714 | Edward    |
--- | 788213 | Emily     |
--- | 682850 | Ethan     |
--- | 788911 | Gloria    |
--- | 210641 | Heather   |
--- | 753885 | Jennifer  |
--- | 677698 | John      |
--- | 210245 | Jordan    |
--- | 809265 | Jose      |
--- | 560886 | Kelsey    |
--- | 395717 | Kenny     |
--- | 253397 | Kristina  |
--- | 251693 | Larry     |
--- | 467400 | Luca      |
--- | 354903 | Marilyn   |
--- | 619074 | Matthew   |
--- | 626361 | Melissa   |
--- | 542503 | Michael   |
--- | 205082 | Pamela    |
--- | 341739 | Rebecca   |
--- | 710572 | Richard   |
--- | 398010 | Sofia     |
--- | 745650 | Sophia    |
--- | 676919 | Steven    |
--- | 449774 | Taylor    |
--- | 660982 | Thomas    |
--- +--------+-----------+
+    -- +--------+-----------+
+    -- |   id   |   name    |
+    -- +--------+-----------+
+    -- | 325548 | Brandon   |
+    -- | 458378 | Brooke    |
+    -- | 686048 | Bruce     |
+    -- | 423393 | Carol     |
+    -- | 769190 | Charles   |
+    -- | 952462 | Christian |
+    -- | 750165 | Daniel    |
+    -- | 447494 | Dennis    |
+    -- | 514354 | Diana     |
+    -- | 953679 | Doris     |
+    -- | 757606 | Douglas   |
+    -- | 651714 | Edward    |
+    -- | 788213 | Emily     |
+    -- | 682850 | Ethan     |
+    -- | 788911 | Gloria    |
+    -- | 210641 | Heather   |
+    -- | 753885 | Jennifer  |
+    -- | 677698 | John      |
+    -- | 210245 | Jordan    |
+    -- | 809265 | Jose      |
+    -- | 560886 | Kelsey    |
+    -- | 395717 | Kenny     |
+    -- | 253397 | Kristina  |
+    -- | 251693 | Larry     |
+    -- | 467400 | Luca      |
+    -- | 354903 | Marilyn   |
+    -- | 619074 | Matthew   |
+    -- | 626361 | Melissa   |
+    -- | 542503 | Michael   |
+    -- | 205082 | Pamela    |
+    -- | 341739 | Rebecca   |
+    -- | 710572 | Richard   |
+    -- | 398010 | Sofia     |
+    -- | 745650 | Sophia    |
+    -- | 676919 | Steven    |
+    -- | 449774 | Taylor    |
+    -- | 660982 | Thomas    |
+    -- +--------+-----------+
+
+---CREATE INTERSECT BETWEEN WITHDRAW LIST AND PASSENGERS:
 
 
 
