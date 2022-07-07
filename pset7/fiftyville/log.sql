@@ -36,37 +36,44 @@
     -- +-----+------+-------+-----+------+--------+----------+---------------+
 
 --check second interview -> atm_transactions
--- SELECT * FROM atm_transactions WHERE day=28 AND month=07 AND year=2021 AND atm_location LIKE "%Humphrey%" AND transaction_type='withdraw'
--- +-----+----------------+------+-------+-----+---------------+------------------+--------+
--- | id  | account_number | year | month | day | atm_location  | transaction_type | amount |
--- +-----+----------------+------+-------+-----+---------------+------------------+--------+
--- | 245 | 90209473       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 45     |
--- | 247 | 41935128       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 15     |
--- | 255 | 66344537       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 55     |
--- | 258 | 92647903       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 5      |
--- | 262 | 40665580       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 35     |
--- | 265 | 96336648       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 20     |
--- | 273 | 69638157       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 20     |
--- | 276 | 13156006       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 15     |
--- | 277 | 89843009       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 40     |
--- | 280 | 92647903       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 40     |
--- | 281 | 57022441       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 55     |
--- | 290 | 79165736       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 5      |
--- | 291 | 76849114       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 10     |
--- | 300 | 66344537       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 60     |
--- | 302 | 50380485       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 100    |
--- | 309 | 46222318       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 60     |
--- | 310 | 58673910       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 10     |
--- | 312 | 93903397       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 35     |
--- | 315 | 79127781       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 65     |
--- | 316 | 95773068       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 45     |
--- | 322 | 26797365       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 35     |
--- | 329 | 34939061       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 100    |
--- | 333 | 65190958       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 50     |
--- | 334 | 99031604       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 20     |
--- | 337 | 58552019       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 30     |
--- | 342 | 55322348       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 5      |
--- +-----+----------------+------+-------+-----+---------------+------------------+--------+
+    -- SELECT * FROM atm_transactions WHERE day=28 AND month=07 AND year=2021 AND atm_location LIKE "%Humphrey%" AND transaction_type='withdraw'
+    -- +-----+----------------+------+-------+-----+---------------+------------------+--------+
+    -- | id  | account_number | year | month | day | atm_location  | transaction_type | amount |
+    -- +-----+----------------+------+-------+-----+---------------+------------------+--------+
+    -- | 245 | 90209473       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 45     |
+    -- | 247 | 41935128       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 15     |
+    -- | 255 | 66344537       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 55     |
+    -- | 258 | 92647903       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 5      |
+    -- | 262 | 40665580       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 35     |
+    -- | 265 | 96336648       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 20     |
+    -- | 273 | 69638157       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 20     |
+    -- | 276 | 13156006       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 15     |
+    -- | 277 | 89843009       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 40     |
+    -- | 280 | 92647903       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 40     |
+    -- | 281 | 57022441       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 55     |
+    -- | 290 | 79165736       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 5      |
+    -- | 291 | 76849114       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 10     |
+    -- | 300 | 66344537       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 60     |
+    -- | 302 | 50380485       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 100    |
+    -- | 309 | 46222318       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 60     |
+    -- | 310 | 58673910       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 10     |
+    -- | 312 | 93903397       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 35     |
+    -- | 315 | 79127781       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 65     |
+    -- | 316 | 95773068       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 45     |
+    -- | 322 | 26797365       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 35     |
+    -- | 329 | 34939061       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 100    |
+    -- | 333 | 65190958       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 50     |
+    -- | 334 | 99031604       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 20     |
+    -- | 337 | 58552019       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 30     |
+    -- | 342 | 55322348       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 5      |
+    -- +-----+----------------+------+-------+-----+---------------+------------------+--------+
+
+SELECT 
+
+
+
+
+
 
 --check third interview -> flights
 -- SELECT * FROM flights WHERE day=29 AND month=07 AND year=2021
