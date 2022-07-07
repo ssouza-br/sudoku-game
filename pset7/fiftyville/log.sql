@@ -35,4 +35,4 @@
 -- | 268 | 2021 | 7     | 28  | 10   | 35     | exit     | 1106N58       |
 -- +-----+------+-------+-----+------+--------+----------+---------------+
 
---check second interview -> 
+--check second interview -> atm_transactions
