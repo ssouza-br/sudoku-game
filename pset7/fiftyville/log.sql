@@ -170,4 +170,4 @@
 -- +-----+------+-------+-----+------+--------+----------+---------------+
 
 
-
+SELECT passport_number FROM people WHERE phone_number IN (SELECT caller FROM phone_calls WHERE day=29 AND month=07 AND year=2021 AND duration<=60)
