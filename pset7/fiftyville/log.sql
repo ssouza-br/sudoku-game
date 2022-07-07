@@ -139,3 +139,6 @@
 -- | 324 | (831) 555-0973 | (033) 555-9033 | 2021 | 7     | 29  | 57       |
 -- | 353 | (901) 555-8732 | (487) 555-5865 | 2021 | 7     | 29  | 35       |
 -- +-----+----------------+----------------+------+-------+-----+----------+
+
+--check third interview -> people from caller phone number
+SELECT * FROM people WHERE   day=29 AND month=07 AND year=2021 AND duration<=60
