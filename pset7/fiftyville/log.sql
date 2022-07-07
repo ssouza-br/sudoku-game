@@ -117,7 +117,11 @@
 -- +----+-------------------+------------------------+------+-------+-----+------+--------+
 
 --check third interview -> flights -> passengers
---SELECT * FROM passengers WHERE flight_id IN (SELECT id FROM flights WHERE day=29 AND month=07 AND year=2021)
+SELECT id, name from people where passport_number in
+
+(SELECT passport_number FROM passengers WHERE flight_id IN (SELECT id FROM flights WHERE day=29 AND month=07 AND year=2021))
+
+
 -- +-----------+-----------------+------+
 -- | flight_id | passport_number | seat |
 -- +-----------+-----------------+------+
