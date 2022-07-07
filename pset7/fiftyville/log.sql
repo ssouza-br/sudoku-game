@@ -214,7 +214,7 @@
 -- | 53        | 8C   | 7834357192      |
 -- +-----------+------+-----------------+
 
-
+--flight_id dos passageiros com o numero de telefone do caller
 -- SELECT flight_id, passport_number FROM passengers WHERE passport_number IN (SELECT passport_number FROM people WHERE phone_number IN (SELECT caller FROM phone_calls WHERE day=29 AND month=07 AND year=2021 AND duration<=60));
 -- +-----------+-----------------+
 -- | flight_id | passport_number |
