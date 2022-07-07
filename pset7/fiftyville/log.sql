@@ -68,11 +68,40 @@
     -- | 342 | 55322348       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 5      |
     -- +-----+----------------+------+-------+-----+---------------+------------------+--------+
 
+    --name of people withdraw money
+    -- SELECT name FROM people WHERE id IN
 
-
-SELECT person_id from bank_accounts where account_number in
-(SELECT account_number FROM atm_transactions WHERE day=28 AND month=07 AND year=2021 AND atm_location LIKE "%Humphrey%" AND transaction_type='withdraw')
-
+    -- (SELECT person_id from bank_accounts where account_number in
+    -- (SELECT account_number FROM atm_transactions WHERE day=28 AND month=07 AND
+    -- year=2021 AND atm_location LIKE "%Humphrey%" AND transaction_type='withdraw'))
+    -- +-----------+
+    -- |   name    |
+    -- +-----------+
+    -- | Ernest    |
+    -- | Laura     |
+    -- | Christina |
+    -- | Ryan      |
+    -- | Joan      |
+    -- | Rebecca   |
+    -- | Anna      |
+    -- | Zachary   |
+    -- | Theresa   |
+    -- | Jack      |
+    -- | Paul      |
+    -- | Alexis    |
+    -- | Amanda    |
+    -- | Michelle  |
+    -- | Denise    |
+    -- | Rachel    |
+    -- | Donna     |
+    -- | Douglas   |
+    -- | Charles   |
+    -- | Harold    |
+    -- | Andrew    |
+    -- | Stephen   |
+    -- | Andrea    |
+    -- | Lisa      |
+    -- +-----------+
 
 
 
