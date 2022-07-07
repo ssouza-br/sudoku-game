@@ -174,13 +174,13 @@
 
     -- (SELECT passport_number FROM passengers WHERE flight_id IN (SELECT id FROM flights WHERE day=29 AND month=07 AND year=2021))
 
--- +--------+---------+
--- |   id   |  name   |
--- +--------+---------+
--- | 341739 | Rebecca |
--- | 757606 | Douglas |
--- | 769190 | Charles |
--- +--------+---------+
+    -- +--------+---------+
+    -- |   id   |  name   |
+    -- +--------+---------+
+    -- | 341739 | Rebecca |
+    -- | 757606 | Douglas |
+    -- | 769190 | Charles |
+    -- +--------+---------+
 
 
 
