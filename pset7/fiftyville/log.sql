@@ -80,8 +80,11 @@
 -- | 53 | 8                 | 9                      | 2021 | 7     | 29  | 15   | 20     |
 -- +----+-------------------+------------------------+------+-------+-----+------+--------+
 
+--check third interview -> flights -> passengers
+WHERE IN (SELECT * FROM flights WHERE day=29 AND month=07 AND year=2021)
+
 --check third interview -> phone_calls
--- SELECT * FROM phone_calls WHERE day=29 AND month=07 AND year=2021 AND duration<=60
+-- SELECT * FROM phone_calls   day=29 AND month=07 AND year=2021 AND duration<=60
 -- +-----+----------------+----------------+------+-------+-----+----------+
 -- | id  |     caller     |    receiver    | year | month | day | duration |
 -- +-----+----------------+----------------+------+-------+-----+----------+
