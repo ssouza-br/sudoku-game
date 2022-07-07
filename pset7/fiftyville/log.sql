@@ -164,17 +164,23 @@
 
 ---CREATE INTERSECT BETWEEN WITHDRAW LIST AND PASSENGERS:
 
-    (SELECT id, name FROM people WHERE id IN
+    -- SELECT id, name FROM people WHERE id IN
 
-    (SELECT person_id from bank_accounts where account_number in
-    (SELECT account_number FROM atm_transactions WHERE day=28 AND month=07 AND
-    year=2021 AND atm_location LIKE "%Humphrey%" AND transaction_type='withdraw')) order by name ASC)
+    -- (SELECT person_id from bank_accounts where account_number in
+    -- (SELECT account_number FROM atm_transactions WHERE day=28 AND month=07 AND
+    -- year=2021 AND atm_location LIKE "%Humphrey%" AND transaction_type='withdraw'))
 
-    INTERSECT (SELECT id, name from people where passport_number in
+    -- INTERSECT SELECT id, name from people where passport_number in
 
-    (SELECT passport_number FROM passengers WHERE flight_id IN (SELECT id FROM flights WHERE day=29 AND month=07 AND year=2021)) order by name ASC)
+    -- (SELECT passport_number FROM passengers WHERE flight_id IN (SELECT id FROM flights WHERE day=29 AND month=07 AND year=2021))
 
-
+-- +--------+---------+
+-- |   id   |  name   |
+-- +--------+---------+
+-- | 341739 | Rebecca |
+-- | 757606 | Douglas |
+-- | 769190 | Charles |
+-- +--------+---------+
 
 
 
