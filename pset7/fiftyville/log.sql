@@ -215,7 +215,22 @@
 -- +-----------+------+-----------------+
 
 
-SELECT flight_id, passport_number FROM people WHERE passport_number IN (SELECT passport_number FROM people WHERE phone_number IN (SELECT caller FROM phone_calls WHERE day=29 AND month=07 AND year=2021 AND duration<=60));
+-- SELECT flight_id, passport_number FROM passengers WHERE passport_number IN (SELECT passport_number FROM people WHERE phone_number IN (SELECT caller FROM phone_calls WHERE day=29 AND month=07 AND year=2021 AND duration<=60));
+-- +-----------+-----------------+
+-- | flight_id | passport_number |
+-- +-----------+-----------------+
+-- | 9         | 3816396248      |
+-- | 14        | 2047409662      |
+-- | 22        | 8714200946      |
+-- | 29        | 1139561952      |
+-- | 32        | 3816396248      |
+-- | 46        | 3816396248      |
+-- | 51        | 2047409662      |
+-- | 55        | 1139561952      |
+-- | 55        | 3816396248      |
+-- | 56        | 2047409662      |
+-- +-----------+-----------------+
+
 
 -- +-----------+------+-----------------+
 -- | flight_id | seat | passport_number |
