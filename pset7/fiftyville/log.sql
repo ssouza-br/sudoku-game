@@ -36,3 +36,4 @@
 -- +-----+------+-------+-----+------+--------+----------+---------------+
 
 --check second interview -> atm_transactions
+SELECT * FROM atm_transactions WHERE day=28 AND month=07 AND year=2021 AND atm_location LIKE "%Humphrey%"
