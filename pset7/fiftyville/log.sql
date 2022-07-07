@@ -170,7 +170,7 @@
 -- +-----+------+-------+-----+------+--------+----------+---------------+
 
 --list all passport numbers from callers
-SELECT flight_id, seat, passport_number from passengers where flight_id IN (SELECT flight_id FROM flights WHERE day=29 AND month=07 AND year=2021)
+SELECT flight_id, seat, passport_number from passengers where flight_id IN (SELECT id FROM flights WHERE day=29 AND month=07 AND year=2021)
 
 
 AND passport_number IN
