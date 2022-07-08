@@ -184,6 +184,9 @@
     -- | 686048 | Bruce   | (367) 555-5533 | 5773159633      | 94KL13X       |
     -- | 907148 | Carina  | (031) 555-6622 | 9628244268      | Q12B3Z3       |
     -- +--------+---------+----------------+-----------------+---------------+
+
+
+
 --check license plate caller
 -- SELECT  id, name FROM people WHERE license_plate in
 
