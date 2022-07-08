@@ -355,3 +355,6 @@
 
 --checking if caller and receiver are in the same flight
     SELECT id, name FROM people WHERE phone_number IN (SELECT caller FROM phone_calls WHERE day=28 AND month=07 AND year=2021 AND duration<=60)
+
+
+SELECT COUNT(*) FROM movies JOIN (SELECT * FROM ratings WHERE rating=10.0) ON id=movie_id;
