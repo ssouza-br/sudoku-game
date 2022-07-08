@@ -215,7 +215,7 @@
     -- | 686048 | Bruce   | (367) 555-5533 | 5773159633      | 94KL13X       |
     -- | 907148 | Carina  | (031) 555-6622 | 9628244268      | Q12B3Z3       |
     -- +--------+---------+----------------+-----------------+---------------+
---check license plate
+--check license plate caller
 -- SELECT  id, name FROM people WHERE license_plate in
 
 -- (SELECT license_plate FROM people WHERE phone_number IN (SELECT caller FROM phone_calls WHERE day=28 AND month=07 AND year=2021 AND duration<=60)
@@ -233,6 +233,21 @@
 -- | 560886 | Kelsey |
 -- | 686048 | Bruce  |
 -- +--------+--------+
+
+--check license plate receiver
+    -- SELECT  id, name FROM people WHERE license_plate in
+
+    -- (SELECT license_plate FROM people WHERE phone_number IN (SELECT receiver FROM phone_calls WHERE day=28 AND month=07 AND year=2021 AND duration<=60)
+
+    -- INTERSECT
+
+    -- SELECT license_plate FROM bakery_security_logs WHERE day=28 AND month=07 AND year=2021 AND activity='exit' AND hour=10)
+
+    -- +--------+------+
+    -- |   id   | name |
+    -- +--------+------+
+    -- | 467400 | Luca |
+    -- +--------+------+
 
 
 
