@@ -269,3 +269,22 @@
     -- | 560886 | Kelsey  |
     -- | 686048 | Bruce   |
     -- +--------+---------+
+
+    -- List2 - name of people withdraw money
+    -- SELECT id, name FROM people WHERE id IN
+
+    -- (SELECT person_id from bank_accounts where account_number in
+    -- (SELECT account_number FROM atm_transactions WHERE day=28 AND month=07 AND
+    -- year=2021 AND atm_location LIKE "%Legget%" AND transaction_type='withdraw')) order by name ASC
+    -- +--------+---------+
+    -- |   id   |  name   |
+    -- +--------+---------+
+    -- | 438727 | Benista |
+    -- | 458378 | Brooke  |
+    -- | 686048 | Bruce   |
+    -- | 514354 | Diana   |
+    -- | 396669 | Iman    |
+    -- | 395717 | Kenny   |
+    -- | 467400 | Luca    |
+    -- | 449774 | Taylor  |
+    -- +--------+---------+
