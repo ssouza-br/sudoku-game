@@ -203,80 +203,26 @@
 -- | 686048 | Bruce  |
 -- +--------+--------+
 
---check license plate receiver
-    -- SELECT  id, name FROM people WHERE license_plate in
 
-    -- (SELECT license_plate FROM people WHERE phone_number IN (SELECT receiver FROM phone_calls WHERE day=28 AND month=07 AND year=2021 AND duration<=60)
+---SACARAM E SÃO PASSAGEIROS
+    -- +--------+--------+
+    -- |   id   |  name  |
+    -- +--------+--------+
+    -- | 395717 | Kenny  |
+    -- | 449774 | Taylor |
+    -- | 458378 | Brooke |
+    -- | 467400 | Luca   |
+    -- | 514354 | Diana  |
+    -- | 686048 | Bruce  |
+    -- +--------+--------+
 
-    -- INTERSECT
-
-    -- SELECT license_plate FROM bakery_security_logs WHERE day=28 AND month=07 AND year=2021 AND activity='exit' AND hour=10)
-
-    -- +--------+------+
-    -- |   id   | name |
-    -- +--------+------+
-    -- | 467400 | Luca |
-    -- +--------+------+
-
-
---list all passport numbers from callers
--- SELECT flight_id, seat, passport_number from passengers where flight_id IN (SELECT id FROM flights WHERE day=29 AND month=07 AND year=2021)
--- +-----------+------+-----------------+
--- | flight_id | seat | passport_number |
--- +-----------+------+-----------------+
--- | 18        | 9C   | 2835165196      |
--- | 18        | 2C   | 6131360461      |
--- | 18        | 3C   | 3231999695      |
--- | 18        | 4C   | 3592750733      |
--- | 18        | 5D   | 2626335085      |
--- | 18        | 6B   | 6117294637      |
--- | 18        | 7A   | 2996517496      |
--- | 18        | 8D   | 3915621712      |
--- | 23        | 7D   | 4149859587      |
--- | 23        | 8A   | 9183348466      |
--- | 23        | 9B   | 7378796210      |
--- | 23        | 2C   | 7874488539      |
--- | 23        | 3A   | 4195341387      |
--- | 23        | 4A   | 6263461050      |
--- | 23        | 5A   | 3231999695      |
--- | 23        | 6B   | 7951366683      |
--- | 36        | 2A   | 7214083635      |
--- | 36        | 3B   | 1695452385      |
--- | 36        | 4A   | 5773159633      |
--- | 36        | 5C   | 1540955065      |
--- | 36        | 6C   | 8294398571      |
--- | 36        | 6D   | 1988161715      |
--- | 36        | 7A   | 9878712108      |
--- | 36        | 7B   | 8496433585      |
--- | 43        | 7B   | 7597790505      |
--- | 43        | 8A   | 6128131458      |
--- | 43        | 9A   | 6264773605      |
--- | 43        | 2C   | 3642612721      |
--- | 43        | 3B   | 4356447308      |
--- | 43        | 4A   | 7441135547      |
--- | 53        | 9B   | 7894166154      |
--- | 53        | 2C   | 6034823042      |
--- | 53        | 3D   | 4408372428      |
--- | 53        | 4D   | 2312901747      |
--- | 53        | 5A   | 1151340634      |
--- | 53        | 6D   | 8174538026      |
--- | 53        | 7A   | 1050247273      |
--- | 53        | 8C   | 7834357192      |
--- +-----------+------+-----------------+
-
---flight_id dos passageiros com o numero de telefone do caller
--- SELECT flight_id, passport_number FROM passengers WHERE passport_number IN (SELECT passport_number FROM people WHERE phone_number IN (SELECT caller FROM phone_calls WHERE day=29 AND month=07 AND year=2021 AND duration<=60));
--- +-----------+------+-----------------+
--- | flight_id | seat | passport_number |
--- +-----------+------+-----------------+
--- | 9         | 5D   | 3816396248      |
--- | 14        | 9B   | 2047409662      |
--- | 22        | 2C   | 8714200946      |
--- | 29        | 6B   | 1139561952      |
--- | 32        | 8C   | 3816396248      |
--- | 46        | 7A   | 3816396248      |
--- | 51        | 3A   | 2047409662      |
--- | 55        | 3D   | 1139561952      |
--- | 55        | 4A   | 3816396248      |
--- | 56        | 2A   | 2047409662      |
--- +-----------+------+-----------------+
+---LIGARAM E SAIRAM DO ESTACIONAMENTO
+    -- +--------+--------+
+    -- |   id   |  name  |
+    -- +--------+--------+
+    -- | 398010 | Sofia  |
+    -- | 449774 | Taylor |
+    -- | 514354 | Diana  |
+    -- | 560886 | Kelsey |
+    -- | 686048 | Bruce  |
+    -- +--------+--------+
