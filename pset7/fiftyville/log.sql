@@ -353,25 +353,25 @@
 
 --INTERSECT LIST1, LIST2, LIST3 AND LIST4
 
-    -- SELECT  id, name FROM people WHERE license_plate in
-    -- (SELECT license_plate FROM bakery_security_logs WHERE day=28 AND month=07 AND year=2021 AND activity='exit' AND hour=10)
+    SELECT  id, name FROM people WHERE license_plate in
+    (SELECT license_plate FROM bakery_security_logs WHERE day=28 AND month=07 AND year=2021 AND activity='exit' AND hour=10)
 
-    -- INTERSECT
+    INTERSECT
 
-    -- SELECT id, name FROM people WHERE id IN
-    -- (SELECT person_id from bank_accounts where account_number in
-    -- (SELECT account_number FROM atm_transactions WHERE day=28 AND month=07 AND
-    -- year=2021 AND atm_location LIKE "%Legget%" AND transaction_type='withdraw'))
+    SELECT id, name FROM people WHERE id IN
+    (SELECT person_id from bank_accounts where account_number in
+    (SELECT account_number FROM atm_transactions WHERE day=28 AND month=07 AND
+    year=2021 AND atm_location LIKE "%Legget%" AND transaction_type='withdraw'))
 
-    -- INTERSECT
+    INTERSECT
 
-    -- SELECT id, name FROM people WHERE phone_number IN
-    -- (SELECT caller FROM phone_calls WHERE day=28 AND month=07 AND year=2021 AND duration<=60)
+    SELECT id, name FROM people WHERE phone_number IN
+    (SELECT caller FROM phone_calls WHERE day=28 AND month=07 AND year=2021 AND duration<=60)
 
-    -- INTERSECT
+    INTERSECT
 
-    -- SELECT id, name from people where passport_number in
-    -- (SELECT passport_number FROM passengers WHERE flight_id IN (SELECT id FROM flights WHERE day=29 AND month=07 AND year=2021))
+    SELECT id, name from people where passport_number in
+    (SELECT passport_number FROM passengers WHERE flight_id IN (SELECT id FROM flights WHERE day=29 AND month=07 AND year=2021 AND id=36))
 
     -- +--------+--------+
     -- |   id   |  name  |
