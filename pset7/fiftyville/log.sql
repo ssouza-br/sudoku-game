@@ -216,12 +216,23 @@
     -- | 907148 | Carina  | (031) 555-6622 | 9628244268      | Q12B3Z3       |
     -- +--------+---------+----------------+-----------------+---------------+
 --check license plate
-SELECT * FROM people WHERE phone_number IN (SELECT caller FROM phone_calls WHERE day=28 AND month=07 AND year=2021 AND duration<=60)
+-- SELECT  id, name FROM people WHERE license_plate in
 
+-- (SELECT license_plate FROM people WHERE phone_number IN (SELECT caller FROM phone_calls WHERE day=28 AND month=07 AND year=2021 AND duration<=60)
 
+-- INTERSECT
 
-IN
-(SELECT licence_plate FROM bakery_security_logs WHERE day=28 AND month=07 AND year=2021 AND activity='exit' AND hour=10)
+-- SELECT license_plate FROM bakery_security_logs WHERE day=28 AND month=07 AND year=2021 AND activity='exit' AND hour=10)
+
+-- +--------+--------+
+-- |   id   |  name  |
+-- +--------+--------+
+-- | 398010 | Sofia  |
+-- | 449774 | Taylor |
+-- | 514354 | Diana  |
+-- | 560886 | Kelsey |
+-- | 686048 | Bruce  |
+-- +--------+--------+
 
 
 
