@@ -36,7 +36,23 @@
     -- +-----+------+-------+-----+------+--------+----------+---------------+
 
     --name of people on parking lot
-    
+    -- SELECT  id, name FROM people WHERE license_plate in
+    -- (SELECT license_plate FROM bakery_security_logs WHERE day=28 AND month=07 AND year=2021 AND activity='exit' AND hour=10)
+
+    -- +--------+---------+
+    -- |   id   |  name   |
+    -- +--------+---------+
+    -- | 221103 | Vanessa |
+    -- | 243696 | Barry   |
+    -- | 396669 | Iman    |
+    -- | 398010 | Sofia   |
+    -- | 449774 | Taylor  |
+    -- | 467400 | Luca    |
+    -- | 514354 | Diana   |
+    -- | 560886 | Kelsey  |
+    -- | 686048 | Bruce   |
+    -- +--------+---------+
+
 
 --check second interview -> atm_transactions
     -- SELECT * FROM atm_transactions WHERE day=28 AND month=07 AND year=2021 AND atm_location LIKE "%Legget%" AND transaction_type='withdraw'
