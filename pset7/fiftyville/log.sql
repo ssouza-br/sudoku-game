@@ -36,72 +36,38 @@
     -- +-----+------+-------+-----+------+--------+----------+---------------+
 
 --check second interview -> atm_transactions
-    -- SELECT * FROM atm_transactions WHERE day=28 AND month=07 AND year=2021 AND atm_location LIKE "%Humphrey%" AND transaction_type='withdraw'
-    -- +-----+----------------+------+-------+-----+---------------+------------------+--------+
-    -- | id  | account_number | year | month | day | atm_location  | transaction_type | amount |
-    -- +-----+----------------+------+-------+-----+---------------+------------------+--------+
-    -- | 245 | 90209473       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 45     |
-    -- | 247 | 41935128       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 15     |
-    -- | 255 | 66344537       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 55     |
-    -- | 258 | 92647903       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 5      |
-    -- | 262 | 40665580       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 35     |
-    -- | 265 | 96336648       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 20     |
-    -- | 273 | 69638157       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 20     |
-    -- | 276 | 13156006       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 15     |
-    -- | 277 | 89843009       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 40     |
-    -- | 280 | 92647903       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 40     |
-    -- | 281 | 57022441       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 55     |
-    -- | 290 | 79165736       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 5      |
-    -- | 291 | 76849114       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 10     |
-    -- | 300 | 66344537       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 60     |
-    -- | 302 | 50380485       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 100    |
-    -- | 309 | 46222318       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 60     |
-    -- | 310 | 58673910       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 10     |
-    -- | 312 | 93903397       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 35     |
-    -- | 315 | 79127781       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 65     |
-    -- | 316 | 95773068       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 45     |
-    -- | 322 | 26797365       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 35     |
-    -- | 329 | 34939061       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 100    |
-    -- | 333 | 65190958       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 50     |
-    -- | 334 | 99031604       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 20     |
-    -- | 337 | 58552019       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 30     |
-    -- | 342 | 55322348       | 2021 | 7     | 28  | Humphrey Lane | withdraw         | 5      |
-    -- +-----+----------------+------+-------+-----+---------------+------------------+--------+
+    -- SELECT * FROM atm_transactions WHERE day=28 AND month=07 AND year=2021 AND atm_location LIKE "%Legget%" AND transaction_type='withdraw'
+    -- +-----+----------------+------+-------+-----+----------------+------------------+--------+
+    -- | id  | account_number | year | month | day |  atm_location  | transaction_type | amount |
+    -- +-----+----------------+------+-------+-----+----------------+------------------+--------+
+    -- | 246 | 28500762       | 2021 | 7     | 28  | Leggett Street | withdraw         | 48     |
+    -- | 264 | 28296815       | 2021 | 7     | 28  | Leggett Street | withdraw         | 20     |
+    -- | 266 | 76054385       | 2021 | 7     | 28  | Leggett Street | withdraw         | 60     |
+    -- | 267 | 49610011       | 2021 | 7     | 28  | Leggett Street | withdraw         | 50     |
+    -- | 269 | 16153065       | 2021 | 7     | 28  | Leggett Street | withdraw         | 80     |
+    -- | 288 | 25506511       | 2021 | 7     | 28  | Leggett Street | withdraw         | 20     |
+    -- | 313 | 81061156       | 2021 | 7     | 28  | Leggett Street | withdraw         | 30     |
+    -- | 336 | 26013199       | 2021 | 7     | 28  | Leggett Street | withdraw         | 35     |
+    -- +-----+----------------+------+-------+-----+----------------+------------------+--------+
 
     --name of people withdraw money
---     SELECT id, name FROM people WHERE id IN
+    -- SELECT id, name FROM people WHERE id IN
 
---     (SELECT person_id from bank_accounts where account_number in
---     (SELECT account_number FROM atm_transactions WHERE day=28 AND month=07 AND
---     year=2021 AND atm_location LIKE "%Humphrey%" AND transaction_type='withdraw')) order by name ASC
-    -- +--------+-----------+
-    -- |   id   |   name    |
-    -- +--------+-----------+
-    -- | 630782 | Alexis    |
-    -- | 632023 | Amanda    |
-    -- | 929343 | Andrea    |
-    -- | 837455 | Andrew    |
-    -- | 484375 | Anna      |
-    -- | 769190 | Charles   |
-    -- | 274893 | Christina |
-    -- | 652412 | Denise    |
-    -- | 713341 | Donna     |
-    -- | 757606 | Douglas   |
-    -- | 229572 | Ernest    |
-    -- | 779942 | Harold    |
-    -- | 567218 | Jack      |
-    -- | 336397 | Joan      |
-    -- | 274388 | Laura     |
-    -- | 985539 | Lisa      |
-    -- | 637069 | Michelle  |
-    -- | 572028 | Paul      |
-    -- | 704850 | Rachel    |
-    -- | 341739 | Rebecca   |
-    -- | 293753 | Ryan      |
-    -- | 920334 | Stephen   |
-    -- | 539960 | Theresa   |
-    -- | 506435 | Zachary   |
-    -- +--------+-----------+
+    -- (SELECT person_id from bank_accounts where account_number in
+    -- (SELECT account_number FROM atm_transactions WHERE day=28 AND month=07 AND
+    -- year=2021 AND atm_location LIKE "%Legget%" AND transaction_type='withdraw')) order by name ASC
+    -- +--------+---------+
+    -- |   id   |  name   |
+    -- +--------+---------+
+    -- | 438727 | Benista |
+    -- | 458378 | Brooke  |
+    -- | 686048 | Bruce   |
+    -- | 514354 | Diana   |
+    -- | 396669 | Iman    |
+    -- | 395717 | Kenny   |
+    -- | 467400 | Luca    |
+    -- | 449774 | Taylor  |
+    -- +--------+---------+
 
 --check third interview -> flights
     -- SELECT * FROM flights WHERE day=29 AND month=07 AND year=2021
@@ -168,19 +134,22 @@
 
     -- (SELECT person_id from bank_accounts where account_number in
     -- (SELECT account_number FROM atm_transactions WHERE day=28 AND month=07 AND
-    -- year=2021 AND atm_location LIKE "%Humphrey%" AND transaction_type='withdraw'))
+    -- year=2021 AND atm_location LIKE "%Legget%" AND transaction_type='withdraw'))
 
     -- INTERSECT SELECT id, name from people where passport_number in
 
     -- (SELECT passport_number FROM passengers WHERE flight_id IN (SELECT id FROM flights WHERE day=29 AND month=07 AND year=2021))
 
-    -- +--------+---------+
-    -- |   id   |  name   |
-    -- +--------+---------+
-    -- | 341739 | Rebecca |
-    -- | 757606 | Douglas |
-    -- | 769190 | Charles |
-    -- +--------+---------+
+    -- +--------+--------+
+    -- |   id   |  name  |
+    -- +--------+--------+
+    -- | 395717 | Kenny  |
+    -- | 449774 | Taylor |
+    -- | 458378 | Brooke |
+    -- | 467400 | Luca   |
+    -- | 514354 | Diana  |
+    -- | 686048 | Bruce  |
+    -- +--------+--------+
 
 --check third interview -> phone_calls
     -- SELECT * FROM phone_calls WHERE day=28 AND month=07 AND year=2021 AND duration<=60
