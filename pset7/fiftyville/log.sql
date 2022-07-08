@@ -35,6 +35,9 @@
     -- | 268 | 2021 | 7     | 28  | 10   | 35     | exit     | 1106N58       |
     -- +-----+------+-------+-----+------+--------+----------+---------------+
 
+    --name of people on parking lot
+    
+
 --check second interview -> atm_transactions
     -- SELECT * FROM atm_transactions WHERE day=28 AND month=07 AND year=2021 AND atm_location LIKE "%Legget%" AND transaction_type='withdraw'
     -- +-----+----------------+------+-------+-----+----------------+------------------+--------+
