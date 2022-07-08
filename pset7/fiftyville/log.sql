@@ -188,21 +188,20 @@
     -- +-----+----------------+----------------+------+-------+-----+----------+
 
 --check third interview -> people from caller phone number
-    SELECT id, name FROM people WHERE phone_number IN (SELECT caller FROM phone_calls WHERE day=28 AND month=07 AND year=2021 AND duration<=60)
-    --check license_plate with security camera -> stolen car
-    -- +--------+---------+----------------+-----------------+---------------+
-    -- |   id   |  name   |  phone_number  | passport_number | license_plate |
-    -- +--------+---------+----------------+-----------------+---------------+
-    -- | 395717 | Kenny   | (826) 555-1652 | 9878712108      | 30G67EN       |
-    -- | 398010 | Sofia   | (130) 555-0289 | 1695452385      | G412CB7       |
-    -- | 438727 | Benista | (338) 555-6650 | 9586786673      | 8X428L0       |
-    -- | 449774 | Taylor  | (286) 555-6063 | 1988161715      | 1106N58       |
-    -- | 514354 | Diana   | (770) 555-1861 | 3592750733      | 322W7JE       |
-    -- | 560886 | Kelsey  | (499) 555-9472 | 8294398571      | 0NTHK55       |
-    -- | 561160 | Kathryn | (609) 555-5876 | 6121106406      | 4ZY7I8T       |
-    -- | 686048 | Bruce   | (367) 555-5533 | 5773159633      | 94KL13X       |
-    -- | 907148 | Carina  | (031) 555-6622 | 9628244268      | Q12B3Z3       |
-    -- +--------+---------+----------------+-----------------+---------------+
+    -- SELECT id, name FROM people WHERE phone_number IN (SELECT caller FROM phone_calls WHERE day=28 AND month=07 AND year=2021 AND duration<=60)
+    -- +--------+---------+
+    -- |   id   |  name   |
+    -- +--------+---------+
+    -- | 395717 | Kenny   |
+    -- | 398010 | Sofia   |
+    -- | 438727 | Benista |
+    -- | 449774 | Taylor  |
+    -- | 514354 | Diana   |
+    -- | 560886 | Kelsey  |
+    -- | 561160 | Kathryn |
+    -- | 686048 | Bruce   |
+    -- | 907148 | Carina  |
+    -- +--------+---------+
 
 
 
@@ -287,4 +286,20 @@
     -- | 395717 | Kenny   |
     -- | 467400 | Luca    |
     -- | 449774 | Taylor  |
+    -- +--------+---------+
+
+    -- List3 - phone call caller
+    -- SELECT id, name FROM people WHERE phone_number IN (SELECT caller FROM phone_calls WHERE day=28 AND month=07 AND year=2021 AND duration<=60)
+    -- +--------+---------+
+    -- |   id   |  name   |
+    -- +--------+---------+
+    -- | 395717 | Kenny   |
+    -- | 398010 | Sofia   |
+    -- | 438727 | Benista |
+    -- | 449774 | Taylor  |
+    -- | 514354 | Diana   |
+    -- | 560886 | Kelsey  |
+    -- | 561160 | Kathryn |
+    -- | 686048 | Bruce   |
+    -- | 907148 | Carina  |
     -- +--------+---------+
