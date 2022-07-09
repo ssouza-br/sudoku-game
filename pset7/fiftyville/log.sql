@@ -101,9 +101,9 @@
     -- +----+-------------------+------------------------+------+-------+-----+------+--------+
 
     --check third interview -> flights -> passengers
-    -- SELECT id, name from people where passport_number in
+    SELECT id, name from people where passport_number in
 
-    -- (SELECT passport_number FROM passengers WHERE flight_id IN (SELECT id FROM flights WHERE day=29 AND month=07 AND year=2021)) order by name ASC
+    (SELECT passport_number FROM passengers WHERE flight_id IN (SELECT id FROM flights WHERE day=29 AND month=07 AND year=2021 AND id=36)) order by name ASC
 
     -- +--------+-----------+
     -- |   id   |   name    |
@@ -401,4 +401,4 @@
 --check destination
 -- select city from airports where id in (select destination_airport_id from flights where id=36);
 
-select name from people where phone_number='(609) 555-5876'
+-- select name from people where phone_number='(609) 555-5876'
