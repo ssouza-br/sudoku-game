@@ -397,3 +397,5 @@
 -- | 449774 | Taylor    |
 -- | 660982 | Thomas    |
 -- +--------+-----------+
+
+select name from people where phone_number='(676) 555-6554'
