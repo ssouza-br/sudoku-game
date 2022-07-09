@@ -257,9 +257,9 @@
     -- +--------+---------+
 
     -- List4 - passengers
-    SELECT id, name from people where passport_number in
+    -- SELECT id, name from people where passport_number in
 
-    (SELECT passport_number FROM passengers WHERE flight_id IN (SELECT id FROM flights WHERE day=29 AND month=07 AND year=2021)) order by name ASC
+    -- (SELECT passport_number FROM passengers WHERE flight_id IN (SELECT id FROM flights WHERE day=29 AND month=07 AND year=2021)) order by name ASC
 
     -- +--------+--------+
     -- |   id   |  name  |
@@ -341,6 +341,20 @@
     -- | Robin |
     -- +-------+
 
+--Diana receiver
+    -- SELECT name FROM people WHERE phone_number IN
+
+    -- (SELECT receiver FROM phone_calls WHERE id IN
+
+    -- (SELECT id FROM phone_calls WHERE day=28 AND month=07 AND year=2021 AND duration<=60 AND caller in
+    -- (SELECT phone_number FROM people WHERE name='Diana')))
+
+    -- +--------+
+    -- |  name  |
+    -- +--------+
+    -- | Philip |
+    -- +--------+
+
 
 -- +--------+-----------+
 -- |   id   |   name    |
@@ -382,4 +396,4 @@
 -- | 676919 | Steven    |
 -- | 449774 | Taylor    |
 -- | 660982 | Thomas    |
-+--------+-----------+
+-- +--------+-----------+
