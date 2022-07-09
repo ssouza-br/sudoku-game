@@ -257,9 +257,9 @@
     -- +--------+---------+
 
     -- List4 - passengers
-    -- SELECT id, name from people where passport_number in
+    SELECT id, name from people where passport_number in
 
-    -- (SELECT passport_number FROM passengers WHERE flight_id IN (SELECT id FROM flights WHERE day=29 AND month=07 AND year=2021 AND id=36)) order by name ASC
+    (SELECT passport_number FROM passengers WHERE flight_id IN (SELECT id FROM flights WHERE day=29 AND month=07 AND year=2021)) order by name ASC
 
     -- +--------+--------+
     -- |   id   |  name  |
@@ -294,7 +294,7 @@
     -- INTERSECT
 
     -- SELECT id, name from people where passport_number in
-    -- (SELECT passport_number FROM passengers WHERE flight_id IN (SELECT id FROM flights WHERE day=29 AND month=07 AND year=2021 AND id=36))
+    -- (SELECT passport_number FROM passengers WHERE flight_id IN (SELECT id FROM flights WHERE day=29 AND month=07 AND year=2021))
 
     -- +--------+--------+
     -- |   id   |  name  |
@@ -302,6 +302,15 @@
     -- | 449774 | Taylor |
     -- | 686048 | Bruce  |
     -- +--------+--------+
+
+    -- +--------+--------+
+    -- |   id   |  name  |
+    -- +--------+--------+
+    -- | 449774 | Taylor |
+    -- | 514354 | Diana  |
+    -- | 686048 | Bruce  |
+    -- +--------+--------+
+
 
 --checking if caller and receiver are in the same flight
 --Taylor receiver
