@@ -397,5 +397,3 @@
 -- | 449774 | Taylor    |
 -- | 660982 | Thomas    |
 -- +--------+-----------+
-
-select name from people where name='Bruce'
