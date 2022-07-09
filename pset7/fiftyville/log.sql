@@ -354,16 +354,30 @@
     -- +--------+--------+
 
 --checking if caller and receiver are in the same flight
--- SELECT receiver FROM phone_calls WHERE day=28 AND month=07 AND year=2021 AND duration<=60 AND caller
+--Taylor receiver
+    -- SELECT name FROM people WHERE phone_number IN
 
-SELECT caller, receiver, id FROM phone_calls WHERE caller in
-(SELECT phone_number FROM people WHERE name='Taylor')
+    -- (SELECT receiver FROM phone_calls WHERE id IN
 
+    -- (SELECT id FROM phone_calls WHERE day=28 AND month=07 AND year=2021 AND duration<=60 AND caller in
+    -- (SELECT phone_number FROM people WHERE name='Taylor')))
 
+    -- +-------+
+    -- | name  |
+    -- +-------+
+    -- | James |
+    -- +-------+
 
+--Bruce receiver
+    -- SELECT name FROM people WHERE phone_number IN
 
--- SELECT name FROM people JOIN (SELECT receiver,caller FROM phone_calls WHERE day=28 AND month=07 AND year=2021 AND duration<=60)
--- ON phone_number=caller WHERE people.name='Taylor';
+    -- (SELECT receiver FROM phone_calls WHERE id IN
 
+    -- (SELECT id FROM phone_calls WHERE day=28 AND month=07 AND year=2021 AND duration<=60 AND caller in
+    -- (SELECT phone_number FROM people WHERE name='Bruce')))
 
--- SELECT COUNT(*) FROM movies JOIN (SELECT * FROM ratings WHERE rating=10.0) ON id=movie_id;
+    -- +-------+
+    -- | name  |
+    -- +-------+
+    -- | Robin |
+    -- +-------+
