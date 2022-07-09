@@ -397,3 +397,6 @@
 -- | 449774 | Taylor    |
 -- | 660982 | Thomas    |
 -- +--------+-----------+
+
+--check destination
+select city from airports where id in (select destination_airport from flights where id=36);
