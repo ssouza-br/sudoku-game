@@ -399,4 +399,6 @@
 -- +--------+-----------+
 
 --check destination
-select city from airports where id in (select destination_airport_id from flights where id=36);
+-- select city from airports where id in (select destination_airport_id from flights where id=36);
+
+select phone_number from people where name='Luca'
