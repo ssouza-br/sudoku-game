@@ -101,9 +101,9 @@
     -- +----+-------------------+------------------------+------+-------+-----+------+--------+
 
     --check third interview -> flights -> passengers
-    SELECT id, name from people where passport_number in
+    -- SELECT id, name from people where passport_number in
 
-    (SELECT passport_number FROM passengers WHERE flight_id IN (SELECT id FROM flights WHERE day=29 AND month=07 AND year=2021 AND id=36)) order by name ASC
+    -- (SELECT passport_number FROM passengers WHERE flight_id IN (SELECT id FROM flights WHERE day=29 AND month=07 AND year=2021 AND id=36)) order by name ASC
 
     -- +--------+-----------+
     -- |   id   |   name    |
@@ -278,7 +278,7 @@
 --INTERSECT LIST1, LIST2, LIST3 AND LIST4
 
     -- SELECT  id, name FROM people WHERE license_plate in
-    -- (SELECT license_plate FROM bakery_security_logs WHERE day=28 AND month=07 AND year=2021 AND activity='exit' AND hour=10)
+    -- (SELECT license_plate FROM bakery_security_logs WHERE day=28 AND month=07 AND year=2021 AND activity='exit' AND hour=10 AND minute<=25)
 
     -- INTERSECT
 
@@ -295,29 +295,13 @@
     -- INTERSECT
 
     -- SELECT id, name from people where passport_number in
-    -- (SELECT passport_number FROM passengers WHERE flight_id IN (SELECT id FROM flights WHERE day=29 AND month=07 AND year=2021))
+    -- (SELECT passport_number FROM passengers WHERE flight_id IN (SELECT id FROM flights WHERE day=29 AND month=07 AND year=2021 and id=36))
 
-    -- +--------+--------+
-    -- |   id   |  name  |
-    -- +--------+--------+
-    -- | 449774 | Taylor |
-    -- | 686048 | Bruce  |
-    -- +--------+--------+
-
---checking if caller and receiver are in the same flight
---Taylor receiver
-    -- SELECT name FROM people WHERE phone_number IN
-
-    -- (SELECT receiver FROM phone_calls WHERE id IN
-
-    -- (SELECT id FROM phone_calls WHERE day=28 AND month=07 AND year=2021 AND duration<=60 AND caller in
-    -- (SELECT phone_number FROM people WHERE name='Taylor')))
-
-    -- +-------+
-    -- | name  |
-    -- +-------+
-    -- | James |
-    -- +-------+
+    -- +--------+-------+
+    -- |   id   | name  |
+    -- +--------+-------+
+    -- | 686048 | Bruce |
+    -- +--------+-------+
 
 --Bruce receiver
     -- SELECT name FROM people WHERE phone_number IN
@@ -335,3 +319,9 @@
 
 --check destination
 -- select city from airports where id in (select destination_airport_id from flights where id=36);
+
+    -- +---------------+
+    -- |     city      |
+    -- +---------------+
+    -- | New York City |
+    -- +---------------+
