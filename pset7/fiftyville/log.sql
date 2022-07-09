@@ -304,15 +304,6 @@
     -- | 686048 | Bruce  |
     -- +--------+--------+
 
-    -- +--------+--------+
-    -- |   id   |  name  |
-    -- +--------+--------+
-    -- | 449774 | Taylor |
-    -- | 514354 | Diana  |
-    -- | 686048 | Bruce  |
-    -- +--------+--------+
-
-
 --checking if caller and receiver are in the same flight
 --Taylor receiver
     -- SELECT name FROM people WHERE phone_number IN
