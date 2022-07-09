@@ -259,7 +259,7 @@
     -- List4 - passengers
     -- SELECT id, name from people where passport_number in
 
-    -- (SELECT passport_number FROM passengers WHERE flight_id IN (SELECT id FROM flights WHERE day=29 AND month=07 AND year=2021)) order by name ASC
+    -- (SELECT passport_number FROM passengers WHERE flight_id IN (SELECT id FROM flights WHERE day=29 AND month=07 AND year=2021 ANd id=36)) order by name ASC
 
     -- +--------+--------+
     -- |   id   |  name  |
@@ -273,6 +273,7 @@
     -- | 398010 | Sofia  |
     -- | 449774 | Taylor |
     -- +--------+--------+
+
 
 --INTERSECT LIST1, LIST2, LIST3 AND LIST4
 
