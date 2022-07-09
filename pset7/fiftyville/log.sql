@@ -256,73 +256,23 @@
     -- | 907148 | Carina  |
     -- +--------+---------+
 
-    -- List4 - phone call RECEIVER
-    -- SELECT id, name FROM people WHERE phone_number IN (SELECT receiver FROM phone_calls WHERE day=28 AND month=07 AND year=2021 AND duration<=60)
-    -- +--------+------------+
-    -- |   id   |    name    |
-    -- +--------+------------+
-    -- | 250277 | James      |
-    -- | 251693 | Larry      |
-    -- | 467400 | Luca       |
-    -- | 484375 | Anna       |
-    -- | 567218 | Jack       |
-    -- | 626361 | Melissa    |
-    -- | 712712 | Jacqueline |
-    -- | 847116 | Philip     |
-    -- | 864400 | Robin      |
-    -- | 953679 | Doris      |
-    -- +--------+------------+
-
-
-
-
-
-    -- List5 - passengers
+    -- List4 - passengers
     -- SELECT id, name from people where passport_number in
 
-    -- (SELECT passport_number FROM passengers WHERE flight_id IN (SELECT id FROM flights WHERE day=29 AND month=07 AND year=2021)) order by name ASC
+    -- (SELECT passport_number FROM passengers WHERE flight_id IN (SELECT id FROM flights WHERE day=29 AND month=07 AND year=2021 AND id=36)) order by name ASC
 
-    -- +--------+-----------+
-    -- |   id   |   name    |
-    -- +--------+-----------+
-    -- | 325548 | Brandon   |
-    -- | 458378 | Brooke    |
-    -- | 686048 | Bruce     |
-    -- | 423393 | Carol     |
-    -- | 769190 | Charles   |
-    -- | 952462 | Christian |
-    -- | 750165 | Daniel    |
-    -- | 447494 | Dennis    |
-    -- | 514354 | Diana     |
-    -- | 953679 | Doris     |
-    -- | 757606 | Douglas   |
-    -- | 651714 | Edward    |
-    -- | 788213 | Emily     |
-    -- | 682850 | Ethan     |
-    -- | 788911 | Gloria    |
-    -- | 210641 | Heather   |
-    -- | 753885 | Jennifer  |
-    -- | 677698 | John      |
-    -- | 210245 | Jordan    |
-    -- | 809265 | Jose      |
-    -- | 560886 | Kelsey    |
-    -- | 395717 | Kenny     |
-    -- | 253397 | Kristina  |
-    -- | 251693 | Larry     |
-    -- | 467400 | Luca      |
-    -- | 354903 | Marilyn   |
-    -- | 619074 | Matthew   |
-    -- | 626361 | Melissa   |
-    -- | 542503 | Michael   |
-    -- | 205082 | Pamela    |
-    -- | 341739 | Rebecca   |
-    -- | 710572 | Richard   |
-    -- | 398010 | Sofia     |
-    -- | 745650 | Sophia    |
-    -- | 676919 | Steven    |
-    -- | 449774 | Taylor    |
-    -- | 660982 | Thomas    |
-    -- +--------+-----------+
+    -- +--------+--------+
+    -- |   id   |  name  |
+    -- +--------+--------+
+    -- | 686048 | Bruce  |
+    -- | 953679 | Doris  |
+    -- | 651714 | Edward |
+    -- | 560886 | Kelsey |
+    -- | 395717 | Kenny  |
+    -- | 467400 | Luca   |
+    -- | 398010 | Sofia  |
+    -- | 449774 | Taylor |
+    -- +--------+--------+
 
 --INTERSECT LIST1, LIST2, LIST3 AND LIST4
 
@@ -381,3 +331,17 @@
     -- +-------+
     -- | Robin |
     -- +-------+
+
+
+    -- +--------+--------+
+    -- |   id   |  name  |
+    -- +--------+--------+
+    -- | 686048 | Bruce  |
+    -- | 953679 | Doris  |
+    -- | 651714 | Edward |
+    -- | 560886 | Kelsey |
+    -- | 395717 | Kenny  |
+    -- | 467400 | Luca   |
+    -- | 398010 | Sofia  |
+    -- | 449774 | Taylor |
+    -- +--------+--------+
