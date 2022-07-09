@@ -398,4 +398,4 @@
 -- | 660982 | Thomas    |
 -- +--------+-----------+
 
-select name from people where phone_number='(286) 555-6063'
+select name from people where name='Bruce'
