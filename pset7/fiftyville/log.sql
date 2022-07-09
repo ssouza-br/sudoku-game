@@ -399,4 +399,4 @@
 -- +--------+-----------+
 
 --check destination
-select city from airports where id in (select destination_airport from flights where id=36);
+select city from airports where id in (select destination_airport_id from flights where id=36);
