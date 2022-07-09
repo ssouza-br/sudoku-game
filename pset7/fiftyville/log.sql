@@ -401,4 +401,4 @@
 --check destination
 -- select city from airports where id in (select destination_airport_id from flights where id=36);
 
-select phone_number from people where name='Luca'
+select name from people where phone_number='(609) 555-5876'
