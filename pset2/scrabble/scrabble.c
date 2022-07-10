@@ -26,6 +26,10 @@ int compute_score(string word)
     int score = 0;
     for (int i = 0, len = strlen(word); i < len; i++)
     {
-        
+        for (int j = 0; j < 26; j++)
+        {
+            if (word[i]==)
+            score +=
+        }
     }
 }
