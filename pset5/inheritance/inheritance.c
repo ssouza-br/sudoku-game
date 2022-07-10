@@ -84,15 +84,10 @@ void free_family(person *p)
         while (p->parents[0] != NULL)
         {
             person *tmp0 = p->parents[0];
+            person *tmp1 = p->parents[1];
             free(p);
-            p = tmp0;
-        }
-
-        while (p->parents[1] != NULL)
-        {
-            person *tmp0 = p->parents[1];
-            free(p);
-            p = tmp0;
+            p->parents[0] = tmp0;
+            p->parents[0] = tmp1;
         }
     }
     // TODO: Handle base case
