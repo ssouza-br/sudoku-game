@@ -1,11 +1,11 @@
-sort1 uses: Selection Sort
+sort1 uses: selection Sort
 
 How do you know?: Lower sorting random list
 
-sort2 uses: Merge Sort
+sort2 uses: merge Sort
 
 How do you know?: Faster sorting random list
 
-sort3 uses: Bubble Sort
+sort3 uses: bubble Sort
 
 How do you know?: Average sorting random list
