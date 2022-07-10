@@ -20,6 +20,7 @@ person *create_family(int generations);
 void print_family(person *p, int generation);
 void free_family(person *p);
 char random_allele();
+void free_recursively(person *p);
 
 int main(void)
 {
@@ -81,20 +82,7 @@ void free_family(person *p)
 {
     if (p != NULL)
     {
-        while (p->parents[0] != NULL)
-        {
-            person *tmp0 = p->parents[0];
-            person *tmp1 = p->parents[1];
-            free(p);
-            while (tmp0->parents[0] != NULL)
-            {
-                person *tmp0 = p->parents[0];
-                person *tmp1 = p->parents[1];
-                free(p);
-
-            }
-
-        }
+        free_recursively(p);
     }
     // TODO: Handle base case
 
@@ -102,6 +90,18 @@ void free_family(person *p)
 
     // TODO: Free child
 
+}
+
+void free_recursively(person *p)
+{
+    while (p->parents[0] != NULL && p->parents[1] != NULL)
+    {
+        person *tmp0 = p->parents[0];
+        person *tmp1 = p->parents[1];
+        free(p);
+        free_recursively(tmp0);
+        free_recursively(tmp1);
+    }
 }
 
 // Print each family member and their alleles.
