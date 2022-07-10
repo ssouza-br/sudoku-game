@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
     // TODO: Read samples from input file and write updated data to output file
     while (fread(&buffer, 1, 2, input) == 2)
     {
-
+        fwrite(factor*&buffer, 1, 2, output);
     }
 
     // Close files
