@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
 
     float factor = atof(argv[3]);
 
-    BYTE *buffer = (BYTE *)malloc(512 * sizeof(BYTE));
+    BYTE *header = (BYTE *)malloc(512 * sizeof(BYTE));
 
     // TODO: Copy header from input file to output file
 
