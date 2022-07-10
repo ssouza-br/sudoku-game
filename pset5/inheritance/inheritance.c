@@ -81,10 +81,16 @@ void free_family(person *p)
 {
     if (p != NULL)
     {
-        while (p->parents[0] != NULL && p->parents[1] != NULL)
+        while (p->parents[0] != NULL)
         {
             person *tmp0 = p->parents[0];
-            person *tmp1 = p->parents[1];
+            free(p);
+            p = tmp0;
+        }
+
+        while (p->parents[1] != NULL)
+        {
+            person *tmp0 = p->parents[1];
             free(p);
             p = tmp0;
         }
