@@ -94,7 +94,7 @@ void free_family(person *p)
 
 void free_recursively(person *p)
 {
-    while (p->parents[0] != NULL && p->parents[1] != NULL)
+    if (p->parents[0] != NULL && p->parents[1] != NULL)
     {
         person *tmp0 = p->parents[0];
         person *tmp1 = p->parents[1];
