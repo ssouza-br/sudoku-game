@@ -53,6 +53,7 @@ person *create_family(int generations)
         p.parents = {parent0, parent1};
 
         // TODO: Randomly assign current person's alleles based on the alleles of their parents
+        p.alleles = {random_allele(), random_allele()};
 
     }
 
