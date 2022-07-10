@@ -81,10 +81,11 @@ void free_family(person *p)
 {
     if (p != NULL)
     {
-        while (table[i] != NULL)
+        while (p->parents[0] != NULL && p->parents[1] != NULL)
         {
-            node *tmp = table[i]->next;
-            free(table[i]);
+            person *tmp0 = p->parents[0];
+            person *tmp1 = p->parents[1];
+            free(p);
             table[i] = tmp;
         }
     }
