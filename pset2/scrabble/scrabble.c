@@ -41,7 +41,7 @@ int compute_score(string word)
     {
         for (int j = 0; j < 26; j++)
         {
-            if (word[i]==LETTERS[j])
+            if (toupper(word[i])==LETTERS[j])
             {
                 score += POINTS[j];
             }
