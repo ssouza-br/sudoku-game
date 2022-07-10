@@ -99,11 +99,12 @@ void free_recursively(person *p)
         person *tmp0 = p->parents[0];
         person *tmp1 = p->parents[1];
         free(p);
-        if (tmp0 != NULL && tmp1 != NULL)
-        {
-            free_recursively(tmp0);
-            free_recursively(tmp1);
-        }
+        free_recursively(tmp0);
+        free_recursively(tmp1);
+    }
+    else
+    {
+        free(p);
     }
 }
 
