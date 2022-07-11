@@ -20,6 +20,7 @@ def main():
     with open(sys.argv[1], "r") as dbfile:
         database_reader = csv.DictReader(dbfile)
         for row in database_reader:
+            print(row['team'])
             row['team'] = {}
             row['team']['rating'] = row['rating']
             teams.append(row['team'])
