@@ -27,6 +27,7 @@ def main():
     # print(teams)
     # print(teams[0])
     #print(teams[0]['Norway']['rating'])
+    print(len(teams))
 
     # TODO: Simulate N tournaments and keep track of win counts
     i = 0
