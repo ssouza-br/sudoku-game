@@ -29,7 +29,7 @@ def main():
     i = 0
     while i < 50:
         winner = simulate_tournament(teams)
-        
+        i in enumerate()
         print(winner)
 
 
