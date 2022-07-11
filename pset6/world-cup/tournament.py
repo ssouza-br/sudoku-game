@@ -20,11 +20,11 @@ def main():
     with open(sys.argv[1], "r") as dbfile:
         database_reader = csv.DictReader(dbfile)
         for row in database_reader:
-            row['team'] = {}
+            row['team'] = {'rating':int(row['rating'])}
             teams.append(row['team'])
             #counts[row['team']] = int(row['rating'])
-    #print(simulate_round(teams))
-    print(teams)
+    print(simulate_round(teams))
+    # print(teams)
     # print(teams[0])
     #print(teams[0]['Norway']['rating'])
 
