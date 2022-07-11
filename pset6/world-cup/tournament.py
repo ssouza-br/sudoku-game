@@ -27,25 +27,13 @@ def main():
     #print(teams_name)
     # TODO: Simulate N tournaments and keep track of win counts
     i = 0
-    while i < 50:
+    while i < N:
         winner = simulate_tournament(teams)
         index = teams.index(winner)
         if teams_name[index] in counts:
             counts[teams_name[index]] += 1
         else:
             counts[teams_name[index]] = 1
-
-
-        print(winner)
-
-
-
-        #print(winner)
-        #print(counts[winner])
-        # if winner in counts:
-        #     counts[winner] += 1
-        # else:
-        #     counts[winner] = 1
         i += 1
 
 
