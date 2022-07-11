@@ -23,9 +23,10 @@ def main():
             tst = {row['team']:{'rating':int(row['rating'])}}
             teams.append(tst)
             #counts[row['team']] = int(row['rating'])
-    print(simulate_round(teams))
+    #print(simulate_round(teams))
     print(teams)
     print(teams[0])
+    print(teams[0]['rating'])
 
     # TODO: Simulate N tournaments and keep track of win counts
     i = 0
