@@ -23,8 +23,8 @@ def main():
             row['team'] = {'rating':int(row['rating'])}
             teams.append(row['team'])
             #counts[row['team']] = int(row['rating'])
-    #print(simulate_round(teams))
-    # print(teams)
+    print(simulate_round(teams))
+    print(teams)
     # print(teams[0])
     #print(teams[0]['Norway']['rating'])
 
@@ -35,7 +35,7 @@ def main():
 
 
 
-        print(winner)
+        #print(winner)
         #print(counts[winner])
         # if winner in counts:
         #     counts[winner] += 1
