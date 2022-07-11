@@ -27,7 +27,8 @@ def main():
     i = 0
     while i < N:
         winner = simulate_tournament(teams)
-        counts[winner] += 1
+        print(counst)
+        #counts[winner] += 1
         i += 1
 
 
