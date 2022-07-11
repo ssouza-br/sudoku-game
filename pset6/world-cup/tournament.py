@@ -24,6 +24,7 @@ def main():
             counts[row['team']] = row['rating']
 
     # TODO: Simulate N tournaments and keep track of win counts
+    i = 0
     while i < N:
         winner = simulate_tournament(teams)
         counts[winner] += 1
