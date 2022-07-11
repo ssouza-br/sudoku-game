@@ -6,7 +6,7 @@ import random
 
 # Number of simluations to run
 N = 1000
-teams_name = []
+
 
 def main():
 
@@ -20,11 +20,8 @@ def main():
     with open(sys.argv[1], "r") as dbfile:
         database_reader = csv.DictReader(dbfile)
         for row in database_reader:
-            # teams_name.append(row['team'])
-            # row['team'] = {'rating':int(row['rating'])}
-            # teams.append(row['team'])
             teams.append(row)
-    #print(teams)
+
     # TODO: Simulate N tournaments and keep track of win counts
     i = 0
     while i < N:
@@ -34,8 +31,6 @@ def main():
         else:
             counts[winner] = 1
         i += 1
-
-    # print(simulate_tournament([{'rating':123},{'rating':1000}]))
 
     # Print each team's chances of winning, according to simulation
     for team in sorted(counts, key=lambda team: counts[team], reverse=True):
@@ -71,6 +66,7 @@ def simulate_tournament(teams):
     while (len(winners) > 1):
         winners = simulate_round(winners)
     return winners[0]['team']
+
 
 if __name__ == "__main__":
     main()
