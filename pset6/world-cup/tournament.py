@@ -23,8 +23,8 @@ def main():
             row['team'] = {'rating':int(row['rating'])}
             teams.append(row['team'])
             #counts[row['team']] = int(row['rating'])
-    print(f'simulare round {simulate_round(teams)}')
-    print(teams)
+    # print(f'simulare round {simulate_round(teams)}')
+    # print(teams)
     # print(teams[0])
     #print(teams[0]['Norway']['rating'])
 
@@ -32,6 +32,7 @@ def main():
     i = 0
     while i < 50:
         winner = simulate_tournament(teams)
+        print(winner)
 
 
 
@@ -77,6 +78,7 @@ def simulate_tournament(teams):
     winners = teams
     while (len(winners) < 2):
         winners = simulate_round(winners)
+        print(f'winners {winners}')
     return winners[0]
 
 
