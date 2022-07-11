@@ -16,17 +16,20 @@ def main():
 
     teams = []
     counts = {}
+    teams_name = []
     # TODO: Read teams into memory from file
     with open(sys.argv[1], "r") as dbfile:
         database_reader = csv.DictReader(dbfile)
         for row in database_reader:
+            teams_name.append(row['team'])
             row['team'] = {'rating':int(row['rating'])}
             teams.append(row['team'])
-
+    print(teams_name)
     # TODO: Simulate N tournaments and keep track of win counts
     i = 0
     while i < 50:
         winner = simulate_tournament(teams)
+        
         print(winner)
 
 
