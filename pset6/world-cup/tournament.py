@@ -22,7 +22,7 @@ def main():
         for row in database_reader:
             teams.append(row['team'])
             counts[row['team']] = row['rating']
-    print(counts)
+            
     # TODO: Simulate N tournaments and keep track of win counts
 
     # Print each team's chances of winning, according to simulation
