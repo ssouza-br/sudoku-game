@@ -26,7 +26,7 @@ def main():
     #print(simulate_round(teams))
     print(teams)
     print(teams[0])
-    print(teams[0]['rating'])
+    print(teams[0]['Norway']['rating'])
 
     # TODO: Simulate N tournaments and keep track of win counts
     i = 0
