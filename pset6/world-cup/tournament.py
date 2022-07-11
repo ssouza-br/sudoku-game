@@ -6,7 +6,7 @@ import random
 
 # Number of simluations to run
 N = 1000
-
+teams_name = []
 
 def main():
 
@@ -16,7 +16,6 @@ def main():
 
     teams = []
     counts = {}
-    teams_name = []
     # TODO: Read teams into memory from file
     with open(sys.argv[1], "r") as dbfile:
         database_reader = csv.DictReader(dbfile)
