@@ -21,14 +21,14 @@ def main():
         database_reader = csv.DictReader(dbfile)
         for row in database_reader:
             teams.append(row['team'])
-            counts[row['team']] = row['rating']
+            counts[row['team']] = int(row['rating'])
 
     # TODO: Simulate N tournaments and keep track of win counts
     i = 0
     while i < N:
         winner = simulate_tournament(teams)
-        print(counts[winner])
-        #counts[winner] += 1
+        #print(counts[winner])
+        counts[winner] += 1
         i += 1
 
 
