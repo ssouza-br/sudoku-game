@@ -20,26 +20,26 @@ def main():
     with open(sys.argv[1], "r") as dbfile:
         database_reader = csv.DictReader(dbfile)
         for row in database_reader:
-            tst = {row['team']:{'rating':int(row['rating'])}}
-            teams.append(tst)
+            row['team'] = {'rating':int(row['rating'])}
+            teams.append(row['team'])
             #counts[row['team']] = int(row['rating'])
-    #print(simulate_round(teams))
-    print(teams)
-    print(teams[0])
-    print(teams[0]['Norway']['rating'])
+    print(simulate_round(teams))
+    # print(teams)
+    # print(teams[0])
+    #print(teams[0]['Norway']['rating'])
 
     # TODO: Simulate N tournaments and keep track of win counts
     i = 0
-    # while i < N:
-    #     winner = simulate_tournament(teams)
-    #     #print(counts[winner])
-    #     counts[winner] += 1
-    #     i += 1
+    while i < N:
+        winner = simulate_tournament(teams)
+        #print(counts[winner])
+        counts[winner] += 1
+        i += 1
 
 
     # Print each team's chances of winning, according to simulation
-    # for team in sorted(counts, key=lambda team: counts[team], reverse=True):
-    #     print(f"{team}: {int(counts[team]) * 100 / N:.1f}% chance of winning")
+    for team in sorted(counts, key=lambda team: counts[team], reverse=True):
+        print(f"{team}: {int(counts[team]) * 100 / N:.1f}% chance of winning")
 
 
 def simulate_game(team1, team2):
