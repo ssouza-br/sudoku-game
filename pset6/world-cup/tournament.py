@@ -34,6 +34,7 @@ def main():
             counts[winner] = 1
         i += 1
 
+    print(simulate_tournament([{'rating':123},{'rating':1}]))
 
     # Print each team's chances of winning, according to simulation
     for team in sorted(counts, key=lambda team: counts[team], reverse=True):
