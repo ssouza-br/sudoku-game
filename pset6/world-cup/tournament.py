@@ -19,8 +19,8 @@ def main():
     with open(sys.argv[1], "r") as dbfile:
         database_reader = csv.DictReader(dbfile)
         for row in database_reader:
-            print(row)
-
+            teams.append(row['team'])
+    print(teams)
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
 
