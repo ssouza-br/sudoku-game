@@ -22,7 +22,7 @@ def main():
         for row in database_reader:
             teams.append(row['team'])
             counts[row['team']] = int(row['rating'])
-    print(simulate_tournament(teams))
+    print(simulate_round(teams))
     # TODO: Simulate N tournaments and keep track of win counts
     i = 0
     while i < N:
@@ -33,8 +33,8 @@ def main():
 
 
     # Print each team's chances of winning, according to simulation
-    for team in sorted(counts, key=lambda team: counts[team], reverse=True):
-        print(f"{team}: {int(counts[team]) * 100 / N:.1f}% chance of winning")
+    # for team in sorted(counts, key=lambda team: counts[team], reverse=True):
+    #     print(f"{team}: {int(counts[team]) * 100 / N:.1f}% chance of winning")
 
 
 def simulate_game(team1, team2):
