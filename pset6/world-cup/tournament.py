@@ -27,6 +27,8 @@ def main():
             #counts[row['team']] = int(row['rating'])
     #print(simulate_round(teams))
     print(teams)
+    tst = 'teste':{'rating':188}
+    print(tst)
     # TODO: Simulate N tournaments and keep track of win counts
     i = 0
     # while i < N:
