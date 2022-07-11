@@ -15,13 +15,14 @@ def main():
         sys.exit("Usage: python tournament.py FILENAME")
 
     teams = []
+    counts = {}
     # TODO: Read teams into memory from file
     with open(sys.argv[1], "r") as dbfile:
         database_reader = csv.DictReader(dbfile)
         for row in database_reader:
             teams.append(row['team'])
-    print(teams)
-    counts = {}
+            counts[row['team']] = row['rating']
+    print(counts)
     # TODO: Simulate N tournaments and keep track of win counts
 
     # Print each team's chances of winning, according to simulation
