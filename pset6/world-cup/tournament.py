@@ -22,12 +22,6 @@ def main():
         for row in database_reader:
             row['team'] = {'rating':int(row['rating'])}
             teams.append(row['team'])
-            #counts[row['team']] = int(row['rating'])
-    # print(f'simulare round {simulate_round(teams)}')
-    # print(teams)
-    # print(teams[0])
-    #print(teams[0]['Norway']['rating'])
-    print(len(teams))
 
     # TODO: Simulate N tournaments and keep track of win counts
     i = 0
@@ -79,7 +73,6 @@ def simulate_tournament(teams):
     winners = teams
     while (len(winners) > 1):
         winners = simulate_round(winners)
-        print(f'winners {winners}')
     return winners[0]
 
 
