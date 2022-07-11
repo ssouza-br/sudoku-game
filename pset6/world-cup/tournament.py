@@ -22,12 +22,12 @@ def main():
         for row in database_reader:
             teams.append(row['team'])
             counts[row['team']] = row['rating']
-            
+
     # TODO: Simulate N tournaments and keep track of win counts
 
     # Print each team's chances of winning, according to simulation
     for team in sorted(counts, key=lambda team: counts[team], reverse=True):
-        print(f"{team}: {counts[team] * 100 / N:.1f}% chance of winning")
+        print(f"{team}: {int(counts[team]) * 100 / N:.1f}% chance of winning")
 
 
 def simulate_game(team1, team2):
