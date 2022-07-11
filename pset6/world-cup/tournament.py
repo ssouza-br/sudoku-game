@@ -33,7 +33,10 @@ def main():
     while i < N:
         winner = simulate_tournament(teams)
         #print(counts[winner])
-        counts[winner] += 1
+        if winner in counts:
+            counts[winner] += 1
+        else:
+            counts[winner] = 1
         i += 1
 
 
