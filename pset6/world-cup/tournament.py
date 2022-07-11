@@ -24,13 +24,17 @@ def main():
             teams_name.append(row['team'])
             row['team'] = {'rating':int(row['rating'])}
             teams.append(row['team'])
-    print(teams_name)
+    #print(teams_name)
     # TODO: Simulate N tournaments and keep track of win counts
     i = 0
     while i < 50:
         winner = simulate_tournament(teams)
+        index = teams.index(winner)
+        if teams_name[index] in counts:
+            counts[teams_name[index]] += 1
+        else:
+            counts[teams_name[index]] = 1
 
-        for winner in teams:
 
         print(winner)
 
