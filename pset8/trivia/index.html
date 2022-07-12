@@ -39,5 +39,22 @@
                 <!-- TODO: Add free response question here -->
             </div>
         </div>
+        <script>
+            let idList = ['home','bop_test','reports','contact'];
+
+            for (let id of idList){
+              document.getElementById(id).addEventListener("mouseover", mouseOver);
+              document.getElementById(id).addEventListener("mouseout", mouseOut);
+
+              function mouseOver() {
+                document.getElementById(id).className = "nav-link active";
+              }
+
+              function mouseOut() {
+                document.getElementById(id).className = "nav-link text-white";
+              }
+            }
+
+          </script>
     </body>
 </html>
