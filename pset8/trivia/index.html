@@ -60,7 +60,13 @@
                 alert('Incorrect');
             }
             document.querySelector('#check').onclick = function() {
-                document.getElementById("text").style.backgroundColor = 'green';
+                var input = document.getElementById("text").value
+                if (input == 'Bozo'){
+                    document.getElementById("text").style.backgroundColor = 'green';
+                }
+                else{
+                    document.getElementById("text").style.backgroundColor = 'red';
+                }
             }
 
           </script>
