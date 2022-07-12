@@ -21,13 +21,13 @@
                 <h3>
                     Which came first, the chicken or the egg?
                 </h3>
-                <button>
+                <button id="chicken">
                     chicken
                 </button>
-                <button>
+                <button id="egg">
                     egg
                 </button>
-                <button>
+                <button id="none">
                     None
                 </button>
                 <!-- TODO: Add multiple choice question here -->
@@ -40,19 +40,13 @@
             </div>
         </div>
         <script>
-            let idList = ['home','bop_test','reports','contact'];
-
-            for (let id of idList){
-              document.getElementById(id).addEventListener("mouseover", mouseOver);
-              document.getElementById(id).addEventListener("mouseout", mouseOut);
-
-              function mouseOver() {
-                document.getElementById(id).className = "nav-link active";
-              }
-
-              function mouseOut() {
-                document.getElementById(id).className = "nav-link text-white";
-              }
+            document.querySelector('#egg').onclick = function() {
+                alert('Incorrect');
+                document.querySelector('#egg').style.backgroundcolor = red;
+            }
+            document.querySelector('#chicken').onclick = function() {
+                alert('Correct');
+                document.querySelector('#chicken').style.backgroundcolor = green;
             }
 
           </script>
