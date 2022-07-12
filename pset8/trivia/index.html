@@ -39,8 +39,8 @@
                 <h3>
                     In which country has Bozo clown as president??
                 </h3>
-                <input>
-                <button>
+                <input id="text">
+                <button id="check">
                     Check answer
                 </button>
                 <!-- TODO: Add free response question here -->
@@ -58,6 +58,9 @@
             document.querySelector('#none').onclick = function() {
                 document.getElementById("none").style.backgroundColor = 'red';
                 alert('Incorrect');
+            }
+            document.querySelector('#check').onclick = function() {
+                document.getElementById("text").style.backgroundColor = 'green';
             }
 
           </script>
