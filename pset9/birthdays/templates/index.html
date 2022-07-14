@@ -34,8 +34,11 @@
                     </thead>
                     <tbody>
                         <!-- TODO: Loop through the database entries to display them in this table -->
-                        {% for sport in sports %}
-                        <input name="sport" type="radio" value="{{ sport }}"> {{ sport }}
+                        {% for birthday in birthdays %}
+                        <tr>
+                            <td>{{birthday["name"]}} </td>
+                            <td>{{birthday["day] + '/' + birthday["month"]}}</td>
+                        </tr>
                         {% endfor %}
                     </tbody>
                 </table>
