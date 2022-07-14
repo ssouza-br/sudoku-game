@@ -14,13 +14,13 @@
             <div class="section">
 
                 <h2>Add a Birthday</h2>
-                <input id="text">
-                <button id="check">
-                    Check answer
-                </button>
-                <!-- TODO: Create a form for users to submit a name, a month, and a day -->
-                <form>
-                    
+                <form action="/register" method="post">
+                    <input autocomplete="off" autofocus name="name" placeholder="Name" type="text">
+                    <input autocomplete="off" name="email" placeholder="Email" type="email">
+                    {% for sport in sports %}
+                        <input name="sport" type="radio" value="{{ sport }}"> {{ sport }}
+                    {% endfor %}
+                    <input type="submit" value="Register">
                 </form>
             </div>
 
