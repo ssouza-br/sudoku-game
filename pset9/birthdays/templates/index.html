@@ -15,12 +15,10 @@
 
                 <h2>Add a Birthday</h2>
                 <form action="/register" method="post">
-                    <input autocomplete="off" autofocus name="name" placeholder="Name" type="text">
-                    <input autocomplete="off" name="email" placeholder="Email" type="email">
-                    {% for sport in sports %}
-                        <input name="sport" type="radio" value="{{ sport }}"> {{ sport }}
-                    {% endfor %}
-                    <input type="submit" value="Register">
+                    <input autocomplete="off" autofocus name="name" placeholder="Name" type="number">
+                    <input autocomplete="off" name="month" placeholder="Month" type="number">
+                    <input autocomplete="off" name="day" placeholder="Day" type="number">
+                    <input type="submit" value="Add Birthday">
                 </form>
             </div>
 
