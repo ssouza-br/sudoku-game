@@ -127,6 +127,8 @@ def register():
 
         if add:
             db.execute("INSERT INTO birthdays (name, day, month) VALUES (?, ?, ?)")
+            # Redirect user to home page
+            return redirect("/")
 
     return apology("TODO")
 
