@@ -125,6 +125,7 @@ def register():
         register = request.form.get("register")
 
         if register:
+            print("eu passei pelo botão")
             #db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
             db.execute("INSERT INTO users (username, hash) VALUES ('triste', 'senha')")
             # Redirect user to home page
