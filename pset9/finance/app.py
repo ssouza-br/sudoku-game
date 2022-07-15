@@ -117,6 +117,14 @@ def quote():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """Register user"""
+    name = request.form.get("name")
+    day = request.form.get("day")
+    month = request.form.get("month")
+    add = request.form.get("add")
+
+    if add:
+        db.execute("INSERT INTO birthdays (name, day, month) VALUES (?, ?, ?)")
+
     return apology("TODO")
 
 
