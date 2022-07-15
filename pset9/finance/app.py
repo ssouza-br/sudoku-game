@@ -120,17 +120,19 @@ def register():
     # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
         """Register user"""
-        name = request.form.get("name")
-        day = request.form.get("day")
-        month = request.form.get("month")
-        add = request.form.get("add")
+        username = request.form.get("username")
+        password = request.form.get("password")
+        register = request.form.get("register")
 
-        if add:
-            db.execute("INSERT INTO birthdays (name, day, month) VALUES (?, ?, ?)")
+        if register:
+            db.execute("INSERT INTO birthdays (username, password) VALUES (?, ?)")
             # Redirect user to home page
             return redirect("/")
+        # User reached route via GET (as by clicking a link or via redirect)
+    else:
+        return render_template("register.html")
 
-    return apology("TODO")
+    # return apology("TODO")
 
 
 @app.route("/sell", methods=["GET", "POST"])
