@@ -122,12 +122,13 @@ def register():
         """Register user"""
         username = request.form.get("username")
         password = request.form.get("password")
+        hash = 
         register = request.form.get("register")
 
         if register:
-            db.execute("INSERT INTO finance (username, password) VALUES (?, ?)")
+            db.execute("INSERT INTO finance (username, hash) VALUES (?, ?)")
             # Redirect user to home page
-            return redirect("/")
+        return redirect("/")
         # User reached route via GET (as by clicking a link or via redirect)
     else:
         return render_template("register.html")
