@@ -122,12 +122,9 @@ def register():
         username = request.form.get("username")
         hash = generate_password_hash(request.form.get("password"))
         register = request.form.get("register")
-        console.log(username, hash)
 
         if register:
-            print("eu passei pelo botão")
-            #db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
-            db.execute("INSERT INTO users (username, hash) VALUES ('triste', 'senha')")
+            db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
             # Redirect user to home page
         #return redirect("/")
         # User reached route via GET (as by clicking a link or via redirect)
