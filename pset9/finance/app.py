@@ -128,6 +128,8 @@ def register():
         if not hash:
             return apology("must provide password to registrated", 403)
 
+        if username in db.execute("")
+
         db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
         # Redirect user to home page
         return redirect("/")
