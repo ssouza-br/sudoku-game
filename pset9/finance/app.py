@@ -125,7 +125,7 @@ def register():
         register = request.form.get("register")
 
         if register:
-            db.execute("INSERT INTO birthdays (username, password) VALUES (?, ?)")
+            db.execute("INSERT INTO finance (username, password) VALUES (?, ?)")
             # Redirect user to home page
             return redirect("/")
         # User reached route via GET (as by clicking a link or via redirect)
