@@ -128,7 +128,7 @@ def register():
             #db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
             db.execute("INSERT INTO users (username, hash) VALUES ('triste', 'senha')")
             # Redirect user to home page
-        return redirect("/")
+        #return redirect("/")
         # User reached route via GET (as by clicking a link or via redirect)
     else:
         return render_template("register.html")
