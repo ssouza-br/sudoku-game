@@ -121,8 +121,7 @@ def register():
     if request.method == "POST":
         """Register user"""
         username = request.form.get("username")
-        password = request.form.get("password")
-        hash = 
+        hash = generate_password_hash(request.form.get("password"))
         register = request.form.get("register")
 
         if register:
