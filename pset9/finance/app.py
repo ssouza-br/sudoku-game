@@ -40,21 +40,21 @@ def after_request(response):
 
 
 @app.route("/")
-@login_required
+#@login_required
 def index():
     """Show portfolio of stocks"""
     return apology("TODO")
 
 
 @app.route("/buy", methods=["GET", "POST"])
-@login_required
+#@login_required
 def buy():
     """Buy shares of stock"""
     return apology("TODO")
 
 
 @app.route("/history")
-@login_required
+#@login_required
 def history():
     """Show history of transactions"""
     return apology("TODO")
@@ -108,7 +108,7 @@ def logout():
 
 
 @app.route("/quote", methods=["GET", "POST"])
-@login_required
+#@login_required
 def quote():
     """Get stock quote."""
     return apology("TODO")
@@ -138,7 +138,7 @@ def register():
 
 
 @app.route("/sell", methods=["GET", "POST"])
-@login_required
+#@login_required
 def sell():
     """Sell shares of stock"""
     return apology("TODO")
