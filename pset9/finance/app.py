@@ -123,6 +123,12 @@ def register():
         hash = generate_password_hash(request.form.get("password"))
         register = request.form.get("register")
 
+        if not username:
+            return apology("must provide username to registrated", 403)
+
+        if not hash:
+            return apology("must provide password to registrated", 403)
+
         if register:
             db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
             # Redirect user to home page
