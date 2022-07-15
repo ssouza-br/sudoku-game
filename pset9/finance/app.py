@@ -116,13 +116,13 @@ def quote():
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
-
     # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
         """Register user"""
         username = request.form.get("username")
         hash = generate_password_hash(request.form.get("password"))
         register = request.form.get("register")
+        console.log(username, hash)
 
         if register:
             print("eu passei pelo botão")
