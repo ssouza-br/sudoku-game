@@ -50,7 +50,29 @@ def index():
 @login_required
 def buy():
     """Buy shares of stock"""
-    return apology("TODO")
+    if request.method == "POST":
+        """Register user"""
+        symbol = request.form.get("symbol")
+        qty = request.form.get("shares")
+
+        if not symbol:
+            return apology("must provide symbol to buy", 403)
+
+        if not qty:
+            return apology("must provide quatitity of shares to buy", 403)
+
+        db.execute(
+            "INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
+
+        # Remember which user has logged in
+        # session["user_id"] = rows[0]["id"]
+
+        # Redirect user to home page
+        return redirect("/")
+        # User reached route via GET (as by clicking a link or via redirect)
+    else:
+        return render_template("register.html")
+
 
 
 @app.route("/history")
