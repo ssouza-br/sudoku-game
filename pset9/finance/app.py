@@ -72,6 +72,8 @@ def buy():
         dict_res['qty'] = qty
 
         if cost <= cash:
+            new_cash = cash - cost
+            
             return render_template("receipt.html", dict_res=dict_res)
         else:
             return apology("You don't have money enough to buy these shares")
