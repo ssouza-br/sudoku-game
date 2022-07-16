@@ -61,7 +61,7 @@ def buy():
         if not qty:
             return apology("must provide quatitity of shares to buy", 403)
         dict_res = lookup(symbol)
-
+        print(session["user_id"])
         db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
 
         # Remember which user has logged in
@@ -71,7 +71,7 @@ def buy():
         return redirect("/")
         # User reached route via GET (as by clicking a link or via redirect)
     else:
-        return render_template("register.html")
+        return render_template("buy.html")
 
 
 
