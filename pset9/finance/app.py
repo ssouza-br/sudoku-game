@@ -118,6 +118,8 @@ def quote():
         if not symbol:
             return apology("must provide symbol to quote", 403)
 
+        dict_res = lookup(symbol)
+        
         # Redirect user to home page
         return redirect("/")
         # User reached route via GET (as by clicking a link or via redirect)
