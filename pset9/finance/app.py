@@ -144,7 +144,7 @@ def register():
         db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
 
         # Remember which user has logged in
-        session["user_id"] = rows[0]["id"]
+        # session["user_id"] = rows[0]["id"]
 
         # Redirect user to home page
         return redirect("/")
