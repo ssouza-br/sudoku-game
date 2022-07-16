@@ -131,7 +131,9 @@ def register():
         # if username in db.execute("SELECT username FROM users"):
         #     return apology("username already registrated", 403)
         print(db.execute("SELECT username FROM users"))
-        user_list = [for i in db.execute("SELECT username FROM users")]
+        user_list = [i['username'] for i in db.execute("SELECT username FROM users")]
+        print(user_list)
+
         db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
         # Redirect user to home page
         return redirect("/")
