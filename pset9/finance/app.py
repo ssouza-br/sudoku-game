@@ -123,7 +123,7 @@ def quote():
             # Redirect user to home page
             return render_template("quoted.html", dict_res=dict_res)
         else:
-            return apology("must provide symbol to quote", 403)
+            return apology("invalid symbol to quote", 403)
         # User reached route via GET (as by clicking a link or via redirect)
     else:
         return render_template("quote.html")
