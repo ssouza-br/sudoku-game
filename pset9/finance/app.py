@@ -53,7 +53,7 @@ def buy():
     if request.method == "POST":
         """Register user"""
         symbol = request.form.get("symbol")
-        qty = request.form.get("shares")
+        qty = int(request.form.get("shares"))
 
         if not symbol:
             return apology("must provide symbol to buy", 403)
@@ -64,7 +64,7 @@ def buy():
         dict_res = lookup(symbol)
 
         cash = db.execute("SELECT CASH FROM users WHERE id = ?", session["user_id"])
-        cash = cash['cash']
+        cash = cash[0]['cash']
 
         cost = qty * dict_res['price']
 
@@ -73,7 +73,9 @@ def buy():
 
         if cost <= cash:
             new_cash = cash - cost
-            
+            db.execute("UPDATE users SET CASH = ? WHERE id = ?",
+                       new_cash, session["user_id"])
+            dict_res['cash'] = new_cash
             return render_template("receipt.html", dict_res=dict_res)
         else:
             return apology("You don't have money enough to buy these shares")
