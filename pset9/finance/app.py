@@ -121,7 +121,6 @@ def register():
         """Register user"""
         username = request.form.get("username")
         hash = generate_password_hash(request.form.get("password"))
-        print(db.execute("SELECT username FROM users"))
 
         if not username:
             return apology("must provide username to registrated", 403)
@@ -129,9 +128,9 @@ def register():
         if not hash:
             return apology("must provide password to registrated", 403)
 
-        if username in db.execute("SELECT username FROM users"):
-            return apology("username already registrated", 403)
-
+        # if username in db.execute("SELECT username FROM users"):
+        #     return apology("username already registrated", 403)
+        print(db.execute("SELECT username FROM users"))
         db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
         # Redirect user to home page
         return redirect("/")
