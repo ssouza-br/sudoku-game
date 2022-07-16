@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+<p>
+    A share of {{dict_res['name']}} ({{dict_res['symbol']}}) costs ${{dict_res['price']}}.
+</p>
+{% endblock %}
