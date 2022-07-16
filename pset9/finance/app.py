@@ -61,7 +61,7 @@ def buy():
         if not qty:
             return apology("must provide quatitity of shares to buy", 403)
         dict_res = lookup(symbol)
-        print(session["user_id"])
+        print("section id", session["user_id"])
         # db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
 
         # Remember which user has logged in
