@@ -119,9 +119,11 @@ def quote():
             return apology("must provide symbol to quote", 403)
 
         dict_res = lookup(symbol)
-
-        # Redirect user to home page
-        return render_template("quoted.html", dict_res=dict_res)
+        if symbol not None:
+            # Redirect user to home page
+            return render_template("quoted.html", dict_res=dict_res)
+        else:
+            return apology("must provide symbol to quote", 403)
         # User reached route via GET (as by clicking a link or via redirect)
     else:
         return render_template("quote.html")
