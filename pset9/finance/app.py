@@ -121,7 +121,7 @@ def quote():
         dict_res = lookup(symbol)
         print(dict_res)
         # Redirect user to home page
-        return redirect("quoted.html", inp = dict_res)
+        return redirect("quoted.html", name = dict_res['name'], symbol = dict_res['symbol'], price = dict_res['price'])
         # User reached route via GET (as by clicking a link or via redirect)
     else:
         return render_template("quote.html")
