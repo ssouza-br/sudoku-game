@@ -60,9 +60,9 @@ def buy():
 
         if not qty:
             return apology("must provide quatitity of shares to buy", 403)
+        dict_res = lookup(symbol)
 
-        db.execute(
-            "INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
+        db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
 
         # Remember which user has logged in
         # session["user_id"] = rows[0]["id"]
