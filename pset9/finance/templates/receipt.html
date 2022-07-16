@@ -18,18 +18,18 @@
    <tbody>
 
             <tr>
-                <td class="text-start">{{symbol}}</td>
-                <td class="text-start">{{name}}</td>
-                <td class="text-end">10</td>
-                <td class="text-end">$189.11</td>
-                <td class="text-end">$1,891.10</td>
+                <td class="text-start">{{dict_res['symbol']}}</td>
+                <td class="text-start">{{dict_res['name']}}</td>
+                <td class="text-end">{{dict_res['qty']}}</td>
+                <td class="text-end">${{dict_res['price']}}</td>
+                <td class="text-end">${{dict_res['cost']}}</td>
             </tr>
 
     </tbody>
     <tfoot>
         <tr>
             <td class="border-0 fw-bold text-end" colspan="4">Cash</td>
-            <td class="border-0 text-end">$8,108.90</td>
+            <td class="border-0 text-end">${{dict_res['cash']}}</td>
         </tr>
         <tr>
             <td class="border-0 fw-bold text-end" colspan="4">TOTAL</td>

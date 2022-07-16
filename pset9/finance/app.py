@@ -68,6 +68,9 @@ def buy():
 
         cost = qty * dict_res['price']
 
+        dict_res['cost'] = cost
+        dict_res['qty'] = qty
+
         if cost <= cash:
             return render_template("receipt.html", dict_res=dict_res)
         else:
