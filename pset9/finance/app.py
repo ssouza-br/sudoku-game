@@ -111,7 +111,7 @@ def logout():
 @login_required
 def quote():
     """Get stock quote."""
-    
+
     return apology("TODO")
 
 
@@ -133,6 +133,10 @@ def register():
         if username in user_list:
             return apology("username already registrated", 403)
         db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
+
+        # Remember which user has logged in
+        session["user_id"] = rows[0]["id"]
+        
         # Redirect user to home page
         return redirect("/")
         # User reached route via GET (as by clicking a link or via redirect)
