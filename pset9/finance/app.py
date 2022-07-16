@@ -111,9 +111,18 @@ def logout():
 @login_required
 def quote():
     """Get stock quote."""
+    if request.method == "POST":
+        """Register user"""
+        symbol = request.form.get("symbol")
 
-    return apology("TODO")
+        if not symbol:
+            return apology("must provide symbol to quote", 403)
 
+        # Redirect user to home page
+        return redirect("/")
+        # User reached route via GET (as by clicking a link or via redirect)
+    else:
+        return render_template("quote.html")
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
@@ -136,7 +145,7 @@ def register():
 
         # Remember which user has logged in
         session["user_id"] = rows[0]["id"]
-        
+
         # Redirect user to home page
         return redirect("/")
         # User reached route via GET (as by clicking a link or via redirect)
