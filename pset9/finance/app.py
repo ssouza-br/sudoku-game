@@ -60,10 +60,16 @@ def buy():
 
         if not qty:
             return apology("must provide quatitity of shares to buy", 403)
-        dict_res = lookup(symbol)
-        print("section id", session["user_id"])
-        # db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
 
+        dict_res = lookup(symbol)
+
+        cash = db.execute("SELECT CASH FROM users WHERE id = ?", session["user_id"])
+        cash = cash['cash']
+
+        cost = qty * dict_res['price']
+
+        if cost <= cash:
+            
         # Remember which user has logged in
         # session["user_id"] = rows[0]["id"]
 
