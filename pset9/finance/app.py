@@ -119,7 +119,7 @@ def quote():
             return apology("must provide symbol to quote", 403)
 
         dict_res = lookup(symbol)
-        if symbol != None:
+        if dict_res != None:
             # Redirect user to home page
             return render_template("quoted.html", dict_res=dict_res)
         else:
