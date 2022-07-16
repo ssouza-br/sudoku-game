@@ -61,6 +61,9 @@ def buy():
         if not qty:
             return apology("must provide quatitity of shares to buy", 403)
 
+        if qty < 0:
+            return apology("must provide positive quatitity of shares to buy", 403)
+
         dict_res = lookup(symbol)
 
         cash = db.execute("SELECT CASH FROM users WHERE id = ?", session["user_id"])
