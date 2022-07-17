@@ -22,7 +22,7 @@
                 <td class="text-start">{{dict_res['name']}}</td>
                 <td class="text-end">{{dict_res['quantity']}}</td>
                 <td class="text-end">{{dict_res['price'] | usd}}</td>
-                <td class="text-end">{{ dict_res['quantity'] * float(dict_res['price']) | usd}}</td>
+                <td class="text-end">{{ dict_res['quantity'] * dict_res['price'] | usd}}</td>
             </tr>
     {% endfor %}
     </tbody>
