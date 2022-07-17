@@ -22,9 +22,18 @@
                 <td class="text-start">{{dict_res['name']}}</td>
                 <td class="text-end">{{dict_res['quantity']}}</td>
                 <td class="text-end">{{dict_res['price'] | usd}}</td>
-                <td class="text-end">{{ dict_res['quantity']* dict_res['price'] | usd}}</td>
+                <td class="text-end">{{ dict_res['quantity'] * dict_res['price'] | usd}}</td>
             </tr>
-
+            CREATE TABLE transactions (
+                id           INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+                users_id    INTEGER NOT NULL,
+                symbol  TEXT NOT NULL,
+                name  TEXT NOT NULL,
+                price  NUMERIC NOT NULL,
+                quantity  INTEGER NOT NULL,
+                cash  NUMERIC NOT NULL,
+                FOREIGN KEY (users_id) REFERENCES users(id)
+            );
     </tbody>
     <tfoot>
         <tr>
