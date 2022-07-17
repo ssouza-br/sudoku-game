@@ -89,7 +89,7 @@ def buy():
                 temp = db.execute(
                     "SELECT quantity FROM transactions WHERE users_id = ? and symbol = ?", session["user_id"], dict_res['symbol'])
                 db.execute(
-                    "UPDATE transactions SET quantity = ? and", temp[0]['quantity'] + dict_res['qty'])
+                    "UPDATE transactions SET quantity = ? and cash = ?", temp[0]['quantity'] + dict_res['qty'], dict_res['cash'])
 
             res = db.execute(
                     "SELECT * FROM transactions WHERE users_id = ?", session["user_id"])
