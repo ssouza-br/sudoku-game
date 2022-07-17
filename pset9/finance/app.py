@@ -80,7 +80,6 @@ def buy():
                        new_cash, session["user_id"])
             dict_res['cash'] = new_cash
 
-
             if len(db.execute(
                     "SELECT * FROM transactions WHERE users_id = ? and symbol = ?", session["user_id"], dict_res['symbol'])) == 0:
                 db.execute(
