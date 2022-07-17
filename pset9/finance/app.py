@@ -86,8 +86,10 @@ def buy():
 
             res = db.execute(
                 "SELECT * FROM transactions WHERE users_id = ?", session["user_id"])
-            print(len(db.execute(
-                "SELECT * FROM transactions WHERE users_id = ?", session["user_id"])))
+            print('len NFLX:',len(db.execute(
+                "SELECT * FROM transactions WHERE users_id = ? and symbol = ?", session["user_id"], 'NFLX')))
+            print('len PTR4:', len(db.execute(
+                "SELECT * FROM transactions WHERE users_id = ? and symbol = ?", session["user_id"], 'PTR4')))
             return render_template("receipt.html", res=res)
         else:
             return apology("You don't have money enough to buy these shares")
