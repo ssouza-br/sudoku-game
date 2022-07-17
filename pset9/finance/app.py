@@ -84,7 +84,8 @@ def buy():
                 "INSERT INTO transactions (users_id, symbol, name, price, quantity) VALUES (?, ?, ?, ?, ?)"
                 , session["user_id"], dict_res['symbol'], dict_res['name'], dict_res['price'], dict_res['qty'])
 
-            res = db.execute("SELECT * FROM transactions ")
+            res = db.execute("SELECT * FROM transactions")
+            print(res)
             return render_template("receipt.html", dict_res=dict_res)
         else:
             return apology("You don't have money enough to buy these shares")
