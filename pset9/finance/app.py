@@ -87,7 +87,7 @@ def buy():
             res = db.execute(
                 "SELECT * FROM transactions WHERE users_id = ?", session["user_id"])
             print(res)
-            return render_template("receipt.html", dict_res=res)
+            return render_template("receipt.html", res=res)
         else:
             return apology("You don't have money enough to buy these shares")
 
