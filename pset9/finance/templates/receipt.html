@@ -17,13 +17,13 @@
     </thead>
    <tbody>
     {% for dict_res in res -%}
-    {% set %}
+    {% set total = dict_res['quantity'] * dict_res['price'] %}
             <tr>
                 <td class="text-start">{{dict_res['symbol']}}</td>
                 <td class="text-start">{{dict_res['name']}}</td>
                 <td class="text-end">{{dict_res['quantity']}}</td>
                 <td class="text-end">{{dict_res['price'] | usd}}</td>
-                <td class="text-end">{{ dict_res['quantity'] * (dict_res['price'] | float) | usd}}</td>
+                <td class="text-end">{{total | usd}}</td>
             </tr>
     {% endfor %}
     </tbody>
