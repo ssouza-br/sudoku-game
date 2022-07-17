@@ -89,9 +89,9 @@ def buy():
 
 CREATE TABLE child (
     id           INTEGER PRIMARY KEY,
-    parent_id    INTEGER,
+    users_id    INTEGER,
     description  TEXT,
-    FOREIGN KEY (parent_id) REFERENCES parent(id)
+    FOREIGN KEY (users_id) REFERENCES users(id)
 );
 
 @app.route("/history")
