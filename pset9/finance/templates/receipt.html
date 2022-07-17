@@ -16,7 +16,7 @@
         </tr>
     </thead>
    <tbody>
-    {}
+    {% for dict_res in res -%}
             <tr>
                 <td class="text-start">{{dict_res['symbol']}}</td>
                 <td class="text-start">{{dict_res['name']}}</td>
@@ -31,6 +31,7 @@
             <td class="border-0 fw-bold text-end" colspan="4">Cash</td>
             <td class="border-0 text-end">{{dict_res['cash'] | usd}}</td>
         </tr>
+    {% endfor %}
         <tr>
             <td class="border-0 fw-bold text-end" colspan="4">TOTAL</td>
             <td class="border-0 w-bold text-end">$10,000.00</td>
