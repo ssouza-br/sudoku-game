@@ -86,6 +86,7 @@ def buy():
 
             res = db.execute(
                 "SELECT * FROM transactions WHERE users_id = ?", session["user_id"])
+            res['price']
             print(res)
             return render_template("receipt.html", res=res)
         else:
