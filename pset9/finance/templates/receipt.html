@@ -7,6 +7,7 @@
 {% block main %}
 {% set ns = namespace() %}
 {% set ns.last_cash = 0 %}
+{% set ns.last_time = 0 %}
 <table class="table table-striped">
     <thead>
         <tr>
@@ -20,7 +21,13 @@
    <tbody>
     {% for dict_res in res -%}
     {% set total = dict_res['quantity'] * dict_res['price'] %}
-    {% set ns.last_cash = dict_res['cash'] %}
+
+
+    {% if dict_res['time'] > ns.las_time %}
+        {% set ns.last_cash = dict_res['cash'] %}
+
+
+        
             <tr>
                 <td class="text-start">{{dict_res['symbol']}}</td>
                 <td class="text-start">{{dict_res['name']}}</td>
