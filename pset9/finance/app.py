@@ -87,12 +87,7 @@ def buy():
     else:
         return render_template("buy.html")
 
-CREATE TABLE transactions (
-    id           INTEGER PRIMARY KEY,
-    users_id    INTEGER,
-    description  TEXT,
-    FOREIGN KEY (users_id) REFERENCES users(id)
-);
+
 
 @app.route("/history")
 @login_required
