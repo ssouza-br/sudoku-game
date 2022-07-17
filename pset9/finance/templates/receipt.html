@@ -22,14 +22,12 @@
                 <td class="text-start">{{dict_res['name']}}</td>
                 <td class="text-end">{{dict_res['qty']}}</td>
                 <td class="text-end">{{dict_res['price'] | usd}}</td>
-                <!-- <td class="text-end">{{dict_res['cost'] | usd}}</td> -->
             </tr>
 
     </tbody>
     <tfoot>
         <tr>
             <td class="border-0 fw-bold text-end" colspan="4">Cash</td>
-            <!-- <td class="border-0 text-end">{{dict_res['cash'] | usd}}</td> -->
         </tr>
     {% endfor %}
         <tr>
