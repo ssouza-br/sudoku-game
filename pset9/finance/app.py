@@ -79,6 +79,7 @@ def buy():
             db.execute("UPDATE users SET CASH = ? WHERE id = ?",
                        new_cash, session["user_id"])
             dict_res['cash'] = new_cash
+            
             return render_template("receipt.html", dict_res=dict_res)
         else:
             return apology("You don't have money enough to buy these shares")
