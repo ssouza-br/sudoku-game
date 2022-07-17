@@ -5,6 +5,7 @@ from flask import Flask, flash, redirect, render_template, request, session
 from flask_session import Session
 from tempfile import mkdtemp
 from werkzeug.security import check_password_hash, generate_password_hash
+import time
 
 from helpers import apology, login_required, lookup, usd
 
@@ -64,6 +65,8 @@ def buy():
         if qty < 0:
             return apology("must provide positive quatitity of shares to buy", 403)
 
+        t = time.time_ns()
+
         dict_res = lookup(symbol)
 
         cash = db.execute("SELECT CASH FROM users WHERE id = ?", session["user_id"])
@@ -83,7 +86,7 @@ def buy():
             if len(db.execute(
                     "SELECT * FROM transactions WHERE users_id = ? and symbol = ?", session["user_id"], dict_res['symbol'])) == 0:
                 db.execute(
-                    "INSERT INTO transactions (users_id, symbol, name, price, quantity, cash) VALUES (?, ?, ?, ?, ?, ?)", session["user_id"], dict_res['symbol'], dict_res['name'], dict_res['price'], dict_res['qty'], dict_res['cash'])
+                    "INSERT INTO transactions (users_id, symbol, name, price, quantity, cash, time) VALUES (?, ?, ?, ?, ?, ?, ?)", session["user_id"], dict_res['symbol'], dict_res['name'], dict_res['price'], dict_res['qty'], dict_res['cash'], t)
             else:
                 temp = db.execute(
                     "SELECT quantity FROM transactions WHERE users_id = ? and symbol = ?", session["user_id"], dict_res['symbol'])
