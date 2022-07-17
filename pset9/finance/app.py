@@ -80,16 +80,17 @@ def buy():
                        new_cash, session["user_id"])
             dict_res['cash'] = new_cash
 
-            db.execute(
-                "INSERT INTO transactions (users_id, symbol, name, price, quantity, cash) VALUES (?, ?, ?, ?, ?, ?)"
-                , session["user_id"], dict_res['symbol'], dict_res['name'], dict_res['price'], dict_res['qty'], dict_res['cash'])
 
+            if len(db.execute(
+                    "SELECT * FROM transactions WHERE users_id = ? and symbol = ?", session["user_id"], dict_res['symbol'])) == 0:
+                db.execute(
+                    "INSERT INTO transactions (users_id, symbol, name, price, quantity, cash) VALUES (?, ?, ?, ?, ?, ?)", session["user_id"], dict_res['symbol'], dict_res['name'], dict_res['price'], dict_res['qty'], dict_res['cash'])
+
+
+            else:
+                
             res = db.execute(
-                "SELECT * FROM transactions WHERE users_id = ?", session["user_id"])
-            print('len NFLX:',len(db.execute(
-                "SELECT * FROM transactions WHERE users_id = ? and symbol = ?", session["user_id"], 'NFLX')))
-            print('len PTR4:', len(db.execute(
-                "SELECT * FROM transactions WHERE users_id = ? and symbol = ?", session["user_id"], 'PTR4')))
+                    "SELECT * FROM transactions WHERE users_id = ?", session["user_id"])
             return render_template("receipt.html", res=res)
         else:
             return apology("You don't have money enough to buy these shares")
