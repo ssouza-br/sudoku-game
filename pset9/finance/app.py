@@ -88,7 +88,12 @@ def buy():
 
 
             else:
-                
+                temp = db.execute(
+                    "SELECT cash, quantity FROM transactions WHERE users_id = ? and symbol = ?", session["user_id"], dict_res['symbol'])
+                print(temp)
+                db.execute(
+                    "UPDATE transactions SET quantity = ? and price = ?", temp['quantity'] + dict_res['qty'], temp['cash'] + dict_res['cash'])
+
             res = db.execute(
                     "SELECT * FROM transactions WHERE users_id = ?", session["user_id"])
             return render_template("receipt.html", res=res)
