@@ -81,8 +81,8 @@ def buy():
             dict_res['cash'] = new_cash
 
             db.execute(
-                "INSERT INTO transactions (users_id, symbol, name, price, quantity) VALUES (?, ?, ?, ?, ?)"
-                , session["user_id"], dict_res['symbol'], dict_res['name'], dict_res['price'], dict_res['qty'])
+                "INSERT INTO transactions (users_id, symbol, name, price, quantity, cash) VALUES (?, ?, ?, ?, ?, ?)"
+                , session["user_id"], dict_res['symbol'], dict_res['name'], dict_res['price'], dict_res['qty'], dict_res['cash'])
 
             res = db.execute(
                 "SELECT * FROM transactions WHERE users_id = ?", session["user_id"])
