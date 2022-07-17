@@ -18,6 +18,7 @@
    <tbody>
     {% for dict_res in res -%}
     {% set total = dict_res['quantity'] * dict_res['price'] %}
+    {% set last_cash = dict_res['cash'] %}
             <tr>
                 <td class="text-start">{{dict_res['symbol']}}</td>
                 <td class="text-start">{{dict_res['name']}}</td>
@@ -30,7 +31,7 @@
     <tfoot>
         <tr>
             <td class="border-0 fw-bold text-end" colspan="4">Cash</td>
-            <td class="border-0 text-end">$10,123.00}</td>
+            <td class="border-0 text-end">{{last_cash | usd}}</td>
         </tr>
         <tr>
             <td class="border-0 fw-bold text-end" colspan="4">TOTAL</td>
