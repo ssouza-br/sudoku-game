@@ -87,7 +87,7 @@ def buy():
     else:
         return render_template("buy.html")
 
-CREATE TABLE child (
+CREATE TABLE transactions (
     id           INTEGER PRIMARY KEY,
     users_id    INTEGER,
     description  TEXT,
