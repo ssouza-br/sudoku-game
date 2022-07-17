@@ -69,8 +69,6 @@ def buy():
         cash = db.execute("SELECT CASH FROM users WHERE id = ?", session["user_id"])
         cash = cash[0]['cash']
 
-        cost = qty * dict_res['price']
-
         dict_res['cost'] = cost
         dict_res['qty'] = qty
 
