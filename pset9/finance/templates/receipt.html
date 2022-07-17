@@ -22,15 +22,15 @@
                 <td class="text-start">{{dict_res['name']}}</td>
                 <td class="text-end">{{dict_res['quantity']}}</td>
                 <td class="text-end">{{dict_res['price'] | usd}}</td>
-                <td class="text-end">{{ dict_res['quantity'] * dict_res['price'] | usd}}</td>
+                <td class="text-end">{{ dict_res['quantity'] * float(dict_res['price']) | usd}}</td>
             </tr>
+    {% endfor %}
     </tbody>
     <tfoot>
         <tr>
             <td class="border-0 fw-bold text-end" colspan="4">Cash</td>
             <td class="border-0 text-end">{{dict_res['cash'] | usd}}</td>
         </tr>
-    {% endfor %}
         <tr>
             <td class="border-0 fw-bold text-end" colspan="4">TOTAL</td>
             <td class="border-0 w-bold text-end">$10,000.00</td>
