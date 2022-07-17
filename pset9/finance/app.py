@@ -94,7 +94,7 @@ def buy():
                     "UPDATE transactions SET quantity = ?, cash = ? WHERE users_id = ? and symbol = ?", temp[0]['quantity'] + dict_res['qty'], dict_res['cash'], session["user_id"], dict_res['symbol'])
                 print(temp)
             res = db.execute(
-                    "SELECT * FROM transactions WHERE users_id = ?", session["user_id"])
+                    "SELECT * FROM transactions WHERE users_id = ? ORDER BY time ASC", session["user_id"])
             print(res)
             return render_template("receipt.html", res=res)
         else:
