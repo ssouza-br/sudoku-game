@@ -6,7 +6,7 @@
 
 {% block main %}
 {% set ns = namespace() %}
-{% set last_cash = 0 %}
+{% set ns.last_cash = 0 %}
 <table class="table table-striped">
     <thead>
         <tr>
@@ -20,7 +20,7 @@
    <tbody>
     {% for dict_res in res -%}
     {% set total = dict_res['quantity'] * dict_res['price'] %}
-    {% last_cash = dict_res['cash'] %}
+    {% set ns.last_cash = dict_res['cash'] %}
             <tr>
                 <td class="text-start">{{dict_res['symbol']}}</td>
                 <td class="text-start">{{dict_res['name']}}</td>
@@ -33,7 +33,7 @@
     <tfoot>
         <tr>
             <td class="border-0 fw-bold text-end" colspan="4">Cash</td>
-            <td class="border-0 text-end">{{last_cash | usd}}</td>
+            <td class="border-0 text-end">{{ns.last_cash | usd}}</td>
         </tr>
         <tr>
             <td class="border-0 fw-bold text-end" colspan="4">TOTAL</td>
