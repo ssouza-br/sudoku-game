@@ -214,4 +214,60 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
+    if request.method == "POST":
+        """Register user"""
+        symbol = request.form.get("symbol")
+        qty = int(request.form.get("shares"))
+
+        if not symbol:
+            return apology("must provide symbol to buy", 403)
+
+        if not qty:
+            return apology("must provide quatitity of shares to buy", 403)
+
+        if qty < 0:
+            return apology("must provide positive quatitity of shares to buy", 403)
+
+        current_qty = db.execute("SELECT quantity FROM transactions WHERE id = ? and symbol = ?", session["user_id"], symbol)
+
+        if qty > current_qty:
+            return apology("don't try to sell more that you have", 403)
+
+        t = time.time_ns()
+
+        dict_res = lookup(symbol)
+
+        cash = db.execute(
+            "SELECT CASH FROM users WHERE id = ?", session["user_id"])
+        cash = cash[0]['cash']
+
+        cost = qty * dict_res['price']
+
+        dict_res['cost'] = cost
+        dict_res['qty'] = qty
+
+        if cost <= cash:
+            new_cash = cash - cost
+            db.execute("UPDATE users SET CASH = ? WHERE id = ?",
+                       new_cash, session["user_id"])
+            dict_res['cash'] = new_cash
+
+            if len(db.execute(
+                    "SELECT * FROM transactions WHERE users_id = ? and symbol = ?", session["user_id"], dict_res['symbol'])) == 0:
+                db.execute(
+                    "INSERT INTO transactions (users_id, symbol, name, price, quantity, cash, time) VALUES (?, ?, ?, ?, ?, ?, ?)", session["user_id"], dict_res['symbol'], dict_res['name'], dict_res['price'], dict_res['qty'], dict_res['cash'], t)
+            else:
+                temp = db.execute(
+                    "SELECT quantity FROM transactions WHERE users_id = ? and symbol = ?", session["user_id"], dict_res['symbol'])
+                db.execute(
+                    "UPDATE transactions SET quantity = ?, cash = ? WHERE users_id = ? and symbol = ?", temp[0]['quantity'] + dict_res['qty'], dict_res['cash'], session["user_id"], dict_res['symbol'])
+                print(temp)
+            return redirect("/")
+        else:
+            return apology("You don't have money enough to buy these shares")
+
+        # User reached route via GET (as by clicking a link or via redirect)
+    else:
+        return render_template("sell.html")
+
     return apology("TODO")
