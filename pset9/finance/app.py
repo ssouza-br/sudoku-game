@@ -46,10 +46,10 @@ def after_request(response):
 @app.route("/")
 @login_required
 def index():
+    """Show portfolio of stocks"""
     hist = db.execute(
         "SELECT * FROM transactions WHERE users_id = ? ORDER BY time ASC", session["user_id"])
     return render_template("index.html", res=hist)
-    """Show portfolio of stocks"""
 
 @app.route("/buy", methods=["GET", "POST"])
 @login_required
