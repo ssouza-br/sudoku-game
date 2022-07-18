@@ -26,6 +26,10 @@ Session(app)
 # Configure CS50 Library to use SQLite database
 db = SQL("sqlite:///finance.db")
 
+# History list
+hist = db.execute(
+    "SELECT * FROM transactions WHERE users_id = ? ORDER BY time ASC", session["user_id"])
+
 # Make sure API key is set
 if not os.environ.get("API_KEY"):
     raise RuntimeError("API_KEY not set")
@@ -43,15 +47,11 @@ def after_request(response):
 @app.route("/")
 @login_required
 def index():
-    res = db.execute(
-            "SELECT * FROM transactions WHERE users_id = ? ORDER BY time ASC", session["user_id"])
-    print(res)
-    if len(res) != 0:
-        return render_template("index.html", res=res)
+    if len(hist) != 0:
+        return render_template("index.html", res=hist)
     """Show portfolio of stocks"""
     else:
         return apology("Nothing to show")
-
 
 @app.route("/buy", methods=["GET", "POST"])
 @login_required
