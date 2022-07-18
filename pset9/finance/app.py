@@ -43,6 +43,10 @@ def after_request(response):
 @app.route("/")
 @login_required
 def index():
+    res = db.execute(
+            "SELECT * FROM transactions WHERE users_id = ? ORDER BY time ASC", session["user_id"])
+    print(res)
+
     """Show portfolio of stocks"""
     return apology("TODO")
 
