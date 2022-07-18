@@ -97,7 +97,7 @@ def buy():
                 db.execute(
                     "UPDATE transactions SET quantity = ?, cash = ? WHERE users_id = ? and symbol = ?", temp[0]['quantity'] + dict_res['qty'], dict_res['cash'], session["user_id"], dict_res['symbol'])
                 print(temp)
-            return render_template("/")
+            return redirect("/")
         else:
             return apology("You don't have money enough to buy these shares")
 
