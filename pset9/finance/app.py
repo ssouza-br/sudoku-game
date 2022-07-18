@@ -47,11 +47,8 @@ def after_request(response):
 @app.route("/")
 @login_required
 def index():
-    if len(hist) != 0:
-        return render_template("index.html", res=hist)
+    return render_template("index.html", res=hist)
     """Show portfolio of stocks"""
-    else:
-        return apology("Nothing to show")
 
 @app.route("/buy", methods=["GET", "POST"])
 @login_required
@@ -99,7 +96,7 @@ def buy():
                 db.execute(
                     "UPDATE transactions SET quantity = ?, cash = ? WHERE users_id = ? and symbol = ?", temp[0]['quantity'] + dict_res['qty'], dict_res['cash'], session["user_id"], dict_res['symbol'])
                 print(temp)
-            return render_template("/", res=res)
+            return render_template("/", res=hist)
         else:
             return apology("You don't have money enough to buy these shares")
 
