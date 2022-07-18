@@ -96,7 +96,7 @@ def buy():
             res = db.execute(
                     "SELECT * FROM transactions WHERE users_id = ? ORDER BY time ASC", session["user_id"])
             print(res)
-            return render_template("receipt.html", res=res)
+            return render_template("/", res=res)
         else:
             return apology("You don't have money enough to buy these shares")
 
