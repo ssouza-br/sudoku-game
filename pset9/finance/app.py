@@ -99,9 +99,6 @@ def buy():
                 db.execute(
                     "UPDATE transactions SET quantity = ?, cash = ? WHERE users_id = ? and symbol = ?", temp[0]['quantity'] + dict_res['qty'], dict_res['cash'], session["user_id"], dict_res['symbol'])
                 print(temp)
-            res = db.execute(
-                    "SELECT * FROM transactions WHERE users_id = ? ORDER BY time ASC", session["user_id"])
-            print(res)
             return render_template("/", res=res)
         else:
             return apology("You don't have money enough to buy these shares")
