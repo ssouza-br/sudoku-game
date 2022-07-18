@@ -21,7 +21,7 @@
    <tbody>
     {% for dict_res in res -%}
     {% set total = dict_res['quantity'] * dict_res['price'] %}
-    {% if dict_res['cash'] > ns.last_cash %}
+    {% if dict_res['cash'] < ns.last_cash %}
         {% set ns.last_cash = dict_res['cash'] %}
     {% endif %}
             <tr>
