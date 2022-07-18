@@ -46,9 +46,11 @@ def index():
     res = db.execute(
             "SELECT * FROM transactions WHERE users_id = ? ORDER BY time ASC", session["user_id"])
     print(res)
-
+    if res not None:
+        return render_template("index.html", res=res)
     """Show portfolio of stocks"""
-    return apology("TODO")
+    else:
+        return apology("Nothing to show")
 
 
 @app.route("/buy", methods=["GET", "POST"])
