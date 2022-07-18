@@ -47,7 +47,7 @@ def index():
             "SELECT * FROM transactions WHERE users_id = ? ORDER BY time ASC", session["user_id"])
     print(res)
     if len(res) != 0:
-    return render_template("index.html", res=res)
+        return render_template("index.html", res=res)
     """Show portfolio of stocks"""
     else:
         return apology("Nothing to show")
