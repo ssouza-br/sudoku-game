@@ -95,8 +95,7 @@ def buy():
                 temp = db.execute(
                     "SELECT quantity FROM transactions WHERE users_id = ? and symbol = ?", session["user_id"], dict_res['symbol'])
                 db.execute(
-                    "UPDATE transactions SET quantity = ?, cash = ? WHERE users_id = ? and symbol = ?", temp[0]['quantity'] + dict_res['qty'], dict_res['cash'], session["user_id"], dict_res['symbol'])
-                print(temp)
+                    "UPDATE transactions SET quantity = ?, cash = ?, time = ? WHERE users_id = ? and symbol = ?", temp[0]['quantity'] + dict_res['qty'], dict_res['cash'], t, session["user_id"], dict_res['symbol'])
             return redirect("/")
         else:
             return apology("You don't have money enough to buy these shares")
@@ -252,7 +251,7 @@ def sell():
         dict_res['cash'] = new_cash
 
         db.execute(
-            "UPDATE transactions SET quantity = ?, cash = ? WHERE users_id = ? and symbol = ?", dict_res['qty'], dict_res['cash'], session["user_id"], dict_res['symbol'])
+            "UPDATE transactions SET quantity = ?, cash = ?, time = ? WHERE users_id = ? and symbol = ?", dict_res['qty'], dict_res['cash'], t, session["user_id"], dict_res['symbol'])
         return redirect("/")
 
         # User reached route via GET (as by clicking a link or via redirect)
