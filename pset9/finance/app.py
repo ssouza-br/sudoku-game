@@ -229,8 +229,8 @@ def sell():
             return apology("must provide positive quatitity of shares to buy", 403)
 
         current_qty = db.execute("SELECT quantity FROM transactions WHERE id = ? and symbol = ?", session["user_id"], symbol)
-
-        if qty > current_qty:
+        print(current_qty)
+        if qty > current_qty[0]['quantity']:
             return apology("don't try to sell more that you have", 403)
 
         t = time.time_ns()
