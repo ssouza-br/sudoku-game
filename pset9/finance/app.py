@@ -244,22 +244,17 @@ def sell():
         cost = qty * dict_res['price']
 
         dict_res['cost'] = cost
-        dict_res['qty'] = qty
+        dict_res['qty'] = current_qty - qty
 
         new_cash = cash + cost
         db.execute("UPDATE users SET CASH = ? WHERE id = ?",
                     new_cash, session["user_id"])
         dict_res['cash'] = new_cash
 
-        temp = db.execute(
-            "SELECT quantity FROM transactions WHERE users_id = ? and symbol = ?", session["user_id"], dict_res['symbol'])
         db.execute(
-            "UPDATE transactions SET quantity = ?, cash = ? WHERE users_id = ? and symbol = ?", temp[0]['quantity'] + dict_res['qty'], dict_res['cash'], session["user_id"], dict_res['symbol'])
-        print(temp)
+            "UPDATE transactions SET quantity = ?, cash = ? WHERE users_id = ? and symbol = ?", dict_res['qty'], dict_res['cash'], session["user_id"], dict_res['symbol'])
         return redirect("/")
 
         # User reached route via GET (as by clicking a link or via redirect)
     else:
         return render_template("sell.html")
-
-    return apology("TODO")
