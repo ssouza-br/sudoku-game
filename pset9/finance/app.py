@@ -27,8 +27,7 @@ Session(app)
 db = SQL("sqlite:///finance.db")
 
 # History list
-hist = db.execute(
-    "SELECT * FROM transactions WHERE users_id = ? ORDER BY time ASC", session["user_id"])
+
 
 # Make sure API key is set
 if not os.environ.get("API_KEY"):
@@ -47,6 +46,8 @@ def after_request(response):
 @app.route("/")
 @login_required
 def index():
+    hist = db.execute(
+        "SELECT * FROM transactions WHERE users_id = ? ORDER BY time ASC", session["user_id"])
     return render_template("index.html", res=hist)
     """Show portfolio of stocks"""
 
