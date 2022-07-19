@@ -68,8 +68,8 @@ def buy():
         if not qty:
             return apology("must provide quatitity of shares to buy", 400)
 
-        # if qty < 0:
-        #     return apology("must provide positive quatitity of shares to buy", 400)
+        if qty < 0:
+            return apology("must provide positive quatitity of shares to buy", 400)
 
         t = datetime.now()
 
