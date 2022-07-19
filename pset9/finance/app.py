@@ -62,7 +62,6 @@ def buy():
         symbol = request.form.get("symbol")
         qty = int(request.form.get("shares"))
 
-        if qty != 
         if not symbol:
             return apology("must provide symbol to buy", 400)
 
