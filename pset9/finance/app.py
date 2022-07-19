@@ -194,16 +194,16 @@ def register():
         confirmation = request.form.get("confirmation")
 
         if not username:
-            return apology("must provide username to registrated", 403)
+            return apology("must provide username to registrated", 400)
 
         if not hash:
-            return apology("must provide password to registrated", 403)
+            return apology("must provide password to registrated", 400)
 
         if not confirmation:
-            return apology("must provide passowrd again to registrated", 403)
+            return apology("must provide passowrd again to registrated", 400)
 
         if confirmation != request.form.get("password"):
-            return apology("passwords mismatched", 403)
+            return apology("passwords mismatched", 400)
 
 
         user_list = [i['username'] for i in db.execute("SELECT username FROM users")]
