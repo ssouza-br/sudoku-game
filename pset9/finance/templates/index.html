@@ -9,8 +9,9 @@
 {% set ns.share_names = [] %}
 
 {% for dict_res in res -%}
-
-{{ server_ip.append( ip+":"+port ) }}
+    {% if dict_res['name'] not ns.share_names}
+        {{ ns.share_names.append(dict_res['name'])}}
+    {% endif %}
 {% endfor %}
 
 
