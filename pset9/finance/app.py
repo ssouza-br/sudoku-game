@@ -191,12 +191,16 @@ def register():
         """Register user"""
         username = request.form.get("username")
         hash = generate_password_hash(request.form.get("password"))
+        confirmation = request.form.get("confirmation")
 
         if not username:
             return apology("must provide username to registrated", 403)
 
         if not hash:
             return apology("must provide password to registrated", 403)
+
+        if not confirmation:
+            return apology("must provide passowrd again to registrated", 403)
 
         user_list = [i['username'] for i in db.execute("SELECT username FROM users")]
         if username in user_list:
