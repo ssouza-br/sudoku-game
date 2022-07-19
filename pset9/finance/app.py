@@ -84,7 +84,6 @@ def buy():
 
         dict_res['cost'] = cost
         dict_res['qty'] = qty
-        dict_res['type'] = 'buy'
 
         if cost <= cash:
             new_cash = cash - cost
