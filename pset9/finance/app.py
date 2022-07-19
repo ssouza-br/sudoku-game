@@ -241,7 +241,7 @@ def sell():
         # t = datetime.fromtimestamp(t)
 
         t = datetime.now()
-        print(t)
+        print('tempooo', t)
         t = datetime.timestamp(t)
 
         dict_res = lookup(symbol)
