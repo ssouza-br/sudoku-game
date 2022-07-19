@@ -60,16 +60,17 @@ def buy():
     if request.method == "POST":
         """Register user"""
         symbol = request.form.get("symbol")
-        qty = int(request.form.get("shares"))
+
+        try:
+            qty = int(request.form.get("shares"))
+        except ValueError:
+            return apology("must provide integers quatitity of shares to buy", 400)
 
         if not symbol:
             return apology("must provide symbol to buy", 400)
 
         if not request.form.get("shares"):
             return apology("must provide quatitity of shares to buy", 400)
-
-        if not qty.isdigit():
-            return apology("must provide integers quatitity of shares to buy", 400)
 
         if qty < 0:
             return apology("must provide positive quatitity of shares to buy", 400)
