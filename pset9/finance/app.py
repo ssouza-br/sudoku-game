@@ -202,6 +202,10 @@ def register():
         if not confirmation:
             return apology("must provide passowrd again to registrated", 403)
 
+        if confirmation != request.form.get("password"):
+            return apology("passwords mismatched", 403)
+
+
         user_list = [i['username'] for i in db.execute("SELECT username FROM users")]
         if username in user_list:
             return apology("username already registrated", 403)
