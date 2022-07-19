@@ -6,14 +6,7 @@
 
 {% block main %}
 {% set ns = namespace() %}
-{% set ns.share_names = [] %}
-
-{% for dict_res in res -%}
-    {% if dict_res['name'] in ns.share_names}
-        {{ ns.share_names.append(dict_res['name'])}}
-    {% endif %}
-{% endfor %}
-
+{% set ns.last_cash = 10000 %}
 
 <table class="table table-striped">
     <thead>
