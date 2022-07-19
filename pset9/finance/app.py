@@ -110,8 +110,9 @@ def buy():
 @login_required
 def history():
     """Show history of transactions"""
-    return apology("TODO")
-
+    hist = db.execute(
+        "SELECT * FROM transactions WHERE users_id = ? ORDER BY time ASC", session["user_id"])
+    return render_template("history.html", res=hist)
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
