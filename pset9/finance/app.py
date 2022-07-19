@@ -87,9 +87,9 @@ def buy():
         dict_res = lookup(symbol)
 
         cash = db.execute("SELECT CASH FROM users WHERE id = ?", session["user_id"])
-        cash = float(cash[0]['cash'])
+        cash = cash[0]['cash']
 
-        cost = qty * float(dict_res['price'])
+        cost = qty * dict_res['price']
 
         dict_res['cost'] = cost
         dict_res['qty'] = qty
