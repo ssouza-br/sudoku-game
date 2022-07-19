@@ -255,8 +255,7 @@ def sell():
         db.execute(
             "INSERT INTO transactions (users_id, symbol, name, price, quantity, cash, time) VALUES (?, ?, ?, ?, ?, ?, ?)", session["user_id"], dict_res['symbol'], dict_res['name'], dict_res['price'], dict_res['qty'], dict_res['cash'], t)
 
-            else:
-                return redirect("/")
+        return redirect("/")
 
         # User reached route via GET (as by clicking a link or via redirect)
     else:
