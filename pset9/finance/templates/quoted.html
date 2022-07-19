@@ -6,6 +6,6 @@
 
 {% block main %}
 <p>
-    A share of {{dict_res['name']}} ({{dict_res['symbol']}}) costs ${{dict_res['price']}}.
+    A share of {{dict_res['name']}} ({{dict_res['symbol']}}) costs {{dict_res['price'] | usd}}.
 </p>
 {% endblock %}
