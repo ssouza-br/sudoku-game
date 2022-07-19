@@ -70,8 +70,10 @@ def buy():
         if qty < 0:
             return apology("must provide positive quatitity of shares to buy", 403)
 
-        t = time.time_ns()
-        t = datetime.fromtimestamp(t)
+        t = datetime.now()
+        t = datetime.timestamp(t)
+        # t = time.time_ns()
+        # t = datetime.fromtimestamp(t)
 
         dict_res = lookup(symbol)
 
@@ -236,8 +238,11 @@ def sell():
         if qty > current_qty:
             return apology("don't try to sell more that you have", 403)
 
-        t = time.time_ns()
-        t = datetime.fromtimestamp(t)
+        # t = time.time_ns()
+        # t = datetime.fromtimestamp(t)
+
+        t = datetime.now()
+        t = datetime.timestamp(t)
 
         dict_res = lookup(symbol)
 
