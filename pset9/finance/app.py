@@ -63,13 +63,13 @@ def buy():
         qty = int(request.form.get("shares"))
 
         if not symbol:
-            return apology("must provide symbol to buy", 403)
+            return apology("must provide symbol to buy", 400)
 
         if not qty:
-            return apology("must provide quatitity of shares to buy", 403)
+            return apology("must provide quatitity of shares to buy", 400)
 
         if qty < 0:
-            return apology("must provide positive quatitity of shares to buy", 403)
+            return apology("must provide positive quatitity of shares to buy", 400)
 
         t = datetime.now()
 
