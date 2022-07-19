@@ -71,9 +71,6 @@ def buy():
             return apology("must provide positive quatitity of shares to buy", 403)
 
         t = datetime.now()
-        t = datetime.timestamp(t)
-        # t = time.time_ns()
-        # t = datetime.fromtimestamp(t)
 
         dict_res = lookup(symbol)
 
@@ -241,8 +238,6 @@ def sell():
         # t = datetime.fromtimestamp(t)
 
         t = datetime.now()
-        print('tempooo', t)
-        t = datetime.timestamp(t)
 
         dict_res = lookup(symbol)
 
