@@ -107,8 +107,7 @@ def buy():
             else:
                 temp = db.execute(
                         "SELECT quantity FROM transactions WHERE users_id = ? and symbol = ?", session["user_id"], dict_res['symbol'])
-                if len(temp)!=0:
-                    db.execute("UPDATE transactions SET quantity = ?, cash = ?, time = ? WHERE users_id = ? and symbol = ?", temp[0]['quantity'] + dict_res['qty'], dict_res['cash'], t, session["user_id"], dict_res['symbol'])
+                db.execute("UPDATE transactions SET quantity = ?, cash = ?, time = ? WHERE users_id = ? and symbol = ?", temp[0]['quantity'] + dict_res['qty'], dict_res['cash'], t, session["user_id"], dict_res['symbol'])
             return redirect("/")
         else:
             return apology("You don't have money enough to buy these shares")
