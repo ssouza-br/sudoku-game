@@ -49,12 +49,9 @@ def after_request(response):
 def index():
     """Show portfolio of stocks"""
     hist = db.execute(
-        "SELECT symbol, name, SUM(quantity) as quantity, price FROM transactions WHERE users_id = ? GROUP BY symbol ORDER BY time ASC", session["user_id"])
+        "SELECT symbol, name, SUM(quantity) as quantity, price, cash FROM transactions WHERE users_id = ? GROUP BY symbol ORDER BY time ASC", session["user_id"])
     print(hist)
     return render_template("index.html", res=hist)
-
-Symbol	Name	Shares	Price
-
 
 @app.route("/buy", methods=["GET", "POST"])
 @login_required
