@@ -82,6 +82,7 @@ def buy():
 
         dict_res['cost'] = cost
         dict_res['qty'] = qty
+        dict_res['type'] = 'buy'
 
         if cost <= cash:
             new_cash = cash - cost
@@ -248,6 +249,7 @@ def sell():
 
         dict_res['cost'] = cost
         dict_res['qty'] = current_qty - qty
+        dict_res['type'] = 'sell'
 
         new_cash = cash + cost
         db.execute("UPDATE users SET CASH = ? WHERE id = ?",
