@@ -84,7 +84,8 @@ def buy():
         dict_res = lookup(symbol)
 
         cash = db.execute("SELECT CASH FROM users WHERE id = ?", session["user_id"])
-        cash = cash[0]['cash']
+        if len(cash) != 0:
+            cash = cash[0]['cash']
 
         cost = qty * dict_res['price']
 
