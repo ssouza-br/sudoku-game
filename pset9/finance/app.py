@@ -71,7 +71,6 @@ def buy():
         if not request.form.get("shares").isdigit():
             return apology("must provide integers quatitity of shares to buy", 400)
 
-
         if qty < 0:
             return apology("must provide positive quatitity of shares to buy", 400)
 
