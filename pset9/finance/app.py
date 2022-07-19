@@ -49,7 +49,7 @@ def after_request(response):
 def index():
     """Show portfolio of stocks"""
     hist = db.execute(
-        "SELECT * FROM transactions WHERE users_id = ? ORDER BY time ASC", session["user_id"])
+        "SELECT symbol, SUM(quantity) as quantity, price FROM transactions WHERE users_id = ? GROUP BY name ORDER BY time ASC", session["user_id"])
     print(hist)
     return render_template("index.html", res=hist)
 
