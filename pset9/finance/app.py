@@ -64,13 +64,13 @@ def buy():
         except ValueError:
             return apology("must provide integers quatitity of shares to buy", 400)
 
-        try:
-            symbol = request.form.get("symbol")
-        except ValueError:
-            return apology("must provide symbol to buy", 400)
-
-        # if not symbol:
+        # try:
+        #     symbol = request.form.get("symbol")
+        # except ValueError:
         #     return apology("must provide symbol to buy", 400)
+
+        if not symbol:
+            return apology("must provide symbol to buy", 400)
 
         if not symbol.isalnum():
             return apology("must provide alphanumeric symbol to buy", 400)
