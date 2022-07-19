@@ -50,6 +50,7 @@ def index():
     """Show portfolio of stocks"""
     hist = db.execute(
         "SELECT * FROM transactions WHERE users_id = ? GROUP BY symbol ORDER BY time ASC", session["user_id"])
+    print(hist)
     return render_template("index.html", res=hist)
 
 @app.route("/buy", methods=["GET", "POST"])
