@@ -128,18 +128,18 @@ def login():
 
         # Ensure username was submitted
         if not request.form.get("username"):
-            return apology("must provide username", 403)
+            return apology("must provide username", 400)
 
         # Ensure password was submitted
         elif not request.form.get("password"):
-            return apology("must provide password", 403)
+            return apology("must provide password", 400)
 
         # Query database for username
         rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
 
         # Ensure username exists and password is correct
         if len(rows) != 1 or not check_password_hash(rows[0]["hash"], request.form.get("password")):
-            return apology("invalid username and/or password", 403)
+            return apology("invalid username and/or password", 400)
 
         # Remember which user has logged in
         session["user_id"] = rows[0]["id"]
@@ -172,14 +172,14 @@ def quote():
         symbol = request.form.get("symbol")
 
         if not symbol:
-            return apology("must provide symbol to quote", 403)
+            return apology("must provide symbol to quote", 400)
 
         dict_res = lookup(symbol)
         if dict_res != None:
             # Redirect user to home page
             return render_template("quoted.html", dict_res=dict_res)
         else:
-            return apology("invalid symbol to quote", 403)
+            return apology("invalid symbol to quote", 400)
         # User reached route via GET (as by clicking a link or via redirect)
     else:
         return render_template("quote.html")
@@ -208,7 +208,7 @@ def register():
 
         user_list = [i['username'] for i in db.execute("SELECT username FROM users")]
         if username in user_list:
-            return apology("username already registrated", 403)
+            return apology("username already registrated", 400)
         db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
 
         # Remember which user has logged in
@@ -230,18 +230,18 @@ def sell():
         qty = int(request.form.get("shares"))
 
         if not symbol:
-            return apology("must provide symbol to buy", 403)
+            return apology("must provide symbol to buy", 400)
 
         if not qty:
-            return apology("must provide quatitity of shares to buy", 403)
+            return apology("must provide quatitity of shares to buy", 400)
 
         if qty < 0:
-            return apology("must provide positive quatitity of shares to buy", 403)
+            return apology("must provide positive quatitity of shares to buy", 400)
 
         current_qty = db.execute("SELECT quantity FROM transactions WHERE users_id = ? and symbol = ?", session["user_id"], symbol.upper())
         current_qty = current_qty[0]['quantity']
         if qty > current_qty:
-            return apology("don't try to sell more that you have", 403)
+            return apology("don't try to sell more that you have", 400)
 
         t = datetime.now()
 
