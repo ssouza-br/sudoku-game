@@ -234,9 +234,6 @@ def sell():
         if qty > current_qty:
             return apology("don't try to sell more that you have", 403)
 
-        # t = time.time_ns()
-        # t = datetime.fromtimestamp(t)
-
         t = datetime.now()
 
         dict_res = lookup(symbol)
@@ -248,7 +245,7 @@ def sell():
         cost = qty * dict_res['price']
 
         dict_res['cost'] = cost
-        dict_res['qty'] = current_qty - qty
+        dict_res['qty'] = -1*qty
 
         new_cash = cash + cost
         db.execute("UPDATE users SET CASH = ? WHERE id = ?",
@@ -256,8 +253,10 @@ def sell():
         dict_res['cash'] = new_cash
 
         db.execute(
-            "UPDATE transactions SET quantity = ?, cash = ?, time = ? WHERE users_id = ? and symbol = ?", dict_res['qty'], dict_res['cash'], t, session["user_id"], dict_res['symbol'])
-        return redirect("/")
+            "INSERT INTO transactions (users_id, symbol, name, price, quantity, cash, time) VALUES (?, ?, ?, ?, ?, ?, ?)", session["user_id"], dict_res['symbol'], dict_res['name'], dict_res['price'], dict_res['qty'], dict_res['cash'], t)
+
+            else:
+                return redirect("/")
 
         # User reached route via GET (as by clicking a link or via redirect)
     else:
