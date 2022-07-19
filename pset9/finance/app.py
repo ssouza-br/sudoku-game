@@ -65,7 +65,7 @@ def buy():
         if not symbol:
             return apology("must provide symbol to buy", 400)
 
-        if not qty:
+        if not request.form.get("shares"):
             return apology("must provide quatitity of shares to buy", 400)
 
         if qty < 0:
