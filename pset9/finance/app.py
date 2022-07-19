@@ -6,6 +6,7 @@ from flask_session import Session
 from tempfile import mkdtemp
 from werkzeug.security import check_password_hash, generate_password_hash
 import time
+from datetime import datetime
 
 from helpers import apology, login_required, lookup, usd
 
@@ -70,6 +71,7 @@ def buy():
             return apology("must provide positive quatitity of shares to buy", 403)
 
         t = time.time_ns()
+        t = datetime.fromtimestamp(t)
 
         dict_res = lookup(symbol)
 
@@ -234,6 +236,7 @@ def sell():
             return apology("don't try to sell more that you have", 403)
 
         t = time.time_ns()
+        t = datetime.fromtimestamp(t)
 
         dict_res = lookup(symbol)
 
