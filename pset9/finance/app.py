@@ -53,6 +53,7 @@ def index():
     print(hist)
     return render_template("index.html", res=hist)
 
+
 @app.route("/buy", methods=["GET", "POST"])
 @login_required
 def buy():
