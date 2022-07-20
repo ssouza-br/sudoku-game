@@ -9,7 +9,7 @@
         <div class="mb-3">
             {% for share in shares -%}
                 <select name="symbol">
-                    <option value={{share['symbol']}}>{{share['symbol']}}</option>
+                    <option>{{share['symbol']}}</option>
                 </select>
             {% endfor %}
             <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="symbol" placeholder="Symbol" type="text">

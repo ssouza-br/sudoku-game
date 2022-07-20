@@ -300,5 +300,5 @@ def sell():
     else:
         shares = db.execute(
             "SELECT DISTINCT(symbol) FROM transactions WHERE users_id = ?", session["user_id"])
-        print(opt)
+        print(shares)
         return render_template("sell.html", shares=shares)
