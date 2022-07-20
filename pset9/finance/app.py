@@ -83,7 +83,6 @@ def buy():
         dict_res = lookup(symbol)
 
         print('dict', dict_res)
-        print('len dict', len(dict_res))
 
         cash = db.execute("SELECT CASH FROM users WHERE id = ?", session["user_id"])
         if len(cash) != 0:
