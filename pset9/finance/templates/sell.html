@@ -7,9 +7,9 @@
 {% block main %}
     <form action="/sell" method="post">
         <div class="mb-3">
-            {% for dict_res in res -%}
+            {% for share in shares -%}
                 <select name="symbol">
-                    <option value={{}}>{{}}</option>
+                    <option value={{share['symbol']}}>{{share['symbol']}}</option>
                 </select>
             {% endfor %}
             <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="symbol" placeholder="Symbol" type="text">

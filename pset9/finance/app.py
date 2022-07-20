@@ -298,7 +298,7 @@ def sell():
 
         # User reached route via GET (as by clicking a link or via redirect)
     else:
-        opt = db.execute(
+        shares = db.execute(
             "SELECT DISTINCT(symbol) FROM transactions WHERE users_id = ?", session["user_id"])
         print(opt)
-        return render_template("sell.html", opt=opt)
+        return render_template("sell.html", shares=shares)
