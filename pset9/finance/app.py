@@ -82,36 +82,35 @@ def buy():
 
         dict_res = lookup(symbol)
 
-        print('dict', dict_res)
+        if dict_res not None:
+            cash = db.execute("SELECT CASH FROM users WHERE id = ?", session["user_id"])
+            if len(cash) != 0:
+                cash = cash[0]['cash']
 
-        cash = db.execute("SELECT CASH FROM users WHERE id = ?", session["user_id"])
-        if len(cash) != 0:
-            cash = cash[0]['cash']
+            cost = qty * dict_res['price']
 
-        cost = qty * dict_res['price']
+            dict_res['cost'] = cost
+            dict_res['qty'] = qty
+            dict_res['symbol'] = dict_res['symbol'].upper()
 
-        dict_res['cost'] = cost
-        dict_res['qty'] = qty
-        dict_res['symbol'] = dict_res['symbol'].upper()
+            if cost <= cash:
+                new_cash = cash - cost
+                db.execute("UPDATE users SET CASH = ? WHERE id = ?",
+                        new_cash, session["user_id"])
+                dict_res['cash'] = new_cash
 
-        if cost <= cash:
-            new_cash = cash - cost
-            db.execute("UPDATE users SET CASH = ? WHERE id = ?",
-                       new_cash, session["user_id"])
-            dict_res['cash'] = new_cash
-
-            if len(db.execute(
-                    "SELECT * FROM transactions WHERE users_id = ? and symbol = ?", session["user_id"], dict_res['symbol'])) == 0:
-                db.execute(
-                    "INSERT INTO transactions (users_id, symbol, name, price, quantity, cash, time) VALUES (?, ?, ?, ?, ?, ?, ?)", session["user_id"], dict_res['symbol'], dict_res['name'], dict_res['price'], dict_res['qty'], dict_res['cash'], t)
+                if len(db.execute(
+                        "SELECT * FROM transactions WHERE users_id = ? and symbol = ?", session["user_id"], dict_res['symbol'])) == 0:
+                    db.execute(
+                        "INSERT INTO transactions (users_id, symbol, name, price, quantity, cash, time) VALUES (?, ?, ?, ?, ?, ?, ?)", session["user_id"], dict_res['symbol'], dict_res['name'], dict_res['price'], dict_res['qty'], dict_res['cash'], t)
+                else:
+                    temp = db.execute(
+                            "SELECT quantity FROM transactions WHERE users_id = ? and symbol = ?", session["user_id"], dict_res['symbol'])
+                    if len(temp)!=0:
+                        db.execute("UPDATE transactions SET quantity = ?, cash = ?, time = ? WHERE users_id = ? and symbol = ?", temp[0]['quantity'] + dict_res['qty'], dict_res['cash'], t, session["user_id"], dict_res['symbol'])
+                return redirect("/")
             else:
-                temp = db.execute(
-                        "SELECT quantity FROM transactions WHERE users_id = ? and symbol = ?", session["user_id"], dict_res['symbol'])
-                if len(temp)!=0:
-                    db.execute("UPDATE transactions SET quantity = ?, cash = ?, time = ? WHERE users_id = ? and symbol = ?", temp[0]['quantity'] + dict_res['qty'], dict_res['cash'], t, session["user_id"], dict_res['symbol'])
-            return redirect("/")
-        else:
-            return apology("You don't have money enough to buy these shares")
+                return apology("You don't have money enough to buy these shares")
 
         # User reached route via GET (as by clicking a link or via redirect)
     else:
