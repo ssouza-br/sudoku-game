@@ -257,7 +257,7 @@ def sell():
 
         if dict_res:
             current_qty = db.execute("SELECT quantity FROM transactions WHERE users_id = ? and symbol = ?",
-            session["user_id"], symbol)
+                                     session["user_id"], symbol)
             current_qty = current_qty[0]['quantity']
             if qty > current_qty:
                 return apology("don't try to sell more that you have", 400)
@@ -274,11 +274,13 @@ def sell():
             dict_res['symbol'] = dict_res['symbol'].upper()
 
             new_cash = cash + cost
-            db.execute("UPDATE users SET CASH = ? WHERE id = ?", new_cash, session["user_id"])
+            db.execute("UPDATE users SET CASH = ? WHERE id = ?",
+                       new_cash, session["user_id"])
             dict_res['cash'] = new_cash
 
             db.execute(
-                "INSERT INTO transactions (users_id, symbol, name, price, quantity, cash, time) VALUES (?, ?, ?, ?, ?, ?, ?)", session["user_id"], dict_res['symbol'], dict_res['name'], dict_res['price'], dict_res['qty'], dict_res['cash'], t)
+                "INSERT INTO transactions (users_id, symbol, name, price, quantity, cash, time) VALUES (?, ?, ?, ?, ?, ?, ?)",
+                                    session["user_id"], dict_res['symbol'], dict_res['name'], dict_res['price'], dict_res['qty'], dict_res['cash'], t)
             return redirect("/")
         else:
             return apology("must provide correct stock name", 400)
