@@ -85,8 +85,7 @@ def buy():
 
         if dict_res:
             cash = db.execute("SELECT CASH FROM users WHERE id = ?", session["user_id"])
-            if len(cash) != 0:
-                cash = cash[0]['cash']
+            cash = cash[0]['cash']
 
             cost = qty * dict_res['price']
 
@@ -96,25 +95,20 @@ def buy():
 
             if cost <= cash:
                 new_cash = cash - cost
-                db.execute("UPDATE users SET CASH = ? WHERE id = ?",
-                        new_cash, session["user_id"])
+                db.execute("UPDATE users SET CASH = ? WHERE id = ?", new_cash, session["user_id"])
                 dict_res['cash'] = new_cash
 
-                db.execute(
-                        "INSERT INTO transactions (users_id, symbol, name, price, quantity, cash, time) VALUES (?, ?, ?, ?, ?, ?, ?)", session["user_id"], dict_res['symbol'], dict_res['name'], dict_res['price'], dict_res['qty'], dict_res['cash'], t)
+                db.execute("INSERT INTO transactions (users_id, symbol, name, price, quantity, cash, time) VALUES (?, ?, ?, ?, ?, ?, ?)", session["user_id"], dict_res['symbol'], dict_res['name'], dict_res['price'], dict_res['qty'], dict_res['cash'], t)
 
                 db.execute("UPDATE users SET cash = ? WHERE id = ?", dict_res['cash'], session["user_id"])
                 return redirect("/")
             else:
-                return apology("You don't have money enough to buy these shares",400)
+                return apology("You don't have money enough to buy these shares", 400)
         else:
-            return apology("Invalid symbol to lookup quote",400)
-
-
+            return apology("Invalid symbol to lookup quote", 400)
         # User reached route via GET (as by clicking a link or via redirect)
     else:
         return render_template("buy.html")
-
 
 
 @app.route("/history")
@@ -124,6 +118,7 @@ def history():
     hist = db.execute(
         "SELECT * FROM transactions WHERE users_id = ? ORDER BY time ASC", session["user_id"])
     return render_template("history.html", res=hist)
+
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
@@ -193,6 +188,7 @@ def quote():
     else:
         return render_template("quote.html")
 
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     # User reached route via POST (as by submitting a form via POST)
@@ -214,7 +210,6 @@ def register():
         if confirmation != request.form.get("password"):
             return apology("passwords mismatched", 400)
 
-
         user_list = [i['username'] for i in db.execute("SELECT username FROM users")]
         if username in user_list:
             return apology("username already registrated", 400)
@@ -231,6 +226,7 @@ def register():
         # User reached route via GET (as by clicking a link or via redirect)
     else:
         return render_template("register.html")
+
 
 @app.route("/sell", methods=["GET", "POST"])
 @login_required
@@ -260,15 +256,15 @@ def sell():
         dict_res = lookup(symbol)
 
         if dict_res:
-            current_qty = db.execute("SELECT quantity FROM transactions WHERE users_id = ? and symbol = ?", session["user_id"], symbol)
+            current_qty = db.execute("SELECT quantity FROM transactions WHERE users_id = ? and symbol = ?",
+            session["user_id"], symbol)
             current_qty = current_qty[0]['quantity']
             if qty > current_qty:
                 return apology("don't try to sell more that you have", 400)
 
             t = datetime.now()
 
-            cash = db.execute(
-                "SELECT CASH FROM users WHERE id = ?", session["user_id"])
+            cash = db.execute("SELECT CASH FROM users WHERE id = ?", session["user_id"])
             cash = cash[0]['cash']
 
             cost = qty * dict_res['price']
