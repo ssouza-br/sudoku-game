@@ -242,8 +242,15 @@ def sell():
     """Sell shares of stock"""
     if request.method == "POST":
         """Register user"""
-        symbol = request.form.get("symbol").upper()
-        qty = int(request.form.get("shares"))
+        try:
+            qty = int(request.form.get("shares"))
+        except ValueError:
+            return apology("must provide integers quatitity of shares to buy", 400)
+
+        try:
+            symbol = request.form.get("symbol").upper()
+        except ValueError:
+            return apology("must provide symbol to buy", 400)
 
         if not symbol:
             return apology("must provide symbol to buy", 400)
@@ -256,7 +263,7 @@ def sell():
 
         dict_res = lookup(symbol)
 
-        if len(dict_res) != 0:
+        if dict_res:
             current_qty = db.execute("SELECT quantity FROM transactions WHERE users_id = ? and symbol = ?", session["user_id"], symbol)
             current_qty = current_qty[0]['quantity']
             if qty > current_qty:
@@ -281,9 +288,9 @@ def sell():
 
             db.execute(
                 "INSERT INTO transactions (users_id, symbol, name, price, quantity, cash, time) VALUES (?, ?, ?, ?, ?, ?, ?)", session["user_id"], dict_res['symbol'], dict_res['name'], dict_res['price'], dict_res['qty'], dict_res['cash'], t)
+            return redirect("/")
         else:
             return apology("must provide correct stock name", 400)
-        return redirect("/")
 
         # User reached route via GET (as by clicking a link or via redirect)
     else:
