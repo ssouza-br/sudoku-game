@@ -82,7 +82,7 @@ def buy():
 
         dict_res = lookup(symbol)
 
-        if dict_res not {}:
+        if dict_res:
             cash = db.execute("SELECT CASH FROM users WHERE id = ?", session["user_id"])
             if len(cash) != 0:
                 cash = cash[0]['cash']
@@ -110,7 +110,10 @@ def buy():
                         db.execute("UPDATE transactions SET quantity = ?, cash = ?, time = ? WHERE users_id = ? and symbol = ?", temp[0]['quantity'] + dict_res['qty'], dict_res['cash'], t, session["user_id"], dict_res['symbol'])
                 return redirect("/")
             else:
-                return apology("You don't have money enough to buy these shares")
+                return apology("You don't have money enough to buy these shares",400)
+        else:
+            return apology("Invalid symbol to lookup quote",400)
+
 
         # User reached route via GET (as by clicking a link or via redirect)
     else:
