@@ -250,33 +250,35 @@ def sell():
         if qty < 0:
             return apology("must provide positive quatitity of shares to buy", 400)
 
-        current_qty = db.execute("SELECT quantity FROM transactions WHERE users_id = ? and symbol = ?", session["user_id"], symbol)
-        current_qty = current_qty[0]['quantity']
-        if qty > current_qty:
-            return apology("don't try to sell more that you have", 400)
-
-        t = datetime.now()
-
         dict_res = lookup(symbol)
 
-        cash = db.execute(
-            "SELECT CASH FROM users WHERE id = ?", session["user_id"])
-        cash = cash[0]['cash']
+        if len(dict_res) != 0:
+            current_qty = db.execute("SELECT quantity FROM transactions WHERE users_id = ? and symbol = ?", session["user_id"], symbol)
+            current_qty = current_qty[0]['quantity']
+            if qty > current_qty:
+                return apology("don't try to sell more that you have", 400)
 
-        cost = qty * dict_res['price']
+            t = datetime.now()
 
-        dict_res['cost'] = cost
-        dict_res['qty'] = -1*qty
-        dict_res['symbol'] = dict_res['symbol'].upper()
+            cash = db.execute(
+                "SELECT CASH FROM users WHERE id = ?", session["user_id"])
+            cash = cash[0]['cash']
 
-        new_cash = cash + cost
-        db.execute("UPDATE users SET CASH = ? WHERE id = ?",
-                    new_cash, session["user_id"])
-        dict_res['cash'] = new_cash
+            cost = qty * dict_res['price']
 
-        db.execute(
-            "INSERT INTO transactions (users_id, symbol, name, price, quantity, cash, time) VALUES (?, ?, ?, ?, ?, ?, ?)", session["user_id"], dict_res['symbol'], dict_res['name'], dict_res['price'], dict_res['qty'], dict_res['cash'], t)
+            dict_res['cost'] = cost
+            dict_res['qty'] = -1*qty
+            dict_res['symbol'] = dict_res['symbol'].upper()
 
+            new_cash = cash + cost
+            db.execute("UPDATE users SET CASH = ? WHERE id = ?",
+                        new_cash, session["user_id"])
+            dict_res['cash'] = new_cash
+
+            db.execute(
+                "INSERT INTO transactions (users_id, symbol, name, price, quantity, cash, time) VALUES (?, ?, ?, ?, ?, ?, ?)", session["user_id"], dict_res['symbol'], dict_res['name'], dict_res['price'], dict_res['qty'], dict_res['cash'], t)
+        else:
+            return apology("must provide correct stock name", 400)
         return redirect("/")
 
         # User reached route via GET (as by clicking a link or via redirect)
