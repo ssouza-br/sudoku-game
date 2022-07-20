@@ -91,6 +91,7 @@ def buy():
 
         dict_res['cost'] = cost
         dict_res['qty'] = qty
+        dict_res['symbol'] = dict_res['symbol'].upper()
 
         if cost <= cash:
             new_cash = cash - cost
