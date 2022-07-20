@@ -7,6 +7,12 @@
 {% block main %}
     <form action="/sell" method="post">
         <div class="mb-3">
+            <select name="symbol">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+              </select>
             <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="symbol" placeholder="Symbol" type="text">
         </div>
         <div class="mb-3">
