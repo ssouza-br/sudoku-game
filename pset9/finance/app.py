@@ -99,19 +99,10 @@ def buy():
                         new_cash, session["user_id"])
                 dict_res['cash'] = new_cash
 
-                if len(db.execute(
-                        "SELECT * FROM transactions WHERE users_id = ? and symbol = ?", session["user_id"], dict_res['symbol'])) == 0:
-                    db.execute(
+                db.execute(
                         "INSERT INTO transactions (users_id, symbol, name, price, quantity, cash, time) VALUES (?, ?, ?, ?, ?, ?, ?)", session["user_id"], dict_res['symbol'], dict_res['name'], dict_res['price'], dict_res['qty'], dict_res['cash'], t)
-                else:
-                    temp = db.execute(
-                            "SELECT quantity FROM transactions WHERE users_id = ? and symbol = ?", session["user_id"], dict_res['symbol'])
-                    if len(temp)!=0:
-                        new_qty = temp[0]['quantity'] + dict_res['qty']
-                        print('new_qty',new_qty)
-                        print('old_qty', temp[0]['quantity'])
-                        print('qty colocada', dict_res['qty'])
-                        db.execute("UPDATE transactions SET quantity = ?, cash = ?, time = ? WHERE users_id = ? and symbol = ?", new_qty, dict_res['cash'], t, session["user_id"], dict_res['symbol'])
+
+                db.execute("UPDATE users SET cash = ? WHERE users_id = ?", session["user_id"])
                 return redirect("/")
             else:
                 return apology("You don't have money enough to buy these shares",400)
