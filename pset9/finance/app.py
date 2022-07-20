@@ -65,13 +65,12 @@ def buy():
             return apology("must provide integers quatitity of shares to buy", 400)
 
         try:
-            symbol = request.form.get("symbol")
+            symbol = request.form.get("symbol").upper()
         except ValueError:
             return apology("must provide symbol to buy", 400)
 
         if not symbol.isalnum():
             return apology("must provide alphanumeric symbol to buy", 400)
-
 
         if not request.form.get("shares"):
             return apology("must provide quatitity of shares to buy", 400)
@@ -239,7 +238,7 @@ def sell():
     """Sell shares of stock"""
     if request.method == "POST":
         """Register user"""
-        symbol = request.form.get("symbol")
+        symbol = request.form.get("symbol").upper()
         qty = int(request.form.get("shares"))
 
         if not symbol:
