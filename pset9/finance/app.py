@@ -82,7 +82,7 @@ def buy():
 
         dict_res = lookup(symbol)
 
-        if dict_res not None:
+        if dict_res not {}:
             cash = db.execute("SELECT CASH FROM users WHERE id = ?", session["user_id"])
             if len(cash) != 0:
                 cash = cash[0]['cash']
