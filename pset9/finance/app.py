@@ -250,7 +250,7 @@ def sell():
         if qty < 0:
             return apology("must provide positive quatitity of shares to buy", 400)
 
-        current_qty = db.execute("SELECT quantity FROM transactions WHERE users_id = ? and symbol = ?", session["user_id"], symbol.upper())
+        current_qty = db.execute("SELECT quantity FROM transactions WHERE users_id = ? and symbol = ?", session["user_id"], symbol)
         current_qty = current_qty[0]['quantity']
         if qty > current_qty:
             return apology("don't try to sell more that you have", 400)
