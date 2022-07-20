@@ -268,6 +268,7 @@ def sell():
 
         dict_res['cost'] = cost
         dict_res['qty'] = -1*qty
+        dict_res['symbol'] = dict_res['symbol'].upper()
 
         new_cash = cash + cost
         db.execute("UPDATE users SET CASH = ? WHERE id = ?",
