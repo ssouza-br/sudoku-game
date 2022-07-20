@@ -102,7 +102,7 @@ def buy():
                 db.execute(
                         "INSERT INTO transactions (users_id, symbol, name, price, quantity, cash, time) VALUES (?, ?, ?, ?, ?, ?, ?)", session["user_id"], dict_res['symbol'], dict_res['name'], dict_res['price'], dict_res['qty'], dict_res['cash'], t)
 
-                db.execute("UPDATE users SET cash = ? WHERE users_id = ?", dict_res['cash'], session["user_id"])
+                db.execute("UPDATE users SET cash = ? WHERE id = ?", dict_res['cash'], session["user_id"])
                 return redirect("/")
             else:
                 return apology("You don't have money enough to buy these shares",400)
