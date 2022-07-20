@@ -98,7 +98,8 @@ def buy():
                 db.execute("UPDATE users SET CASH = ? WHERE id = ?", new_cash, session["user_id"])
                 dict_res['cash'] = new_cash
 
-                db.execute("INSERT INTO transactions (users_id, symbol, name, price, quantity, cash, time) VALUES (?, ?, ?, ?, ?, ?, ?)", session["user_id"], dict_res['symbol'], dict_res['name'], dict_res['price'], dict_res['qty'], dict_res['cash'], t)
+                db.execute("INSERT INTO transactions (users_id, symbol, name, price, quantity, cash, time) VALUES (?, ?, ?, ?, ?, ?, ?)",
+                           session["user_id"], dict_res['symbol'], dict_res['name'], dict_res['price'], dict_res['qty'], dict_res['cash'], t)
 
                 db.execute("UPDATE users SET cash = ? WHERE id = ?", dict_res['cash'], session["user_id"])
                 return redirect("/")
