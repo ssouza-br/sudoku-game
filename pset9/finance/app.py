@@ -220,8 +220,11 @@ def register():
             return apology("username already registrated", 400)
         db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
 
+        # Query database for username
+        rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
+
         # Remember which user has logged in
-        # session["user_id"] = rows[0]["id"]
+        session["user_id"] = rows[0]["id"]
 
         # Redirect user to home page
         return redirect("/")
