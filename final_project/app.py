@@ -52,6 +52,12 @@ def history():
     # return render_template("history.html", res=hist)
 
 
+@app.route("/new")
+@login_required
+def new():
+    return render_template("new.html")
+
+
 @app.route("/login", methods=["GET", "POST"])
 def login():
     """Log user in"""

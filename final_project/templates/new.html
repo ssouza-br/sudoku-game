@@ -7,6 +7,16 @@
 {% block main %}
     <form action="/new" method="post">
         <div class="mb-3">
+            <p>Please select a level:</p>
+            <input type="radio" name="level" value="easy">
+            <label for="easy">Easy</label><br>
+            <input type="radio" name="level" value="medium">
+            <label for="medium">Medium</label><br>
+            <input type="radio" name="level" value="hard">
+            <label for="hard">Hard</label>
+        </div>
+
+        <div class="mb-3">
             <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="symbol" placeholder="Symbol" type="text">
         </div>
         <div class="mb-3">
