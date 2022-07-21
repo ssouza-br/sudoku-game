@@ -61,8 +61,8 @@ def new():
         print(level)
         print(numGame)
 
-
-    return render_template("new.html")
+    else:
+        return render_template("new.html")
 
 
 @app.route("/login", methods=["GET", "POST"])
