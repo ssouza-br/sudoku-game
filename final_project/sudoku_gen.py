@@ -16,5 +16,5 @@ sudo = [[1, 2, 3,  4, 5, 6,  7, 8, 9],
 
 for i in range(9):
         db.execute("INSERT INTO new_games(COD_MATRIZ, ORDEM, N1, N2, N3, N4, N5, N6, N7, N8, N9) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
-                   1, i, sudo[i][1], sudo[i][2], sudo[i][3], sudo[i][4], sudo[i][5], sudo[i][6], sudo[i][7], sudo[i][8], sudo[i][9])
+                   1, i, sudo[i][0], sudo[i][1], sudo[i][2], sudo[i][3], sudo[i][4], sudo[i][5], sudo[i][6], sudo[i][7], sudo[i][8])
 
