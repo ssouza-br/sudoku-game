@@ -17,19 +17,13 @@
         </div>
         <div class="mb-3">
             <select name="symbol">
-                <option disabled selected>Symbol</option>
-            {% for share in shares -%}
-                <option>{{share['symbol']}}</option>
+                <option disabled selected># Game</option>
+            {% for n in range(10) %}
+                <option>{{n}}</option>
             {% endfor %}
             </select>
         </div>
 
-        <div class="mb-3">
-            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="symbol" placeholder="Symbol" type="text">
-        </div>
-        <div class="mb-3">
-            <input class="form-control mx-auto w-auto" min="1" name="shares" placeholder="Shares" type="number">
-        </div>
         <button class="btn btn-primary" type="submit">New Game</button>
     </form>
 {% endblock %}
