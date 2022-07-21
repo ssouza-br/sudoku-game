@@ -58,6 +58,7 @@ def new():
     if request.method == "POST":
         level = request.form.get("level")
         numGame = request.form.get("#game")
+        numGame = 1
 
         res = db.execute("SELECT * FROM new_games WHERE COD_MATRIZ= ?", numGame)
         print(res)
