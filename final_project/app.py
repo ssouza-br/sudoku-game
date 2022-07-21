@@ -52,9 +52,20 @@ def history():
     # return render_template("history.html", res=hist)
 
 
-@app.route("/new")
+@app.route("/new", methods=["GET", "POST"])
 @login_required
 def new():
+    if request.method == "POST":
+
+        # Ensure username was submitted
+        if not request.form.get("username"):
+            return apology("must provide username", 400)
+
+        # Ensure password was submitted
+        elif not request.form.get("password"):
+            return apology("must provide password", 400)
+
+
     return render_template("new.html")
 
 
