@@ -43,8 +43,7 @@ def index():
     # hist = db.execute(
     #     "SELECT symbol, name, SUM(quantity) as quantity, price, cash FROM transactions WHERE users_id = ? GROUP BY name ORDER BY time ASC", session["user_id"])
     # print(hist)
-    return None
-    # return render_template("index.html", res=hist)
+    return render_template("index.html")
 
 @app.route("/history")
 @login_required
