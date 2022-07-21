@@ -58,11 +58,12 @@ def new():
     if request.method == "POST":
         level = request.form.get("level")
         numGame = request.form.get("#game")
-        print(level)
-        print(numGame)
+
+        res = db.execute("SELECT * FROM new_games WHERE COD_MATRIZ= ?", numGame)
+        print(res)
 
     else:
-        return render_template("new.html")
+        return render_template("new.html", res=res)
 
 
 @app.route("/login", methods=["GET", "POST"])
