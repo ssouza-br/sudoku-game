@@ -8,4 +8,4 @@
 8	9	1			5
 8			7		9
 
-INSERT INTO new_game SET COD_MATRIZ = 1, ORDEM = 1, N1=6 , N2=3 , N3=NULL , N4=NULL , N5= , NN6=2 , N7=NULL , N8=9 ,N9=NULL ;
+INSERT INTO new_games SET COD_MATRIZ = 1, ORDEM = 1, N1=6 , N2=3 , N3=NULL , N4=NULL , N5= , N6=2 , N7=NULL , N8=9 ,N9=NULL ;
