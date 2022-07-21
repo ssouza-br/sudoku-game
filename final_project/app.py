@@ -61,9 +61,10 @@ def new():
 
         res = db.execute("SELECT * FROM new_games WHERE COD_MATRIZ= ?", numGame)
         print(res)
+        return render_template("game.html",res=res)
 
     else:
-        return render_template("new.html", res=res)
+        return render_template("new.html")
 
 
 @app.route("/login", methods=["GET", "POST"])
