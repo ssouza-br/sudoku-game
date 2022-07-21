@@ -27,14 +27,6 @@ Session(app)
 # Configure CS50 Library to use SQLite database
 db = SQL("sqlite:///sudoku.db")
 
-# History list
-
-
-# Make sure API key is set
-if not os.environ.get("API_KEY"):
-    raise RuntimeError("API_KEY not set")
-
-
 @app.after_request
 def after_request(response):
     """Ensure responses aren't cached"""
@@ -52,65 +44,6 @@ def index():
         "SELECT symbol, name, SUM(quantity) as quantity, price, cash FROM transactions WHERE users_id = ? GROUP BY name ORDER BY time ASC", session["user_id"])
     print(hist)
     return render_template("index.html", res=hist)
-
-
-@app.route("/buy", methods=["GET", "POST"])
-@login_required
-def buy():
-    """Buy shares of stock"""
-    if request.method == "POST":
-        """Register user"""
-        try:
-            qty = int(request.form.get("shares"))
-        except ValueError:
-            return apology("must provide integers quatitity of shares to buy", 400)
-
-        try:
-            symbol = request.form.get("symbol").upper()
-        except ValueError:
-            return apology("must provide symbol to buy", 400)
-
-        if not symbol.isalnum():
-            return apology("must provide alphanumeric symbol to buy", 400)
-
-        if not request.form.get("shares"):
-            return apology("must provide quatitity of shares to buy", 400)
-
-        if qty < 0:
-            return apology("must provide positive quatitity of shares to buy", 400)
-
-        t = datetime.now()
-
-        dict_res = lookup(symbol)
-
-        if dict_res:
-            cash = db.execute("SELECT CASH FROM users WHERE id = ?", session["user_id"])
-            cash = cash[0]['cash']
-
-            cost = qty * dict_res['price']
-
-            dict_res['cost'] = cost
-            dict_res['qty'] = qty
-            dict_res['symbol'] = dict_res['symbol'].upper()
-
-            if cost <= cash:
-                new_cash = cash - cost
-                db.execute("UPDATE users SET CASH = ? WHERE id = ?", new_cash, session["user_id"])
-                dict_res['cash'] = new_cash
-
-                db.execute("INSERT INTO transactions (users_id, symbol, name, price, quantity, cash, time) VALUES (?, ?, ?, ?, ?, ?, ?)",
-                           session["user_id"], dict_res['symbol'], dict_res['name'], dict_res['price'], dict_res['qty'], dict_res['cash'], t)
-
-                db.execute("UPDATE users SET cash = ? WHERE id = ?", dict_res['cash'], session["user_id"])
-                return redirect("/")
-            else:
-                return apology("You don't have money enough to buy these shares", 400)
-        else:
-            return apology("Invalid symbol to lookup quote", 400)
-        # User reached route via GET (as by clicking a link or via redirect)
-    else:
-        return render_template("buy.html")
-
 
 @app.route("/history")
 @login_required
@@ -168,28 +101,6 @@ def logout():
     return redirect("/")
 
 
-@app.route("/quote", methods=["GET", "POST"])
-@login_required
-def quote():
-    """Get stock quote."""
-    if request.method == "POST":
-        """Register user"""
-        symbol = request.form.get("symbol")
-
-        if not symbol:
-            return apology("must provide symbol to quote", 400)
-
-        dict_res = lookup(symbol)
-        if dict_res != None:
-            # Redirect user to home page
-            return render_template("quoted.html", dict_res=dict_res)
-        else:
-            return apology("invalid symbol to quote", 400)
-        # User reached route via GET (as by clicking a link or via redirect)
-    else:
-        return render_template("quote.html")
-
-
 @app.route("/register", methods=["GET", "POST"])
 def register():
     # User reached route via POST (as by submitting a form via POST)
@@ -227,67 +138,3 @@ def register():
         # User reached route via GET (as by clicking a link or via redirect)
     else:
         return render_template("register.html")
-
-
-@app.route("/sell", methods=["GET", "POST"])
-@login_required
-def sell():
-    """Sell shares of stock"""
-    if request.method == "POST":
-        """Register user"""
-        try:
-            qty = int(request.form.get("shares"))
-        except ValueError:
-            return apology("must provide integers quatitity of shares to buy", 400)
-
-        try:
-            symbol = request.form.get("symbol").upper()
-        except ValueError:
-            return apology("must provide symbol to buy", 400)
-
-        if not symbol:
-            return apology("must provide symbol to buy", 400)
-
-        if not qty:
-            return apology("must provide quatitity of shares to buy", 400)
-
-        if qty < 0:
-            return apology("must provide positive quatitity of shares to buy", 400)
-
-        dict_res = lookup(symbol)
-
-        if dict_res:
-            current_qty = db.execute("SELECT quantity FROM transactions WHERE users_id = ? and symbol = ?",
-                                     session["user_id"], symbol)
-            current_qty = current_qty[0]['quantity']
-            if qty > current_qty:
-                return apology("don't try to sell more that you have", 400)
-
-            t = datetime.now()
-
-            cash = db.execute("SELECT CASH FROM users WHERE id = ?", session["user_id"])
-            cash = cash[0]['cash']
-
-            cost = qty * dict_res['price']
-
-            dict_res['cost'] = cost
-            dict_res['qty'] = -1*qty
-            dict_res['symbol'] = dict_res['symbol'].upper()
-
-            new_cash = cash + cost
-            db.execute("UPDATE users SET CASH = ? WHERE id = ?",
-                       new_cash, session["user_id"])
-            dict_res['cash'] = new_cash
-
-            db.execute("INSERT INTO transactions (users_id, symbol, name, price, quantity, cash, time) VALUES (?, ?, ?, ?, ?, ?, ?)",
-                       session["user_id"], dict_res['symbol'], dict_res['name'], dict_res['price'], dict_res['qty'], dict_res['cash'], t)
-            return redirect("/")
-        else:
-            return apology("must provide correct stock name", 400)
-
-        # User reached route via GET (as by clicking a link or via redirect)
-    else:
-        shares = db.execute(
-            "SELECT DISTINCT(symbol) FROM transactions WHERE users_id = ?", session["user_id"])
-        print(shares)
-        return render_template("sell.html", shares=shares)
