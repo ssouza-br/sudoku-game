@@ -8,12 +8,20 @@
     <form action="/new" method="post">
         <div class="mb-3">
             <p>Please select a level:</p>
-            <input class=" pr-3" type="radio" name="level" value="easy">
+            <input type="radio" name="level" value="easy">
             <label for="easy">Easy</label>
-            <input class=" pr-3" type="radio" name="level" value="medium">
+            <input type="radio" name="level" value="medium">
             <label for="medium">Medium</label>
-            <input class=" pr-3" type="radio" name="level" value="hard">
+            <input type="radio" name="level" value="hard">
             <label for="hard">Hard</label>
+        </div>
+        <div class="mb-3">
+            <select name="symbol">
+                <option disabled selected>Symbol</option>
+            {% for share in shares -%}
+                <option>{{share['symbol']}}</option>
+            {% endfor %}
+            </select>
         </div>
 
         <div class="mb-3">
