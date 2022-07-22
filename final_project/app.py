@@ -54,6 +54,7 @@ def game():
             print(key,val)
             # if key.startswith("item"):
             #     print(key, val)
+        return redirect("/")
     else:
         return render_template("game.html")
 
