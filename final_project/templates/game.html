@@ -22,9 +22,9 @@
             <tr>
                 {% for i in range(9) %}
                     {%if res[n][column_list[i]] == None %}
-                        <td><input type="number" name={{column_list[i] + n}} min="1" max="9"></td>
+                        <td><input type="number" name={{column_list[i] + n|string}} min="1" max="9"></td>
                     {%else%}
-                        <td><input type="number" name={{column_list[i] + n}} value={{res[n][column_list[i]]}} min="1" max="9" readonly ></td>
+                        <td><input type="number" name={{column_list[i] + n|string}} value={{res[n][column_list[i]]}} min="1" max="9" readonly ></td>
                     {%endif%}
                 {% endfor %}
             </tr>
@@ -34,9 +34,9 @@
             <tr>
                 {% for i in range(9) %}
                     {%if res[n][column_list[i]] == None %}
-                        <td><input type="number" name={{column_list[i]+n}} min="1" max="9"></td>
+                        <td><input type="number" name={{column_list[i] + n|string}} min="1" max="9"></td>
                     {%else%}
-                        <td><input type="number" name={{column_list[i]+n}} value={{res[n][column_list[i]]}} min="1" max="9" readonly ></td>
+                        <td><input type="number" name={{column_list[i]+n|string}} value={{res[n][column_list[i]]}} min="1" max="9" readonly ></td>
                     {%endif%}
                 {% endfor %}
             </tr>
@@ -46,9 +46,9 @@
             <tr>
                 {% for i in range(9) %}
                     {%if res[n][column_list[i]] == None %}
-                        <td><input type="number" name={{column_list[i]+n}} min="1" max="9"></td>
+                        <td><input type="number" name={{column_list[i]+n|string}} min="1" max="9"></td>
                     {%else%}
-                        <td><input type="number" name={{column_list[i]+n}} value={{res[n][column_list[i]]}} min="1" max="9" readonly ></td>
+                        <td><input type="number" name={{column_list[i]+n|string}} value={{res[n][column_list[i]]}} min="1" max="9" readonly ></td>
                     {%endif%}
                 {% endfor %}
             </tr>
