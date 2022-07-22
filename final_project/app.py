@@ -55,7 +55,7 @@ def game():
         for key, val in request.form.items():
             print('ordem ', key[2])
             print('nitem ', key[:2])
-            if int(json_res[int(key[2])-1][str(key[:2])]) == val:
+            if int(json_res[int(key[2])-1][str(key[:2])]) == int(val):
                 print('acertou '+key)
                 print('val', val)
                 print('digitado', json_res[int(key[2])-1][str(key[:2])])
