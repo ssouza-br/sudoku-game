@@ -50,10 +50,10 @@ def index():
 @login_required
 def game():
     if request.method == "POST":
-        numGame = request.form.get("#game")
-
-
-
+        for key, val in request.form.items():
+            print(key,val)
+            # if key.startswith("item"):
+            #     print(key, val)
     else:
         return render_template("game.html")
 
