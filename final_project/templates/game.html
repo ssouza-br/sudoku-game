@@ -21,7 +21,11 @@
             {% for n in range(3) %}
             <tr>
                 {% for i in range(9) %}
-                <td>{{res[n][column_list[i]]}}</td>
+                    {%if res[n][column_list[i]] == None %}
+                        <td>{{res[n][column_list[i]]}}</td>
+                    {%else%}
+                        <td>{{res[n][column_list[i]]}}</td>
+                    {%endif%}
                 {% endfor %}
             </tr>
             {% endfor %}
