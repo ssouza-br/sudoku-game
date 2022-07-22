@@ -12,26 +12,34 @@
         td { border: solid thin; height: 1.4em; width: 1.4em; text-align: center; padding: 0; }
         </style>
         <table>
+        {% set column_list = ['N1','N2','N3','N4','N5','N6','N7','N8','N9'] %}
           <caption>Sudoku of the day</caption>
           <colgroup><col><col><col></colgroup>
           <colgroup><col><col><col></colgroup>
           <colgroup><col><col><col></colgroup>
           <tbody>
-            {% set column_list = ['N1','N2','N3',N4','N5','N6','N7','N8','N9'] %}
             {% for n in range(3) %}
             <tr>
                 {% for i in range(9) %}
-                <tr> <td>{{res[n][column_list[i]]}}</td>
+                <td>{{res[n][column_list[i]]}}</td>
                 {% endfor %}
-                </tr>
+            </tr>
             {% endfor %}
           <tbody>
             {% for n in range(3,6) %}
-                <tr> <td>{{res[n]['N1']}} <td>{{res[n]['N2']}}  <td>{{res[n]['N3']}} <td>{{res[n]['N4']}}<td>{{res[n]['N5']}}  <td>{{res[n]['N6']}} <td>{{res[n]['N7']}} <td>{{res[n]['N8']}}  <td>{{res[n]['N9']}}
+            <tr>
+                {% for i in range(9) %}
+                <td>{{res[n][column_list[i]]}}</td>
+                {% endfor %}
+            </tr>
             {% endfor %}
           <tbody>
             {% for n in range(6,9) %}
-                <tr> <td>{{res[n]['N1']}} <td>{{res[n]['N2']}}  <td>{{res[n]['N3']}} <td>{{res[n]['N4']}}<td>{{res[n]['N5']}}  <td>{{res[n]['N6']}} <td>{{res[n]['N7']}} <td>{{res[n]['N8']}}  <td>{{res[n]['N9']}}
+            <tr>
+                {% for i in range(9) %}
+                <td>{{res[n][column_list[i]]}}</td>
+                {% endfor %}
+            </tr>
             {% endfor %}
         </table>
 </form>
