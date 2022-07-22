@@ -50,6 +50,7 @@ def index():
 @login_required
 def game():
     if request.method == "POST":
+        numGame = request.form.get("#game")
 
 
 
