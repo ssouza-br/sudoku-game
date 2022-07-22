@@ -22,7 +22,7 @@
             <tr>
                 {% for i in range(9) %}
                     {%if res[n][column_list[i]] == None %}
-                        <td>{{res[n][column_list[i]]}}</td>
+                        <td><input type="number" name=column_list[i] value=column_list[i]></td>
                     {%else%}
                         <td>{{res[n][column_list[i]]}}</td>
                     {%endif%}
