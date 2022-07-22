@@ -51,9 +51,11 @@ def index():
 def game():
     if request.method == "POST":
         json_res = db.execute("SELECT * FROM answer_games WHERE COD_MATRIZ = 1")
-        print(dict_res)
+        print(json_res)
         for key, val in request.form.items():
-            if json_res[][key] == val:
+            print('ordem ', key[2])
+            print('nitem ', key[:2])
+            if json_res[key[2]][key[:2]] == val:
                 print('acertou '+key)
             else:
                 print('errou '+key)
