@@ -50,10 +50,12 @@ def index():
 @login_required
 def game():
     if request.method == "POST":
+        dict_res = db.execute("SELECT FROM answer_game WHERE COD_MATRIZ = 1")
         for key, val in request.form.items():
-            print(key,val)
-            # if key.startswith("item"):
-            #     print(key, val)
+            if dic_res[key] == val:
+                print('acertou '+key)
+            else:
+                print('errou '+key)
         return redirect("/")
     else:
         return render_template("game.html")
