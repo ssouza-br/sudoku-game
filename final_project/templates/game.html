@@ -24,7 +24,7 @@
                     {%if res[n][column_list[i]] == None %}
                         <td><input type="number" name={{column_list[i] + n|string}} min="1" max="9"></td>
                     {%else%}
-                        <td><input type="number" name={{column_list[i] + n|string}} value={{res[n][column_list[i]]}} min="1" max="9" readonly ></td>
+                        <td>{{res[n][column_list[i]]}}</td>
                     {%endif%}
                 {% endfor %}
             </tr>
