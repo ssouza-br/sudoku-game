@@ -33,7 +33,11 @@
             {% for n in range(3,6) %}
             <tr>
                 {% for i in range(9) %}
-                <td>{{res[n][column_list[i]]}}</td>
+                    {%if res[n][column_list[i]] == None %}
+                        <td><input type="number" name=column_list[i] min="1" max="9"></td>
+                    {%else%}
+                        <td><input type="number" name=column_list[i] value={{res[n][column_list[i]]}} min="1" max="9" readonly ></td>
+                    {%endif%}
                 {% endfor %}
             </tr>
             {% endfor %}
@@ -41,7 +45,11 @@
             {% for n in range(6,9) %}
             <tr>
                 {% for i in range(9) %}
-                <td>{{res[n][column_list[i]]}}</td>
+                    {%if res[n][column_list[i]] == None %}
+                        <td><input type="number" name=column_list[i] min="1" max="9"></td>
+                    {%else%}
+                        <td><input type="number" name=column_list[i] value={{res[n][column_list[i]]}} min="1" max="9" readonly ></td>
+                    {%endif%}
                 {% endfor %}
             </tr>
             {% endfor %}
