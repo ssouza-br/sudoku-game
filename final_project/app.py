@@ -45,6 +45,17 @@ def index():
     # print(hist)
     return render_template("index.html")
 
+
+@app.route("/game", methods=["GET", "POST"])
+@login_required
+def game():
+    if request.method == "POST":
+
+
+
+    else:
+        return render_template("game.html")
+
 @app.route("/history")
 @login_required
 def history():
