@@ -6,7 +6,7 @@
 
 {% block main %}
 <div>
-    <h4>Vida disponivel: {{opt}}</h4>
+    <h6>Vida disponivel: <input type="number" name="life" value="{{opt}}" readonly></h6>
 </div>
 <form action="/game" method="post">
     <style>
