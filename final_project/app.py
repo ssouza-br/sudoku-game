@@ -56,7 +56,7 @@ def game():
             # print('ordem ', key[2])
             # print('nitem ', key[:2])
             if int(json_res[int(key[2])-1][str(key[:2])]) == int(val):
-                flash(u'Vc acertou, campeão!!!', 'error')
+                flash(u'Vc acertou, campeão!!!', 'success')
                 # print('acertou '+key)
                 # print('val', val)
                 # print('digitado', json_res[int(key[2])-1][str(key[:2])])

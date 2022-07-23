@@ -23,10 +23,11 @@ nav .navbar-brand .green
 }
 
 .error {
-    color: red
-    background-color:
+    color: red;
+    background-color:red
 }
 
 .success {
-    color: green
+    color: green;
+    background-color:green
 }
