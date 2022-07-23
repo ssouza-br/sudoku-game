@@ -71,6 +71,7 @@ def game():
         json_answ = db.execute("SELECT * FROM current_games WHERE COD_MATRIZ = ? AND USERS_ID = ?",
                                dict_res['game_number'], session["user_id"])
         print(json_answ)
+        print(json_answ[6])
         print(dict_res)
         for key in dict_res:
             if key!='game_number':
