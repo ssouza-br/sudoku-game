@@ -89,11 +89,8 @@ def new():
 
         res = db.execute("SELECT * FROM new_games WHERE COD_MATRIZ= ?", numGame)
         print(res)
-        db..execute("INSERT INTO current_games(COD_MATRIZ, column2, column3, ...)
-                    SELECT column1, column2, column3, ...
-                    FROM table1
-                    WHERE condition
-                    ")
+        db.execute("INSERT INTO current_games(COD_MATRIZ, ORDEM, N1, N2, N3, N4, N5, N6, N7, N8, N9)
+                   SELECT COD_MATRIZ, ORDEM, N1, N2, N3, N4, N5, N6, N7, N8, N9   WHERE condition")
 
         return render_template("game.html",res=res)
 
