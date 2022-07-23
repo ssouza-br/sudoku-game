@@ -74,6 +74,8 @@ def game():
         print(dict_res)
         for key in dict_res:
             if key!='game_number':
+                print('part1a: ', int(key[2])-1)
+                print('part2a:', str(key[:2]))
                 print('part1:', json_answ[int(key[2])-1][str(key[:2])])
                 print('part2:', int(dict_res[key]))
                 if int(json_answ[int(key[2])-1][str(key[:2])]) == int(dict_res[key]):
