@@ -70,6 +70,7 @@ def game():
 
         json_answ = db.execute("SELECT * FROM answer_games WHERE COD_MATRIZ = ?",
                                dict_res['game_number'])
+        finished = false
         for key in dict_res:
             if key!='game_number':
                 if int(json_answ[int(key[2])-1][str(key[:2])]) == int(dict_res[key]):
