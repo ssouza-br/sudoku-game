@@ -57,13 +57,14 @@ def game():
             print('nitem ', key[:2])
             if int(json_res[int(key[2])-1][str(key[:2])]) == int(val):
                 flash(u'Vc acertou, campeão!!!', 'error')
-                print('acertou '+key)
-                print('val', val)
-                print('digitado', json_res[int(key[2])-1][str(key[:2])])
+                # print('acertou '+key)
+                # print('val', val)
+                # print('digitado', json_res[int(key[2])-1][str(key[:2])])
             else:
-                print('errou '+key)
-                print('val', val)
-                print('digitado', json_res[int(key[2])-1][str(key[:2])])
+                flash(u'Vc errou, tente outra vez, campeão!!!', 'error')
+                # print('errou '+key)
+                # print('val', val)
+                # print('digitado', json_res[int(key[2])-1][str(key[:2])])
         return redirect("/")
     else:
         return render_template("game.html")
