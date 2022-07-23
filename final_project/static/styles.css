@@ -24,14 +24,14 @@ nav .navbar-brand .green
 
 .error {
     color: black;
-    background-color:red
+    background-color: rgba(201, 76, 76, 0.3);
 }
 
 .success {
     color: black;
-    background-color:green
+    background-color: rgba(76, 201, 76, 0.3);
 }
 
 .flahes {
-    
+
 }
