@@ -70,6 +70,7 @@ def game():
             #     # print('errou '+key)
             #     # print('val', val)
             #     # print('digitado', json_res[int(key[2])-1][str(key[:2])])
+        db.execute("UPDATE FROM current_games SET")
         print(dict_res)
         return redirect("/")
     else:
