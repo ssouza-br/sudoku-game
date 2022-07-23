@@ -91,9 +91,7 @@ def new():
         json_res = db.execute("SELECT * FROM new_games WHERE COD_MATRIZ= ?", numGame)
         if not db.execute("SELECT * FROM current_games WHERE COD_MATRIZ= ? AND USERS_ID = ?", numGame, session["user_id"]):
             for order in range(9):
-                db.execute("INSERT INTO current_games (USERS_ID, COD_MATRIZ, ORDEM, N1, N2, N3, N4, N5, N6, N7, N8, N9) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?),
-                    session["user_id"], numGame, json_res[order]['ORDEM'], json_res[order]['N1'], json_res[order]['N2'], json_res[order]['N3'], json_res[order]['N4'], json_res[order]['N5'],
-                       json_res[order]['N6'], json_res[order]['N7'], json_res[order]['N8'], json_res[order]['N9'])
+                db.execute("INSERT INTO current_games (USERS_ID, COD_MATRIZ, ORDEM, N1, N2, N3, N4, N5, N6, N7, N8, N9) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", session["user_id"], numGame, json_res[order]['ORDEM'], json_res[order]['N1'], json_res[order]['N2'], json_res[order]['N3'], json_res[order]['N4'], json_res[order]['N5'], json_res[order]['N6'], json_res[order]['N7'], json_res[order]['N8'], json_res[order]['N9'])
 
             # db.execute("INSERT INTO current_games (USERS_ID, COD_MATRIZ) VALUES (?, ?)", session["user_id"], numGame)
         print(json_res)
