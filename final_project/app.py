@@ -94,7 +94,7 @@ def new():
         print(json_res)
         # updating current games with new game
         for order in range(9):
-            db.execute("UPDATE current_games SET ORDEM=?, N1=?, N2=?, N3=?, N4=?, N5=?, N6=?, N7=?, N8=?, N9=? WHERE COD_MATRIZ= ? AND USERS_ID= ?",
+            db.execute("INSERT INTO current_games ORDEM=?, N1=?, N2=?, N3=?, N4=?, N5=?, N6=?, N7=?, N8=?, N9=? WHERE COD_MATRIZ= ? AND USERS_ID= ?",
                        json_res[order]['ORDEM'], json_res[order]['N1'], json_res[order]['N2'], json_res[order]['N3'], json_res[order]['N4'], json_res[order]['N5'],
                        json_res[order]['N6'], json_res[order]['N7'], json_res[order]['N8'], json_res[order]['N9'], session["user_id"], numGame)
 
