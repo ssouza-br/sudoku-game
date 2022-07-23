@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Buy
+{% endblock %}
+
+{% block main %}
+<form action="/game" method="post">
+    <style>
+        table { border-collapse: collapse; font-family: Calibri, sans-serif; font-size: 2em; align:center;}
+        colgroup, tbody { border: solid medium; }
+        td { border: solid thin; height: 1.4em; width: 1.4em; text-align: center; padding: 0; }
+        </style>
+        <table>
+        {% set column_list = ['N1','N2','N3','N4','N5','N6','N7','N8','N9'] %}
+          <caption>Sudoku of the day</caption>
+          <colgroup><col><col><col></colgroup>
+          <colgroup><col><col><col></colgroup>
+          <colgroup><col><col><col></colgroup>
+          <tbody>
+            {% for n in range(3) %}
+            <tr>
+                {% for i in range(9) %}
+                    {%if res[n][column_list[i]] == None %}
+                        <td><input type="number" name={{column_list[i] + (n+1)|string + (res[0]['COD_MATRIZ']) | string}} min="1" max="9"></td>
+                    {%else%}
+                        <td>{{res[n][column_list[i]]}}</td>
+                    {%endif%}
+                {% endfor %}
+            </tr>
+            {% endfor %}
+          <tbody>
+            {% for n in range(3,6) %}
+            <tr>
+                {% for i in range(9) %}
+                    {%if res[n][column_list[i]] == None %}
+                    <td><input type="number" name={{column_list[i] + (n+1)|string + (res[0]['COD_MATRIZ']) | string}} min="1" max="9"></td>
+                    {%else%}
+                        <td>{{res[n][column_list[i]]}}</td>
+                    {%endif%}
+                {% endfor %}
+            </tr>
+            {% endfor %}
+          <tbody>
+            {% for n in range(6,9) %}
+            <tr>
+                {% for i in range(9) %}
+                    {%if res[n][column_list[i]] == None %}
+                    <td><input type="number" name={{column_list[i] + (n+1)|string + (res[0]['COD_MATRIZ']) | string}} min="1" max="9"></td>
+                    {%else%}
+                        <td>{{res[n][column_list[i]]}}</td>
+                    {%endif%}
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+        <button class="btn btn-primary" type="submit">Check Game</button>
+</form>
+{% endblock %}
