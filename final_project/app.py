@@ -73,7 +73,7 @@ def game():
 
         for key in dict_res:
             if key!='game_number':
-                db.execute("UPDATE current_games SET {}=? WHERE ORDEM=? AND COD_MATRIZ=? AND USER_ID=?".format(
+                db.execute("UPDATE current_games SET {}=? WHERE ORDEM=? AND COD_MATRIZ=? AND USERS_ID=?".format(
                     key[:2]), key[2], dict_res[key], dict_res['game_number'], session["user_id"])
         print(dict_res)
         return redirect("/")
