@@ -51,6 +51,8 @@ def index():
 def game():
     if request.method == "POST":
         json_res = db.execute("SELECT * FROM answer_games WHERE COD_MATRIZ = 1")
+
+        
         print(json_res)
         for key, val in request.form.items():
             # print('ordem ', key[2])
