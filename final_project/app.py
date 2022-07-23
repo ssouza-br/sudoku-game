@@ -92,7 +92,7 @@ def new():
         level = request.form.get("level")
         numGame = request.form.get("#game")
         numGame = 1
-
+        life =3
         json_res = db.execute("SELECT * FROM new_games WHERE COD_MATRIZ= ?", numGame)
         if not db.execute("SELECT * FROM current_games WHERE COD_MATRIZ= ? AND USERS_ID = ?", numGame, session["user_id"]):
             for order in range(9):
@@ -100,7 +100,7 @@ def new():
 
         # updating current games with new game
         json_res = db.execute("SELECT * FROM current_games WHERE COD_MATRIZ= ? AND USERS_ID = ?", numGame, session["user_id"])
-        return render_template("game.html",res=json_res)
+        return render_template("game.html",res=json_res, opt=life)
 
     else:
         return render_template("new.html")
