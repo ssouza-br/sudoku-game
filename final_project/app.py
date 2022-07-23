@@ -72,7 +72,9 @@ def game():
             #     # print('digitado', json_res[int(key[2])-1][str(key[:2])])
 
         for key in dict_res:
-            db.execute("UPDATE current_games SET {}=? WHERE ORDEM=? AND COD_MATRIZ=? AND USER_ID".format('N1'), "KEY","VALUE" dict_res['game_number'], session["user_id"])
+            if key!='game_number':
+                db.execute("UPDATE current_games SET {}=? WHERE ORDEM=? AND COD_MATRIZ=? AND USER_ID=?".format(
+                    key[:2]), dict_res[key], dict_res['game_number'], session["user_id"])
         print(dict_res)
         return redirect("/")
     else:
