@@ -4,6 +4,8 @@
     Quote
 {% endblock %}
 
+{% block main %}
+
 {% with errors = get_flashed_messages(category_filter=["error"]) %}
 {% if errors %}
 <div class="alert-message block-message error">
@@ -17,10 +19,6 @@
 {% endif %}
 {% endwith %}
 
-{% block main %}
-{% set ns = namespace() %}
-{% set ns.last_cash = 0 %}
-
 
 <table class="table table-striped">
     <thead>
@@ -32,27 +30,5 @@
         </tr>
     </thead>
    <tbody>
-    <!-- {% for dict_res in res -%}
-    {% set total = dict_res['quantity'] * dict_res['price'] %}
-    {% set ns.last_cash = ns.last_cash + total %}
-            <tr>
-                <td class="text-start">{{dict_res['symbol']}}</td>
-                <td class="text-start">{{dict_res['name']}}</td>
-                <td class="text-end">{{dict_res['quantity']}}</td>
-                <td class="text-end">{{dict_res['price'] | usd}}</td>
-                <td class="text-end">{{total | usd}}</td>
-            </tr>
-    {% endfor %}
-    </tbody>
-    <tfoot>
-        <tr>
-            <td class="border-0 fw-bold text-end" colspan="4">Cash</td>
-            <td class="border-0 text-end">{{(10000 - ns.last_cash) | usd}}</td>
-        </tr>
-        <tr>
-            <td class="border-0 fw-bold text-end" colspan="4">TOTAL</td>
-            <td class="border-0 w-bold text-end">$10,000.00</td>
-        </tr>
-    </tfoot> -->
 </table>
 {% endblock %}
