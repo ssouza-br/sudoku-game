@@ -88,13 +88,17 @@ def new():
         numGame = 1
 
 
-        res = db.execute("SELECT * FROM new_games WHERE COD_MATRIZ= ?", numGame)
-        print(res)
-        # db.execute("INSERT INTO current_games (USERS_ID, COD_MATRIZ) VALUES (?, ?)",
-        #            session["user_id"], numGame)
-        db.execute("UPDATE current_games SET ORDEM=t2.ORDEM, N1=t2.N1, N2=t2.N2, N3=t2.N3, N4=t2.N4, N5=t2.N5, N1=t2.N6, N1=t2.N6, N7=t2.N7, N8=t2.N8, N9=t2.N9 FROM (SELECT ORDEM, N1, N2, N3, N4, N5, N6, N7, N8, N9 FROM new_games) as t2 WHERE COD_MATRIZ= 1 AND USERS_ID=8")
+        json_res = db.execute("SELECT * FROM new_games WHERE COD_MATRIZ= ?", numGame)
+        if not db.execute("SELECT * FROM current_games WHERE COD_MATRIZ= ? AND USERS_ID = ?", numGame, session["user_id"]):
+            db.execute("INSERT INTO current_games (USERS_ID, COD_MATRIZ) VALUES (?, ?)", session["user_id"], numGame)
 
-        return render_template("game.html",res=res)
+        # updating current games with new game
+        for order in range(9):
+            db.execute("UPDATE current_games SET (ORDEM, N1, N2, N3, N4, N5, N6, N7, N8, N9) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) WHERE COD_MATRIZ= ? AND USERS_ID= ?",
+                       json_res[order]['ordem'], json_res[order]['N1'], json_res[order]['N2'], json_res[order]['N3'], json_res[order]['N4'], json_res[order]['N5'],
+                       json_res[order]['N6'], json_res[order]['N7'], json_res[order]['N8'], json_res[order]['N9'], session["user_id"], numGame)
+
+        return render_template("game.html",res=json_res)
 
     else:
         return render_template("new.html")
