@@ -53,7 +53,9 @@ def game():
         json_res = db.execute("SELECT * FROM answer_games WHERE COD_MATRIZ = 1")
 
         print(json_res)
+        dict_res = {}
         for key, val in request.form.items():
+            dict_res[key]=val
             print(key, val)
             # print('ordem ', key[2])
             # print('nitem ', key[:2])
