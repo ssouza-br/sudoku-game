@@ -1,13 +1,4 @@
-
-
-
-CREATE TABLE transactions(
-    id           INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-    users_id    INTEGER NOT NULL,
-    symbol  TEXT NOT NULL,
-    name  TEXT NOT NULL,
-    price  NUMERIC NOT NULL,
-    quantity  INTEGER NOT NULL,
-    cash  NUMERIC NOT NULL,
-    time TEXT NOT NULL,
-    FOREIGN KEY(users_id) REFERENCES users(id));
+        db.execute("UPDATE current_games SET
+        (ORDEM = t2.ORDEM, N1 = t2.N1, N2 = t2.N2, N3 = t2.N3, N4 = t2.N4, N5 = t2.N5, N1 = t2.N6, N1 = t2.N6, N7 = t2.N7, N8 = t2.N8, N9 = t2.N9)
+        FROM (SELECT ORDEM, N1, N2, N3, N4, N5, N6, N7, N8, N9 FROM new_games WHERE )t2 WHERE COD_MATRIZ = ? AND USERS_ID = ?",
+                   session["user_id"], numGame)
