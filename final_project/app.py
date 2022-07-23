@@ -50,9 +50,6 @@ def index():
 @login_required
 def game():
     if request.method == "POST":
-        json_res = db.execute("SELECT * FROM answer_games WHERE COD_MATRIZ = 1")
-
-        print(json_res)
         dict_res = {}
         for key, val in request.form.items():
             dict_res[key]=val
@@ -74,9 +71,10 @@ def game():
         for key in dict_res:
             if key!='game_number':
                 db.execute("UPDATE current_games SET {}=? WHERE ORDEM=? AND COD_MATRIZ=? AND USERS_ID=?".format(
-                    key[:2]), dict_res[key], key[2],  dict_res['game_number'], session["user_id"])
+                    key[:2]), dict_res[key], key[2], dict_res['game_number'], session["user_id"])
+        json_res = db.execute( "SELECT * FROM current_games WHERE COD_MATRIZ = ? AND USERS_ID = ?", dict_res['game_number'], session["user_id"])
         print(dict_res)
-        return redirect("/")
+        return render_template("game.html", res=json_res)
     else:
         return render_template("game.html")
 
