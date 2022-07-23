@@ -53,8 +53,8 @@ def game():
         json_res = db.execute("SELECT * FROM answer_games WHERE COD_MATRIZ = 1")
         print(json_res)
         for key, val in request.form.items():
-            print('ordem ', key[2])
-            print('nitem ', key[:2])
+            # print('ordem ', key[2])
+            # print('nitem ', key[:2])
             if int(json_res[int(key[2])-1][str(key[:2])]) == int(val):
                 flash(u'Vc acertou, campeão!!!', 'error')
                 # print('acertou '+key)
