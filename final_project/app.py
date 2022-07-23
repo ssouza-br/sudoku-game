@@ -68,10 +68,17 @@ def game():
             #     # print('val', val)
             #     # print('digitado', json_res[int(key[2])-1][str(key[:2])])
 
+        json_answ = db.execute("SELECT * FROM current_games WHERE COD_MATRIZ = ? AND USERS_ID = ?",
+                               dict_res['game_number'], session["user_id"])
+
         for key in dict_res:
             if key!='game_number':
+                
                 db.execute("UPDATE current_games SET {}=? WHERE ORDEM=? AND COD_MATRIZ=? AND USERS_ID=?".format(
                     key[:2]), dict_res[key], key[2], dict_res['game_number'], session["user_id"])
+
+
+
         json_res = db.execute( "SELECT * FROM current_games WHERE COD_MATRIZ = ? AND USERS_ID = ?", dict_res['game_number'], session["user_id"])
         print(dict_res)
         return render_template("game.html", res=json_res)
