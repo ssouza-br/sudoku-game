@@ -70,15 +70,8 @@ def game():
 
         json_answ = db.execute("SELECT * FROM answer_games WHERE COD_MATRIZ = ?",
                                dict_res['game_number'])
-        # print(json_answ)
-        # print(json_answ[6])
-        # print(dict_res)
         for key in dict_res:
             if key!='game_number':
-                # print('part1a: ', int(key[2])-1)
-                # print('part2a:', str(key[:2]))
-                # print('part1:', json_answ[int(key[2])-1][str(key[:2])])
-                # print('part2:', int(dict_res[key]))
                 if int(json_answ[int(key[2])-1][str(key[:2])]) == int(dict_res[key]):
                     db.execute("UPDATE current_games SET {}=? WHERE ORDEM=? AND COD_MATRIZ=? AND USERS_ID=?".format(
                     key[:2]), dict_res[key], key[2], dict_res['game_number'], session["user_id"])
