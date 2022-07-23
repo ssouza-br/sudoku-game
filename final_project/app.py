@@ -91,7 +91,7 @@ def new():
         json_res = db.execute("SELECT * FROM new_games WHERE COD_MATRIZ= ?", numGame)
         if not db.execute("SELECT * FROM current_games WHERE COD_MATRIZ= ? AND USERS_ID = ?", numGame, session["user_id"]):
             db.execute("INSERT INTO current_games (USERS_ID, COD_MATRIZ) VALUES (?, ?)", session["user_id"], numGame)
-
+        print(json_res)
         # updating current games with new game
         for order in range(9):
             db.execute("UPDATE current_games SET ORDEM=?, N1=?, N2=?, N3=?, N4=?, N5=?, N6=?, N7=?, N8=?, N9=? WHERE COD_MATRIZ= ? AND USERS_ID= ?",
