@@ -54,6 +54,7 @@ def game():
 
 
 CREATE TABLE current_games(COD INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+                        users_id
                           COD_MATRIZ INTEGER NOT NULL,
                           ORDEM INTEGER NOT NULL,
                           N1 INTEGER,
