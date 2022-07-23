@@ -9,11 +9,9 @@
 {% set dict_cat = ({"error":"alert alert-danger","success": "alert alert-success"}) %}
 {% with messages = get_flashed_messages(with_categories=true) %}
   {% if messages %}
-    <ul class=flashes>
     {% for category, message in messages %}
       <li class="{{ dict_cat[category] }}">{{ message }}</li>
     {% endfor %}
-    </ul>
   {% endif %}
 {% endwith %}
 
