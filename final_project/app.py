@@ -87,6 +87,7 @@ def new():
         numGame = request.form.get("#game")
         numGame = 1
 
+
         res = db.execute("SELECT * FROM new_games WHERE COD_MATRIZ= ?", numGame)
         print(res)
         db.execute("INSERT INTO current_games(COD_MATRIZ, ORDEM, N1, N2, N3, N4, N5, N6, N7, N8, N9) SELECT COD_MATRIZ, ORDEM, N1, N2, N3, N4, N5, N6, N7, N8, N9 FROM new_games WHERE COD_MATRIZ = 1")
