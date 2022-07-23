@@ -90,8 +90,8 @@ def new():
 
         res = db.execute("SELECT * FROM new_games WHERE COD_MATRIZ= ?", numGame)
         print(res)
-        db.execute("INSERT INTO current_games (USERS_ID) VALUES (?)",
-                   session["user_id"])
+        db.execute("INSERT INTO current_games (USERS_ID, COD_MATRIZ) VALUES (?, ?)",
+                   session["user_id"], numGame)
         db.execute("INSERT INTO current_games(COD_MATRIZ, ORDEM, N1, N2, N3, N4, N5, N6, N7, N8, N9) SELECT COD_MATRIZ, ORDEM, N1, N2, N3, N4, N5, N6, N7, N8, N9 FROM new_games WHERE COD_MATRIZ = 1")
 
         return render_template("game.html",res=res)
