@@ -52,7 +52,22 @@ def game():
     if request.method == "POST":
         json_res = db.execute("SELECT * FROM answer_games WHERE COD_MATRIZ = 1")
 
-        
+
+CREATE TABLE current_games(COD INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+                          COD_MATRIZ INTEGER NOT NULL,
+                          ORDEM INTEGER NOT NULL,
+                          N1 INTEGER,
+                          N2 INTEGER,
+                          N3 INTEGER,
+                          N4 INTEGER,
+                          N5 INTEGER,
+                          N6 INTEGER,
+                          N7 INTEGER,
+                          N8 INTEGER,
+                          N9 INTEGER);
+
+
+
         print(json_res)
         for key, val in request.form.items():
             # print('ordem ', key[2])
