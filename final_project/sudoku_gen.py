@@ -26,6 +26,9 @@ print(lst)
 
 arr = np.array(list(str(generators.random_sudoku(avg_rank=150)))).reshape(9,9)
 lst2 = arr.tolist()
+
+ls2 = [lista[j] for j in range(9) for i in lista[j]]
+
 print(lst2)
 # lst = [int(ch) for ch in sudo]
 # sudo = list(sudo)
