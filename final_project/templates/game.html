@@ -5,10 +5,10 @@
 {% endblock %}
 
 {% block main %}
-<div>
-    <h6>Vida disponivel: <input type="number" name="life" value="{{opt}}" readonly></h6>
-</div>
 <form action="/game" method="post">
+    <div>
+        <h6>Vida disponivel: <input type="number" name="life" value="{{opt}}" readonly></h6>
+    </div>
     <style>
         table { border-collapse: collapse; font-family: Calibri, sans-serif; font-size: 2em; align:center;}
         colgroup, tbody { border: solid medium; }
