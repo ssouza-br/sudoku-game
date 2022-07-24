@@ -74,7 +74,6 @@ def game():
             return redirect("message.html")
 
         elif life <= 0:
-            print('eu entrei aqui')
             flash('Vc perdeu campeão!!!', 'error')
             return redirect("/")
 
