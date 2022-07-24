@@ -1,5 +1,6 @@
 from cs50 import SQL
 from dokusan import generators
+import numpy as np
 
 db = SQL("sqlite:///sudoku.db")
 
@@ -17,6 +18,7 @@ db = SQL("sqlite:///sudoku.db")
 
 for j in range(100):
     sudo = generators.random_sudoku(avg_rank=150)
+    sudo = np.array(list(sudo)).reshape(9,9)
     for i in range(9):
         db.execute("INSERT INTO answer_games(COD_MATRIZ, ORDEM, N1, N2, N3, N4, N5, N6, N7, N8, N9) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
                         j+1, i+1, sudo[i][0], sudo[i][1], sudo[i][2], sudo[i][3], sudo[i][4], sudo[i][5], sudo[i][6], sudo[i][7], sudo[i][8])
