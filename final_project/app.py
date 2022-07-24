@@ -70,7 +70,9 @@ def game():
                         life -= 1
                         finished = False
                 else:
-                    
+                    finished = False
+                    flash('Vc ganhou campeão!!!', 'error')
+
         if finished:
             flash('Vc ganhou campeão!!!', 'success')
             db.execute("DELETE FROM current_games WHERE USERS_ID = ? AND COD_MATRIZ = ?",
