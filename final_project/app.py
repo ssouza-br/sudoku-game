@@ -71,11 +71,11 @@ def game():
                         finished = False
         if finished:
             flash('Vc ganhou campeão!!!', 'success')
-            return redirect("/")
+            return render_template("/message.html")
 
         elif life <= 0:
             flash('Vc perdeu campeão!!!', 'error')
-            return redirect("/")
+            return render_template("/message.html")
 
         json_res = db.execute( "SELECT * FROM current_games WHERE COD_MATRIZ = ? AND USERS_ID = ?", dict_res['game_number'], session["user_id"])
         print(dict_res)
