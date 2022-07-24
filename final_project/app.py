@@ -71,7 +71,7 @@ def game():
                         finished = False
         if finished:
             flash('Vc ganhou campeão!!!', 'success')
-        if life < 0:
+        if life <= 0:
             flash('Vc perdeu campeão!!!', 'error')
 
         json_res = db.execute( "SELECT * FROM current_games WHERE COD_MATRIZ = ? AND USERS_ID = ?", dict_res['game_number'], session["user_id"])
