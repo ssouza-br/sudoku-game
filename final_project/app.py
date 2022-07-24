@@ -71,7 +71,7 @@ def game():
                         finished = False
                 else:
                     finished = False
-                    flash('Vc ganhou campeão!!!', 'error')
+                    flash('Vc precisa!!!', 'error')
 
         if finished:
             flash('Vc ganhou campeão!!!', 'success')
