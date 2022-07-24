@@ -70,12 +70,15 @@ def game():
                         life -= 1
                         finished = False
         if finished:
-            flash(u'Vc ganhou campeão!!!', 'success')
+            flash('Vc ganhou campeão!!!', 'success')
+            db.execute("DELETE FROM current_games WHERE USERS_ID = ? AND COD_MATRIZ = ?",
+                       session["user_id"], dict_res['game_number'])
             return redirect("/")
 
         elif life <= 0:
             flash('Vc perdeu campeão!!!', 'error')
-            db.execute("DELETE FROM current_games WHERE USERS_ID = ? AND COD_MATRIZ = ?", )
+            db.execute("DELETE FROM current_games WHERE USERS_ID = ? AND COD_MATRIZ = ?",
+                       session["user_id"], dict_res['game_number'])
             return redirect("/")
 
         json_res = db.execute( "SELECT * FROM current_games WHERE COD_MATRIZ = ? AND USERS_ID = ?", dict_res['game_number'], session["user_id"])
