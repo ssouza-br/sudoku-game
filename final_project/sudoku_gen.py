@@ -17,8 +17,8 @@ db = SQL("sqlite:///sudoku.db")
 #         [9, 7, 8,  3, 1, 2,  6, 4, 5]]
 
 sudo = generators.random_sudoku(avg_rank=150)
-sudo = np.array(list(str(sudo)))
-sudo = np.array([int(num) for num in sudo]).reshape(9,9)
+sudo = list(str(sudo))
+sudo = [int(num) for num in sudo]
 print(sudo)
 print(sudo[0][0])
 print(sudo[0][8])
