@@ -16,7 +16,7 @@ sudo = [[1, 2, 3,  4, 5, 6,  7, 8, 9],
         [6, 4, 5,  9, 7, 8,  3, 1, 2],
         [9, 7, 8,  3, 1, 2,  6, 4, 5]]
 
-print(sudo)
+print(type(sudo))
 
 # sudo = generators.random_sudoku(avg_rank=150)
 
