@@ -76,6 +76,7 @@ def game():
             flash('Vc ganhou campeão!!!', 'success')
             db.execute("DELETE FROM current_games WHERE USERS_ID = ? AND COD_MATRIZ = ?",
                        session["user_id"], dict_res['game_number'])
+            db.execute("")
             return redirect("/")
 
         elif life <= 0:
