@@ -18,11 +18,15 @@ sudo = [[1, 2, 3,  4, 5, 6,  7, 8, 9],
 
 print(type(sudo))
 
-# sudo = generators.random_sudoku(avg_rank=150)
 
+sudo = generators.random_sudoku(avg_rank=150)
+lst = list(str(generators.random_sudoku(avg_rank=150)))
+print(lst)
 # print(np.array([[1,2,3],[4,5,6]]))
 
-#arr = np.array(list(str(generators.random_sudoku(avg_rank=150)))).reshape(9,9)
+arr = np.array(list(str(generators.random_sudoku(avg_rank=150)))).reshape(9,9)
+arr.to_list()
+print(arr)
 # lst = [int(ch) for ch in sudo]
 # sudo = list(sudo)
 #sudo = [int(num) for num in sudo].reshape(9,9)
