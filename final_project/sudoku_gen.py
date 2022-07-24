@@ -27,9 +27,12 @@ print(lst)
 arr = np.array(list(str(generators.random_sudoku(avg_rank=150)))).reshape(9,9)
 lst2 = arr.tolist()
 
-ls2 = ['' if lst2[i][j] == 0 else lst2[i][j] for j in range(9) for i in range(9)]
+ls2 = ['' if lst2[i][j] == '0' else lst2[i][j] for j in range(9) for i in range(9)]
 print(ls2)
 
+# arr = np.array(list(str(generators.random_sudoku(avg_rank=150))))
+
+# ls2 = [if arr[i]=='0']
 # [entry for tag in tags for entry in entries if tag in entry]
 
 # print(lst2)
