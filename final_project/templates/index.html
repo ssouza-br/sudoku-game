@@ -3,10 +3,8 @@
 {% block title %}
     Quote
 {% endblock %}
-
-{% block main %}
-
 {% set dict_cat = ({"error":"alert alert-danger","success": "alert alert-success"}) %}
+
 {% with messages = get_flashed_messages(with_categories=true) %}
   {% if messages %}
     {% for category, message in messages %}
@@ -15,7 +13,7 @@
   {% endif %}
 {% endwith %}
 
-
+{% block main %}
 <table class="table table-striped">
     <thead>
         <tr>
