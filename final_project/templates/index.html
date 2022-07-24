@@ -6,6 +6,16 @@
 
 {% block main %}
 
+<%- if flash.any? %>
+  <%- flash.keys.each do |flash_key| %>
+    <%- next if flash_key.to_s == 'timedout' %>
+    <div class="alert-message <%= flash_key %>">
+      <a class="close" data-dismiss="alert" href="#"> x</a>
+      <%= flash.discard(flash_key) %>
+    </div>
+  <%- end %>
+<%- end %>
+
 {% set dict_cat = ({"error":"alert alert-danger","success": "alert alert-success"}) %}
 {% with messages = get_flashed_messages(with_categories=true) %}
   {% if messages %}
