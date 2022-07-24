@@ -71,7 +71,7 @@ def game():
                         finished = False
         if finished:
             flash(u'Vc ganhou campeão!!!', 'success')
-            return redirect("message.html")
+            return redirect("/")
 
         elif life <= 0:
             flash('Vc perdeu campeão!!!', 'error')
