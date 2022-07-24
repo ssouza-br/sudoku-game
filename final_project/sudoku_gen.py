@@ -1,7 +1,7 @@
 from cs50 import SQL
-from dokusan import generator
+from dokusan import generators
 
-arr = generator.random_sudoku(avg_rank=150)
+arr = generators.random_sudoku(avg_rank=150)
 print(arr)
 db = SQL("sqlite:///sudoku.db")
 
