@@ -19,16 +19,20 @@ db = SQL("sqlite:///sudoku.db")
 # print(type(sudo))
 
 
-sudo = generators.random_sudoku(avg_rank=150)
-lst = list(str(generators.random_sudoku(avg_rank=150)))
-print(lst)
-# print(np.array([[1,2,3],[4,5,6]]))
+# sudo = generators.random_sudoku(avg_rank=150)
+# lst = list(str(generators.random_sudoku(avg_rank=150)))
+# print(lst)
+# # print(np.array([[1,2,3],[4,5,6]]))
 
-arr = np.array(list(str(generators.random_sudoku(avg_rank=150)))).reshape(9,9)
-lst2 = arr.tolist()
+# arr = np.array(list(str(generators.random_sudoku(avg_rank=150)))).reshape(9,9)
+# lst2 = arr.tolist()
 
-ls2 = ['' if lst2[i][j] == '0' else lst2[i][j] for j in range(9) for i in range(9)]
-print(ls2)
+# ls2 = ['' if lst2[i][j] == '0' else lst2[i][j] for j in range(9) for i in range(9)]
+# print(ls2)
+
+sudo = np.array(list(str(generators.random_sudoku(avg_rank=150)))).reshape(9, 9)
+sudo = sudo.tolist()
+sudo = ['' if sudo[i][j] == '0' else sudo[i][j] for j in range(9) for i in range(9)]
 
 # arr = np.array(list(str(generators.random_sudoku(avg_rank=150))))
 
@@ -47,7 +51,7 @@ print(ls2)
 for j in range(10):
     sudo = np.array(list(str(generators.random_sudoku(avg_rank=150)))).reshape(9, 9)
     sudo = sudo.tolist()
-    sudo = ['' if lst2[i][j] == '0' else lst2[i][j] for j in range(9) for i in range(9)]
+    sudo = ['' if sudo[i][j] == '0' else sudo[i][j] for j in range(9) for i in range(9)]
     print(sudo)
     for i in range(9):
         db.execute("INSERT INTO new_games (COD_MATRIZ, ORDEM, N1, N2, N3, N4, N5, N6, N7, N8, N9) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", j+1, i+1, sudo[i][0], sudo[i][1], sudo[i][2], sudo[i][3], sudo[i][4], sudo[i][5], sudo[i][6], sudo[i][7], sudo[i][8])
