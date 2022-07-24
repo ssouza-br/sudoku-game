@@ -74,7 +74,7 @@ def game():
             return redirect("message.html")
 
         elif life <= 0:
-            flash(u'Vc perdeu campeão!!!', 'error')
+            flash('Vc perdeu campeão!!!', 'error')
             return redirect("/")
 
         json_res = db.execute( "SELECT * FROM current_games WHERE COD_MATRIZ = ? AND USERS_ID = ?", dict_res['game_number'], session["user_id"])
