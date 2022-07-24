@@ -34,6 +34,9 @@ nav .navbar-brand .green
     padding:10px;
 }
 
-.flashes {
-    list-style-type: none;
-}
+form input {
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid #fff;
+    outline: none;
+  }
