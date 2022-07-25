@@ -59,8 +59,11 @@ def game():
         finished = True
         life = int(dict_res['life'])
         for key in dict_res:
+            print('key: ', key)
+            print('dict[key]: ', dict_res[key])
             if key!='game_number' and key!='life':
                 if dict_res[key]!='':
+                    print('eu passei aqui', dict_res[key])
                     if int(json_answ[int(key[2])-1][str(key[:2])]) == int(dict_res[key]):
                         db.execute("UPDATE current_games SET {}=? WHERE ORDEM=? AND COD_MATRIZ=? AND USERS_ID=?".format(
                         key[:2]), dict_res[key], key[2], dict_res['game_number'], session["user_id"])
