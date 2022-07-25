@@ -22,8 +22,8 @@ nav .navbar-brand .green
     color: #2e944b;
 }
 .top{
-    display:inline;
-    margin-bottom: 
+    display:inline-block;
+    margin-bottom: 10px;
 }
 .inputed{
     color: gray;
