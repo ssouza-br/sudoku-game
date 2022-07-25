@@ -37,7 +37,7 @@
         {% for n in range(3,6) %}
         <tr>
             {% for i in range(9) %}
-                {%if res[n][column_list[i]] == None %}
+                {%if res[n][column_list[i]] == None or res[n][column_list[i]] == ''%}
                 <td><input type="number" name={{column_list[i] + (n+1)|string + (res[0]['COD_MATRIZ']) | string}} min="1" max="9"></td>
                 {%else%}
                     <td>{{res[n][column_list[i]]}}</td>
