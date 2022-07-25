@@ -28,7 +28,7 @@ for j in range(10):
     sudo_new = generators.random_sudoku(avg_rank=150)
     sudo = sudo_to_list(sudo_new)
 
-    sudo_answer = solvers.backtrack(sudo)
+    sudo_answer = solvers.backtrack(sudo_new)
     sudo_a = sudo_to_list(sudo_answer)
 
     for i in range(9):
