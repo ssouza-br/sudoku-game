@@ -117,7 +117,10 @@ def new():
         return render_template("game.html",res=json_res, opt=life)
 
     else:
-        return render_template("new.html")
+        game_lst = db.execute("SELECT DISTINCT(COD_MATRIZ) FROM new_games")
+        game_lst = [int(dict_res['COD_MATRIZ']) for dict_res in game_lst]
+        print(game_lst)
+        return render_template("new.html",game_lst=game_lst)
 
 
 @app.route("/login", methods=["GET", "POST"])
