@@ -7,8 +7,8 @@
 {% block main %}
 <form action="/game" method="post">
     <div>
-        <h4 class="top">Vida disponivel: <input type="number" name="life" value="{{opt}}" readonly></h4>
-        <h4 class="top">Game number: <input type="number" name="game_number" value="{{res[0]['COD_MATRIZ']}}" readonly></h4>
+        <h4 class="inp_head">Vida disponivel: <input class="inp_fixed" type="number" name="life" value="{{opt}}" readonly></h4>
+        <h4 class="inp_head">Game number: <input class="inp_fixed" type="number" name="game_number" value="{{res[0]['COD_MATRIZ']}}" readonly></h4>
     </div>
     <table>
     {% set column_list = ['N1','N2','N3','N4','N5','N6','N7','N8','N9'] %}
