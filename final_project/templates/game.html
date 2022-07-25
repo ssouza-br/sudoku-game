@@ -6,9 +6,9 @@
 
 {% block main %}
 <form action="/game" method="post">
-    <div class=""top">
-        <h4>Vida disponivel: <input type="number" name="life" value="{{opt}}" readonly></h4>
-        <h4>Game number: <input type="number" name="game_number" value="{{res[0]['COD_MATRIZ']}}" readonly></h4>
+    <div>
+        <h4 class="top">Vida disponivel: <input type="number" name="life" value="{{opt}}" readonly></h4>
+        <h4 class="top">Game number: <input type="number" name="game_number" value="{{res[0]['COD_MATRIZ']}}" readonly></h4>
     </div>
     <style>
         table { border-collapse: collapse; font-family: Calibri, sans-serif; font-size: 2em; align:center;  margin-left: auto;
