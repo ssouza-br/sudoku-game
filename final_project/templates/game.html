@@ -7,13 +7,15 @@
 {% block main %}
 <form action="/game" method="post">
     <div>
-        <h6>Vida disponivel: <input type="number" name="life" value="{{opt}}" readonly></h6>
-        <h6>Game number: <input type="number" name="game_number" value="{{res[0]['COD_MATRIZ']}}" readonly></h6>
+        <h4>Vida disponivel: <input type="number" name="life" value="{{opt}}" readonly></h4>
+        <h4>Game number: <input type="number" name="game_number" value="{{res[0]['COD_MATRIZ']}}" readonly></h4>
     </div>
     <style>
-        table { border-collapse: collapse; font-family: Calibri, sans-serif; font-size: 2em; align:center;}
+        table { border-collapse: collapse; font-family: Calibri, sans-serif; font-size: 2em; align:center;  margin-left: auto;
+  margin-right: auto}
         colgroup, tbody { border: solid medium; }
         td { border: solid thin; height: 1.4em; width: 1.4em; text-align: center; padding: 0; }
+        button {margin-top:10px;}
     </style>
 
     <table>
