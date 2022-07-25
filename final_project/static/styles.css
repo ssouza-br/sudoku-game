@@ -21,7 +21,9 @@ nav .navbar-brand .green
 {
     color: #2e944b;
 }
-
+.inputed{
+    color: gray;
+}
 .error {
     color: black;
     background-color: rgba(201, 76, 76, 0.3);
