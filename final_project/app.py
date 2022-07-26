@@ -106,6 +106,7 @@ def new():
     if request.method == "POST":
         level = request.form.get("level")
         numGame = request.form.get("#game")
+        if numGame
         life =3
         json_res = db.execute("SELECT * FROM new_games WHERE COD_MATRIZ= ?", numGame)
         if not db.execute("SELECT * FROM current_games WHERE COD_MATRIZ= ? AND USERS_ID = ?", numGame, session["user_id"]):
