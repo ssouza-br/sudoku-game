@@ -72,7 +72,12 @@
 
 <script>
   function org_reg_submit(){
-        document.getElementsByClassName("inp_head").style.backgroundColor = 'red';
+    var galleries = document.getElementsByClassName("tst");
+    var len =  galleries.length;
+
+    for(var i=0 ; i<len; i++){
+    galleries[i].style.backgroundColor="blue";
+    }
 }
 </script>
 
