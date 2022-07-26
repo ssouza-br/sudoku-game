@@ -41,7 +41,7 @@ def after_request(response):
 def index():
     """Show portfolio of stocks"""
     # hist = db.execute(
-    #     "SELECT symbol, name, SUM(quantity) as quantity, price, cash FROM transactions WHERE users_id = ? GROUP BY name ORDER BY time ASC", session["user_id"])
+    #     "SELECT symbol, name, SUM(quantity) as quantity, price, cash FROM transactions WHERE users_id = ? GROUP BY name line BY time ASC", session["user_id"])
     # print(hist)
     return render_template("index.html")
 
@@ -109,9 +109,10 @@ def new():
         json_res = db.execute("SELECT * FROM new_games WHERE GAME_NUMBER= ?", numGame)
         if not db.execute("SELECT * FROM current_games WHERE GAME_NUMBER= ? AND USERS_ID = ?", numGame, session["user_id"]):
             life = 3
-            for order in range(9):
-                db.execute("INSERT INTO current_games (USERS_ID, GAME_NUMBER, LINE, COL1, COL2, COL3, COL4, COL5, COL6, COL7, COL8, COL9) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", session["user_id"], numGame, json_res[order][
-                           'LINE'], json_res[order]['N1'], json_res[order]['N2'], json_res[order]['N3'], json_res[order]['N4'], json_res[order]['N5'], json_res[order]['N6'], json_res[order]['N7'], json_res[order]['N8'], json_res[order]['N9'])
+            for line in range(9):
+                db.execute("INSERT INTO current_games (USERS_ID, GAME_NUMBER, LINE, COL1, COL2, COL3, COL4, COL5, COL6, COL7, COL8, COL9) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+                session["user_id"], numGame, json_res[line]['LINE'], json_res[line]['COL1'], json_res[line]['COL2'], json_res[line]['COL3'], json_res[line]['COL4'], json_res[line]['COL5'],
+                json_res[line]['COL6'], json_res[line]['COL7'], json_res[line]['COL8'], json_res[line]['COL9'])
             json_res = db.execute("SELECT * FROM current_games WHERE GAME_NUMBER= ? AND USERS_ID = ?", numGame, session["user_id"])
             return render_template("game.html", res=json_res, opt=life)
         else:
