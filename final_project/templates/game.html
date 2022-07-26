@@ -67,10 +67,13 @@
 </form>
 
 <script>
-    document.querySelector('.inputed').onclick = function() {
+    let deleteLink = document.querySelector('.inputed');
+
+    deleteLink.addEventListener('click', function(event) {
+        event.preventDefault();
         document.getElementsByClassName('inputed').style.backgroundColor = 'red';
-        alert('Incorrect');
-    }
+});
+
 </script>
 
 {% endblock %}
