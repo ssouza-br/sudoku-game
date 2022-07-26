@@ -72,8 +72,9 @@
 
     var galleries = document.getElementsByClassName("tst");
     var len =  galleries.length;
+    const val = document.querySelector('input').onclick();
     console.log(len);
-    console.log(galleries[1].value);
+    console.log(val);
 
     for(var i=0 ; i<len; i++){
     galleries[i].style.backgroundColor="blue";
