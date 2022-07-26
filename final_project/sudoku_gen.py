@@ -32,6 +32,6 @@ for j in range(10):
     sudo_a = sudo_to_list(sudo_answer)
 
     for i in range(9):
-        db.execute("INSERT INTO new_games (COD_MATRIZ, ORDEM, N1, N2, N3, N4, N5, N6, N7, N8, N9) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", j+1, i+1, sudo[i][0], sudo[i][1], sudo[i][2], sudo[i][3], sudo[i][4], sudo[i][5], sudo[i][6], sudo[i][7], sudo[i][8])
-        db.execute("INSERT INTO answer_games (COD_MATRIZ, ORDEM, N1, N2, N3, N4, N5, N6, N7, N8, N9) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", j+1, i+1, sudo_a[i][0], sudo_a[i][1], sudo_a[i][2], sudo_a[i][3], sudo_a[i][4], sudo_a[i][5], sudo_a[i][6], sudo_a[i][7], sudo_a[i][8])
+        db.execute("INSERT INTO new_games (GAME_NUMBER, LINE, N1, N2, N3, N4, N5, N6, N7, N8, N9) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", j+1, i+1, sudo[i][0], sudo[i][1], sudo[i][2], sudo[i][3], sudo[i][4], sudo[i][5], sudo[i][6], sudo[i][7], sudo[i][8])
+        db.execute("INSERT INTO answer_games (GAME_NUMBER, LINE, N1, N2, N3, N4, N5, N6, N7, N8, N9) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", j+1, i+1, sudo_a[i][0], sudo_a[i][1], sudo_a[i][2], sudo_a[i][3], sudo_a[i][4], sudo_a[i][5], sudo_a[i][6], sudo_a[i][7], sudo_a[i][8])
     print('jogo: ', j, 'salvo no banco')
