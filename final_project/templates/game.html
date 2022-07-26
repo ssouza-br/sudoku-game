@@ -69,10 +69,9 @@
 
 <script>
   function org_reg_submit(){
-
-    var galleries = document.getElementsByClassName("8");
-    var len =  galleries.length;
     const val = document.querySelector('input').value;
+    var galleries = document.getElementsByClassName(val);
+    var len =  galleries.length;
     console.log(len);
     console.log(val);
     for(var i=0 ; i<len; i++){
