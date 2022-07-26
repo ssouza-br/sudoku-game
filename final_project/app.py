@@ -54,7 +54,7 @@ def game():
         for key, val in request.form.items():
             dict_res[key]=val
 
-        json_answ = db.execute("SELECT * FROM answer_games WHERE COD_MATRIZ = ?",
+        json_answ = db.execute("SELECT * FROM answer_games WHERE GAME_NUMBER = ?",
                                dict_res['game_number'])
         finished = True
         life = int(dict_res['life'])
@@ -65,10 +65,10 @@ def game():
                 if dict_res[key]!='':
                     print('eu passei aqui', dict_res[key])
                     if int(json_answ[int(key[2])-1][str(key[:2])]) == int(dict_res[key]):
-                        db.execute("UPDATE current_games SET {}=? WHERE ORDEM=? AND COD_MATRIZ=? AND USERS_ID=?".format(
+                        db.execute("UPDATE current_games SET {}=? WHERE LINE=? AND GAME_NUMBER=? AND USERS_ID=?".format(
                         key[:2]), dict_res[key], key[2], dict_res['game_number'], session["user_id"])
                     else:
-                        db.execute("UPDATE current_games SET {}=NULL WHERE ORDEM=? AND COD_MATRIZ=? AND USERS_ID=?".format(
+                        db.execute("UPDATE current_games SET {}=NULL WHERE LINE=? AND GAME_NUMBER=? AND USERS_ID=?".format(
                             key[:2]), key[2], dict_res['game_number'], session["user_id"])
                         life -= 1
                         finished = False
@@ -77,17 +77,17 @@ def game():
 
         if finished:
             flash('Vc ganhou campeão!!!', 'success')
-            db.execute("DELETE FROM current_games WHERE USERS_ID = ? AND COD_MATRIZ = ?",
+            db.execute("DELETE FROM current_games WHERE USERS_ID = ? AND GAME_NUMBER = ?",
                        session["user_id"], dict_res['game_number'])
             return redirect("/")
 
         elif life <= 0:
             flash('Vc perdeu campeão!!!', 'error')
-            db.execute("DELETE FROM current_games WHERE USERS_ID = ? AND COD_MATRIZ = ?",
+            db.execute("DELETE FROM current_games WHERE USERS_ID = ? AND GAME_NUMBER = ?",
                        session["user_id"], dict_res['game_number'])
             return redirect("/")
 
-        json_res = db.execute( "SELECT * FROM current_games WHERE COD_MATRIZ = ? AND USERS_ID = ?", dict_res['game_number'], session["user_id"])
+        json_res = db.execute( "SELECT * FROM current_games WHERE GAME_NUMBER = ? AND USERS_ID = ?", dict_res['game_number'], session["user_id"])
         print(dict_res)
         return render_template("game.html", res=json_res, opt=life)
     else:
@@ -106,12 +106,13 @@ def new():
     if request.method == "POST":
         level = request.form.get("level")
         numGame = request.form.get("#game")
-        json_res = db.execute("SELECT * FROM new_games WHERE COD_MATRIZ= ?", numGame)
-        if not db.execute("SELECT * FROM current_games WHERE COD_MATRIZ= ? AND USERS_ID = ?", numGame, session["user_id"]):
+        json_res = db.execute("SELECT * FROM new_games WHERE GAME_NUMBER= ?", numGame)
+        if not db.execute("SELECT * FROM current_games WHERE GAME_NUMBER= ? AND USERS_ID = ?", numGame, session["user_id"]):
             life = 3
             for order in range(9):
-                db.execute("INSERT INTO current_games (USERS_ID, COD_MATRIZ, ORDEM, N1, N2, N3, N4, N5, N6, N7, N8, N9) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", session["user_id"], numGame, json_res[order]['ORDEM'], json_res[order]['N1'], json_res[order]['N2'], json_res[order]['N3'], json_res[order]['N4'], json_res[order]['N5'], json_res[order]['N6'], json_res[order]['N7'], json_res[order]['N8'], json_res[order]['N9'])
-            json_res = db.execute("SELECT * FROM current_games WHERE COD_MATRIZ= ? AND USERS_ID = ?", numGame, session["user_id"])
+                db.execute("INSERT INTO current_games (USERS_ID, GAME_NUMBER, LINE, COL1, COL2, COL3, COL4, COL5, COL6, COL7, COL8, COL9) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", session["user_id"], numGame, json_res[order][
+                           'LINE'], json_res[order]['N1'], json_res[order]['N2'], json_res[order]['N3'], json_res[order]['N4'], json_res[order]['N5'], json_res[order]['N6'], json_res[order]['N7'], json_res[order]['N8'], json_res[order]['N9'])
+            json_res = db.execute("SELECT * FROM current_games WHERE GAME_NUMBER= ? AND USERS_ID = ?", numGame, session["user_id"])
             return render_template("game.html", res=json_res, opt=life)
         else:
             flash('vc já criou esse game amigão','error')
@@ -120,8 +121,8 @@ def new():
 
 
     else:
-        game_lst = db.execute("SELECT DISTINCT(COD_MATRIZ) FROM new_games")
-        game_lst = [int(dict_res['COD_MATRIZ']) for dict_res in game_lst]
+        game_lst = db.execute("SELECT DISTINCT(GAME_NUMBER) FROM new_games")
+        game_lst = [int(dict_res['GAME_NUMBER']) for dict_res in game_lst]
         print(game_lst)
         return render_template("new.html",game_lst=game_lst)
 
