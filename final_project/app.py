@@ -71,7 +71,7 @@ def game():
                         key[:2]), dict_res[key], key[2], dict_res['game_number'], session["user_id"])
                     else:
                         life -= 1
-                        db.execute("UPDATE current_games SET {}=NULL WHERE LINE=? AND GAME_NUMBER=? AND USERS_ID=?".format(
+                        db.execute("UPDATE current_games SET {}=NULL, GAME_LIFE=? WHERE LINE=? AND GAME_NUMBER=? AND USERS_ID=?".format(
                             key[:2]), key[2], dict_res['game_number'], session["user_id"])
                         finished = False
                 else:
