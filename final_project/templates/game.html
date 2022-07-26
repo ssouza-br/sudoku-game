@@ -31,7 +31,7 @@
                 {%if res[n][column_list[i]] == None or res[n][column_list[i]] == '' %}
                     <td><input type="number" name={{column_list[i] + (n+1)|string + (res[0]['GAME_NUMBER']) | string}} min="1" max="9"></td>
                 {%else%}
-                    <td id="tst" onclick="org_reg_submit()">{{res[n][column_list[i]]}}</td>
+                    <td class="tst" onclick="org_reg_submit()">{{res[n][column_list[i]]}}</td>
                 {%endif%}
             {% endfor %}
         </tr>
@@ -43,7 +43,7 @@
                 {%if res[n][column_list[i]] == None or res[n][column_list[i]] == '' %}
                 <td><input type="number" name={{column_list[i] + (n+1)|string + (res[0]['GAME_NUMBER']) | string}} min="1" max="9"></td>
                 {%else%}
-                    <td id="tst" onclick="org_reg_submit()">{{res[n][column_list[i]]}}</td>
+                    <td class="tst" onclick="org_reg_submit()">{{res[n][column_list[i]]}}</td>
                 {%endif%}
             {% endfor %}
         </tr>
@@ -55,7 +55,7 @@
                 {%if res[n][column_list[i]] == None or res[n][column_list[i]] == '' %}
                 <td><input type="number" name={{column_list[i] + (n+1)|string + (res[0]['GAME_NUMBER']) | string}} min="1" max="9"></td>
                 {%else%}
-                    <td id="tst" onclick="org_reg_submit()">{{res[n][column_list[i]]}}</td>
+                    <td class="tst" onclick="org_reg_submit()">{{res[n][column_list[i]]}}</td>
                 {%endif%}
             {% endfor %}
         </tr>
@@ -72,7 +72,7 @@
 
 <script>
   function org_reg_submit(){
-        document.getElementById("tst").style.backgroundColor = 'red';
+        document.getElementByClassName("tst").style.backgroundColor = 'red';
 }
 </script>
 
