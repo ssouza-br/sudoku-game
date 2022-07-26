@@ -111,6 +111,7 @@ def new():
         json_res = db.execute("SELECT * FROM new_games WHERE GAME_NUMBER= ?", numGame)
         if not db.execute("SELECT * FROM current_games WHERE GAME_NUMBER= ? AND USERS_ID = ?", numGame, session["user_id"]):
             for line in range(9):
+                # updating current games with new games
                 db.execute("INSERT INTO current_games (USERS_ID, GAME_NUMBER, GAME_LIFE, LINE, COL1, COL2, COL3, COL4, COL5, COL6, COL7, COL8, COL9) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
                 session["user_id"], numGame, LIFE, json_res[line]['LINE'], json_res[line]['COL1'], json_res[line]['COL2'], json_res[line]['COL3'], json_res[line]['COL4'], json_res[line]['COL5'],
                 json_res[line]['COL6'], json_res[line]['COL7'], json_res[line]['COL8'], json_res[line]['COL9'])
@@ -120,7 +121,6 @@ def new():
             flash('vc já criou esse game amigão','error')
             json_res = db.execute("SELECT * FROM current_games WHERE GAME_NUMBER= ? AND USERS_ID = ?", numGame, session["user_id"])
             return render_template("game.html", res=json_res, opt=json_res[0]['GAME_LIFE'])
-        # updating current games with new game
     else:
         game_lst = db.execute("SELECT DISTINCT(GAME_NUMBER) FROM new_games")
         game_lst = [int(dict_res['GAME_NUMBER']) for dict_res in game_lst]
