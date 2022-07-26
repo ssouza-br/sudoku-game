@@ -43,7 +43,7 @@
                 {%if res[n][column_list[i]] == None or res[n][column_list[i]] == '' %}
                 <td><input type="number" name={{column_list[i] + (n+1)|string + (res[0]['GAME_NUMBER']) | string}} min="1" max="9"></td>
                 {%else%}
-                    <td class="tst" onclick="org_reg_submit()">{{res[n][column_list[i]]}}</td>
+                    <td class="tst"><input type="number" name={{column_list[i] + (n+1)|string + (res[0]['GAME_NUMBER']) | string}} value="{{res[n][column_list[i]]}}" min="1" max="9" onclick="org_reg_submit()" readonly></td>
                 {%endif%}
             {% endfor %}
         </tr>
