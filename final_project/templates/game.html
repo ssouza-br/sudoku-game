@@ -64,15 +64,16 @@
     <div>
         <button class="btn btn-primary" type="submit">Check Game</button>
     </div>
+    <div>
+        <input type="button"  value="Register" id="org_reg_submit_button" class="reg_input" maxlength="100" onclick="org_reg_submit()">
+    </div>
 </form>
 
+
 <script>
-    let deleteLink = document.querySelector('.inp_head');
-
-    deleteLink.addEventListener('click',function org_reg_submit() {
+  function org_reg_submit(){
         document.getElementsByClassName('inp_head').style.backgroundColor = 'red';
-});
-
+}
 </script>
 
 {% endblock %}
