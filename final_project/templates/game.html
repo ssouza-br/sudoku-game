@@ -69,6 +69,9 @@
 
 {% block javascript %}
 	<script>
-
+        document.querySelector('#egg').onclick = function() {
+            document.getElementById("egg").style.backgroundColor = 'red';
+            alert('Incorrect');
+        }
     </script>
 {% endblock %}
