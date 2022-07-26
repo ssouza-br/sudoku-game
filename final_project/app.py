@@ -115,13 +115,12 @@ def new():
                 session["user_id"], numGame, LIFE, json_res[line]['LINE'], json_res[line]['COL1'], json_res[line]['COL2'], json_res[line]['COL3'], json_res[line]['COL4'], json_res[line]['COL5'],
                 json_res[line]['COL6'], json_res[line]['COL7'], json_res[line]['COL8'], json_res[line]['COL9'])
             json_res = db.execute("SELECT * FROM current_games WHERE GAME_NUMBER= ? AND USERS_ID = ?", numGame, session["user_id"])
-            return render_template("game.html", res=json_res)
+            return render_template("game.html", res=json_res, opt=LIFE)
         else:
             flash('vc já criou esse game amigão','error')
-            return render_template("game.html", res=json_res, opt=life)
+            json_res = db.execute("SELECT * FROM current_games WHERE GAME_NUMBER= ? AND USERS_ID = ?", numGame, session["user_id"])
+            return render_template("game.html", res=json_res, opt=json_res[0]['GAME_LIFE'])
         # updating current games with new game
-
-
     else:
         game_lst = db.execute("SELECT DISTINCT(GAME_NUMBER) FROM new_games")
         game_lst = [int(dict_res['GAME_NUMBER']) for dict_res in game_lst]
