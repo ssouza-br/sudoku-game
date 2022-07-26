@@ -68,7 +68,7 @@ def game():
                     print('eu passei aqui', dict_res[key])
                     if int(json_answ[int(key[4])-1][str(key[:4])]) == int(dict_res[key]):
                         db.execute("UPDATE current_games SET {}=? WHERE LINE=? AND GAME_NUMBER=? AND USERS_ID=?".format(
-                        key[:2]), dict_res[key], key[2], dict_res['game_number'], session["user_id"])
+                        key[:4]), dict_res[key], key[4], dict_res['game_number'], session["user_id"])
                     else:
                         life -= 1
                         db.execute("UPDATE current_games SET {}=NULL, GAME_LIFE=? WHERE LINE=? AND GAME_NUMBER=? AND USERS_ID=?".format(
