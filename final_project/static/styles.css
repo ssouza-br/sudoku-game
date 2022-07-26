@@ -63,7 +63,7 @@ form input {
   }
 
 /*table CSS*/
-table { border-collapse: collapse; font-family: Calibri, sans-serif; font-size: 2em; align:center;  margin-left: auto;
+.sudoku{ border-collapse: collapse; font-family: Calibri, sans-serif; font-size: 2em; align:center;  margin-left: auto;
     margin-right: auto}
 
 colgroup, tbody { border: solid medium; }
