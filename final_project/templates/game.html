@@ -65,13 +65,12 @@
         <button class="btn btn-primary" type="submit">Check Game</button>
     </div>
 </form>
-{% endblock %}
 
-{% block javascript %}
-	<script>
-        document.querySelector('inputed').onclick = function() {
-            document.getElementsByClassName('inputed').style.backgroundColor = 'red';
-            alert('Incorrect');
-        }
-    </script>
+<script>
+    document.querySelector('inputed').onclick = function() {
+        document.getElementsByClassName('inputed').style.backgroundColor = 'red';
+        alert('Incorrect');
+    }
+</script>
+
 {% endblock %}
