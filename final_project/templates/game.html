@@ -19,7 +19,7 @@
         <h4 class="inp_head">Sudoku # <input class="inp_fixed" type="number" name="game_number" value="{{res[0]['GAME_NUMBER']}}" readonly></h4>
         <h4 class="inp_head">Lifes: <input class="inp_fixed" type="number" name="life" value="{{opt}}" readonly></h4>
     </div>
-    <table id="tb" class="sudoku">
+    <table class="sudoku">
     {% set column_list = ['COL1','COL2','COL3','COL4','COL5','COL6','COL7','COL8','COL9'] %}
         <colgroup><col><col><col></colgroup>
         <colgroup><col><col><col></colgroup>
@@ -31,7 +31,7 @@
                 {%if res[n][column_list[i]] == None or res[n][column_list[i]] == '' %}
                     <td><input type="number" name={{column_list[i] + (n+1)|string + (res[0]['GAME_NUMBER']) | string}} min="1" max="9"></td>
                 {%else%}
-                    <td class="inputed">{{res[n][column_list[i]]}}</td>
+                    <td id="tst" onclick="org_reg_submit()">{{res[n][column_list[i]]}}</td>
                 {%endif%}
             {% endfor %}
         </tr>
@@ -43,7 +43,7 @@
                 {%if res[n][column_list[i]] == None or res[n][column_list[i]] == '' %}
                 <td><input type="number" name={{column_list[i] + (n+1)|string + (res[0]['GAME_NUMBER']) | string}} min="1" max="9"></td>
                 {%else%}
-                    <td class="inputed">{{res[n][column_list[i]]}}</td>
+                    <td id="tst" onclick="org_reg_submit()">{{res[n][column_list[i]]}}</td>
                 {%endif%}
             {% endfor %}
         </tr>
@@ -55,7 +55,7 @@
                 {%if res[n][column_list[i]] == None or res[n][column_list[i]] == '' %}
                 <td><input type="number" name={{column_list[i] + (n+1)|string + (res[0]['GAME_NUMBER']) | string}} min="1" max="9"></td>
                 {%else%}
-                    <td class="inputed" onclick="org_reg_submit()">{{res[n][column_list[i]]}}</td>
+                    <td id="tst" onclick="org_reg_submit()">{{res[n][column_list[i]]}}</td>
                 {%endif%}
             {% endfor %}
         </tr>
@@ -72,7 +72,7 @@
 
 <script>
   function org_reg_submit(){
-        document.getElementById("tb").style.backgroundColor = 'red';
+        document.getElementById("tst").style.backgroundColor = 'red';
 }
 </script>
 
