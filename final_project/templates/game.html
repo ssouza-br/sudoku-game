@@ -70,7 +70,7 @@
 {% block javascript %}
 	<script>
         document.querySelector('.inputed').onclick = function() {
-            document.getElementById("egg").style.backgroundColor = 'red';
+            document.getElementsByClassName('.inputed').style.backgroundColor = 'red';
             alert('Incorrect');
         }
     </script>
