@@ -27,6 +27,8 @@ Session(app)
 # Configure CS50 Library to use SQLite database
 db = SQL("sqlite:///sudoku.db")
 
+# Max life
+LIFE = 3
 @app.after_request
 def after_request(response):
     """Ensure responses aren't cached"""
@@ -108,13 +110,12 @@ def new():
         numGame = request.form.get("#game")
         json_res = db.execute("SELECT * FROM new_games WHERE GAME_NUMBER= ?", numGame)
         if not db.execute("SELECT * FROM current_games WHERE GAME_NUMBER= ? AND USERS_ID = ?", numGame, session["user_id"]):
-            life = 3
             for line in range(9):
-                db.execute("INSERT INTO current_games (USERS_ID, GAME_NUMBER, LINE, COL1, COL2, COL3, COL4, COL5, COL6, COL7, COL8, COL9) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
-                session["user_id"], numGame, json_res[line]['LINE'], json_res[line]['COL1'], json_res[line]['COL2'], json_res[line]['COL3'], json_res[line]['COL4'], json_res[line]['COL5'],
+                db.execute("INSERT INTO current_games (USERS_ID, GAME_NUMBER, GAME_LIFE, LINE, COL1, COL2, COL3, COL4, COL5, COL6, COL7, COL8, COL9) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+                session["user_id"], numGame, LIFE, json_res[line]['LINE'], json_res[line]['COL1'], json_res[line]['COL2'], json_res[line]['COL3'], json_res[line]['COL4'], json_res[line]['COL5'],
                 json_res[line]['COL6'], json_res[line]['COL7'], json_res[line]['COL8'], json_res[line]['COL9'])
             json_res = db.execute("SELECT * FROM current_games WHERE GAME_NUMBER= ? AND USERS_ID = ?", numGame, session["user_id"])
-            return render_template("game.html", res=json_res, opt=life)
+            return render_template("game.html", res=json_res)
         else:
             flash('vc já criou esse game amigão','error')
             return render_template("game.html", res=json_res, opt=life)
