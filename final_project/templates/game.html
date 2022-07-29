@@ -33,9 +33,9 @@
             {% for i in range(9) %}
                 {% set inpNumber = data[n][column_list[i]] %}
                 {%if inpNumber == '' or inpNumber == None %}
-                    <td><input style="color: brown" type="number" name={{column_list[i] + (n+1)|string + (data[0]['GAME_NUMBER']) | string}} min="1" max="9"></td> 
+                    <td onclick='tdclick(event)'><input style="color: brown" type="number" name={{column_list[i] + (n+1)|string + (data[0]['GAME_NUMBER']) | string}} min="1" max="9"></td> 
                 {%else%}
-                    <td class="{{inpNumber}}">{{inpNumber}}</td>    
+                    <td class="{{inpNumber}}" onclick='tdclick(event)'>{{inpNumber}}</td>    
                 {%endif%}
             {% endfor %}
         </tr>
@@ -45,9 +45,9 @@
         <tr>
             {% for i in range(9) %}
                 {%if data[n][column_list[i]] == '' or data[n][column_list[i]] == None %}
-                <td><input style="color: brown" type="number" name={{column_list[i] + (n+1)|string + (data[0]['GAME_NUMBER']) | string}} min="1" max="9"></td>
+                <td onclick='tdclick(event)'><input style="color: brown" type="number" name={{column_list[i] + (n+1)|string + (data[0]['GAME_NUMBER']) | string}} min="1" max="9"></td>
                 {%else%}
-                <td class="{{data[n][column_list[i]]}}">{{data[n][column_list[i]]}}</td>
+                <td class="{{data[n][column_list[i]]}}" onclick='tdclick(event)'>{{data[n][column_list[i]]}}</td>
                 {%endif%}
             {% endfor %}
         </tr>
@@ -57,9 +57,9 @@
         <tr>
             {% for i in range(9) %}
                 {%if data[n][column_list[i]] == '' or data[n][column_list[i]] == None %}
-                    <td><input class="inp_txt" style="color: brown" type="number" name={{column_list[i] + (n+1)|string + (data[0]['GAME_NUMBER']) | string}} min="1" max="9"></td>
+                    <td onclick='tdclick(event)'><input class="inp_txt" style="color: brown" type="number" name={{column_list[i] + (n+1)|string + (data[0]['GAME_NUMBER']) | string}} min="1" max="9"></td>
                 {%else%}
-                    <td class="{{data[n][column_list[i]]}}">{{data[n][column_list[i]]}}</td>
+                    <td class="{{data[n][column_list[i]]}}" onclick='tdclick(event)'>{{data[n][column_list[i]]}}</td>
                 {%endif%}
             {% endfor %}
         </tr>
@@ -116,6 +116,13 @@
             galleries[i].style.backgroundColor="blue";
         }
     } 
+    
+    function tdclick(e){ 
+        if (!e) var e = window.event;                // Get the window event
+        e.cancelBubble = true;                       // IE Stop propagation
+        if (e.stopPropagation) e.stopPropagation();  // Other Broswers
+        console.log('td clicked', e);
+    };  
 </script>
 
 {% endblock %}
