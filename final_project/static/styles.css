@@ -63,13 +63,17 @@ form input {
   }
 
 /*table CSS*/
-.sudoku{ border-collapse: collapse; font-family: Calibri, sans-serif; font-size: 2em; align:center;  margin-left: auto;
-    margin-right: auto}
+.sudoku{ border-collapse: collapse; font-family: Calibri, sans-serif; font-size: 2em; text-align:center;  margin-left: auto;
+    margin-right: auto; display:inline; width: 100px;}
 
-colgroup, tbody { border: solid medium; }
+.sudoku colgroup, tbody { border: solid medium; }
 
-td { border: solid thin; height: 1.4em; width: 1.4em; text-align: center; padding: 0; }
+.sudoku td { border: solid thin; height: 1.4em; width: 1.4em; text-align: center; padding: 0; }
 
-.tst{
-    
+.highlightNum_table{
+    display:inline;
+    margin-bottom: 10px;
+    text-align:right;
+    margin-left: auto;
+    margin-right: auto;
 }

@@ -1,11 +1,14 @@
 {% extends "layout.html" %}
 
 {% block title %}
-    Buy
+    Have fun!!
 {% endblock %}
 
 {% block main %}
 {% set dict_cat = ({"error":"alert alert-danger","success": "alert alert-success"}) %}
+{% set ns = namespace() %}
+{% set ns.count = 1 %}
+{% set ns.dict_count_num = ({'1':77, '2':0, '3':0, '4':0, '5':0, '6':0, '7':0, '8':0, '9':0}) %}
 
 {% with messages = get_flashed_messages(with_categories=true) %}
   {% if messages %}
@@ -16,10 +19,10 @@
 {% endwith %}
 <form action="/game" method="post">
     <div>
-        <h4 class="inp_head">Sudoku # <input class="inp_fixed" type="number" name="game_number" value="{{res[0]['GAME_NUMBER']}}" readonly></h4>
+        <h4 class="inp_head">Sudoku # <input class="inp_fixed" type="number" name="game_number" value="{{data[0]['GAME_NUMBER']}}" readonly></h4>
         <h4 class="inp_head">Lifes: <input class="inp_fixed" type="number" name="life" value="{{opt}}" readonly></h4>
     </div>
-    <table class="sudoku">
+    <table id="sudoku_table" class="sudoku">
     {% set column_list = ['COL1','COL2','COL3','COL4','COL5','COL6','COL7','COL8','COL9'] %}
         <colgroup><col><col><col></colgroup>
         <colgroup><col><col><col></colgroup>
@@ -28,10 +31,11 @@
         {% for n in range(3) %}
         <tr>
             {% for i in range(9) %}
-                {%if res[n][column_list[i]] == None or res[n][column_list[i]] == '' %}
-                    <td><input type="number" name={{column_list[i] + (n+1)|string + (res[0]['GAME_NUMBER']) | string}} min="1" max="9"></td>
+                {% set inpNumber = data[n][column_list[i]] %}
+                {%if inpNumber == '' or inpNumber == None %}
+                    <td><input style="color: brown" type="number" name={{column_list[i] + (n+1)|string + (data[0]['GAME_NUMBER']) | string}} min="1" max="9"></td> 
                 {%else%}
-                    <td class="{{res[n][column_list[i]]}}" onclick="org_reg_submit()">{{res[n][column_list[i]]}}</td>
+                    <td class="{{inpNumber}}">{{inpNumber}}</td>    
                 {%endif%}
             {% endfor %}
         </tr>
@@ -40,10 +44,10 @@
         {% for n in range(3,6) %}
         <tr>
             {% for i in range(9) %}
-                {%if res[n][column_list[i]] == None or res[n][column_list[i]] == '' %}
-                <td><input type="number" name={{column_list[i] + (n+1)|string + (res[0]['GAME_NUMBER']) | string}} min="1" max="9"></td>
+                {%if data[n][column_list[i]] == '' or data[n][column_list[i]] == None %}
+                <td><input style="color: brown" type="number" name={{column_list[i] + (n+1)|string + (data[0]['GAME_NUMBER']) | string}} min="1" max="9"></td>
                 {%else%}
-                <td class="{{res[n][column_list[i]]}}" onclick="org_reg_submit()">{{res[n][column_list[i]]}}</td>
+                <td class="{{data[n][column_list[i]]}}">{{data[n][column_list[i]]}}</td>
                 {%endif%}
             {% endfor %}
         </tr>
@@ -52,32 +56,66 @@
         {% for n in range(6,9) %}
         <tr>
             {% for i in range(9) %}
-                {%if res[n][column_list[i]] == None or res[n][column_list[i]] == '' %}
-                <td><input type="number" name={{column_list[i] + (n+1)|string + (res[0]['GAME_NUMBER']) | string}} min="1" max="9"></td>
+                {%if data[n][column_list[i]] == '' or data[n][column_list[i]] == None %}
+                    <td><input class="inp_txt" style="color: brown" type="number" name={{column_list[i] + (n+1)|string + (data[0]['GAME_NUMBER']) | string}} min="1" max="9"></td>
                 {%else%}
-                    <td onclick="org_reg_submit()"><input type="number" name={{column_list[i] + (n+1)|string + (res[0]['GAME_NUMBER']) | string}} min="1" max="9" value="{{res[n][column_list[i]]}}" readonly></td>
+                    <td class="{{data[n][column_list[i]]}}">{{data[n][column_list[i]]}}</td>
                 {%endif%}
             {% endfor %}
         </tr>
         {% endfor %}
     </table>
+
+    <table id="highlight_numbers" class="highlightNum_table">
+        <colgroup><col><col><col></colgroup>
+        
+        <tbody>
+        {% for n in range(3) %}
+        <tr>
+            {% for i in range(3) %}
+                {% if count_numbers[ns.count|string] < 9 %}
+                    <td><button class="btn1" id="{{ns.count}}" type="button" onclick="org_reg_submit('{{ns.count}}')">{{ns.count}}</button></td>
+                    {% set ns.count = ns.count + 1 %}
+                {% else %}
+                    {% set ns.count = ns.count + 1 %}
+                {% endif %}                    
+            {% endfor %}
+        </tr>
+        {% endfor %}
+        </tbody>
+
+    </table>
     <div>
         <button class="btn btn-primary" type="submit">Check Game</button>
     </div>
+
+
 </form>
 
 
 <script>
-  function org_reg_submit(){
-    const val = document.querySelector('input').value;
-    var galleries = document.getElementsByClassName(val);
-    var len =  galleries.length;
-    console.log(len);
-    console.log(val);
-    for(var i=0 ; i<len; i++){
-    galleries[i].style.backgroundColor="blue";
+    let old_galleries = [];
+    function reset_background_table(){
+
+        for(var i=0, len = old_galleries.length ; i<len; i++)
+        {
+            console.log(len);
+            old_galleries[i].style.backgroundColor = "white";
+        }
     }
-}
+
+    function org_reg_submit(className){        
+        reset_background_table();
+
+        var galleries = document.getElementsByClassName(className);
+        old_galleries = galleries;
+        var len =  galleries.length;
+
+        for(var i=0 ; i<len; i++)
+        {
+            galleries[i].style.backgroundColor="blue";
+        }
+    } 
 </script>
 
 {% endblock %}

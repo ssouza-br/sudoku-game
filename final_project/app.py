@@ -10,6 +10,18 @@ from datetime import datetime
 
 from helpers import apology, login_required, lookup, usd
 
+def count_numbers(data):
+    count_numbers = {}
+    columns_list = ['COL1', 'COL2', 'COL3', 'COL4', 'COL5', 'COL6', 'COL7', 'COL8', 'COL9']
+    for line in range(9):
+        for column in range(9):
+            if str(data[line][columns_list[column]]) in count_numbers:
+                count_numbers[str(data[line][columns_list[column]])] +=1
+            else:
+                count_numbers[str(data[line][columns_list[column]])] = 1
+    return count_numbers
+
+
 # Configure application
 app = Flask(__name__)
 
@@ -61,11 +73,11 @@ def game():
         finished = True
         life = int(dict_res['life'])
         for key in dict_res:
-            print('key: ', key)
-            print('dict[key]: ', dict_res[key])
+            # print('key: ', key)
+            # print('dict[key]: ', dict_res[key])
             if key!='game_number' and key!='life':
                 if dict_res[key]!='':
-                    print('eu passei aqui', dict_res[key])
+                    # print('eu passei aqui', dict_res[key])
                     if int(json_answ[int(key[4])-1][str(key[:4])]) == int(dict_res[key]):
                         db.execute("UPDATE current_games SET {}=? WHERE LINE=? AND GAME_NUMBER=? AND USERS_ID=?".format(
                         key[:4]), dict_res[key], key[4], dict_res['game_number'], session["user_id"])
@@ -89,9 +101,11 @@ def game():
                        session["user_id"], dict_res['game_number'])
             return redirect("/")
 
-        json_res = db.execute( "SELECT * FROM current_games WHERE GAME_NUMBER = ? AND USERS_ID = ?", dict_res['game_number'], session["user_id"])
-        print(dict_res)
-        return render_template("game.html", res=json_res, opt=life)
+        data = db.execute( "SELECT * FROM current_games WHERE GAME_NUMBER = ? AND USERS_ID = ?", dict_res['game_number'], session["user_id"])
+        # print('data:', data)
+        count_num = count_numbers(data)
+
+        return render_template("game.html", data=data, opt=life, count_numbers=count_num)
     else:
         return render_template("game.html")
 
@@ -115,16 +129,17 @@ def new():
                 db.execute("INSERT INTO current_games (USERS_ID, GAME_NUMBER, GAME_LIFE, LINE, COL1, COL2, COL3, COL4, COL5, COL6, COL7, COL8, COL9) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
                 session["user_id"], numGame, LIFE, json_res[line]['LINE'], json_res[line]['COL1'], json_res[line]['COL2'], json_res[line]['COL3'], json_res[line]['COL4'], json_res[line]['COL5'],
                 json_res[line]['COL6'], json_res[line]['COL7'], json_res[line]['COL8'], json_res[line]['COL9'])
-            json_res = db.execute("SELECT * FROM current_games WHERE GAME_NUMBER= ? AND USERS_ID = ?", numGame, session["user_id"])
-            return render_template("game.html", res=json_res, opt=LIFE)
+            data = db.execute("SELECT * FROM current_games WHERE GAME_NUMBER= ? AND USERS_ID = ?", numGame, session["user_id"])
+            count_num = count_numbers(data)
+            return render_template("game.html", data=data, opt=LIFE, count_numbers=count_num)
         else:
             flash('vc já criou esse game amigão','error')
-            json_res = db.execute("SELECT * FROM current_games WHERE GAME_NUMBER= ? AND USERS_ID = ?", numGame, session["user_id"])
-            return render_template("game.html", res=json_res, opt=json_res[0]['GAME_LIFE'])
+            data = db.execute("SELECT * FROM current_games WHERE GAME_NUMBER= ? AND USERS_ID = ?", numGame, session["user_id"])
+            count_num = count_numbers(data)
+            return render_template("game.html", data=data, opt=data[0]['GAME_LIFE'], count_numbers=count_num)
     else:
         game_lst = db.execute("SELECT DISTINCT(GAME_NUMBER) FROM new_games")
         game_lst = [int(dict_res['GAME_NUMBER']) for dict_res in game_lst]
-        print(game_lst)
         return render_template("new.html",game_lst=game_lst)
 
 
